@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ComponentsModule } from './components/components.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './homepage/home/home.component';
@@ -23,7 +24,8 @@ import { SearchComponent } from './searchpage/search/search.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
