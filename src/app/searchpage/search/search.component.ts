@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  events: string[] = [];
+  opened: boolean = false;
+
+  
+
+
   constructor() { }
 
   ngOnInit() {

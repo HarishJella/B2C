@@ -1,3 +1,60 @@
+<h2 class="heading">Webaxyz Features</h2>
+
+
+<h2 class="heading">Get in touch</h2>
+
+<button mat-button>Click me!</button>
+
+<!-- Creates a layout with a left-positioned sidenav and explicit content. -->
+<mat-sidenav-container>
+  <mat-sidenav>Start</mat-sidenav>
+  <mat-sidenav-content>Main</mat-sidenav-content>
+</mat-sidenav-container>
+
+<div class="container">
+  <mat-sidenav-container class="search">
+    <mat-sidenav class="sidenav" #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
+      Sidenav
+    </mat-sidenav>
+
+    <mat-sidenav-content class="result_div">
+      <div class="filter_section">
+        <div>
+         <div><i class="material-icons">view_headline</i></div>
+         <div><i class="material-icons">view_headline</i></div>
+         <div><i class="material-icons">view_headline</i></div>
+         <div><i class="material-icons">view_headline</i></div>
+         <div><i class="material-icons">view_headline</i></div>
+         <div><i class="material-icons">view_headline</i></div>
+         <div><i class="material-icons">view_headline</i></div>
+         <div><i class="material-icons">view_headline</i></div>
+         <div><i class="material-icons">view_headline</i></div>
+        </div>
+        <div>
+          destination
+        </div>
+        <div style="">
+          Result
+        </div>
+
+
+
+      </div>
+    </mat-sidenav-content>
+
+
+  </mat-sidenav-container>
+</div>
+
+
+
 <p>
-  search works!
+  <mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox>
 </p>
+<p>
+  <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+</p>
+<p>Events:</p>
+<div class="example-events">
+  <div *ngFor="let e of events">{{e}}</div>
+</div>

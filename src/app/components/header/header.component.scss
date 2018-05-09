@@ -1,0 +1,36 @@
+@import '~variables.scss';
+@import '~mixins.scss';
+
+.top-hed{
+    height: 25px;
+    width: 100%;
+    color: #fff;
+    background: $pinky-orange;
+    @include font-12;
+   a{
+       padding: 0 14px;
+       line-height: 2;
+   }
+}
+.main-hed{
+    background-color: #fff;
+    height: 60px;
+    .brand{
+        margin: auto;
+                text-align: center;
+                display: block;
+                position: relative;
+                top: -20px;
+        .logo{
+            display: inline-block;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 60%;
+            
+            img{
+                width: 75px;
+                
+            }
+        }
+    }
+}

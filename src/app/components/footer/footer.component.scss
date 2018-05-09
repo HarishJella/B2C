@@ -1,0 +1,23 @@
+@import '~variables.scss';
+@import '~mixins.scss';
+.fotr-btm{
+    height: 25px;
+    width: 100%;
+    color: #fff;
+    background: $pinky-orange;
+    @include font-12;
+    line-height: 2;
+    
+}
+.footer{
+    background-color: #fff;
+    .footer-top{
+    
+        .col-md-7{
+            ul{
+            padding: 0;
+            list-style: none;
+        }
+    }
+}
+}
