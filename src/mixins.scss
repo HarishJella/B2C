@@ -1,6 +1,26 @@
 // Global Declarations styles to class
+@mixin heading {
+  font-size: 32px;
+  font-family: $font_family;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.2;
+  &::after {
+    content: "";
+    display: block;
+    background: linear-gradient( -174deg, rgb(242, 99, 38) 0%, rgb(165, 8, 122) 100%);
+    width: 120px;
+    height: 3px;
+    margin-top: 2px;
+  }
+}
 
 @mixin font-12{
     font-size: 12px;
     
+@mixin button {
+  color: #fff;
+  background: $pinky-orange;
+  border-radius: 25px;
+  padding: 4px 16px;
 }
