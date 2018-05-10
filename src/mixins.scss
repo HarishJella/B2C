@@ -5,6 +5,7 @@
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 1.2;
+  margin:60px 0;
   &::after {
     content: "";
     display: block;
@@ -23,4 +24,14 @@
   background: $pinky-orange;
   border-radius: 25px;
   padding: 4px 16px;
+}
+@mixin text_box{
+  border-radius: 1.25rem;
+  background: #f5f5f5;
+  font-size: 12px;
+  border: 1px solid #f5f5f5!important;
+  &:focus{
+    border-color: #f6325c !important;
+  box-shadow: 0 0 0 0.2rem rgba(248, 70, 71, 0.5)!important;
+  }
 }

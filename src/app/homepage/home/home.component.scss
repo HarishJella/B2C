@@ -1,0 +1,117 @@
+@import '~variables.scss';
+@import '~mixins.scss';
+.banner {
+  background-image: url(../../../assets/images/banner-img.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 620px;
+  .mat-card {
+    padding: 0;
+    position: relative;
+    top: 145px;
+    border-radius: 10px;
+  }
+  .srch-bnr {
+    background-image: url(../../../assets/images/srch-bnr.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 265px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    color: #fff;
+    .hl-no{
+        margin-top: 1.5rem;
+    }
+    .d-text {
+      margin-top: 4rem;
+      font-size: 24px;
+      font-weight: 200;
+      line-height: 1;
+      .webxyz {
+        font-size: 58px;
+        font-weight: 400;
+      }
+    }
+  }
+  .main-srch {
+    .mat-tab-body {
+      background-color: #fff;
+      height: 100px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .mat-tab-header {
+      .mat-tab-label-container {
+        .mat-tab-list {
+          .mat-tab-labels {
+            display: inline-block;
+            background-color: #fff !important;
+            border-top-right-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.featurs{
+  text-align: center;
+  img{
+    margin-bottom: 25px;
+  }
+  h2{
+  text-align: left;
+  @include heading;
+}
+  h4{
+    text-align: center;
+    font-size: 18;
+    font-weight: bold;
+    margin-bottom: 20px
+  }
+  p{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+.wide-md{
+  background-color: #fff;
+  h2{
+    text-align: left;
+  @include heading;
+  }
+  p{
+    font-size: 14px;
+    text-align: left;
+    font-weight: 300;
+    line-height: 30px;
+  }
+}
+.wide-md-a{
+  background-image: linear-gradient(to right, #0776bc, #0095c8, #00afad, #00c277, #9ecb3b);
+  min-height: 150px;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+.wide-md-b{
+  margin-bottom: 30px;
+  .row{
+    margin-top: 10px;
+  }
+  h2{
+    @include heading;
+  }
+  img{
+    width: 100%;
+  }
+  .mat-card{
+    padding: 5px;
+  }
+
+}

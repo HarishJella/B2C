@@ -1,0 +1,15 @@
+@import '~variables.scss';
+@import '~mixins.scss';
+.aboutus_heading {
+  @include heading;
+  font-size: 1.20rem !important;
+}
+
+.about_us {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  p {
+    font-size: 14px;
+    margin-bottom: .4rem;
+  }
+}
