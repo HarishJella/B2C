@@ -9,8 +9,8 @@ export class SearchComponent implements OnInit {
 
   events: string[] = [];
   opened: boolean = false;
+  item:boolean;
 
-  
 
 
   constructor() { }
@@ -18,4 +18,9 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  open_filter(item) {
+   
+
+  }
 }
