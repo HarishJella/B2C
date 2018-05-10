@@ -24,6 +24,10 @@
   background: $pinky-orange;
   border-radius: 25px;
   padding: 4px 16px;
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
 }
 @mixin text_box{
   border-radius: 1.25rem;
