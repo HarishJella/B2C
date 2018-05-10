@@ -4,23 +4,59 @@
   .container {
     .modify_search {
       display: grid; // grid-template-columns: repeat(6, 1fr);
-      grid-template-columns: 75px 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 72px 1fr 1fr 1fr 1fr 1fr;
       background-color: #fff;
       border-radius: 4px;
       .item {
-        h6 {}
-        P {}
-        span {}
+        h6 {
+          font-size: 14px;
+          font-family: $open_sans;
+          color: rgb(0, 0, 0);
+          font-weight: bold;
+          line-height: 1.286;
+          text-align: left;
+        }
+        P {
+          font-size: 12px;
+          font-family: $open_sans;
+          color: rgb(0, 0, 0); // font-weight: bold;
+          line-height: 1.286;
+          text-align: left;
+          font-weight: 400;
+        }
+        span {
+          font-size: 12px;
+          font-family: $open_sans;
+          color: rgb(0, 0, 0); // font-weight: bold;
+          line-height: 1.286;
+          text-align: left;
+          font-weight: 400;
+        }
+        button {
+          border: 2px solid transparent !important;
+          border-image: $pinky-orange;
+          background-color: transparent !important;
+          color: #000 !important;
+          border-radius: 10em;
+          font-size: 12px;
+          font-family: $open_sans; // line-height: 1.286;
+          margin: auto;
+        }
       }
     }
     .search_results {
-      display: grid;
-      grid-template-columns: 75px 50px auto;
-      grid-column-gap: 0.50rem;
+      // display: grid;
+      // grid-template-columns: 75px 50px auto;
+      // grid-column-gap: 0.50rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
       .filter_div {
         background: #fff;
         display: grid;
         grid-template-columns: auto;
+        margin-right: 0.50rem;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
         .item {
           cursor: pointer;
           transition: all 0.5s ease-in-out;
@@ -33,9 +69,11 @@
       }
       .dest_nav {
         background: #f5f5f5;
+        margin-right: 0.50rem;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 50px auto;
+        grid-row-gap: 0.50rem;
         .destination {
           justify-content: space-evenly;
           .item {
@@ -45,6 +83,7 @@
             height: 40px;
             position: relative;
             transition: all 0.5s ease-in-out;
+            margin-bottom: 25px;
             p {
               font-size: 10px;
             }
@@ -96,15 +135,21 @@
           grid-template-columns: repeat(6, 1fr);
           .item {
             padding: 0 1rem;
+            align-self: center;
+            justify-self: center;
             p {
+              font-size: 12px;
+              font-family: $open_sans;
+              line-height: 1.2;
+              text-align: center;
+              font-weight: bold;
               color: #fff;
             }
           }
         }
         .result {
           display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 0.1fr;
+          grid-template-columns: 1fr; // grid-template-rows: 0.1fr;
           grid-row-gap: 0.5rem;
           .items {
             background: #fff;
@@ -112,8 +157,78 @@
             grid-template-columns: repeat(6, 1fr);
             .item {
               padding: 0 1rem;
+              align-self: center;
+              justify-self: center;
+              h6 {
+                font-size: 16px;
+                font-size: 14px;
+                font-family: $open_sans;
+                color: rgb(38, 38, 38);
+                font-weight: bold;
+                line-height: 1.2;
+                text-align: center;
+              }
               p {
-                color: #000;
+                font-size: 11px;
+                font-family: $open_sans;
+                color: rgb(38, 38, 38);
+                font-weight: bold;
+                line-height: 1.2;
+                text-align: center;
+              }
+              .image {
+                img {
+                  width: 35px;
+                  height: 35px;
+                }
+                p {
+                  font-size: 11px;
+                  font-family: $ubuntu;
+                  color: rgb(38, 38, 38);
+                  line-height: 1.2;
+                  text-align: center;
+                }
+              }
+              .duration {
+                h6 {
+                  font-size: 12px;
+                  font-family: $open_sans;
+                  color: rgb(38, 38, 38);
+                  font-weight: bold;
+                  line-height: 1.2;
+                  text-align: center;
+                  &:after {
+                    content: '';
+                    background: url('../../../assets/images/right_arrow.png');
+                  }
+                }
+                p {
+                  font-size: 12px;
+                  font-family: $open_sans;
+                  color: rgb(38, 38, 38); // font-weight: 300;
+                  line-height: 1.2;
+                  text-align: center;
+                }
+              }
+              .book {
+                button {
+                  font-size: 18px;
+                  font-size: 14px;
+                  font-family: $open_sans;
+                  color: rgb(255, 255, 255);
+                  line-height: 1.2;
+                  text-align: center;
+                  background: $pinky-orange;
+                  padding: 0.50rem 2.14rem;
+                }
+                a {
+                  font-size: 12px;
+                  font-family: $open_sans;
+                  font-weight: bold;
+                  line-height: 1.2;
+                  text-align: center;
+                  color: #f26326
+                }
               }
             }
           }
