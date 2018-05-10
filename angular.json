@@ -26,10 +26,14 @@
               "node_modules/angular-bootstrap-md/scss/mdb-free.scss",
               "src/styles.scss"
             ],
+<<<<<<< HEAD
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
               "node_modules/hammerjs/hammer.js"
             ]
+=======
+            "scripts": [ ]
+>>>>>>> a3b109040eb720ee49b452822389f50e2143c72e
           },
           "configurations": {
             "production": {
