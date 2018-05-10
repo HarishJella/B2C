@@ -29,7 +29,6 @@ import { AboutComponent } from './aboutpage/about/about.component';
     AboutComponent
   ],
   imports: [
-
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
