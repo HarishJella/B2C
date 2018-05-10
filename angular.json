@@ -21,9 +21,19 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
+              "node_modules/angular-bootstrap-md/scss/mdb-free.scss",
               "src/styles.scss"
             ],
+<<<<<<< HEAD
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/hammerjs/hammer.js"
+            ]
+=======
             "scripts": [ ]
+>>>>>>> a3b109040eb720ee49b452822389f50e2143c72e
           },
           "configurations": {
             "production": {
@@ -36,12 +46,10 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
+              "fileReplacements": [{
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.prod.ts"
+              }]
             }
           }
         },
