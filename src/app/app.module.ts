@@ -15,6 +15,10 @@ import { HomeComponent } from './homepage/home/home.component';
 import { SearchComponent } from './searchpage/search/search.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
 import { AboutComponent } from './aboutpage/about/about.component';
+import { FlightTemplateComponent } from './searchpage/Templates/flight-template/flight-template.component';
+import { BusTemplateComponent } from './searchpage/Templates/bus-template/bus-template.component';
+import { HotelTemplateComponent } from './searchpage/Templates/hotel-template/hotel-template.component';
+
 
 
 @NgModule({
@@ -25,7 +29,10 @@ import { AboutComponent } from './aboutpage/about/about.component';
     HomeComponent,
     SearchComponent,
     BookingComponent,
-    AboutComponent
+    AboutComponent,
+    FlightTemplateComponent,
+    BusTemplateComponent,
+    HotelTemplateComponent
   ],
   imports: [
     BrowserModule,
