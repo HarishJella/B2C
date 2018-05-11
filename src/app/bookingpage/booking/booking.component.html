@@ -78,6 +78,18 @@
             <div>
               <h4>Traveller Infomation</h4>
             </div>
+            <div class="travel_grid  d-none ">
+              <div class="round active">
+                <div class="inner">1</div>
+              </div>
+              <div class="round">
+                <div class="inner">2</div>
+              </div>
+              <div class="round">
+                <div class="inner">3</div>
+              </div>
+
+            </div>
 
 
             <form>
@@ -126,16 +138,18 @@
               </div>
 
 
-              <button class="button" type="submit">Next</button>
+             <div class="next_btn">
+              <button type="button" class="btn btn-default btn-rounded button">Next</button>
+            </div>
             </form>
 
 
 
 
           </div>
-          <div class="">
+          <div class="d-none d-md-block">
             <mat-card class="traveler_infomation">
-              <div class="travel_grid">
+              <div class="travel_grid ">
                 <div class="round active">
                   <div class="inner">1</div>
                 </div>
@@ -219,7 +233,10 @@
           </div>
         </div>
         <div class="text-center">
-          <button class="button" type="submit">Proceed To Pay</button>
+          <button type="button" class="btn btn-default btn-rounded button">Proceed To Pay</button>
+        </div>
+        <div class="text-center agree">
+          <p>By Booking with webaxyz <br> you agree the <a href="">Terms and Conditions</a></p>
         </div>
       </mat-card>
     </div>

@@ -11,6 +11,9 @@ body {
 
 .section {
   padding: 0 80px;
+  @media (max-width: 767PX) {
+    padding: 0 1.5rem;
+  }
 }
 
 /* homepage search field style */
