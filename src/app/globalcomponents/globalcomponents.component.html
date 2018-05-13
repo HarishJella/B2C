@@ -1,144 +1,220 @@
 <div class="section">
   <div class="gobal_components mt-5">
-      <mat-card>
-      <h4>Buttons</h4>
+    <mat-card>
+      <h4 class="heading">Buttons</h4>
       <div class="button_grid">
         <div>
-            <button type="button" class="btn btn-default btn-rounded waves-lights" mdbWavesEffect>Primary Button</button>
+          <button type="button" class="btn  btn-rounded waves-effect primary_btn" mdbWavesEffect> Primary Button</button>
         </div>
         <div>
-            <button type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect>Secondary</button>
-          </div>
+          <button type="button" class="btn btn-outline-default btn-rounded waves-effect secondary_btn" mdbWavesEffect>Secondary Button</button>
+        </div>
       </div>
 
-    <hr>
+      <hr>
       <div class="check_box">
         <div>
-            <h4>checkbox</h4>
-            <mat-checkbox>Check me!</mat-checkbox>
+          <h4 class="heading">checkbox</h4>
+          <mat-checkbox>Check me!</mat-checkbox>
         </div>
-        <div> 
-            <h4>Radio</h4>
-            <mat-radio-group>
-                <mat-radio-button value="1">Option 1</mat-radio-button>
-                <mat-radio-button value="2">Option 2</mat-radio-button>
-              </mat-radio-group>
+        <div>
+          <h4 class="heading">Radio Button</h4>
+          <mat-radio-group>
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div>
+          <!-- <h4 class="heading">Datepicker</h4>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> -->
+        </div>
+      </div>
+
+
+      <hr>
+
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Input" color>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Select">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Favorite food" value="Sushi">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Leave a comment"></textarea>
+        </mat-form-field>
+      </form>
+      <div class="input_box">
+        <div>
+          <h4>Text-Box</h4>
+          <div class="col-md-6 mb-3">
+            <label class="input_label" for="validationServer02">Name</label>
+            <input type="text" class="form-control text_box" id="validationServer02" placeholder="Name" required>
+
+          </div>
+        </div>
+        <div>
+          <h4>select</h4>
+          <div class="form-group col-md-6">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control text_box">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
         </div>
       </div>
       <hr>
-      <div class="input_box">
-          <div>
-              <h4>Text-Box</h4>
-              <div class="col-md-6 mb-3">
-                  <label class="input_label" for="validationServer02">Name</label>
-                  <input type="text" class="form-control text_box" id="validationServer02" placeholder="Name" required>
-                  
-                </div>
+      <div>
+        <h4>Tabs</h4>
+        <mat-tab-group>
+          <mat-tab label="Tab 1">Content 1</mat-tab>
+          <mat-tab label="Tab 2">Content 2</mat-tab>
+        </mat-tab-group>
+      </div>
+
+      <hr>
+      <div class="pannel">
+        <div>
+          <h4>Default Pannel </h4>
+          <div class="card card-body">
+            <h4 class="card-title">Panel title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="flex-row">
+              <a class="card-link">Card link</a>
+              <a class="card-link">Another link</a>
+            </div>
           </div>
-          <div> 
-              <h4>select</h4>
-              <div class="form-group col-md-6">
-                  <label for="inputState">State</label>
-                  <select id="inputState" class="form-control text_box">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
+        </div>
+        <div>
+          <h4>Pannel collapse</h4>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Personal data
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type your name and age
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure libero temporibus exercitationem laudantium
+                voluptatem, cum nemo adipisci omnis eligendi odit illum tempore laborum blanditiis alias at aspernatur possimus
+                ex quis!</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+
+      </div>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite food" value="Sushi">
+      </mat-form-field>
+
+      <hr>
+      <div class="models">
+        <div>
+          <h4>model</h4>
+
+          <button type="button" class="btn btn-primary waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
+            mdbWavesEffect>
+            modal
+          </button>
+
+          <div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Close</button>
+                  <button type="button" class="btn btn-primary btn-sm waves-light" mdbWavesEffect>Save changes</button>
                 </div>
               </div>
             </div>
-<hr>
-<div>
-  <h4>Tabs</h4>
-<mat-tab-group>
-    <mat-tab label="Tab 1">Content 1</mat-tab>
-    <mat-tab label="Tab 2">Content 2</mat-tab>
-  </mat-tab-group>
-</div>
-    
-<hr>
-<div class="pannel">
-  <div>
-      <h4>Default Pannel </h4>
-      <div class="card card-body">
-          <h4 class="card-title">Panel title</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <div class="flex-row">
-              <a class="card-link">Card link</a>
-              <a class="card-link">Another link</a>
           </div>
-      </div>
-  </div>
-  <div>
-      <h4>Pannel collapse</h4>
-      <mat-accordion>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Personal data
-              </mat-panel-title>
-              <mat-panel-description>
-                Type your name and age
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure libero temporibus exercitationem laudantium voluptatem, cum nemo adipisci omnis eligendi odit illum tempore laborum blanditiis alias at aspernatur possimus ex quis!</p>
-          </mat-expansion-panel>
-          </mat-accordion>
-  </div>
- 
-</div>
-
-<mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
-
-  <hr>
-  <div class="models">
-    <div>
-        <h4>model</h4>
-        
-<button type="button" class="btn btn-primary waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()" mdbWavesEffect>
-     modal
-</button>
-
-<div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Close</button>
-                <button type="button" class="btn btn-primary btn-sm waves-light" mdbWavesEffect>Save changes</button>
-            </div>
         </div>
-    </div>
-</div>
-                </div>
+      </div>
+      <hr>
+      <h4>Tooltip</h4>
+      <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on top" placement="top" mdbWavesEffect>
+        Tooltip on top
+      </button>
+
+      <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on right" placement="right" mdbWavesEffect>
+        Tooltip on right
+      </button>
+
+      <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on bottom" placement="bottom" mdbWavesEffect>
+        Tooltip on bottom
+      </button>
+
+      <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on left" placement="left" mdbWavesEffect>
+        Tooltip on left
+      </button>
+      <hr>
+    </mat-card>
+
+
+
+
   </div>
-  <hr>
-  <h4>Tooltip</h4>
-  <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on top" placement="top" mdbWavesEffect>
-      Tooltip on top
-    </button>
-    
-    <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on right" placement="right" mdbWavesEffect>
-      Tooltip on right
-    </button>
-    
-    <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on bottom" placement="bottom" mdbWavesEffect>
-      Tooltip on bottom
-    </button>
-    
-    <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on left" placement="left" mdbWavesEffect>
-      Tooltip on left
-    </button>
-<hr>
-</mat-card>
 </div>
-</div>
+
+
+
+<!-- <div class="container-fluid py-4 d-flex flex-column">
+  <mat-card class="d-flex flex-column">
+    <h4 class="heading">Buttons</h4>
+
+    <button type="button" class="btn  btn-rounded waves-effect primary_btn" mdbWavesEffect> Primary Button</button>
+    <button type="button" class="btn btn-outline-default btn-rounded waves-effect secondary_btn" mdbWavesEffect>Secondary Button</button>
+    <hr>
+
+    <h4 class="heading">checkbox</h4>
+    <mat-checkbox>Check me!</mat-checkbox>
+
+    <hr>
+
+    <h4 class="heading">Radio Button</h4>
+    <mat-radio-group>
+      <mat-radio-button value="1">Option 1</mat-radio-button>
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+    </mat-radio-group>
+    <hr>
+    <h4 class="heading">Datepicker</h4>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </mat-card>
+
+</div> -->
