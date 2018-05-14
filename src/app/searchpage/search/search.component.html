@@ -30,43 +30,50 @@
     </div>
 
 
-    <div class="search_results">
-      <div class="filter_div">
-        <div class="py-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+
+    <div class="col-12 px-0 search_results">
+      <div class="col-1 px-0 filter_div">
+        <div class="py-3 px-4 d-flex justify-content-center align-items-center item 1" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
 
         </div>
 
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 2" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 3" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 4" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 5" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 6" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
       </div>
 
-      <div class="dest_nav">
+
+      <div  class="col-3 {{menuState}}" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laboriosam nostrum. Saepe reiciendis voluptates distinctio
+        harum quisquam voluptatem magni ipsam provident vitae praesentium, est aliquid. Ab illo, dolorum, deleniti ex fuga
+        unde inventore, quis iure odit illum dicta iste rem.
+      </div>
+      <div class="col-1 px-0 dest_nav">
         <div>
 
         </div>
@@ -89,165 +96,99 @@
           </div>
         </div>
       </div>
-      <div class="results_div">
-        <div class="Header">
-          <div class="item d-flex justify-content-start align-items-center">
+      <div class="col-10 px-0 results_div">
+        <div class="col-12 px-0 d-flex justify-content-center align-items-center Header">
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
             <p class="mb-0">Delta Air Lines</p>
           </div>
-          <div class="item d-flex justify-content-start align-items-center">
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
             <p class="mb-0">Depature</p>
           </div>
-          <div class="item d-flex justify-content-start align-items-center">
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
             <p class="mb-0">Duration</p>
           </div>
-          <div class="item d-flex justify-content-start align-items-center">
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
             <p class="mb-0">Return</p>
           </div>
-          <div class="item d-flex justify-content-start align-items-center">
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
             <p class="mb-0">Price</p>
           </div>
-          <div class="item d-flex justify-content-start align-items-center">
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
             <p class="mb-0">Showing 18 of 18 Flights</p>
           </div>
         </div>
-        <div class="result">
-          <div class="py-3 items">
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center image">
-                <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
-                <p class="mb-0">Delta Air Lines</p>
-              </div>
-            </div>
-            <div class="item d-flex justify-content-start align-items-center ">
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h6 class="mb-0">06:30</h6>
-                <p class="mb-0">BLR </p>
-              </div>
-
-            </div>
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center duration">
-                <h6 class="mb-0">1h 55m</h6>
-                <p class="mb-0">Non Stop</p>
-              </div>
-
-            </div>
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h6 class="mb-0">06:30</h6>
-                <p class="mb-0">BBI </p>
-              </div>
-            </div>
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h6 class="mb-0">INR.8908</h6>
-                <p class="mb-0">Refundable </p>
-              </div>
-            </div>
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center book">
-                <button type="button" class="btn btn-default btn-rounded waves-light" mdbWavesEffect>Book</button>
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#basicExample" (click)="fluid.show()">Flight Details</a>
-              </div>
-            </div>
-          </div>
-          <div class="py-3 items">
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center image">
-                <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
-                <p class="mb-0">Delta Air Lines</p>
-              </div>
-            </div>
-            <div class="item d-flex justify-content-start align-items-center ">
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h6 class="mb-0">06:30</h6>
-                <p class="mb-0">BLR </p>
-              </div>
-
-            </div>
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center duration">
-                <h6 class="mb-0">1h 55m</h6>
-                <p class="mb-0">Non Stop</p>
-              </div>
-
-            </div>
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h6 class="mb-0">06:30</h6>
-                <p class="mb-0">BBI </p>
-              </div>
-            </div>
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h6 class="mb-0">INR.8908</h6>
-                <p class="mb-0">Refundable </p>
-              </div>
-            </div>
-            <div class="item d-flex justify-content-start align-items-center">
-              <div class="d-flex flex-column justify-content-center align-items-center book">
-                <button type="button" class="btn btn-default btn-rounded waves-light" mdbWavesEffect>Book</button>
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#basicExample" (click)="fluid.show()">Flight Details</a>
-              </div>
-            </div>
-          </div>
-
-
+        <div class="result" [@Templates]="app-flight-template">
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>  
 
         </div>
+
+
+        <div class="col-12 px-0 d-flex justify-content-center align-items-center Header">
+          <div class="col-4 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Operator</p>
+          </div>
+          <div class="col-1 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Depature</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
+            <p class="mb-0">Duration</p>
+          </div>
+          <div class="col-1 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Boarding</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Price</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Showing 18 of 18 Busses</p>
+          </div>
+        </div>
+
+        <div class="result">
+
+          <app-bus-template></app-bus-template>
+
+        </div>
+
+        <div class="col-12 px-0 d-flex justify-content-center align-items-center Header">
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Delta Air Lines</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Depature</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
+            <p class="mb-0">Duration</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Return</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Price</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+            <p class="mb-0">Showing 18 of 18 Hotels</p>
+          </div>
+        </div>
+
+        <div class="result hotelresult">
+          <app-hotel-template></app-hotel-template>
+          <app-hotel-template></app-hotel-template>
+          <app-hotel-template></app-hotel-template>
+          <app-hotel-template></app-hotel-template>
+          <app-hotel-template></app-hotel-template>
+          <app-hotel-template></app-hotel-template>
+        </div>
+
+
       </div>
     </div>
   </div>
 </section>
 
 
-
-<div mdbModal #fluid="mdb-modal" class="modal fade top" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-full-height modal-top" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="fluid.hide()">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam, sunt, ea dolore eum quod. Minima fugiat
-          enim aut soluta est reprehenderit reiciendis quos, qui, amet possimus laborum assumenda voluptate.
-        </p>
-
-        <ul class="list-group z-depth-0">
-          <li class="list-group-item justify-content-between">
-            Cras justo odio
-            <span class="badge badge-primary badge-pill">14</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Dapibus ac facilisis in
-            <span class="badge badge-primary badge-pill">2</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Morbi leo risus
-            <span class="badge badge-primary badge-pill">1</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Cras justo odio
-            <span class="badge badge-primary badge-pill">14</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Dapibus ac facilisis in
-            <span class="badge badge-primary badge-pill">2</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Morbi leo risus
-            <span class="badge badge-primary badge-pill">1</span>
-          </li>
-        </ul>
-      </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary waves-light" data-dismiss="modal" (click)="fluid.hide()" mdbWavesEffect>Close</button>
-        <button type="button" class="btn btn-primary waves-light" mdbWavesEffect>Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>

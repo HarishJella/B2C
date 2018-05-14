@@ -17,6 +17,10 @@ import { BookingComponent } from './bookingpage/booking/booking.component';
 import { AboutComponent } from './aboutpage/about/about.component';
 import { FaqComponent } from './FAQpage/faq/faq.component';
 import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
+import { FlightTemplateComponent } from './searchpage/Templates/flight-template/flight-template.component';
+import { BusTemplateComponent } from './searchpage/Templates/bus-template/bus-template.component';
+import { HotelTemplateComponent } from './searchpage/Templates/hotel-template/hotel-template.component';
+
 
 
 @NgModule({
@@ -29,7 +33,10 @@ import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.c
     BookingComponent,
     AboutComponent,
     FaqComponent,
-    GlobalcomponentsComponent
+    GlobalcomponentsComponent,
+    FlightTemplateComponent,
+    BusTemplateComponent,
+    HotelTemplateComponent
   ],
   imports: [
     BrowserModule,
