@@ -1,4 +1,5 @@
-<div class="col-12 py-3 px-0 d-flex justify-content-center align-items-center items flight_template">
+<!-- <div class="col-12 py-3 px-0 d-flex justify-content-center align-items-center items flight_template">
+
   <div class="col-2 d-flex flex-column justify-content-center align-items-center item trvl_img">
     <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
     <p class="mb-0">Delta Air Lines</p>
@@ -19,14 +20,51 @@
     <h6 class="mb-0">INR.8908</h6>
     <p class="mb-0">Refundable </p>
   </div>
+
   <div class="col-2 d-flex flex-column justify-content-center align-items-center item trvl_book_btn">
     <button type="button" class="btn btn-default btn-rounded waves-light" mdbWavesEffect>Book</button>
     <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
       mdbWavesEffect>Flight Details</a>
   </div>
+
+</div> -->
+
+
+<div class="d-flex  justify-content-center align-items-center flight_template">
+  <div class="col-12 px-0 d-flex justify-content-center align-items-center ">
+    <div class="col-10 px-0 d-flex flex-column justify-content-center align-items-center section1">
+      <div class="col-12 px-0 d-flex justify-content-center align-items-center ">
+        <div class="col-2 d-flex flex-column justify-content-center align-items-center  trvl_img">
+          <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+          <p class="mb-0">Delta Air Lines</p>
+        </div>
+        <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-0">06:30</h6>
+          <p class="mb-0">BLR </p>
+        </div>
+        <div class="col-2 d-flex flex-column justify-content-center align-items-center trvl_dur">
+          <h6 class="mb-0">1h 55m</h6>
+          <p class="mb-0">Non Stop</p>
+        </div>
+        <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-0">06:30</h6>
+          <p class="mb-0">BBI </p>
+        </div>
+        <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-0">INR.8908</h6>
+          <p class="mb-0">Refundable </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 px-0 d-flex flex-column justify-content-center align-items-center item section2 ">
+      <div class="col-12 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
+        <button type="button" class="btn  btn-rounded waves-light" mdbWavesEffect>Book</button>
+        <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
+          mdbWavesEffect>Flight Details</a>
+      </div>
+    </div>
+  </div>
 </div>
-
-
 
 <div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
@@ -43,11 +81,11 @@
       <div class="modal-body">
         <mat-card>
           <mat-card-content>
-            <h2 class="example-h2">Flight Detailss</h2>
+            <!-- <h2 class="example-h2">Flight Detailss</h2> -->
             <mat-tab-group class="demo-tab-group">
               <mat-tab label="Flight Itinerary">
-                <div class="tab-content">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eligendi a quo nisi. Odio ipsa dolore
+                <div class="tab-content py-4">
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eligendi a quo nisi. Odio ipsa dolore
                     hic temporibus molestiae, minus possimus quaerat ullam rerum fuga esse enim. Impedit, repellendus perferendis?</p>
                 </div>
               </mat-tab>
@@ -97,7 +135,7 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Close</button>
-        <button type="button" class="btn btn-primary btn-sm waves-light" mdbWavesEffect>Back to result</button>
+
       </div>
 
     </div>

@@ -18,6 +18,9 @@ import { AboutComponent } from './aboutpage/about/about.component';
 import { FlightTemplateComponent } from './searchpage/Templates/flight-template/flight-template.component';
 import { BusTemplateComponent } from './searchpage/Templates/bus-template/bus-template.component';
 import { HotelTemplateComponent } from './searchpage/Templates/hotel-template/hotel-template.component';
+import { FlightComponent } from './searchpage/search/flight/flight.component';
+import { BusComponent } from './searchpage/search/bus/bus.component';
+import { HotelComponent } from './searchpage/search/hotel/hotel.component';
 
 
 
@@ -32,7 +35,10 @@ import { HotelTemplateComponent } from './searchpage/Templates/hotel-template/ho
     AboutComponent,
     FlightTemplateComponent,
     BusTemplateComponent,
-    HotelTemplateComponent
+    HotelTemplateComponent,
+    FlightComponent,
+    BusComponent,
+    HotelComponent
   ],
   imports: [
     BrowserModule,
