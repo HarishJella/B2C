@@ -25,6 +25,11 @@
   background: $pinky-orange;
   border-radius: 25px;
   padding: 4px 16px;
+  font-size: 14px;
+  padding: 0.50rem 2.14rem;
+  text-align: center;
+  line-height: 1.2;
+  font-family: $open_sans;
   &:focus {
     outline: 0;
     box-shadow: none;
