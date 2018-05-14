@@ -4,6 +4,8 @@ import { HomeComponent } from './homepage/home/home.component';
 import { SearchComponent } from './searchpage/search/search.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
 import { AboutComponent } from './aboutpage/about/about.component';
+import {FaqComponent} from './FAQpage/faq/faq.component';
+import{GlobalcomponentsComponent} from './globalcomponents/globalcomponents.component';
 
 
 const routes: Routes = [
@@ -11,7 +13,9 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'booking', component: BookingComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'faq',component:FaqComponent },
+  { path:'globalcomponents',component:GlobalcomponentsComponent}
 ];
 
 @NgModule({

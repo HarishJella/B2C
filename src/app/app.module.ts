@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms'; 
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,6 +15,8 @@ import { HomeComponent } from './homepage/home/home.component';
 import { SearchComponent } from './searchpage/search/search.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
 import { AboutComponent } from './aboutpage/about/about.component';
+import { FaqComponent } from './FAQpage/faq/faq.component';
+import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { AboutComponent } from './aboutpage/about/about.component';
     HomeComponent,
     SearchComponent,
     BookingComponent,
-    AboutComponent
+    AboutComponent,
+    FaqComponent,
+    GlobalcomponentsComponent
   ],
   imports: [
     BrowserModule,

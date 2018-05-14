@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~variables.scss';
+@import '~mixins.scss';
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -46,4 +49,10 @@ body {
 }
 .btn-rounded{
   border-radius: 10em;
+}
+
+
+
+.primary_button{
+  @include button;
 }
