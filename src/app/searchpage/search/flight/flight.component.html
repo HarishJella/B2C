@@ -68,7 +68,24 @@
 
       <div class="col-2 {{menuState}}">
         <div>
+          <h2>Filter Section</h2>
+          <div>
+            <h2>Stops</h2>
+            <mat-checkbox>Non-Stops</mat-checkbox>
+            <mat-checkbox>1 Stop</mat-checkbox>
+            <mat-checkbox>2+ Stops</mat-checkbox>
+          </div>
+          <div>
+            <h2>Fare Type</h2>
+            <mat-checkbox>Refundable</mat-checkbox>
+            <mat-checkbox>Non Refundable</mat-checkbox>
 
+          </div>
+          <div>
+            <h2>Price</h2>
+            <p>Upto Rs 2,52,369</p>
+            <mat-slider invert thumbLabel [displayWith]="formatLabel" tickInterval="1000" min="1" max="100000" tickInterval="auto"></mat-slider>
+          </div>
         </div>
       </div>
       <div class="col-1 px-0 dest_nav">
