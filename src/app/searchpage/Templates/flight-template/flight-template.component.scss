@@ -1,159 +1,85 @@
-// @import '~variables.scss';
-// @import '~mixins.scss';
-// .items {
-//   background: #fff;
-//   display: grid;
-//   grid-template-columns: repeat(6, 1fr);
-//   .item {
-//     padding: 0 1rem;
-//     align-self: center;
-//     justify-self: center;
-//     h6 {
-//       font-size: 16px;
-//       font-size: 14px;
-//       font-family: $open_sans;
-//       color: rgb(38, 38, 38);
-//       font-weight: bold;
-//       line-height: 1.2;
-//       text-align: center;
-//     }
-//     p {
-//       font-size: 11px;
-//       font-family: $open_sans;
-//       color: rgb(38, 38, 38);
-//       font-weight: bold;
-//       line-height: 1.2;
-//       text-align: center;
-//     }
-//     .image {
-//       img {
-//         width: 35px;
-//         height: 35px;
-//       }
-//       p {
-//         font-size: 11px;
-//         font-family: $ubuntu;
-//         color: rgb(38, 38, 38);
-//         line-height: 1.2;
-//         text-align: center;
-//       }
-//     }
-//     .duration {
-//       h6 {
-//         font-size: 12px;
-//         font-family: $open_sans;
-//         color: rgb(38, 38, 38);
-//         font-weight: bold;
-//         line-height: 1.2;
-//         text-align: center;
-//         &:after {
-//           content: '';
-//           background: url('../../../../assets/images/right_arrow.png');
-//         }
-//       }
-//       p {
-//         font-size: 12px;
-//         font-family: $open_sans;
-//         color: rgb(38, 38, 38); // font-weight: 300;
-//         line-height: 1.2;
-//         text-align: center;
-//       }
-//     }
-//     .book {
-//       button {
-//         font-size: 18px;
-//         font-size: 14px;
-//         font-family: $open_sans;
-//         color: rgb(255, 255, 255);
-//         line-height: 1.2;
-//         text-align: center;
-//         background: $pinky-orange;
-//         padding: 0.50rem 2.14rem;
-//       }
-//       a {
-//         font-size: 12px;
-//         font-family: $open_sans;
-//         font-weight: bold;
-//         line-height: 1.2;
-//         text-align: center;
-//         color: #f26326
-//       }
-//     }
-//   }
-// }
 @import '~variables.scss';
 @import '~mixins.scss';
-.items {
-  background: #fff;
+.flight_template {
+  background-color: #fff;
   transition: all 0.5s ease-in-out;
   &:hover {
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1607843137254902);
+    box-shadow: -15px 2px 13px -1px rgba(0, 0, 0, 0.160784);
   }
-  .item {
-    padding: 0 1rem;
-    align-self: center;
-    justify-self: center;
-    h6 {
-      font-size: 16px;
-      font-size: 14px;
-      font-family: $open_sans;
-      color: rgb(38, 38, 38);
-      font-weight: bold;
-      line-height: 1.2;
-      text-align: center;
-    }
-    p {
-      font-size: 11px;
-      font-family: $open_sans;
-      color: rgb(38, 38, 38);
-      font-weight: bold;
-      line-height: 1.2;
-      text-align: center;
-    }
-    &.trvl_img {
-      img {
-        width: 35px;
-        height: 35px;
+  .section1 {
+    .col-12 {
+      border-bottom: 1px dashed #a2a2a2;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      &:last-child {
+        border-bottom: 0px dashed #a2a2a2; // padding-bottom: 0px;
+        // padding-top: 0px;
       }
-      p {
-        font-size: 11px;
-        font-family: $ubuntu;
-        color: rgb(38, 38, 38);
-        line-height: 1.2;
-        text-align: center;
-      }
-    }
-    &.trvl_dur {
-      h6 {
-        font-size: 12px;
-        font-family: $open_sans;
-        color: rgb(38, 38, 38);
-        font-weight: bold;
-        line-height: 1.2;
-        text-align: center;
-        &:after {
-          content: '';
-          background: url('../../../../assets/images/right_arrow.png');
+      .col-2 {
+        max-width: 20%;
+        min-width: 20%;
+        flex: 0 0 20%; // padding: 0 1rem;
+        align-self: center;
+        justify-self: center;
+        h6 {
+          font-size: 16px;
+          font-size: 14px;
+          font-family: $open_sans;
+          color: rgb(38, 38, 38);
+          font-weight: bold;
+          line-height: 1.2;
+          text-align: center;
+        }
+        p {
+          font-size: 11px;
+          font-family: $open_sans;
+          color: rgb(38, 38, 38);
+          font-weight: bold;
+          line-height: 1.2;
+          text-align: center;
+        }
+        &.trvl_img {
+          img {
+            width: 35px;
+            height: 35px;
+          }
+          p {
+            font-size: 11px;
+            font-family: $open_sans;
+            color: rgb(38, 38, 38);
+            line-height: 1.2;
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+        &.trvl_dur {
+          h6 {
+            font-size: 12px;
+            font-family: $open_sans;
+            color: rgb(38, 38, 38);
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: center;
+            &:after {
+              content: '';
+              background: url('../../../../assets/images/right_arrow.png');
+            }
+          }
+          p {
+            font-size: 12px;
+            font-family: $open_sans;
+            color: rgb(38, 38, 38); // font-weight: 300;
+            line-height: 1.2;
+            text-align: center;
+          }
         }
       }
-      p {
-        font-size: 12px;
-        font-family: $open_sans;
-        color: rgb(38, 38, 38); // font-weight: 300;
-        line-height: 1.2;
-        text-align: center;
-      }
     }
-    &.trvl_book_btn {
+  }
+  .section2 {
+    .trvl_book_btn {
       button {
-        font-size: 18px;
-        font-size: 14px;
-        font-family: $open_sans;
-        color: rgb(255, 255, 255);
-        line-height: 1.2;
-        text-align: center;
-        background: $pinky-orange;
-        padding: 0.50rem 2.14rem;
+        @include button;
       }
       a {
         font-size: 12px;
@@ -171,14 +97,33 @@
 .modal {
   .modal-dialog {
     .modal-content {
+      border-radius: 15px;
       .modal-header {
-        h4 {}
+        padding: 1.5rem;
+        h4 {
+          @include heading;
+          margin: 0px;
+        }
         button {}
       }
       .modal-body {
-        mat-card {
+        .mat-card {
+          box-shadow: none;
+          padding: 0px;
+          .mat-tab-label-content {
+            font-size: 18px;
+            font-family: $open_sans;
+            color: rgb(0, 0, 0);
+            line-height: 1.556;
+            font-weight: 600;
+          }
+          .mat-ink-bar {
+            background: $pinky-orange;
+          }
           .tab-content {
-            p {}
+            p {
+           
+            }
             table {
               tr {
                 td {
