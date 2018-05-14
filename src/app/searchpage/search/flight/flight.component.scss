@@ -51,6 +51,8 @@
       display: flex;
       justify-content: space-between;
       align-items: start;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
       .filter_div {
         background: #fff;
         display: grid;
@@ -65,6 +67,20 @@
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0784313725490196);
           }
         }
+      }
+      .filter_content {
+        max-width: 0%;
+        transition: all 0.5s ease-in-out;
+        padding: 0px;
+        visibility: hidden;
+        overflow: hidden;
+        height: 0%;
+      }
+      .fil {
+        max-width: 16.666%;
+        transition: all 0.5s ease-in-out;
+        padding: 0 15px 0 15px;
+        overflow: hidden;
       }
       .dest_nav {
         background: #f5f5f5;

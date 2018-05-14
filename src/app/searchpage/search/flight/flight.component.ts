@@ -12,4 +12,15 @@ export class FlightComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  menuState: string = 'filter_content';
+
+
+  open_filter(item) {
+    this.menuState = this.menuState === 'filter_content' ? 'fil' : 'filter_content';
+    console.log(item);
+  }
+
+
+
 }
