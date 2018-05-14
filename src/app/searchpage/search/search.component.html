@@ -30,42 +30,49 @@
     </div>
 
 
+
     <div class="col-12 px-0 search_results">
       <div class="col-1 px-0 filter_div">
-        <div class="py-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="py-3 px-4 d-flex justify-content-center align-items-center item 1" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
 
         </div>
 
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 2" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 3" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 4" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 5" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex justify-content-center align-items-center item 6" #item (click)="open_filter(item)">
           <i class="material-icons">
             sort
           </i>
         </div>
       </div>
 
+
+      <div  class="col-3 {{menuState}}" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laboriosam nostrum. Saepe reiciendis voluptates distinctio
+        harum quisquam voluptatem magni ipsam provident vitae praesentium, est aliquid. Ab illo, dolorum, deleniti ex fuga
+        unde inventore, quis iure odit illum dicta iste rem.
+      </div>
       <div class="col-1 px-0 dest_nav">
         <div>
 
@@ -110,8 +117,13 @@
             <p class="mb-0">Showing 18 of 18 Flights</p>
           </div>
         </div>
-        <div class="result">
-          <app-flight-template></app-flight-template>
+        <div class="result" [@Templates]="app-flight-template">
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>
+          <app-flight-template [@Templates]="div"></app-flight-template>  
 
         </div>
 
@@ -178,3 +190,5 @@
     </div>
   </div>
 </section>
+
+

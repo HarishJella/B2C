@@ -51,11 +51,13 @@
       display: flex;
       justify-content: space-between;
       align-items: start;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
       .filter_div {
         background: #fff;
         display: grid;
         grid-template-columns: auto;
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: all 0.5s ease-in-out;
         .item {
           cursor: pointer;
           transition: all 0.5s ease-in-out;
@@ -66,12 +68,27 @@
           }
         }
       }
+      .filter_content {
+        max-width: 0%;
+        transition: all 0.5s ease-in-out;
+        padding: 0px;
+        visibility: hidden;
+        overflow: hidden;
+        height: 0%;
+      }
+      .fil {
+        max-width: 25%;
+        transition: all 0.5s ease-in-out;
+        padding: 0 15px 0 15px;
+        overflow: hidden;
+      }
       .dest_nav {
         background: #f5f5f5;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 50px auto;
         grid-row-gap: 0.50rem;
+        transition: all 0.5s ease-in-out;
         .destination {
           justify-content: space-evenly;
           .item {
@@ -126,6 +143,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-row-gap: 1em;
+        transition: all 0.5s ease-in-out;
         .Header {
           background: #000;
           border-radius: 2px; // display: grid;
