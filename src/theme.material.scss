@@ -35,4 +35,6 @@ $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $cus
   @include mat-tabs-theme($theme);
   @include mat-toolbar-theme($theme);
   @include mat-tooltip-theme($theme);
+  @include mat-slider-theme($theme);
 }
+

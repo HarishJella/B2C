@@ -1,75 +1,56 @@
 @import '~variables.scss';
 @import '~mixins.scss';
 .gobal_components {
-    .button_grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        text-align: center;
-        .primary_button{
-            @include button;
-        }
-        .selected_btn{
-            @include button_3;
-        }
-        
-
-     
+  .button_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    .primary_button {
+      @include button;
     }
-
-    .check_box{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        
+    .selected_btn {
+      @include button_3;
     }
-    .input_box{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        
-    }
-     
-
-   
-    
-    .pannel{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 20px;
-
-    }
-
-   
-
-    .models{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 20px;
-
-        .modal-dialog .modal-content {
-            border: 0;
-            border-radius: 1.125rem;
-        }
-        .modal-header{
-            border-bottom: 1px solid #e9ecef00;
-        }
-        .modal-footer{
-            border-top: 1px solid #e9ecef00;
-        }
-    }
-    .link{
-        background:$pinky_orange;
-        color: #fff!important;
-    }
-
-    .input{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
-    }
-    
-}
-
-.auto_range{
-    display:grid;
+  }
+  .check_box {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .input_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .pannel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .models {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    .modal-dialog .modal-content {
+      border: 0;
+      border-radius: 1.125rem;
+    }
+    .modal-header {
+      border-bottom: 1px solid #e9ecef00;
+    }
+    .modal-footer {
+      border-top: 1px solid #e9ecef00;
+    }
+  }
+  .link {
+    background: $pinky_orange;
+    color: #fff !important;
+  }
+  .input {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
-
+.auto_range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

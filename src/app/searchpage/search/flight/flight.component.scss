@@ -33,7 +33,7 @@
           font-weight: 400;
         }
         button {
-          border: 2px solid transparent !important;
+          border: 2px solid #f52b64 !important;
           border-image: $pinky-orange;
           background-color: transparent !important;
           color: #000 !important;
@@ -71,15 +71,63 @@
       .filter_section {
         background: #fff;
         .content {
-          h2 {
-            font-size: 18px;
-            font-size: 1.8rem;
-            color: #4d4d4d;
-            border-bottom: 1px solid #e3e6e6;
+          h1 {
+            font-size: 1.1rem;
+            color: $pinky-orange;
             font-weight: 700;
             margin: 0;
           }
-          mat-checkbox {}
+          h2 {
+            font-size: 1rem;
+            color: #263238;
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 16px;
+          }
+          p,
+          mat-checkbox {
+            color: #454545;
+            font-size: 12px;
+            font-weight: 400;
+            display: block;
+          }
+          // mat-slider {
+          //   //  width: 300px;
+          // }
+          // .minmax {
+          //   padding: 0px 8px;
+          // }
+          // .mat-slider-horizontal {
+          //   height: 28px;
+          // }
+          // ::ng-deep {
+          //   .mat-slider-thumb-label {
+          //     transform: rotate(45deg) !important;
+          //     border-radius: 50% 50% 0 !important;
+          //   }
+          //   .mat-slider-thumb {
+          //     transform: scale(0) !important;
+          //   }
+          //   .mat-slider-thumb-label-text {
+          //     opacity: 1 !important;
+          //     color: #fff;
+          //     font-size: 10px;
+          //   }
+          // }
+          // ::ng-deep .mat-accent .mat-slider-thumb,
+          // .mat-accent .mat-slider-thumb-label,
+          // .mat-accent .mat-slider-track-fill {
+          //   background-color: #fff;
+          // }
+          // ::ng-deep .mat-accent .mat-slider-thumb {
+          //   background-color: red;
+          // }
+          // ::ng-deep .mat-accent .mat-slider-thumb-label {
+          //   background: $pinky-orange;
+          // }
+          // ::ng-deep .mat-accent .mat-slider-track-fill {
+          //   background: $pinky-orange;
+          // }
         }
       }
       .filter_content {
@@ -95,6 +143,8 @@
         transition: all 0.5s ease-in-out;
         padding: 0 15px 0 15px;
         overflow: hidden;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
       .dest_nav {
         background: #f5f5f5;
