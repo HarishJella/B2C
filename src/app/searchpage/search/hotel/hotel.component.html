@@ -1,6 +1,6 @@
 <section class="availability">
   <div class="container">
-    <div class="col-12 p-0 mb-2 modify_search ">
+    <div class="col-12 p-0 mb-2 modify_search sticky-top">
       <div class="">
 
       </div>
@@ -31,66 +31,143 @@
 
 
     <div class="col-12 px-0 search_results">
+
       <div class="col-1 px-0 filter_div">
-        <div class="py-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item priceState" #filter (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">price</p>
 
         </div>
 
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item amenitiesState" #price (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">Amenities</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item locationState" #deoart (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">Location</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item ratingState" #airlines (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">Rating</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item propertyTypeState" #fair (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">Property</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
-          <i class="material-icons">
-            sort
-          </i>
-        </div>
+        <!-- <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item 6" #stops (click)="open_filter($event)">
+              <i class="material-icons">
+                sort
+              </i>
+            </div> -->
       </div>
 
-      <div class="col-1 px-0 dest_nav">
-        <div>
-
-        </div>
-        <div class="d-flex flex-column  align-items-center destination">
-          <div class="d-flex flex-column justify-content-center align-items-center item success">
-            <p class="mb-0">BLR</p>
-            <p class="mb-0">CDK</p>
-          </div>
-          <div class="d-flex flex-column justify-content-center align-items-center item success">
-            <p class="mb-0">BLR</p>
-            <p class="mb-0">CDK</p>
-          </div>
-          <div class="d-flex flex-column justify-content-center align-items-center item active">
-            <p class="mb-0">BLR</p>
-            <p class="mb-0">CDK</p>
-          </div>
-          <div class="d-flex flex-column justify-content-center align-items-center item">
-            <p class="mb-0">BLR</p>
-            <p class="mb-0">CDK</p>
+      <div class="col-2 filter_section {{priceState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Price</h2>
+            <p>Upto Rs 2,52,369</p>
+            <mat-slider [thumbLabel]="true" value="10000" [displayWith]="formatLabel" tickInterval="1" min="1" max="100000"></mat-slider>
+            <div class="d-flex justify-content-between minmax">
+              <p>min: 0</p>
+              <p>max: 100k</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-10 px-0 results_div">
+      <div class="col-2 filter_section {{amenitiesState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Amenities</h2>
+            <mat-checkbox>Wifi</mat-checkbox>
+            <mat-checkbox>Swimming pool</mat-checkbox>
+            <mat-checkbox>Bed</mat-checkbox>
+            <mat-checkbox>Table</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{locationState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Location</h2>
+            <mat-checkbox>Anandarao Circle</mat-checkbox>
+            <mat-checkbox>B T M Layout</mat-checkbox>
+            <mat-checkbox>China Airlines</mat-checkbox>
+            <mat-checkbox>Basavangaudi</mat-checkbox>
+            <mat-checkbox>Belanduru</mat-checkbox>
+            <mat-checkbox>Anandarao Circle</mat-checkbox>
+            <mat-checkbox>B T M Layout</mat-checkbox>
+            <mat-checkbox>China Airlines</mat-checkbox>
+            <mat-checkbox>Basavangaudi</mat-checkbox>
+            <mat-checkbox>Belanduru</mat-checkbox>
+            <mat-checkbox>Anandarao Circle</mat-checkbox>
+            <mat-checkbox>B T M Layout</mat-checkbox>
+            <mat-checkbox>China Airlines</mat-checkbox>
+            <mat-checkbox>Basavangaudi</mat-checkbox>
+            <mat-checkbox>Belanduru</mat-checkbox>
+            <mat-checkbox>Anandarao Circle</mat-checkbox>
+            <mat-checkbox>B T M Layout</mat-checkbox>
+            <mat-checkbox>China Airlines</mat-checkbox>
+            <mat-checkbox>Basavangaudi</mat-checkbox>
+            <mat-checkbox>Belanduru</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{ratingState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>User Rating</h2>
+            <mat-checkbox>1</mat-checkbox>
+            <mat-checkbox>2</mat-checkbox>
+            <mat-checkbox>3</mat-checkbox>
+            <mat-checkbox>4</mat-checkbox>
+            <mat-checkbox>5</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{propertyTypeState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Property Type</h2>
+            <mat-checkbox>BnB</mat-checkbox>
+            <mat-checkbox>Bungalow</mat-checkbox>
+            <mat-checkbox>Cottage</mat-checkbox>
+            <mat-checkbox>Farm stay</mat-checkbox>
+            <mat-checkbox>Guest House</mat-checkbox>
+            <mat-checkbox>Home stay</mat-checkbox>
+            <mat-checkbox>Hostel</mat-checkbox>
+            <mat-checkbox>Hotel</mat-checkbox>
+            <mat-checkbox>Loadge</mat-checkbox>
+            <mat-checkbox>Motel</mat-checkbox>
+            <mat-checkbox>Resort</mat-checkbox>
+            <mat-checkbox>Service apartment</mat-checkbox>
+            <mat-checkbox>Tent</mat-checkbox>
+            <mat-checkbox>Villa</mat-checkbox>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-11 px-0 results_div">
         <div class="col-12 px-0 d-flex justify-content-center align-items-center Header">
           <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
             <p class="mb-0">Delta Air Lines</p>

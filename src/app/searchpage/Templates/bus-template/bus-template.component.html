@@ -23,6 +23,7 @@
   </div>
   <div class="col-2 d-flex flex-column justify-content-center align-items-center item trvl_dur">
     <h6 class="mb-0">1h 55m</h6>
+    <img class="img-fluid" src="https://assetscdn.paytm.com/travel/rtravel/assets/50a2b752.svg" alt="">
     <p class="mb-0">Non Stop</p>
   </div>
   <div class="col-1 d-flex flex-column justify-content-center align-items-center item">
@@ -34,59 +35,104 @@
     <p class="mb-0">Refundable </p>
   </div>
   <div class="col-2 d-flex flex-column justify-content-center align-items-center item trvl_book_btn">
-    <button type="button" class="btn btn-default btn-rounded waves-light" mdbWavesEffect>Book</button>
-    <a href="javascript:void(0)" data-toggle="modal" data-target="#basicExample" (click)="fluid.show()">Flight Details</a>
+    <button type="button" class="btn btn-default btn-rounded waves-light" mdbWavesEffect data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()">View Seats</button>
+    <a href="javascript:void(0)" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()">Bus Details</a>
   </div>
 </div>
 
 
 
-<div mdbModal #fluid="mdb-modal" class="modal fade top" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+
+<div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog modal-full-height modal-top" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
+
       <div class="modal-header">
-        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="fluid.hide()">
+        <h4 class="modal-title w-100" id="myModalLabel">Bus Details</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
           <span aria-hidden="true">×</span>
         </button>
       </div>
-      <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente magnam, sunt, ea dolore eum quod. Minima fugiat
-          enim aut soluta est reprehenderit reiciendis quos, qui, amet possimus laborum assumenda voluptate.
-        </p>
 
-        <ul class="list-group z-depth-0">
-          <li class="list-group-item justify-content-between">
-            Cras justo odio
-            <span class="badge badge-primary badge-pill">14</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Dapibus ac facilisis in
-            <span class="badge badge-primary badge-pill">2</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Morbi leo risus
-            <span class="badge badge-primary badge-pill">1</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Cras justo odio
-            <span class="badge badge-primary badge-pill">14</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Dapibus ac facilisis in
-            <span class="badge badge-primary badge-pill">2</span>
-          </li>
-          <li class="list-group-item justify-content-between">
-            Morbi leo risus
-            <span class="badge badge-primary badge-pill">1</span>
-          </li>
-        </ul>
+      <div class="modal-body">
+        <mat-card>
+          <mat-card-content>
+            <!-- <h2 class="example-h2">Flight Detailss</h2> -->
+            <mat-tab-group class="demo-tab-group">
+
+              <mat-tab label="Available Seats">
+                <div class="tab-content py-4">
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eligendi a quo nisi. Odio ipsa dolore
+                    hic temporibus molestiae, minus possimus quaerat ullam rerum fuga esse enim. Impedit, repellendus perferendis?</p>
+                </div>
+              </mat-tab>
+
+              <mat-tab label="Amenities">
+                <div class="tab-content py-4">
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eligendi a quo nisi. Odio ipsa dolore
+                    hic temporibus molestiae, minus possimus quaerat ullam rerum fuga esse enim. Impedit, repellendus perferendis?</p>
+                </div>
+              </mat-tab>
+              <mat-tab label="Boarding & Dropping Points">
+                <div class="tab-content py-4">
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eligendi a quo nisi. Odio ipsa dolore
+                    hic temporibus molestiae, minus possimus quaerat ullam rerum fuga esse enim. Impedit, repellendus perferendis?</p>
+                </div>
+              </mat-tab>
+              <mat-tab label="Reviews">
+                <div class="tab-content py-4">
+                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eligendi a quo nisi. Odio ipsa dolore
+                    hic temporibus molestiae, minus possimus quaerat ullam rerum fuga esse enim. Impedit, repellendus perferendis?</p>
+                </div>
+              </mat-tab>
+              <mat-tab label="Cancellation Policy">
+                <div class="demo-tab-content">
+                  <table class="table table-bordered">
+                    <thead>
+                      <th></th>
+                      <th></th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Airline Cancellation Charges</td>
+                        <td>As per airline policy. Paytm doesn't change any additional cancellation processing fee.</td>
+                      </tr>
+                      <tr>
+                        <td>Direct Cancellation with Airline</td>
+                        <td>Post Cancellation with airline, Please contact paytm customer care for refund</td>
+                      </tr>
+                      <tr>
+                        <td>Booking Modifications</td>
+                        <td>Date/Flight change is allowed upto 24hrs before depature as per airline policy. Contact our paytm
+                          flights customer care - 99</td>
+                      </tr>
+                      <tr>
+                        <td>Terms & Conditions</td>
+                        <td>
+                          <ul>
+                            <li>We accept cancellation, only before 24Hrs from depature time</li>
+                            <li>For cancellations, within 24 hours before depature you need to contact the airline. Post cancellation
+                              by airline, you can contact paytm for refund, if any</li>
+                            <li>Convenience fee is non-refundable. Any cashback availed will be adjusted in final amount</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </mat-tab>
+
+            </mat-tab-group>
+          </mat-card-content>
+        </mat-card>
       </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-secondary waves-light" data-dismiss="modal" (click)="fluid.hide()" mdbWavesEffect>Close</button>
-        <button type="button" class="btn btn-primary waves-light" mdbWavesEffect>Save changes</button>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Close</button>
+
       </div>
+
     </div>
   </div>
 </div>
