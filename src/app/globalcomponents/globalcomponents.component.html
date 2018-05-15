@@ -9,6 +9,15 @@
         <div>
           <button type="button" class="btn btn-outline-default btn-rounded waves-effect secondary_btn" mdbWavesEffect>Secondary Button</button>
         </div>
+        <div>
+          <button type="button" class="btn  btn-rounded waves-effect selected_btn" mdbWavesEffect>Selected</button>
+        </div>
+        <div>
+          <button type="button" class="btn  btn-rounded waves-effect primary_btn" mdbWavesEffect>Ok</button>
+        </div>
+        <div>
+          <button type="button" class="btn btn-outline-default btn-rounded waves-effect secondary_btn" mdbWavesEffect>Cancel</button>
+        </div>
       </div>
 
       <hr>
@@ -83,29 +92,10 @@
           <textarea matInput placeholder="Leave a comment"></textarea>
         </mat-form-field>
       </form>
-      <div class="input_box">
-        <div>
-          <h4>Text-Box</h4>
-          <div class="col-md-6 mb-3">
-            <label class="input_label" for="validationServer02">Name</label>
-            <input type="text" class="form-control text_box" id="validationServer02" placeholder="Name" required>
 
-          </div>
-        </div>
-        <div>
-          <h4>select</h4>
-          <div class="form-group col-md-6">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control text_box">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-        </div>
-      </div>
       <hr>
       <div>
-        <h4>Tabs</h4>
+        <h4 class="heading">Tabs</h4>
         <mat-tab-group>
           <mat-tab label="Tab 1">Content 1</mat-tab>
           <mat-tab label="Tab 2">Content 2</mat-tab>
@@ -115,7 +105,7 @@
       <hr>
       <div class="pannel">
         <div>
-          <h4>Default Pannel </h4>
+          <h4 class="heading">Default Pannel </h4>
           <div class="card card-body">
             <h4 class="card-title">Panel title</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -126,7 +116,7 @@
           </div>
         </div>
         <div>
-          <h4>Pannel collapse</h4>
+          <h4 class="heading">Pannel collapse</h4>
           <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
@@ -153,7 +143,7 @@
       <hr>
       <div class="models">
         <div>
-          <h4>model</h4>
+          <h4 class="heading">model</h4>
 
           <button type="button" class="btn btn-primary waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
             mdbWavesEffect>
@@ -183,7 +173,7 @@
         </div>
       </div>
       <hr>
-      <h4>Tooltip</h4>
+      <h4 class="heading">Tooltip</h4>
       <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on top" placement="top" mdbWavesEffect>
         Tooltip on top
       </button>
@@ -215,6 +205,10 @@
       </form>
 
       <hr>
+      <div>
+        <h4 class="heading">Link</h4>
+        <button mat-button class="link">Clear</button>
+      </div>
     </mat-card>
 
 
