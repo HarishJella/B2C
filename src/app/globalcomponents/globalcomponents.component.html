@@ -45,63 +45,85 @@
 
 
       <hr>
+      <h4 class="heading">Input Flieds</h4>
+      <div class="input">
+        <div>
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Input" color>
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <div class="example-container">
 
-      <div class="example-container">
-        <mat-form-field>
-          <input matInput placeholder="Input" color>
-        </mat-form-field>
 
-        <mat-form-field>
-          <textarea matInput placeholder="Textarea"></textarea>
-        </mat-form-field>
+            <mat-form-field>
+              <textarea matInput placeholder="Textarea"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <div class="example-container">
 
-        <mat-form-field>
-          <mat-select placeholder="Select">
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-            <mat-option value="option">Option</mat-option>
-          </mat-select>
-        </mat-form-field>
+
+
+
+            <mat-form-field>
+              <mat-select placeholder="Select">
+                <mat-option value="option">1</mat-option>
+                <mat-option value="option">2</mat-option>
+                <mat-option value="option">3</mat-option>
+                <mat-option value="option">4</mat-option>
+                <mat-option value="option">5</mat-option>
+                <mat-option value="option">6</mat-option>
+                <mat-option value="option">7</mat-option>
+                <mat-option value="option">8</mat-option>
+                <mat-option value="option">9</mat-option>
+                <mat-option value="option">10</mat-option>
+                <mat-option value="option">11</mat-option>
+                <mat-option value="option">12</mat-option>
+                <mat-option value="option">13</mat-option>
+                <mat-option value="option">14</mat-option>
+                <mat-option value="option">15</mat-option>
+                <mat-option value="option">16</mat-option>
+                <mat-option value="option">17</mat-option>
+                <mat-option value="option">18</mat-option>
+                <mat-option value="option">19</mat-option>
+                <mat-option value="option">20</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Favorite food" value="Sushi">
+          </mat-form-field>
+        </div>
+
       </div>
-
-
-
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Favorite food" value="Sushi">
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Leave a comment"></textarea>
-        </mat-form-field>
-      </form>
-
       <hr>
       <div>
         <h4 class="heading">Tabs</h4>
         <mat-tab-group>
-          <mat-tab label="Tab 1">Content 1</mat-tab>
-          <mat-tab label="Tab 2">Content 2</mat-tab>
+          <mat-tab label="Tab 1">
+            <div class="example-container">
+              <mat-form-field class="py-3">
+                <input matInput placeholder="Input" color>
+              </mat-form-field>
+            </div>
+          </mat-tab>
+          <mat-tab label="Tab 2">
+            <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores laborum at et dolorem quidem aliquid
+              ex magnam, assumenda reiciendis quo provident alias debitis, minima sit! Delectus iure facilis commodi veniam
+              eos, id sequi molestias tempora mollitia rem porro voluptatum. Pariatur doloremque illo dolorem mollitia distinctio
+              esse quibusdam odit dolorum doloribus quaerat facere eveniet itaque id quos eum dignissimos eligendi, beatae
+              magnam maxime. Laudantium modi optio commodi suscipit in numquam incidunt, aliquam sint illum, deserunt voluptatum
+              ab culpa deleniti dolore asperiores enim voluptate. Distinctio odit iure voluptate optio ratione dolores ipsam,
+              doloremque at aperiam omnis corrupti perferendis enim laboriosam ullam?</p>
+          </mat-tab>
         </mat-tab-group>
       </div>
-
       <hr>
       <div class="pannel">
         <div>
@@ -133,18 +155,11 @@
             </mat-expansion-panel>
           </mat-accordion>
         </div>
-
       </div>
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Favorite food" value="Sushi">
-      </mat-form-field>
-
       <hr>
       <div class="models">
         <div>
           <h4 class="heading">model</h4>
-
           <button type="button" class="btn btn-primary waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
             mdbWavesEffect>
             modal
@@ -155,7 +170,7 @@
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+                  <h5 class="modal-title w-100" id="myModalLabel">Modal title</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
                     <span aria-hidden="true">×</span>
                   </button>
@@ -164,8 +179,9 @@
                   ...
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Close</button>
-                  <button type="button" class="btn btn-primary btn-sm waves-light" mdbWavesEffect>Save changes</button>
+
+                  <button type="button" class="btn  btn-rounded waves-effect primary_btn" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Ok</button>
+                  <button type="button" class="btn btn-outline-default btn-rounded waves-effect secondary_btn" mdbWavesEffect>Cancel</button>
                 </div>
               </div>
             </div>
@@ -191,24 +207,45 @@
       </button>
       <hr>
 
+      <div class="auto_range">
+          <div>
+                <h4 class="heading">Auto Complete</h4>
+                <form class="example-form">
+                  <mat-form-field class="example-full-width">
+                    <input type="text" placeholder="Pick one" aria-label="Number" matInput [myControl]="myControl" [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{ option }}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </form>
+          </div>
+          <div>
+                <h4 class="heading">Range Slider</h4>
+                <div>
+                       
+                        <p>Upto Rs 2,52,369</p>
+                        <mat-slider [thumbLabel]="true" value="50000" [displayWith]="formatLabel" tickInterval="1" min="1" max="100000"></mat-slider>
+                        <div class="d-flex justify-content-between minmax">
+                          <p>min: 0</p>
+                          <p>max: 100k</p>
+                        </div>
+            
+                      </div>
 
-      <h4 class="heading">Auto Complete</h4>
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <input type="text" placeholder="Pick one" aria-label="Number" matInput [myControl]="myControl" [matAutocomplete]="auto">
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-              {{ option }}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      </form>
+          </div>
+      </div>
+
+      
+
 
       <hr>
       <div>
         <h4 class="heading">Link</h4>
         <button mat-button class="link">Clear</button>
       </div>
+     
     </mat-card>
 
 
@@ -219,31 +256,4 @@
 
 
 
-<!-- <div class="container-fluid py-4 d-flex flex-column">
-  <mat-card class="d-flex flex-column">
-    <h4 class="heading">Buttons</h4>
 
-    <button type="button" class="btn  btn-rounded waves-effect primary_btn" mdbWavesEffect> Primary Button</button>
-    <button type="button" class="btn btn-outline-default btn-rounded waves-effect secondary_btn" mdbWavesEffect>Secondary Button</button>
-    <hr>
-
-    <h4 class="heading">checkbox</h4>
-    <mat-checkbox>Check me!</mat-checkbox>
-
-    <hr>
-
-    <h4 class="heading">Radio Button</h4>
-    <mat-radio-group>
-      <mat-radio-button value="1">Option 1</mat-radio-button>
-      <mat-radio-button value="2">Option 2</mat-radio-button>
-    </mat-radio-group>
-    <hr>
-    <h4 class="heading">Datepicker</h4>
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  </mat-card>
-
-</div> -->
