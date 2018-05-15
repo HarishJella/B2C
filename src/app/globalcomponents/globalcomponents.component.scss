@@ -4,6 +4,9 @@
     .button_grid{
         display:grid;
         grid-template-columns: 1fr 1fr;
+        .primary_button{
+            @include button;
+        }
 
      
     }
