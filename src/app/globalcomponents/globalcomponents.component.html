@@ -25,12 +25,12 @@
           </mat-radio-group>
         </div>
         <div>
-          <!-- <h4 class="heading">Datepicker</h4>
+          <h4 class="heading">Datepicker</h4>
           <mat-form-field>
             <input matInput [matDatepicker]="picker" placeholder="Choose a date">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field> -->
+          </mat-form-field>
         </div>
       </div>
 
@@ -49,9 +49,29 @@
         <mat-form-field>
           <mat-select placeholder="Select">
             <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
+            <mat-option value="option">Option</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
+
 
 
       <form class="example-form">
@@ -179,6 +199,21 @@
       <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on left" placement="left" mdbWavesEffect>
         Tooltip on left
       </button>
+      <hr>
+
+
+      <h4 class="heading">Auto Complete</h4>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input type="text" placeholder="Pick one" aria-label="Number" matInput [myControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
       <hr>
     </mat-card>
 

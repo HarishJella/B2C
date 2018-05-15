@@ -26,6 +26,7 @@ import { HotelComponent } from './searchpage/search/hotel/hotel.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
