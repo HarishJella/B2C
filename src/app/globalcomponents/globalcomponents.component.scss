@@ -1,107 +1,56 @@
 @import '~variables.scss';
 @import '~mixins.scss';
 .gobal_components {
-    .button_grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        text-align: center;
-        .primary_button{
-            @include button;
-        }
-        .selected_btn{
-            @include button_3;
-        }
-        
-
-     
+  .button_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    .primary_button {
+      @include button;
     }
-
-    .check_box{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        
+    .selected_btn {
+      @include button_3;
     }
-    .input_box{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        
-    }
-     
-
-   
-    
-    .pannel{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 20px;
-
-    }
-
-   
-
-    .models{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 20px;
-
-        .modal-dialog .modal-content {
-            border: 0;
-            border-radius: 1.125rem;
-        }
-        .modal-header{
-            border-bottom: 1px solid #e9ecef00;
-        }
-        .modal-footer{
-            border-top: 1px solid #e9ecef00;
-        }
-    }
-    .link{
-        background:$pinky_orange;
-        color: #fff!important;
-    }
-
-    .input{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
-    }
-    
-}
-
-.auto_range{
-    display:grid;
+  }
+  .check_box {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .input_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .pannel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .models {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    .modal-dialog .modal-content {
+      border: 0;
+      border-radius: 1.125rem;
+    }
+    .modal-header {
+      border-bottom: 1px solid #e9ecef00;
+    }
+    .modal-footer {
+      border-top: 1px solid #e9ecef00;
+    }
+  }
+  .link {
+    background: $pinky_orange;
+    color: #fff !important;
+  }
+  .input {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
-.mat-slider-horizontal {
-    height: 28px;
-    min-width: 100%!important;
-  }
-  ::ng-deep {
-    .mat-slider-thumb-label {
-      transform: rotate(45deg) !important;
-      border-radius: 50% 50% 0 !important;
-    }
-    .mat-slider-thumb {
-      transform: scale(0) !important;
-    }
-    .mat-slider-thumb-label-text {
-      opacity: 1 !important;
-      color: #fff;
-      font-size: 10px;
-    }
-  }
-  ::ng-deep .mat-accent .mat-slider-thumb,
-  .mat-accent .mat-slider-thumb-label,
-  .mat-accent .mat-slider-track-fill {
-    background-color: #fff!important;
-  }
-  ::ng-deep .mat-accent .mat-slider-thumb {
-    background-color: red!important;
-  }
-  ::ng-deep .mat-accent .mat-slider-thumb-label {
-    background: $pinky-orange!important;
-  }
-  ::ng-deep .mat-accent .mat-slider-track-fill {
-    background: $pinky-orange!important;
-  }
 
-
+.auto_range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

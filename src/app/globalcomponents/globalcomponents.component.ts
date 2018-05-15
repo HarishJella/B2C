@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormControl,  FormGroup } from '@angular/forms'
+import { FormControl, FormGroup } from '@angular/forms'
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
@@ -12,11 +12,21 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class GlobalcomponentsComponent implements OnInit {
 
+  formatLabel(value: number | null) {
+    if (!value) {
+      return 0;
+    }
 
+    if (value >= 1000) {
+      return Math.round(value / 1000) + 'k';
+    }
+
+    return value;
+  }
 
   constructor() {
-  
-     
+
+
   }
 
   myControl: FormControl = new FormControl();
