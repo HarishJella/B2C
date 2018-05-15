@@ -64,6 +64,7 @@ body {
 
 .secondary_btn {
   @include button_2;
+
 }
 
 .mat-checkbox-checked.mat-accent .mat-checkbox-background,
@@ -99,3 +100,4 @@ body {
 .mat-calendar-body-selected {
   background: $pinky_orange;
 }
+

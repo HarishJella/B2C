@@ -19,7 +19,7 @@ export class FlightComponent implements OnInit {
     if (value >= 1000) {
       return Math.round(value / 1000) + 'k';
     }
-
+  
     return value;
   }
 
