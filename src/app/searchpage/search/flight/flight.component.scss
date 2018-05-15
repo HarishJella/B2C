@@ -55,13 +55,18 @@
       transition: all 0.5s ease-in-out;
       .filter_div {
         background: #fff;
-        display: grid;
-        grid-template-columns: auto;
+        // display: grid;
+        // grid-template-columns: auto;
         transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        border: 1px solid rgba(128, 128, 128, 0.14901960784313725);
         .item {
           cursor: pointer;
           transition: all 0.5s ease-in-out;
           box-shadow: none;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.14901960784313725);
+          &:last-child {
+            border-bottom: none;
+          }
           &.active,
           &:hover {
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0784313725490196);
@@ -90,8 +95,7 @@
             font-size: 12px;
             font-weight: 400;
             display: block;
-          }
-          // mat-slider {
+          } // mat-slider {
           //   //  width: 300px;
           // }
           // .minmax {
@@ -127,16 +131,15 @@
           // }
           // ::ng-deep .mat-accent .mat-slider-track-fill {
           //   background: $pinky-orange;
-          // }
+          // } 
         }
       }
       .filter_content {
         max-width: 0%;
         transition: all 0.5s ease-in-out;
         padding: 0px;
-        visibility: hidden;
         overflow: hidden;
-        height: 0%;
+        max-height: 462px;
       }
       .fil {
         max-width: 16.666%;
@@ -145,6 +148,8 @@
         overflow: hidden;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+        max-height: 462px;
+        overflow-y: auto;
       }
       .dest_nav {
         background: #f5f5f5;

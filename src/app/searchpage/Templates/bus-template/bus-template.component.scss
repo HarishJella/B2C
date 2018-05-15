@@ -4,7 +4,7 @@
   background: #fff;
   transition: all 0.5s ease-in-out;
   &:hover {
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.1607843137254902);
+    box-shadow: -15px 2px 13px -1px rgba(0, 0, 0, 0.160784);
   }
   .item {
     padding: 0 1rem;
@@ -71,6 +71,7 @@
         text-align: center;
         background: $pinky-orange;
         padding: 0.50rem 2.14rem;
+        white-space: nowrap;
       }
       a {
         font-size: 12px;
@@ -79,6 +80,54 @@
         line-height: 1.2;
         text-align: center;
         color: #f26326
+      }
+    }
+  }
+}
+
+// modal style
+.modal {
+  .modal-dialog {
+    .modal-content {
+      border-radius: 15px;
+      .modal-header {
+        padding: 1.5rem;
+        h4 {
+          @include heading;
+          margin: 0px;
+        }
+        button {}
+      }
+      .modal-body {
+        .mat-card {
+          box-shadow: none;
+          padding: 0px;
+          .mat-tab-label-content {
+            font-size: 18px;
+            font-family: $open_sans;
+            color: rgb(0, 0, 0);
+            line-height: 1.556;
+            font-weight: 600;
+          }
+          .mat-ink-bar {
+            background: $pinky-orange;
+          }
+          .tab-content {
+            p {}
+            table {
+              tr {
+                td {
+                  ul {
+                    li {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .modal-footer {
+        button {}
       }
     }
   }

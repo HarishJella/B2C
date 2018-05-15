@@ -1,6 +1,6 @@
 <section class="availability">
   <div class="container">
-    <div class="col-12 p-0 mb-2 modify_search ">
+    <div class="col-12 p-0 mb-2 modify_search sticky-top">
       <div class="">
 
       </div>
@@ -32,37 +32,143 @@
 
     <div class="col-12 px-0 search_results">
       <div class="col-1 px-0 filter_div">
-        <div class="py-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item priceState" #filter (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">price</p>
 
         </div>
 
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item busTypeState" #price (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">type</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item busBrandState" #deoart (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">brand</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item deptState" #airlines (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">depature</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item boardingState" #fair (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">boarding</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item busOperatorState" #stops (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">operator</p>
+        </div>
+      </div>
+
+      <div class="col-2 filter_section {{priceState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Price</h2>
+            <p>Upto Rs 2,52,369</p>
+            <mat-slider [thumbLabel]="true" value="10000" [displayWith]="formatLabel" tickInterval="1" min="1" max="100000"></mat-slider>
+            <div class="d-flex justify-content-between minmax">
+              <p>min: 0</p>
+              <p>max: 100k</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{busTypeState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Bus Type</h2>
+            <mat-checkbox>AC</mat-checkbox>
+            <mat-checkbox>Non AC</mat-checkbox>
+            <mat-checkbox>Seater</mat-checkbox>
+            <mat-checkbox>Sleeper</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{busBrandState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Bus Brands</h2>
+            <mat-checkbox>Volvo</mat-checkbox>
+            <mat-checkbox>Mercedes</mat-checkbox>
+            <mat-checkbox>Scania</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{deptState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Depature Time</h2>
+            <mat-checkbox>00 - 06</mat-checkbox>
+            <mat-checkbox>06- 12</mat-checkbox>
+            <mat-checkbox>12 - 18</mat-checkbox>
+            <mat-checkbox>18 - 00</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{boardingState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Boarding Points</h2>
+            <mat-checkbox>Anandarao Circle</mat-checkbox>
+            <mat-checkbox>B T M Layout</mat-checkbox>
+            <mat-checkbox>China Airlines</mat-checkbox>
+            <mat-checkbox>Basavangaudi</mat-checkbox>
+            <mat-checkbox>Belanduru</mat-checkbox>
+            <mat-checkbox>Anandarao Circle</mat-checkbox>
+            <mat-checkbox>B T M Layout</mat-checkbox>
+            <mat-checkbox>China Airlines</mat-checkbox>
+            <mat-checkbox>Basavangaudi</mat-checkbox>
+            <mat-checkbox>Belanduru</mat-checkbox>
+            <mat-checkbox>Anandarao Circle</mat-checkbox>
+            <mat-checkbox>B T M Layout</mat-checkbox>
+            <mat-checkbox>China Airlines</mat-checkbox>
+            <mat-checkbox>Basavangaudi</mat-checkbox>
+            <mat-checkbox>Belanduru</mat-checkbox>
+            <mat-checkbox>Anandarao Circle</mat-checkbox>
+            <mat-checkbox>B T M Layout</mat-checkbox>
+            <mat-checkbox>China Airlines</mat-checkbox>
+            <mat-checkbox>Basavangaudi</mat-checkbox>
+            <mat-checkbox>Belanduru</mat-checkbox>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{busOperatorState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
+          <hr>
+          <div>
+            <h2>Bus Operators</h2>
+            <mat-checkbox>Aboli Tours and Travels Circle</mat-checkbox>
+            <mat-checkbox>Anand Travel</mat-checkbox>
+            <mat-checkbox>Canara Pinto</mat-checkbox>
+            <mat-checkbox>GP Travels</mat-checkbox>
+            <mat-checkbox>Geepee Travels</mat-checkbox>
+            <mat-checkbox>GreenLine Travels</mat-checkbox>
+            <mat-checkbox>Neeta Travels</mat-checkbox>
+
+          </div>
         </div>
       </div>
 
@@ -90,7 +196,7 @@
         </div>
       </div>
       <div class="col-10 px-0 results_div">
-       
+
 
 
         <div class="col-12 px-0 d-flex justify-content-center align-items-center Header">
@@ -116,6 +222,15 @@
 
         <div class="result">
 
+          <app-bus-template></app-bus-template>
+          <app-bus-template></app-bus-template>
+          <app-bus-template></app-bus-template>
+          <app-bus-template></app-bus-template>
+          <app-bus-template></app-bus-template>
+          <app-bus-template></app-bus-template>
+          <app-bus-template></app-bus-template>
+          <app-bus-template></app-bus-template>
+          <app-bus-template></app-bus-template>
           <app-bus-template></app-bus-template>
 
         </div>

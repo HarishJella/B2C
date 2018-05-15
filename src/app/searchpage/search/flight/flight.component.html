@@ -1,6 +1,6 @@
 <section class="availability">
   <div class="container">
-    <div class="col-12 p-0 mb-2 modify_search ">
+    <div class="col-12 p-0 mb-2 modify_search sticky-top">
       <div class="">
 
       </div>
@@ -31,42 +31,47 @@
 
     <div class="col-12 px-0 search_results">
       <div class="col-1 px-0 filter_div">
-        <div class="py-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item priceState" #filter (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">price</p>
 
         </div>
 
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item deptState" #price (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">dept</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item stopsState" #deoart (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">stops</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item fairState" #airlines (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">fair</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item airlineState" #fair (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
+          <p class="mb-0">airline</p>
         </div>
-        <div class="p-3 px-4 d-flex justify-content-center align-items-center item" #item (click)="open_filter(item)">
+        <!-- <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item 6" #stops (click)="open_filter($event)">
           <i class="material-icons">
             sort
           </i>
-        </div>
+        </div> -->
       </div>
 
 
-      <div class="col-2 filter_section {{menuState}}">
+      <div class="col-2 filter_section {{priceState}}">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -79,6 +84,11 @@
               <p>max: 100k</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{deptState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
           <hr>
           <div>
             <h2>Depart Time</h2>
@@ -87,6 +97,11 @@
             <mat-checkbox>12 - 18</mat-checkbox>
             <mat-checkbox>18 - 00</mat-checkbox>
           </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{stopsState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
           <hr>
           <div>
             <h2>Stops</h2>
@@ -94,12 +109,22 @@
             <mat-checkbox>1 Stop</mat-checkbox>
             <mat-checkbox>2+ Stops</mat-checkbox>
           </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{fairState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
           <hr>
           <div>
             <h2>Fare Type</h2>
             <mat-checkbox>Refundable</mat-checkbox>
             <mat-checkbox>Non Refundable</mat-checkbox>
           </div>
+        </div>
+      </div>
+      <div class="col-2 filter_section {{airlineState}}">
+        <div class="content py-3">
+          <h1>Filter Section</h1>
           <hr>
           <div>
             <h2>Airlines</h2>
@@ -109,9 +134,9 @@
             <mat-checkbox>Jet Airways</mat-checkbox>
             <mat-checkbox>Indonesia</mat-checkbox>
           </div>
-          <hr>
         </div>
       </div>
+
 
 
       <div class="col-1 px-0 dest_nav">
