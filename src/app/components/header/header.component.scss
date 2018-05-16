@@ -11,7 +11,8 @@
     line-height: 2;
   }
 }
-.hed{
+
+.hed {
   background-color: #000 !important;
 }
 
@@ -34,4 +35,9 @@
       }
     }
   }
+}
+
+.indigo {
+  background-color: none !important;
+  background: $pinky-orange !important;
 }

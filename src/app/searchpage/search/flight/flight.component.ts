@@ -23,11 +23,11 @@ export class FlightComponent implements OnInit {
     return value;
   }
 
-  priceState: string = 'filter_content';
-  deptState: string = 'filter_content';
-  stopsState: string = 'filter_content';
-  fairState: string = 'filter_content';
-  airlineState: string = 'filter_content';
+  priceState: string = 'slideOutLeft filter_content';
+  deptState: string = 'slideOutLeft filter_content';
+  stopsState: string = 'slideOutLeft filter_content';
+  fairState: string = 'slideOutLeft filter_content';
+  airlineState: string = 'slideOutLeft filter_content';
 
 
 
@@ -37,46 +37,47 @@ export class FlightComponent implements OnInit {
     let className = event.target.classList[length];
 
     if (className == 'priceState') {
-      this.priceState = this.priceState === 'filter_content' ? 'fil' : 'filter_content';
+
+      this.priceState = this.priceState === 'slideOutLeft filter_content' ? 'animated slideInLeft fil' : 'slideOutLeft filter_content';
 
 
-      this.deptState = 'filter_content';
-      this.stopsState = 'filter_content';
-      this.fairState = 'filter_content';
-      this.airlineState = 'filter_content';
+      this.deptState = 'slideOutLeft filter_content';
+      this.stopsState = 'slideOutLeft filter_content';
+      this.fairState = 'slideOutLeft filter_content';
+      this.airlineState = 'slideOutLeft filter_content';
 
     }
     if (className == 'deptState') {
-      this.deptState = this.deptState === 'filter_content' ? 'fil' : 'filter_content';
+      this.deptState = this.deptState === 'slideOutLeft filter_content' ? 'animated slideInLeft fil' : 'slideOutLeft filter_content';
 
-      this.priceState = 'filter_content';
-      this.stopsState = 'filter_content';
-      this.fairState = 'filter_content';
-      this.airlineState = 'filter_content';
+      this.priceState = 'slideOutLeft filter_content';
+      this.stopsState = 'slideOutLeft filter_content';
+      this.fairState = 'slideOutLeft filter_content';
+      this.airlineState = 'slideOutLeft filter_content';
     }
     if (className == 'stopsState') {
-      this.stopsState = this.stopsState === 'filter_content' ? 'fil' : 'filter_content';
+      this.stopsState = this.stopsState === 'slideOutLeft filter_content' ? 'animated slideInLeft fil' : 'slideOutLeft filter_content';
 
-      this.priceState = 'filter_content';
-      this.deptState = 'filter_content';
-      this.fairState = 'filter_content';
-      this.airlineState = 'filter_content';
+      this.priceState = 'slideOutLeft filter_content';
+      this.deptState = 'slideOutLeft filter_content';
+      this.fairState = 'slideOutLeft filter_content';
+      this.airlineState = 'slideOutLeft filter_content';
     }
     if (className == 'fairState') {
-      this.fairState = this.fairState === 'filter_content' ? 'fil' : 'filter_content';
+      this.fairState = this.fairState === 'slideOutLeft filter_content' ? 'animated slideInLeft fil' : 'slideOutLeft filter_content';
 
-      this.priceState = 'filter_content';
-      this.deptState = 'filter_content';
-      this.stopsState = 'filter_content';
-      this.airlineState = 'filter_content';
+      this.priceState = 'slideOutLeft filter_content';
+      this.deptState = 'slideOutLeft filter_content';
+      this.stopsState = 'slideOutLeft filter_content';
+      this.airlineState = 'slideOutLeft filter_content';
     }
     if (className == 'airlineState') {
-      this.airlineState = this.airlineState === 'filter_content' ? 'fil' : 'filter_content';
+      this.airlineState = this.airlineState === 'slideOutLeft filter_content' ? 'animated slideInLeft fil' : 'slideOutLeft filter_content';
 
-      this.priceState = 'filter_content';
-      this.deptState = 'filter_content';
-      this.stopsState = 'filter_content';
-      this.fairState = 'filter_content';
+      this.priceState = 'slideOutLeft filter_content';
+      this.deptState = 'slideOutLeft filter_content';
+      this.stopsState = 'slideOutLeft filter_content';
+      this.fairState = 'slideOutLeft filter_content';
 
     }
 
