@@ -1,12 +1,14 @@
 @import '~variables.scss';
 @import '~mixins.scss';
 .availability {
-  .container {
+  .section {
     .modify_search {
-      display: grid; // grid-template-columns: repeat(6, 1fr);
-      grid-template-columns: 72px 1fr 1fr 1fr 1fr 1fr;
+      display: grid; // grid-template-columns: repeat(6, 1fr); 
+      grid-template-columns: 97.08px 3fr 1fr;
       background-color: #fff;
       border-radius: 4px;
+      margin-top: 35px;
+      grid-column-gap: 1em;
       .item {
         h6 {
           font-size: 14px;
@@ -14,14 +16,14 @@
           color: rgb(0, 0, 0);
           font-weight: bold;
           line-height: 1.286;
-          text-align: left;
+          text-align: center;
         }
         P {
           font-size: 12px;
           font-family: $open_sans;
           color: rgb(0, 0, 0); // font-weight: bold;
           line-height: 1.286;
-          text-align: left;
+          text-align: center;
           font-weight: 400;
         }
         span {
@@ -120,19 +122,19 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-row-gap: 1em;
-        margin-left: 1em;
+        padding-left: 1em !important;
         .Header {
           background: #000;
           border-radius: 2px; // display: grid;
           // grid-template-columns: repeat(6, 1fr);
-          min-height: 50px;
+          min-height: 35px;
           .item {
             padding: 0 1rem;
             align-self: center;
             justify-self: center;
             align-self: stretch;
             justify-self: stretch; // border: 1px solid #fff;
-            background: linear-gradient(to right, #263238 50%, #263238 50%);
+            
             p {
               font-size: 12px;
               font-family: $open_sans;
@@ -149,7 +151,7 @@
           grid-row-gap: 0.2rem;
           &.hotelresult {
             grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 1em;
+            grid-gap: 3em;
           }
           .items {
             // display: grid;

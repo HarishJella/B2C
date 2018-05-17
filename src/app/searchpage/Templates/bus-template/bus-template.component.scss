@@ -40,6 +40,8 @@
         text-align: center;
       }
     }
+   
+
     &.trvl_dur {
       h6 {
         font-size: 12px;
@@ -83,6 +85,12 @@
       }
     }
   }
+}
+.bus_footer{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 11px;
 }
 
 // modal style
