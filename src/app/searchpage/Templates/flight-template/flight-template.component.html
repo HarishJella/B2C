@@ -1,69 +1,72 @@
-<!-- <div class="col-12 py-3 px-0 d-flex justify-content-center align-items-center items flight_template">
-
-  <div class="col-2 d-flex flex-column justify-content-center align-items-center item trvl_img">
-    <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
-    <p class="mb-0">Delta Air Lines</p>
-  </div>
-  <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
-    <h6 class="mb-0">06:30</h6>
-    <p class="mb-0">BLR </p>
-  </div>
-  <div class="col-2 d-flex flex-column justify-content-center align-items-center item trvl_dur">
-    <h6 class="mb-0">1h 55m</h6>
-    <p class="mb-0">Non Stop</p>
-  </div>
-  <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
-    <h6 class="mb-0">06:30</h6>
-    <p class="mb-0">BBI </p>
-  </div>
-  <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
-    <h6 class="mb-0">INR.8908</h6>
-    <p class="mb-0">Refundable </p>
-  </div>
-
-  <div class="col-2 d-flex flex-column justify-content-center align-items-center item trvl_book_btn">
-    <button type="button" class="btn btn-default btn-rounded waves-light" mdbWavesEffect>Book</button>
-    <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
-      mdbWavesEffect>Flight Details</a>
-  </div>
-
-</div> -->
-
-
 <div class="d-flex  justify-content-center align-items-center flight_template">
   <div class="col-12 px-0 d-flex justify-content-center align-items-center ">
     <div class="col-10 px-0 d-flex flex-column justify-content-center align-items-center section1">
       <div class="col-12 px-0 d-flex justify-content-center align-items-center ">
-        <div class="col-2 d-flex flex-column justify-content-center align-items-center  trvl_img">
-          <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
-          <p class="mb-0">Delta Air Lines</p>
+        <div class="col-2 py-3  d-flex justify-content-center align-items-center  trvl_img">
+          <div class="pr-2">
+            <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+          </div>
+          <div>
+            <h6 class="mb-1">Delta Air Lines</h6>
+            <p class="mb-0 aircode">AI-9506</p>
+          </div>
+          <ng-template #airdetails>Here we go: hariosh kjlksajklf div
+            <div>
+              <p>hi</p>
+            </div>
+            <div [innerHtml]="html">Harish</div>
+          </ng-template>
+          <div class="p-1 provider waves-light" [mdbTooltip]="airdetails" mdbWavesEffect>
+            <p class="mb-0">1G</p>
+          </div>
         </div>
-        <div class="col-2 d-flex flex-column justify-content-center align-items-center">
-          <h6 class="mb-0">06:30</h6>
-          <p class="mb-0">BLR </p>
+        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+          <div class="mb-1 d-flex">
+            <h6 class="mb-0 mr-1">AGX</h6>
+            <h6 class="mb-0">10:30 </h6>
+          </div>
+          <div>
+            <p class="mb-0">Fri 18 may</p>
+          </div>
+          <ng-template #departuredetails class="animated slideOutDown">Here we go
+            <div>
+              <p>hi</p>
+            </div>
+            <div [innerHtml]="html">Harish</div>
+          </ng-template>
+          <div class="p-1 provider waves-light" [mdbTooltip]="departuredetails" mdbWavesEffect>
+            <p class="mb-0">1G</p>
+          </div>
         </div>
-        <div class="col-2 d-flex flex-column justify-content-center align-items-center trvl_dur">
+        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
           <h6 class="mb-0">1h 55m</h6>
           <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
           <p class="mb-0">Non Stop</p>
         </div>
         <div class="col-2 d-flex flex-column justify-content-center align-items-center">
-          <h6 class="mb-0">06:30</h6>
-          <p class="mb-0">BBI </p>
+          <div class="mb-1 d-flex">
+            <h6 class="mb-0 mr-1">AGX</h6>
+            <h6 class="mb-0">
+              10:30 </h6>
+          </div>
+          <div>
+            <p class="mb-0">Fri 18 may</p>
+          </div>
         </div>
-        <div class="col-2 d-flex flex-column justify-content-center align-items-center">
-          <h6 class="mb-0">INR.8908</h6>
-          <p class="mb-0">Refundable </p>
+        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-1">INR.8908</h6>
+          <p class="mb-0 refundable">Refundable </p>
         </div>
       </div>
     </div>
-    <div class="col-2 px-0 d-flex flex-column justify-content-center align-items-center item section2 ">
+    <div class="col-2 py-3 px-0 d-flex flex-column justify-content-center align-items-center item section2 ">
       <div class="col-12 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
-        <button type="button" class="btn  btn-rounded waves-light" mdbWavesEffect>Book</button>
+        <button type="button" class="btn  btn-rounded waves-light mb-1" mdbWavesEffect>Book</button>
         <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
           mdbWavesEffect>Flight Details</a>
       </div>
     </div>
+
   </div>
 </div>
 
