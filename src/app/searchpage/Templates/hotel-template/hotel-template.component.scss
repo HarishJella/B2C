@@ -2,12 +2,23 @@
 @import '~mixins.scss';
 .Hotel-Template {
   .card {
+    border-radius: 10px;
+    .img_pad  {
+      padding: 20px !important;
+    }
+    img{
+      border-radius: 10px;
+    }
     .card-body {
+      padding-top:0px;
+     
       h5 {
         i {
           color: #cdcccd;
+          font-size: 18px;
           &.active {
             color: #0776bc;
+
           }
         }
       }
@@ -17,6 +28,12 @@
         color: rgb(0, 0, 0);
         font-weight: bold;
         line-height: 1.778;
+      }
+      .pipe{
+        color: #ccc;
+      }
+      .rateing{
+        color: #76a70a;
       }
       p {
         span {
