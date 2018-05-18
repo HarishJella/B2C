@@ -28,6 +28,7 @@ export class FlightComponent implements OnInit {
   stopsState: string = 'filter_content';
   fairState: string = 'filter_content';
   airlineState: string = 'filter_content';
+  dynamicClass: string = 'col-10';
 
 
 
@@ -38,7 +39,7 @@ export class FlightComponent implements OnInit {
 
     if (className == 'priceState') {
       this.priceState = this.priceState === 'filter_content' ? 'fil' : 'filter_content';
-
+      this.dynamicClass = this.dynamicClass === 'col-10' ? 'col-8' : 'col-10';
 
       this.deptState = 'filter_content';
       this.stopsState = 'filter_content';
@@ -48,7 +49,7 @@ export class FlightComponent implements OnInit {
     }
     if (className == 'deptState') {
       this.deptState = this.deptState === 'filter_content' ? 'fil' : 'filter_content';
-
+      this.dynamicClass = this.dynamicClass === 'col-10' ? 'col-8' : 'col-10';
       this.priceState = 'filter_content';
       this.stopsState = 'filter_content';
       this.fairState = 'filter_content';
@@ -56,7 +57,7 @@ export class FlightComponent implements OnInit {
     }
     if (className == 'stopsState') {
       this.stopsState = this.stopsState === 'filter_content' ? 'fil' : 'filter_content';
-
+      this.dynamicClass = this.dynamicClass === 'col-10' ? 'col-8' : 'col-10';
       this.priceState = 'filter_content';
       this.deptState = 'filter_content';
       this.fairState = 'filter_content';
@@ -64,7 +65,7 @@ export class FlightComponent implements OnInit {
     }
     if (className == 'fairState') {
       this.fairState = this.fairState === 'filter_content' ? 'fil' : 'filter_content';
-
+      this.dynamicClass = this.dynamicClass === 'col-10' ? 'col-8' : 'col-10';
       this.priceState = 'filter_content';
       this.deptState = 'filter_content';
       this.stopsState = 'filter_content';
@@ -72,7 +73,7 @@ export class FlightComponent implements OnInit {
     }
     if (className == 'airlineState') {
       this.airlineState = this.airlineState === 'filter_content' ? 'fil' : 'filter_content';
-
+      this.dynamicClass = this.dynamicClass === 'col-10' ? 'col-8' : 'col-10';
       this.priceState = 'filter_content';
       this.deptState = 'filter_content';
       this.stopsState = 'filter_content';

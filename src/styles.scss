@@ -20,7 +20,6 @@ body {
 }
 
 /* homepage search field style */
-
 .main-srch {
   .mat-tab-label {
     height: 100px;
@@ -71,9 +70,9 @@ body {
   background: $pinky_orange !important;
 }
 
-.mat-ripple-element {
-  background: rgba(red, 0.4) !important;
-}
+// .mat-ripple-element {
+//   background: rgba(red, 0.4) !important;
+// }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle {
   // background-color: rgb(66, 134, 244);
@@ -85,15 +84,15 @@ body {
   background: $pinky_orange;
 }
 
-.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
-  // background-color: rgba(66, 134, 244, .26);
-  background: rgba(red, 0.26) !important;
-}
+// .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+//   // background-color: rgba(66, 134, 244, .26);
+//   background: rgba(red, 0.26) !important;
+// }
 
 .mat-input-underline.mat-form-field-underline.mat-disabled {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.66) 0, rgba(0, 0, 0, 0.66) 0, rgb(0, 0, 0));
   height: 2px;
-  background-size: 4px 2px;
+  background-size:4px 2px;
 }
 
 .mat-calendar-body-selected {

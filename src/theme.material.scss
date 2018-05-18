@@ -6,7 +6,7 @@ $custom-theme-accent: mat-palette($mat-orange, A200, A100, A400);
 $custom-theme-warn: mat-palette($mat-red);
 $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
 @function mat-light-theme($primary, $accent, $warn: mat-palette($mat-red)) {
-  @return ( primary: $primary, accent: $accent, warn: $warn, is-dark: false, foreground: $mat-light-theme-foreground, background: $mat-light-theme-background, );
+@return ( primary: $primary, accent: $accent, warn: $warn, is-dark: false, foreground: $mat-light-theme-foreground, background: $mat-light-theme-background, );
 }
 
 @include angular-material-theme($custom-theme);

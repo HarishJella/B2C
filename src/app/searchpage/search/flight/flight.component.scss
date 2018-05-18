@@ -173,7 +173,7 @@
             cursor: pointer;
             &:after {
               content: '';
-              border: 1px dotted #808080;
+              border: 1px dashed #d2d2d2;
               height: 100%;
               width: 1px;
               position: absolute;
@@ -192,7 +192,7 @@
               animation: pulse-shadow 1s infinite;
               @keyframes pulse-shadow {
                 0% {
-                  box-shadow: 0 0 0 0 #ed1d78;
+                  box-shadow: 0 0 0 0 #d2d2d2;
                 }
                 70% {
                   box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0);
@@ -211,6 +211,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-row-gap: 1em;
+        transition: all 0.5s ease-in-out;
         .Header {
           background: #263238;
           border-radius: 2px; // display: grid;
