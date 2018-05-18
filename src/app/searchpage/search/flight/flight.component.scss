@@ -52,11 +52,9 @@
       justify-content: space-between;
       align-items: start;
       overflow: hidden;
-      transition: all 0.5s ease-in-out;
-      display: grid;
-      grid-template-columns: auto auto 1fr;
-      grid-column-gap: 1em;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; // display: grid;
+      // grid-template-columns: auto auto 1fr;
+      // grid-column-gap: 1em;
       .filter_div {
         background: #fff; // display: grid;
         // grid-template-columns: auto;
@@ -139,27 +137,20 @@
         }
       }
       .filter_content {
-        max-width: 0%;
-        min-width: 0%;
-        width: 0%;
-        max-width: 0%;
-        transition: all 0.5s ease-in-out; // transition: width 2s, height 4s;
+        max-width: 0%; // transition: all 0.5s ease-in-out;
         padding: 0px;
         overflow: hidden;
-        max-height: 462px; 
-        display: none;
+        min-height: 344.92px;
       }
       .fil {
-        // max-width: 16.666%;
-        max-width: 100%;
-        transition: all 0.5s ease-in-out; // transition: width 2s, height 4s;
+        max-width: 16.666%;
+        transition: all 0.5s ease-in-out;
         padding: 0 15px 0 15px;
         overflow: hidden;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-        max-height: 462px;
+        min-height: 344.92px;
         overflow-y: auto;
-        display: block;
       }
       .filter_subdiv {
         transition: all 0.5s ease-in-out;
@@ -187,7 +178,7 @@
             cursor: pointer;
             &:after {
               content: '';
-              border: 1px dotted #808080;
+              border: 1px dashed #d2d2d2;
               height: 100%;
               width: 1px;
               position: absolute;
@@ -206,7 +197,7 @@
               animation: pulse-shadow 1s infinite;
               @keyframes pulse-shadow {
                 0% {
-                  box-shadow: 0 0 0 0 #ed1d78;
+                  box-shadow: 0 0 0 0 #d2d2d2;
                 }
                 70% {
                   box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0);

@@ -15,6 +15,7 @@
         border-bottom: 0px dashed #a2a2a2; // padding-bottom: 0px;
         // padding-top: 0px;
       }
+      position:relative;
       .col-2 {
         max-width: 20%;
         min-width: 20%;
@@ -22,8 +23,7 @@
         align-self: center;
         justify-self: center;
         h6 {
-          font-size: 16px;
-          font-size: 11px;
+          font-size: 12px;
           font-family: $open_sans;
           color: rgb(38, 38, 38);
           font-weight: bold;
@@ -47,7 +47,7 @@
           }
         }
         &.trvl_img {
-          position: relative;
+          position: initial;
           img {
             width: 35px;
             height: 35px;
@@ -77,23 +77,76 @@
             }
           }
         }
-        &.departure {
+        &.fare {
+          position: initial;
           .provider {
-            background: $pinky-orange;
-            background: #346a86;
             position: absolute;
-            top: 0;
+            bottom: 0;
             border-radius: 1px;
-            box-shadow: 9px 5px 20px rgba(108, 119, 105, 0.47058823529411764);
+            text-align: center;
             p {
-              color: #fff;
-              font-size: 8px;
+              color: #afaeaf;
+              font-size: 10px;
+            }
+            &.discount{
+              
+            }
+          }
+          .style-1 {
+            del {
+              color: rgba(red, 0.5);
+              text-decoration: none;
+              position: relative;
+              &:before {
+                content: " ";
+                display: block;
+                width: 100%;
+                border-top: 2px solid rgba(red, 0.8);
+                height: 11px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: rotate(-7deg);
+              }
+              font-size:12px;
+            }
+            ins {
+              color: green;
+              font-size: 14px;
+              text-decoration: none;
+              // padding: 1em 1em 1em .5em;
+            }
+          }
+          .box {
+            div {
+              width: 20px;
+              height: 20px;
+              p {
+                color: #fff;
+                font-size: 8px;
+              }
+              background: $pinky-orange;
+              &.fund {
+                &.refundable {
+                  
+                }
+                &.nonrefundable {
+                 
+                }
+              }
+              &.details {
+               
+              }
+              &.stops {
+                
+              }
             }
           }
         }
+        &.departure {}
         &.trvl_dur {
           h6 {
-            font-size: 11px;
+            font-size: 12px;
             font-family: $open_sans;
             color: rgb(38, 38, 38);
             font-weight: bold;
@@ -137,6 +190,7 @@
 
 // modal style
 .modal {
+  overflow-y: auto !important;
   .modal-dialog {
     .modal-content {
       border-radius: 15px;
@@ -181,4 +235,45 @@
       }
     }
   }
+}
+
+.tooltipdd {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltipdd .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltipdd:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }

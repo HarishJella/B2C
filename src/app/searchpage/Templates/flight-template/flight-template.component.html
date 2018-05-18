@@ -1,22 +1,17 @@
 <div class="d-flex  justify-content-center align-items-center flight_template">
-  <div class="col-12 px-0 d-flex justify-content-center align-items-center ">
+  <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
     <div class="col-10 px-0 d-flex flex-column justify-content-center align-items-center section1">
-      <div class="col-12 px-0 d-flex justify-content-center align-items-center ">
+      <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
         <div class="col-2 py-3  d-flex justify-content-center align-items-center  trvl_img">
-          <div class="pr-2">
+          <div class="pr-0">
             <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
           </div>
           <div>
             <h6 class="mb-1">Delta Air Lines</h6>
             <p class="mb-0 aircode">AI-9506</p>
           </div>
-          <ng-template #airdetails>Here we go: hariosh kjlksajklf div
-            <div>
-              <p>hi</p>
-            </div>
-            <div [innerHtml]="html">Harish</div>
-          </ng-template>
-          <div class="p-1 provider waves-light" [mdbTooltip]="airdetails" mdbWavesEffect>
+
+          <div class="p-1 provider waves-light" mdbWavesEffect>
             <p class="mb-0">1G</p>
           </div>
         </div>
@@ -28,15 +23,8 @@
           <div>
             <p class="mb-0">Fri 18 may</p>
           </div>
-          <ng-template #departuredetails class="animated slideOutDown">Here we go
-            <div>
-              <p>hi</p>
-            </div>
-            <div [innerHtml]="html">Harish</div>
-          </ng-template>
-          <div class="p-1 provider waves-light" [mdbTooltip]="departuredetails" mdbWavesEffect>
-            <p class="mb-0">1G</p>
-          </div>
+
+
         </div>
         <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
           <h6 class="mb-0">1h 55m</h6>
@@ -53,9 +41,37 @@
             <p class="mb-0">Fri 18 may</p>
           </div>
         </div>
-        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
-          <h6 class="mb-1">INR.8908</h6>
-          <p class="mb-0 refundable">Refundable </p>
+        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center fare">
+          <!-- <h6 class="mb-1">INR.8908</h6> -->
+          <!-- <p class="mb-0 refundable">Refundable </p> -->
+          <!-- <div class="tooltipdd">
+            Hover over me
+            <span class="tooltiptext">Tooltip text</span>
+          </div> -->
+          <!-- <div class="p-1 provider waves-light" mdbWavesEffect>
+            <p class="mb-0">Fare Details</p>
+          </div> -->
+          <div class="discount">
+            <div class="d-flex flex-column style-1">
+              <del>
+                <span class="amount">INR 9000</span>
+              </del>
+              <ins>
+                <span class="amount">INR 8908</span>
+              </ins>
+            </div>
+          </div>
+          <div class="d-flex justify-content-around align-items-center provider box">
+            <div class="mr-1 d-flex justify-content-center align-items-center waves-light fund refundable" mdbWavesEffect>
+              <p class="mb-0">R</p>
+            </div>
+            <div class="mr-1 d-flex justify-content-center align-items-center waves-light details" mdbWavesEffect>
+              <p class="mb-0">F</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center waves-light stops" mdbWavesEffect>
+              <p class="mb-0">S</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
