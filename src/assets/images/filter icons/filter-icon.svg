@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 640 480" style="enable-background:new 0 0 640 480;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#XMLID_7_);}
+	.st1{fill:url(#XMLID_8_);}
+	.st2{fill:url(#XMLID_9_);}
+	.st3{fill:url(#XMLID_10_);}
+</style>
+<g id="XMLID_3_">
+	<linearGradient id="XMLID_7_" gradientUnits="userSpaceOnUse" x1="-1.686298e-006" y1="240" x2="475.6444" y2="240">
+		<stop  offset="0" style="stop-color:#ED1D78"/>
+		<stop  offset="1" style="stop-color:#0776BC"/>
+	</linearGradient>
+	<path id="XMLID_2_" class="st0" d="M180.6,226.8c5,5.5,7.8,12.6,7.8,20v218.3c0,13.1,15.9,19.8,25.2,10.6l60.9-69.8
+		c8.1-9.8,12.6-14.6,12.6-24.3V246.9c0-7.4,2.8-14.6,7.8-20.1L469.7,37.3c13.1-14.2,3-37.3-16.3-37.3H22.3C2.9,0-7.2,23,5.9,37.3
+		L180.6,226.8z"/>
+</g>
+<linearGradient id="XMLID_8_" gradientUnits="userSpaceOnUse" x1="451" y1="238.2951" x2="627" y2="238.2951">
+	<stop  offset="0" style="stop-color:#ED1D78"/>
+	<stop  offset="1" style="stop-color:#0776BC"/>
+</linearGradient>
+<path id="XMLID_1_" class="st1" d="M622,250.5H456c-2.8,0-5-2.3-5-5v-14.4c0-2.8,2.3-5,5-5h166c2.8,0,5,2.3,5,5v14.4
+	C627,248.2,624.8,250.5,622,250.5z"/>
+<linearGradient id="XMLID_9_" gradientUnits="userSpaceOnUse" x1="451" y1="283.2951" x2="539" y2="283.2951">
+	<stop  offset="0" style="stop-color:#ED1D78"/>
+	<stop  offset="1" style="stop-color:#0776BC"/>
+</linearGradient>
+<path id="XMLID_5_" class="st2" d="M534,295.5h-78c-2.8,0-5-2.3-5-5v-14.4c0-2.8,2.3-5,5-5h78c2.8,0,5,2.3,5,5v14.4
+	C539,293.2,536.8,295.5,534,295.5z"/>
+<linearGradient id="XMLID_10_" gradientUnits="userSpaceOnUse" x1="451" y1="328.2951" x2="591.5814" y2="328.2951">
+	<stop  offset="0" style="stop-color:#ED1D78"/>
+	<stop  offset="1" style="stop-color:#0776BC"/>
+</linearGradient>
+<path id="XMLID_6_" class="st3" d="M586.6,340.5H456c-2.8,0-5-2.3-5-5v-14.4c0-2.8,2.3-5,5-5h130.6c2.8,0,5,2.3,5,5v14.4
+	C591.6,338.2,589.3,340.5,586.6,340.5z"/>
+</svg>

@@ -1,6 +1,6 @@
 <section class="availability">
   <div class="container">
-    <div class="col-12 p-0 mb-2 modify_search sticky-top">
+    <div class="col-12 p-0 mb-2 modify_search">
       <div class="">
 
       </div>
@@ -31,35 +31,27 @@
 
     <div class="col-12 px-0 search_results">
       <div class="col-1 px-0 filter_div">
-        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item priceState" #filter (click)="open_filter($event)">
-          <i class="material-icons"> sort </i>
-          <p class="mb-0">price</p>
+        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)">
+          <!-- <p class="mb-0">price</p> -->
 
         </div>
 
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item deptState" #price (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">dept</p>
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/re_or_non-re.svg" alt="" class="img-fluid deptState" (click)="open_filter($event)">
+          <!-- <p class="mb-0">dept</p> -->
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item stopsState" #deoart (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">stops</p>
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/stops.svg" alt="" class="img-fluid stopsState" (click)="open_filter($event)">
+          <!-- <p class="mb-0">stops</p> -->
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item fairState" #airlines (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">fair</p>
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/price.svg" alt="" class="img-fluid fairState" (click)="open_filter($event)"> 
+          <!-- <p class="mb-0">fair</p> -->
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item airlineState" #fair (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">airline</p>
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/airline.svg" alt="" class="img-fluid airlineState" (click)="open_filter($event)">
+          <!-- <p class="mb-0">airline</p> -->
         </div>
         <!-- <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item 6" #stops (click)="open_filter($event)">
           <i class="material-icons">

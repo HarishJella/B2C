@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',

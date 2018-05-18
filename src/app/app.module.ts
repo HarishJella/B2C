@@ -49,6 +49,7 @@ import { HotelComponent } from './searchpage/search/hotel/hotel.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ComponentsModule
+  
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],
