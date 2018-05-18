@@ -27,7 +27,10 @@ export class FlightComponent implements OnInit {
   stopsState: string = 'filter_content';
   fairState: string = 'filter_content';
   airlineState: string = 'filter_content';
-  dynamicClass: string = 'col-10';
+  dynamicClass: string = 'col-md-10';
+  dynamic_filter_outer_div: string = 'col-md-2';
+  dynamic_filter_inner_div: string = 'col-md-6';
+
 
   open_filter(event) {
     let length = event.target.classList.length;
@@ -37,9 +40,13 @@ export class FlightComponent implements OnInit {
     if (className == 'priceState') {
       this.priceState = this.priceState === 'filter_content' ? 'fil' : 'filter_content';
       if (this.priceState == 'filter_content') {
-        this.dynamicClass = 'col-10';
+        this.dynamicClass = 'col-md-10';
+        this.dynamic_filter_outer_div = 'col-md-2';
+        this.dynamic_filter_inner_div = 'col-md-6';
       } else {
-        this.dynamicClass = 'col-8';
+        this.dynamicClass = 'col-md-8';
+        this.dynamic_filter_outer_div = 'col-md-4';
+        this.dynamic_filter_inner_div = 'col-md-3';
       }
       this.deptState = 'filter_content';
       this.stopsState = 'filter_content';
@@ -49,9 +56,13 @@ export class FlightComponent implements OnInit {
     if (className == 'deptState') {
       this.deptState = this.deptState === 'filter_content' ? 'fil' : 'filter_content';
       if (this.deptState == 'filter_content') {
-        this.dynamicClass = 'col-10';
+        this.dynamicClass = 'col-md-10';
+        this.dynamic_filter_outer_div = 'col-md-2';
+        this.dynamic_filter_inner_div = 'col-md-6';
       } else {
-        this.dynamicClass = 'col-8';
+        this.dynamicClass = 'col-md-8';
+        this.dynamic_filter_outer_div = 'col-md-4';
+        this.dynamic_filter_inner_div = 'col-md-3';
       }
       this.priceState = 'filter_content';
       this.stopsState = 'filter_content';
@@ -61,9 +72,13 @@ export class FlightComponent implements OnInit {
     if (className == 'stopsState') {
       this.stopsState = this.stopsState === 'filter_content' ? 'fil' : 'filter_content';
       if (this.stopsState == 'filter_content') {
-        this.dynamicClass = 'col-10';
+        this.dynamicClass = 'col-md-10';
+        this.dynamic_filter_outer_div = 'col-md-2';
+        this.dynamic_filter_inner_div = 'col-md-6';
       } else {
-        this.dynamicClass = 'col-8';
+        this.dynamicClass = 'col-md-8';
+        this.dynamic_filter_outer_div = 'col-md-4';
+        this.dynamic_filter_inner_div = 'col-md-3';
       }
       this.priceState = 'filter_content';
       this.deptState = 'filter_content';
@@ -73,9 +88,13 @@ export class FlightComponent implements OnInit {
     if (className == 'fairState') {
       this.fairState = this.fairState === 'filter_content' ? 'fil' : 'filter_content';
       if (this.fairState == 'filter_content') {
-        this.dynamicClass = 'col-10';
+        this.dynamicClass = 'col-md-10';
+        this.dynamic_filter_outer_div = 'col-md-2';
+        this.dynamic_filter_inner_div = 'col-md-6';
       } else {
-        this.dynamicClass = 'col-8';
+        this.dynamicClass = 'col-md-8';
+        this.dynamic_filter_outer_div = 'col-md-4';
+        this.dynamic_filter_inner_div = 'col-md-3';
       }
       this.priceState = 'filter_content';
       this.deptState = 'filter_content';
@@ -85,9 +104,13 @@ export class FlightComponent implements OnInit {
     if (className == 'airlineState') {
       this.airlineState = this.airlineState === 'filter_content' ? 'fil' : 'filter_content';
       if (this.airlineState == 'filter_content') {
-        this.dynamicClass = 'col-10';
+        this.dynamicClass = 'col-md-10';
+        this.dynamic_filter_outer_div = 'col-md-2';
+        this.dynamic_filter_inner_div = 'col-md-6';
       } else {
-        this.dynamicClass = 'col-8';
+        this.dynamicClass = 'col-md-8';
+        this.dynamic_filter_outer_div = 'col-md-4';
+        this.dynamic_filter_inner_div = 'col-md-3';
       }
       this.priceState = 'filter_content';
       this.deptState = 'filter_content';
