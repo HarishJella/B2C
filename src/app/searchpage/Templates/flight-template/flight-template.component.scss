@@ -199,6 +199,7 @@
         h4 {
           @include heading;
           margin: 0px;
+          font-size:20px;
         }
         button {}
       }
@@ -207,7 +208,7 @@
           box-shadow: none;
           padding: 0px;
           .mat-tab-label-content {
-            font-size: 18px;
+            font-size: 15px;
             font-family: $open_sans;
             color: rgb(0, 0, 0);
             line-height: 1.556;
