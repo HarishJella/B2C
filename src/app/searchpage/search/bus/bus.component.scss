@@ -2,7 +2,7 @@
 @import '~mixins.scss';
 
 .availability {
-  .container {
+  .section {
     .modify_search {
       display: grid; // grid-template-columns: repeat(6, 1fr);
       grid-template-columns: 72px 1fr 1fr 1fr 1fr 1fr;

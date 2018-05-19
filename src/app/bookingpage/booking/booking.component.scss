@@ -250,22 +250,18 @@
       }
       
       .grand {
-        display: grid;
+       
         grid-template-columns: 1fr 0.1fr 1fr;
         background-color: #eee;
         border-radius: 1.25em;
         margin: auto;
         padding: 0px 15px;
+        table,
+        tr,
+        th{
         font-weight: bold;
-        label {
-          margin-top: .5rem;
         }
-        .gand_tot {
-          text-align: right;
-        }
-        .colen {
-          text-align: center;
-        }
+        
       }
       .button {
         @include button;

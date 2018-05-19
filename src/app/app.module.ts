@@ -22,8 +22,6 @@ import { BusComponent } from './searchpage/search/bus/bus.component';
 import { HotelComponent } from './searchpage/search/hotel/hotel.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
