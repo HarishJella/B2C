@@ -21,8 +21,8 @@
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     color: #fff;
-    .hl-no{
-        margin-top: 1.5rem;
+    .hl-no {
+      margin-top: 1.5rem;
     }
     .d-text {
       margin-top: 4rem;
@@ -38,9 +38,66 @@
   .main-srch {
     .mat-tab-body {
       background-color: #fff;
-      height: 100px;
+      min-height: 100px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
+      .inputs {
+        .input-group {
+          margin-top: 1.25rem;
+          .mat-form-field {
+            .mat-form-field-wrapper {
+              .mat-form-field-flex {
+                .mat-form-field-infix {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          &.search {
+            padding-bottom: 1.25em;
+            .primary_btn {
+              background: rgba(148, 148, 148, 0.6);
+              box-shadow: none;
+              transition: all 0.5s ease-in-out;
+              &:hover {
+                background: $pinky-orange;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+              }
+            }
+          }
+          .passengers {
+            position: absolute;
+            background: green;
+          }
+          &.swap {
+            width: 20px;
+            .material-icons {
+              &:hover {
+                transition-duration: 1s;
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+        .md-form input[type=autocomplete]:focus:not([readonly]) {
+          box-shadow: none;
+          border-bottom: none;
+        } // .md-form input[type=text]:focus:not([readonly]),
+        // .md-form input[type=password]:focus:not([readonly]),
+        // .md-form input[type=email]:focus:not([readonly]),
+        // .md-form input[type=url]:focus:not([readonly]),
+        // .md-form input[type=time]:focus:not([readonly]),
+        // .md-form input[type=date]:focus:not([readonly]),
+        // .md-form input[type=datetime-local]:focus:not([readonly]),
+        // .md-form input[type=tel]:focus:not([readonly]),
+        // .md-form input[type=number]:focus:not([readonly]),
+        // .md-form input[type=search-md]:focus:not([readonly]),
+        // .md-form input[type=search]:focus:not([readonly]),
+        // .md-form textarea.md-textarea:focus:not([readonly]) {
+        //   box-shadow: 0 1px 0 0 #4285f4;
+        //   border-bottom: 1px solid #4285f4;
+        // }
+      }
     }
     .mat-tab-header {
       .mat-tab-label-container {
@@ -49,6 +106,17 @@
             display: inline-block;
             background-color: #fff !important;
             border-top-right-radius: 10px;
+            .mat-tab-label {
+              min-width: 100px;
+              height: 60px;
+              img {
+                width: 60px;
+              }
+              &.mat-tab-label-active {
+                // background-color: rgba(242, 99, 38, 0.6);
+                background: $pinky-orange;
+              }
+            }
           }
         }
       }
@@ -56,22 +124,22 @@
   }
 }
 
-.featurs{
+.featurs {
   text-align: center;
-  img{
+  img {
     margin-bottom: 25px;
   }
-  h2{
-  text-align: left;
-  @include heading;
-}
-  h4{
+  h2 {
+    text-align: left;
+    @include heading;
+  }
+  h4 {
     text-align: center;
     font-size: 18;
     font-weight: bold;
     margin-bottom: 20px
   }
-  p{
+  p {
     font-size: 14px;
     text-align: justify;
     font-weight: 300;
@@ -79,53 +147,55 @@
     margin-bottom: 30px;
   }
 }
-.wide-md{
+
+.wide-md {
   background-color: #fff;
-  h2{
+  h2 {
     text-align: left;
-  @include heading;
+    @include heading;
   }
-  p{
+  p {
     font-size: 14px;
     text-align: justify;
     font-weight: 300;
     line-height: 30px;
   }
 }
-.wide-md-a{
+
+.wide-md-a {
   background-image: linear-gradient(to right, #0776bc, #0095c8, #00afad, #00c277, #9ecb3b);
   min-height: 150px;
   color: #fff;
   text-align: center;
   padding: 30px;
 }
-.wide-md-b{
+
+.wide-md-b {
   margin-bottom: 30px;
-  .row{
+  .row {
     margin-top: 10px;
   }
-  h2{
+  h2 {
     @include heading;
   }
-  img{
+  img {
     width: 100%;
   }
-  .mat-card{
+  .mat-card {
     padding: 5px;
   }
-
 }
 
 .modal-dialog .modal-content {
   border: 0;
-  border-radius: 1.125rem!important;
+  border-radius: 1.125rem !important;
 }
 
-.login_model{
+.login_model {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
 }
-.carousel-indicators{
+
+.carousel-indicators {
   bottom: -50px;
 }

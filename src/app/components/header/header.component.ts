@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation,OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { Component, ViewEncapsulation,OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
- 
+  hide = true;
   constructor() { }
 
   ngOnInit() {

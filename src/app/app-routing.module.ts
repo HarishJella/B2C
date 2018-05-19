@@ -14,7 +14,6 @@ import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.c
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
-  { path: 'search', component: SearchComponent },
   { path: 'bus', component: BusComponent },
   { path: 'hotel', component: HotelComponent },
   { path: 'flight', component: FlightComponent },

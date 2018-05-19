@@ -1,7 +1,7 @@
 <div class="section banner">
   <mat-card>
     <div class="srch-bnr">
-      <div class="text-center hl-no">
+      <!-- <div class="text-center hl-no">
         <h3>Help Line</h3>
         <p>000-000-000</p>
       </div>
@@ -11,39 +11,105 @@
           <span class="webxyz">Webaxyz.com</span>
           <span>Lorem Ipsum</span> is simply dummy text of the printing and type setting industry
         </p>
-      </div>
+      </div> -->
     </div>
   </mat-card>
   <mat-tab-group class="main-srch">
     <mat-tab>
       <ng-template mat-tab-label>
-        <img src="../../../assets/images/bus.svg ">
-        <p>flight</p>
+        <img src="../../../assets/images/flight.svg ">
+        <!-- <p>flight</p> -->
       </ng-template>
-       
-      </mat-tab>
+      <div class="d-flex  justify-content-center-align-items-center inputs">
+        <div class="md-form col-md-2 input-group">
+
+          <mat-form-field class="example-full-width">
+            <input type="autocomplete" placeholder="Leaving From" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+        </div>
+        <div class="md-form col-md-0.1 d-flex justify-content-center align-items-center  input-group swap">
+
+          <i class="material-icons">
+            swap_horiz
+
+          </i>
+
+        </div>
+
+        <div class="md-form col-md-2 input-group">
+          <mat-form-field class="example-full-width">
+            <input type="autocomplete" placeholder="Going To" aria-label="Number" matInput [formControl]="myControl1" [matAutocomplete]="auto2">
+            <mat-autocomplete #auto2="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+        <div class="md-form col-md-2 input-group">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Departure Date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="md-form col-md-2 input-group">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker2" placeholder="Return Date">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="md-form col-md-2 input-group">
+          <mat-form-field>
+            <mat-select placeholder="Traveller">
+              <mat-option *ngFor="let Travel of Travellers" [value]="Travel.value">
+                {{ Travel.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+        <div class="md-form col-md-1.9 input-group search">
+          <button type="button" class="btn mb-0 w-100 btn-rounded waves-effect primary_btn" mdbWavesEffect> Search</button>
+        </div>
+
+
+
+      </div>
+
+    </mat-tab>
+
     <mat-tab>
       <ng-template mat-tab-label>
-        <img src="../../../assets/images/flight.svg ">
-        <p>flight</p>
+
+        <img src="../../../assets/images/bus.svg ">
+        <!-- <p>flight</p> -->
       </ng-template>
       Content 2</mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
         <img src="../../../assets/images/hotel.svg">
-        <p>flight</p>
+        <!-- <p>flight</p> -->
       </ng-template>
       Content 3</mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
         <img src="../../../assets/images/holiday.svg">
-        <p>flight</p>
+        <!-- <p>flight</p> -->
       </ng-template>
       Content 4</mat-tab>
   </mat-tab-group>
 </div>
 <div class="section featurs">
-  <h2 class="heading">Webaxyz featurs</h2>
+  <h2 class="heading">Webaxyz Features</h2>
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-4">
@@ -64,7 +130,7 @@
       </div>
       <div class="col-md-4">
         <img src="../../../assets/images/sec-c.png">
-        <h4>Your Financial report</h4>
+        <h4>Your Financial Report</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure quasi aut fugiat soluta eius recusandae odio
           quo quaerat consequatur consectetur esse, ut facere? Dolor dolorum, qui ab itaque quis veritatis maiores eligendi
           nobis atque harum? Doloremque qui perferendis provident magnam ullam excepturi non consequuntur quia quidem adipisci
@@ -78,7 +144,7 @@
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-6">
-          <h2 class="heading">Webaxyz Mobile template</h2>
+          <h2 class="heading">Webaxyz Mobile Template</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur sint, magnam aliquid vel qui in amet
             voluptas blanditiis et quaerat optio recusandae incidunt voluptates perferendis aspernatur culpa quidem eaque
             cumque? Aut repellat officiis perspiciatis sapiente minus autem voluptatibus reprehenderit sit soluta quasi voluptas
@@ -98,33 +164,36 @@
   <div class="section">
     <div>
       <!--Carousel Wrapper-->
-<mdb-carousel [isControls]="true" [animation]="'slide'">
-  <!--First slide-->
-  <mdb-slide>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos esse illum perferendis, dolore architecto ratione error
-      doloremque iste tempora obcaecati ea itaque quam, minima optio quo iusto ex quod aliquid!</p>
-  </mdb-slide>
-  <!--/First slide-->
-  <!--Second slide-->
-  <mdb-slide>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quo optio aliquid ipsam, nostrum consectetur eum perferendis
-      eligendi sunt reiciendis exercitationem totam nemo quaerat reprehenderit, illum fugiat doloribus voluptates nobis?</p>
-  </mdb-slide>
-  <!--/Second slide-->
-  <!--Third slide-->
-  <mdb-slide>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio saepe ullam iusto recusandae aliquid aperiam eaque
-      repellat dicta laboriosam inventore. Alias beatae fugiat doloribus dolor culpa ratione laudantium exercitationem id.</p>
-  </mdb-slide>
-  <!--/Third slide-->
-</mdb-carousel>
-<!--/.Carousel Wrapper--> 
+      <mdb-carousel [isControls]="true" [animation]="'slide'">
+        <!--First slide-->
+        <mdb-slide>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos esse illum perferendis, dolore architecto ratione
+            error doloremque iste tempora obcaecati ea itaque quam, minima optio quo iusto ex quod aliquid!</p>
+        </mdb-slide>
+        <!--/First slide-->
+        <!--Second slide-->
+        <mdb-slide>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi quo optio aliquid ipsam, nostrum consectetur eum
+            perferendis eligendi sunt reiciendis exercitationem totam nemo quaerat reprehenderit, illum fugiat doloribus
+            voluptates nobis?</p>
+        </mdb-slide>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <mdb-slide>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio saepe ullam iusto recusandae aliquid aperiam
+            eaque repellat dicta laboriosam inventore. Alias beatae fugiat doloribus dolor culpa ratione laudantium exercitationem
+            id.
+          </p>
+        </mdb-slide>
+        <!--/Third slide-->
+      </mdb-carousel>
+      <!--/.Carousel Wrapper-->
     </div>
   </div>
 </div>
 <div class="wide-md-b">
   <div class="section">
-    <h2 class="heading">Perfect Holidays</h2>
+    <h2 class="heading">Perfect Hotels</h2>
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-3">
@@ -191,19 +260,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-                        
-
-                
-                
-                
-                
-
-
-
-
-
