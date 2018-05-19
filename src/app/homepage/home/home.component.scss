@@ -73,7 +73,7 @@
   }
   p{
     font-size: 14px;
-    text-align: center;
+    text-align: justify;
     font-weight: 300;
     line-height: 30px;
     margin-bottom: 30px;
@@ -87,7 +87,7 @@
   }
   p{
     font-size: 14px;
-    text-align: left;
+    text-align: justify;
     font-weight: 300;
     line-height: 30px;
   }
@@ -125,4 +125,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   
+}
+.carousel-indicators{
+  bottom: -50px;
 }
