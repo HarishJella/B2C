@@ -14,6 +14,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatAutocompleteModule, MatInputModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -22,8 +23,8 @@ import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
 
-  imports: [MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule],
-  exports: [MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule],
+  imports: [MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule],
+  exports: [MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule],
 
 })
 

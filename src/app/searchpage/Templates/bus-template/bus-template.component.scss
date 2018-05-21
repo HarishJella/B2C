@@ -13,7 +13,7 @@
     h6 {
       font-size: 16px;
       font-size: 14px;
-      font-family: $open_sans;
+      font-family: $font_family;
       color: rgb(38, 38, 38);
       font-weight: bold;
       line-height: 1.2;
@@ -21,7 +21,7 @@
     }
     p {
       font-size: 11px;
-      font-family: $open_sans;
+      font-family: $font_family;
       color: rgb(38, 38, 38);
       font-weight: bold;
       line-height: 1.2;
@@ -34,7 +34,7 @@
       }
       p {
         font-size: 11px;
-        font-family: $ubuntu;
+        font-family: $font_family;
         color: rgb(38, 38, 38);
         line-height: 1.2;
         text-align: center;
@@ -43,7 +43,7 @@
     &.trvl_dur {
       h6 {
         font-size: 12px;
-        font-family: $open_sans;
+        font-family: $font_family;
         color: rgb(38, 38, 38);
         font-weight: bold;
         line-height: 1.2;
@@ -55,7 +55,7 @@
       }
       p {
         font-size: 12px;
-        font-family: $open_sans;
+        font-family: $font_family;
         color: rgb(38, 38, 38); // font-weight: 300;
         line-height: 1.2;
         text-align: center;
@@ -68,7 +68,7 @@
       button {
         font-size: 18px;
         font-size: 14px;
-        font-family: $open_sans;
+        font-family: $font_family;
         color: rgb(255, 255, 255);
         line-height: 1.2;
         text-align: center;
@@ -82,7 +82,7 @@
       }
       a {
         font-size: 12px;
-        font-family: $open_sans;
+        font-family: $font_family;
         font-weight: bold;
         line-height: 1.2;
         text-align: center;
@@ -138,7 +138,7 @@
           h6 {
             font-size: 16px;
             font-size: 14px;
-            font-family: $open_sans;
+            font-family: $font_family;
             color: rgb(38, 38, 38);
             font-weight: bold;
             line-height: 1.2;
@@ -146,7 +146,7 @@
           }
           p {
             font-size: 11px;
-            font-family: $open_sans;
+            font-family: $font_family;
             color: rgb(38, 38, 38);
             font-weight: bold;
             line-height: 1.2;
@@ -159,7 +159,7 @@
             }
             p {
               font-size: 11px;
-              font-family: $ubuntu;
+              font-family: $font_family;
               color: rgb(38, 38, 38);
               line-height: 1.2;
               text-align: center;
@@ -168,7 +168,7 @@
           &.trvl_dur {
             h6 {
               font-size: 12px;
-              font-family: $open_sans;
+              font-family: $font_family;
               color: rgb(38, 38, 38);
               font-weight: bold;
               line-height: 1.2;
@@ -180,7 +180,7 @@
             }
             p {
               font-size: 12px;
-              font-family: $open_sans;
+              font-family: $font_family;
               color: rgb(38, 38, 38); // font-weight: 300;
               line-height: 1.2;
               text-align: center;
@@ -195,7 +195,7 @@
           padding: 0px;
           .mat-tab-label-content {
             font-size: 18px;
-            font-family: $open_sans;
+            font-family: $font_family;
             color: rgb(0, 0, 0);
             line-height: 1.556;
             font-weight: 600;

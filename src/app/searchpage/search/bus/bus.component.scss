@@ -11,7 +11,7 @@
       .item {
         h6 {
           font-size: 14px;
-          font-family: $open_sans;
+          font-family: $font_family;
           color: rgb(0, 0, 0);
           font-weight: bold;
           line-height: 1.286;
@@ -19,7 +19,7 @@
         }
         P {
           font-size: 12px;
-          font-family: $open_sans;
+          font-family: $font_family;
           color: rgb(0, 0, 0); // font-weight: bold;
           line-height: 1.286;
           text-align: left;
@@ -27,7 +27,7 @@
         }
         span {
           font-size: 12px;
-          font-family: $open_sans;
+          font-family: $font_family;
           color: rgb(0, 0, 0); // font-weight: bold;
           line-height: 1.286;
           text-align: left;
@@ -40,7 +40,7 @@
           color: #000 !important;
           border-radius: 10em;
           font-size: 12px;
-          font-family: $open_sans; // line-height: 1.286;
+          font-family: $font_family; // line-height: 1.286;
           margin: auto;
         }
       }
@@ -203,7 +203,7 @@
             background: linear-gradient(to right, #263238 50%, #263238 50%);
             p {
               font-size: 12px;
-              font-family: $open_sans;
+              font-family: $font_family;
               line-height: 1.2;
               text-align: center;
               font-weight: bold;
@@ -231,7 +231,7 @@
               h6 {
                 font-size: 16px;
                 font-size: 14px;
-                font-family: $open_sans;
+                font-family: $font_family;
                 color: rgb(38, 38, 38);
                 font-weight: bold;
                 line-height: 1.2;
@@ -239,7 +239,7 @@
               }
               p {
                 font-size: 11px;
-                font-family: $open_sans;
+                font-family: $font_family;
                 color: rgb(38, 38, 38);
                 font-weight: bold;
                 line-height: 1.2;
@@ -252,7 +252,7 @@
                 }
                 p {
                   font-size: 11px;
-                  font-family: $ubuntu;
+                  font-family: $font_family;
                   color: rgb(38, 38, 38);
                   line-height: 1.2;
                   text-align: center;
@@ -261,7 +261,7 @@
               .duration {
                 h6 {
                   font-size: 12px;
-                  font-family: $open_sans;
+                  font-family: $font_family;
                   color: rgb(38, 38, 38);
                   font-weight: bold;
                   line-height: 1.2;
@@ -273,7 +273,7 @@
                 }
                 p {
                   font-size: 12px;
-                  font-family: $open_sans;
+                  font-family: $font_family;
                   color: rgb(38, 38, 38); // font-weight: 300;
                   line-height: 1.2;
                   text-align: center;
@@ -283,7 +283,7 @@
                 button {
                   font-size: 18px;
                   font-size: 14px;
-                  font-family: $open_sans;
+                  font-family: $font_family;
                   color: rgb(255, 255, 255);
                   line-height: 1.2;
                   text-align: center;
@@ -292,7 +292,7 @@
                 }
                 a {
                   font-size: 12px;
-                  font-family: $open_sans;
+                  font-family: $font_family;
                   font-weight: bold;
                   line-height: 1.2;
                   text-align: center;

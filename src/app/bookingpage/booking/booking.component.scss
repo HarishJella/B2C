@@ -109,24 +109,20 @@
       .travel_details {
         // 
         display: flex;
-    
-       
         @media (max-width: 425px) {
           grid-template-columns: 1fr;
         }
         .pad {
           padding: 0px;
           transition: all 0.5s ease-in-out;
-        
-          &.tabD{
+          &.tabD {
             max-width: 75%;
             padding: 20px;
           }
-          &.tabN{
+          &.tabN {
             max-width: 0%;
             height: 0px;
             overflow: hidden;
-          
           }
           h4 {
             font-size: 1rem !important;
@@ -248,9 +244,7 @@
         text-align: right;
         font-size: 12px;
       }
-      
       .grand {
-       
         grid-template-columns: 1fr 0.1fr 1fr;
         background-color: #eee;
         border-radius: 1.25em;
@@ -258,10 +252,9 @@
         padding: 0px 15px;
         table,
         tr,
-        th{
-        font-weight: bold;
+        th {
+          font-weight: bold;
         }
-        
       }
       .button {
         @include button;

@@ -11,9 +11,7 @@
             <p class="mb-0 aircode">AI-9506</p>
           </div>
 
-          <!-- <div class="p-1 provider waves-light" mdbWavesEffect>
-            <p class="mb-0">1G</p>
-          </div> -->
+
         </div>
         <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
           <div class="mb-1 d-flex">
@@ -30,6 +28,11 @@
           <h6 class="mb-0">1h 55m</h6>
           <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
           <p class="mb-0">Non Stop</p>
+
+          <div class="provider fundable refundable">
+            R
+          </div>
+
         </div>
         <div class="col-2 d-flex flex-column justify-content-center align-items-center">
           <div class="mb-1 d-flex">
@@ -52,26 +55,19 @@
             <p class="mb-0">Fare Details</p>
           </div> -->
           <div class="discount">
-            <div class="d-flex flex-column style-1">
-              <del>
-                <span class="amount">INR 9000</span>
-              </del>
-              <ins>
-                <span class="amount">INR 8908</span>
-              </ins>
+            <h6 class="mb-0">INR 9612</h6>
+            <div class="d-flex justify-content-center align-items-center">
+              <i class="material-icons">
+                airline_seat_recline_extra
+              </i>
+              <p class="mb-0">9 Seats</p>
             </div>
+
           </div>
-          <div class="d-flex justify-content-around align-items-center provider box">
-            <div class="mr-1 d-flex justify-content-center align-items-center waves-light fund refundable" mdbWavesEffect>
-              <p class="mb-0">R</p>
-            </div>
-            <div class="mr-1 d-flex justify-content-center align-items-center waves-light details" mdbWavesEffect>
-              <p class="mb-0">F</p>
-            </div>
-            <div class="d-flex justify-content-center align-items-center waves-light stops" mdbWavesEffect>
-              <p class="mb-0">S</p>
-            </div>
+          <div class="offer d-flex justify-content-center align-items-center p-1">
+            <h6 class="mb-0">INR 9600</h6>
           </div>
+
         </div>
       </div>
     </div>
@@ -82,9 +78,10 @@
           mdbWavesEffect>Flight Details</a>
       </div>
     </div>
-
   </div>
 </div>
+
+
 
 <div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
@@ -99,36 +96,266 @@
       </div>
 
       <div class="modal-body">
+        <div class="mb-3 d-flex justify-content-between align-items-center current_item_details">
+          <div class="d-flex flex-column justify-content-center align-items-start">
+
+            <h6 class="mb-0">New Delhi -> Mumbai</h6>
+            <p class="mb-0">Tue, 22may | 19h 15m | Non Stop</p>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-end">
+            <h4 class="mb-0">
+              $6,861
+            </h4>
+            <p class="mb-0">(Per Adult)</p>
+          </div>
+        </div>
         <mat-card>
           <mat-card-content>
             <!-- <h2 class="example-h2">Flight Detailss</h2> -->
             <mat-tab-group class="demo-tab-group">
               <mat-tab label="Flight Itinerary">
+
+
                 <div class="tab-content py-4">
                   <div class="col-12 px-0 d-flex flex-column">
-                    <div class="col-12 px-0 d-flex border">
-                      <div class="col-2 d-flex flex-column justify-content-center align-items-stretch">
-                        <img src="../../../../assets/images/flight.svg" alt="" class="img-fluid">
-                        <p class="mb-0">Air India</p>
-                        <p class="mb-0">Air India</p>
-                        <p class="mb-0">Air India</p>
-                        <p class="mb-0">Air India</p>
-                      </div>
-                      <div class="col-3">
-                        sdds
-                      </div>
-                      <div class="col-4">
-                          sdds
-                        </div>
-                        <div class="col-3">
-                            sdds
+                    <div class="col-12 py-2 px-0 d-flex justify-content-center align-items-center border">
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-stretch border-right">
+                        <div class="d-flex justify-content-center align-items-center">
+                          <div>
+                            <img src="../../../../assets/images/flight.svg" alt="" class="img-fluid">
                           </div>
+                          <div>
+                            <h6>SpicejJet</h6>
+                            <p class="mb-0">SG - 159</p>
+                            <span class="mb-0">Operated by spicejet</span>
+                          </div>
+                        </div>
+
+
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6>New Delhi (DEL)</h6>
+                        <p class="mb-0">Tue, 22 may, 21:35</p>
+                        <span class="mb-0">Indira Gandhi - T - ID</span>
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6> 2h 15m | Nonstop </h6>
+                        <img class="img-fluid" src="../../../../assets/images/air_Loader1.gif" alt="">
+                        <div>
+
+                        </div>
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6>Mumabia (BOM)</h6>
+                        <p class="mb-0">Tue, 22 may, 23:50</p>
+                        <span class="mb-0">Chatrpathi Shivaji - T - 1</span>
+                      </div>
                     </div>
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                      <div class="col-8 d-flex justify-content-center align-items-center border Layover">
+                        <i class="material-icons pr-2">
+                          airline_seat_individual_suite
+                        </i>
+                        <p class="mb-0"> Layover: Toronto (YYZ) - 17h 042m</p>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 d-flex flex-column">
+                    <div class="col-12 py-2 px-0 d-flex justify-content-center align-items-center border">
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-stretch border-right">
+                        <div class="d-flex justify-content-center align-items-center">
+                          <div>
+                            <img src="../../../../assets/images/flight.svg" alt="" class="img-fluid">
+                          </div>
+                          <div>
+                            <h6>SpicejJet</h6>
+                            <p class="mb-0">SG - 159</p>
+                            <span class="mb-0">Operated by spicejet</span>
+                          </div>
+                        </div>
+
+
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6>New Delhi (DEL)</h6>
+                        <p class="mb-0">Tue, 22 may, 21:35</p>
+                        <span class="mb-0">Indira Gandhi - T - ID</span>
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6> 2h 15m | Nonstop </h6>
+                        <img class="img-fluid" src="../../../../assets/images/air_Loader1.gif" alt="">
+                        <div>
+
+                        </div>
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6>Mumabia (BOM)</h6>
+                        <p class="mb-0">Tue, 22 may, 23:50</p>
+                        <span class="mb-0">Chatrpathi Shivaji - T - 1</span>
+                      </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                      <div class="col-8 d-flex justify-content-center align-items-center border Layover">
+                        <i class="material-icons">
+                          directions_run
+                        </i>
+                        <p class="mb-0"> Layover: Toronto (YYZ) - 42m</p>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 px-0 d-flex flex-column">
+                    <div class="col-12 py-2 px-0 d-flex justify-content-center align-items-center border">
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-stretch border-right">
+                        <div class="d-flex justify-content-center align-items-center">
+                          <div>
+                            <img src="../../../../assets/images/flight.svg" alt="" class="img-fluid">
+                          </div>
+                          <div>
+                            <h6>SpicejJet</h6>
+                            <p class="mb-0">SG - 159</p>
+                            <span class="mb-0">Operated by spicejet</span>
+                          </div>
+                        </div>
+
+
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6>New Delhi (DEL)</h6>
+                        <p class="mb-0">Tue, 22 may, 21:35</p>
+                        <span class="mb-0">Indira Gandhi - T - ID</span>
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6> 2h 15m | Nonstop </h6>
+                        <img class="img-fluid" src="../../../../assets/images/air_Loader1.gif" alt="">
+                        <div>
+
+                        </div>
+                      </div>
+                      <div class="col-3 d-flex flex-column justify-content-center align-items-center">
+                        <h6>Mumabia (BOM)</h6>
+                        <p class="mb-0">Tue, 22 may, 23:50</p>
+                        <span class="mb-0">Chatrpathi Shivaji - T - 1</span>
+                      </div>
+                    </div>
+                    <!-- <div class="col-12 d-flex justify-content-center align-items-center">
+                      <div class="col-8 d-flex justify-content-center align-items-center border Layover">
+                        <i class="material-icons pr-2">
+                          airline_seat_individual_suite
+                        </i>
+                        <p class="mb-0"> Layover: Toronto (YYZ) - 17h 042m</p>
+
+                      </div>
+                    </div>-->
                   </div>
                 </div>
               </mat-tab>
+              <mat-tab label="Fare Summary & Rules">
+                <div class="col-12 d-flex justify-content-between align-items-start">
+                  <div class="col-6">
+
+                    <table class="table table-striped table-bordered table-sm mt-3 mb-0">
+                      <thead>
+                        <tr>
+                          <th>Sl no</th>
+                          <th>Item</th>
+                          <th>Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Fare Summary</td>
+                          <td>ADT * 1</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Base fare</td>
+                          <td>$ 6,225</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Airlinr fuel surcharges</td>
+                          <td>$ 636</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>Total</td>
+                          <td>$6861</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <span>* Total fare displayed above has been rounded off and may thus show a slight difference</span>
+
+                  </div>
+                  <div class="col-6">
+
+                    <table class="table table-sm my-3 table-bordered">
+                      <thead>
+                        <tr>
+
+                          <th>Fare Rules</th>
+                          <th></th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <td>Airline</td>
+                          <td>Spice Jet</td>
+                        </tr>
+
+                        <tr>
+                          <td>Fare Basis Code </td>
+                          <td>xxxx</td>
+                        </tr>
+
+                        <tr>
+                          <td>Refund Type</td>
+                          <td>Refundable</td>
+                        </tr>
+
+                        <tr>
+                          <td>Airline Cancellation Fee</td>
+                          <td>$400</td>
+                        </tr>
+                        <tr>
+                          <td>Webaxyz online Cancellation Fee</td>
+                          <td>$300</td>
+                        </tr>
+                        <tr>
+                          <td>Rescheduling </td>
+                          <td>$300</td>
+                        </tr>
+                        <tr>
+                          <td>Offline Fee </td>
+                          <td>$300</td>
+                        </tr>
+                        <tr>
+                          <td>Cancellation Policy </td>
+                          <td>Lorem ipsum dolor sit amet.</td>
+                        </tr>
+                        <tr>
+                          <td>Re-issuance </td>
+                          <td>Lorem ipsum dolor sit amet.</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Baggage Policy">
+                Baggage
+              </mat-tab>
               <mat-tab label="Cancellation Policy">
-                <div class="demo-tab-content">
+                <div class="my-3  demo-tab-content">
                   <table class="table table-bordered">
                     <thead>
                       <th></th>
@@ -163,16 +390,15 @@
                   </table>
                 </div>
               </mat-tab>
-              <mat-tab label="Baggage Policy">
-                No content
-              </mat-tab>
+
             </mat-tab-group>
           </mat-card-content>
         </mat-card>
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Close</button>
+        <button type="button" class="btn btn-secondary btn-sm yes waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Yes</button>
+        <button type="button" class="btn btn-secondary btn-sm no waves-light" mdbWavesEffect>No</button>
       </div>
 
     </div>

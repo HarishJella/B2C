@@ -18,7 +18,7 @@
     .navbar-nav {
       .nav-item {
         .nav-link {
-          font-family: $open_sans; // color: rgba(255, 255, 255, 0.5) !important;
+          font-family: $font_family; // color: rgba(255, 255, 255, 0.5) !important;
           font-weight: 600;
           padding-top: 4px;
           padding-bottom: 4px;
@@ -70,7 +70,7 @@
       p {
         color: #000;
         font-weight: 600;
-        font-family: $open_sans;
+        font-family: $font_family;
         font-size: 12px;
         cursor: pointer;
       }
@@ -147,10 +147,10 @@
   }
 }
 
-.modal-open .modal {
-  display: flex !important;
-  align-items: center !important;
-  .modal-dialog {
-    flex-grow: 1;
-  }
-}
+// .modal-open .modal {
+//   display: flex !important;
+//   align-items: center !important;
+//   .modal-dialog {
+//     flex-grow: 1;
+//   }
+// }

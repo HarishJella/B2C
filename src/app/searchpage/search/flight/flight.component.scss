@@ -10,7 +10,7 @@
       .item {
         h6 {
           font-size: 14px;
-          font-family: $open_sans;
+          font-family: $font_family;
           color: rgb(0, 0, 0);
           font-weight: bold;
           line-height: 1.286;
@@ -18,7 +18,7 @@
         }
         P {
           font-size: 12px;
-          font-family: $open_sans;
+          font-family: $font_family;
           color: rgb(0, 0, 0); // font-weight: bold;
           line-height: 1.286;
           text-align: left;
@@ -26,7 +26,7 @@
         }
         span {
           font-size: 12px;
-          font-family: $open_sans;
+          font-family: $font_family;
           color: rgb(0, 0, 0); // font-weight: bold;
           line-height: 1.286;
           text-align: left;
@@ -39,7 +39,7 @@
           color: #000 !important;
           border-radius: 10em;
           font-size: 12px;
-          font-family: $open_sans; // line-height: 1.286;
+          font-family: $font_family; // line-height: 1.286;
           margin: auto;
         }
       }
@@ -240,7 +240,7 @@
             background: linear-gradient(to right, #263238 50%, #263238 50%);
             p {
               font-size: 13px;
-              font-family: $open_sans;
+              font-family: $font_family;
               line-height: 1.2;
               text-align: center;
               font-weight: bold;
@@ -268,7 +268,7 @@
               h6 {
                 font-size: 16px;
                 font-size: 14px;
-                font-family: $open_sans;
+                font-family: $font_family;
                 color: rgb(38, 38, 38);
                 font-weight: bold;
                 line-height: 1.2;
@@ -276,7 +276,7 @@
               }
               p {
                 font-size: 11px;
-                font-family: $open_sans;
+                font-family: $font_family;
                 color: rgb(38, 38, 38);
                 font-weight: bold;
                 line-height: 1.2;
@@ -289,7 +289,7 @@
                 }
                 p {
                   font-size: 11px;
-                  font-family: $ubuntu;
+                  font-family: $font_family;
                   color: rgb(38, 38, 38);
                   line-height: 1.2;
                   text-align: center;
@@ -298,7 +298,7 @@
               .duration {
                 h6 {
                   font-size: 12px;
-                  font-family: $open_sans;
+                  font-family: $font_family;
                   color: rgb(38, 38, 38);
                   font-weight: bold;
                   line-height: 1.2;
@@ -310,7 +310,7 @@
                 }
                 p {
                   font-size: 12px;
-                  font-family: $open_sans;
+                  font-family: $font_family;
                   color: rgb(38, 38, 38); // font-weight: 300;
                   line-height: 1.2;
                   text-align: center;
@@ -320,7 +320,7 @@
                 button {
                   font-size: 18px;
                   font-size: 14px;
-                  font-family: $open_sans;
+                  font-family: $font_family;
                   color: rgb(255, 255, 255);
                   line-height: 1.2;
                   text-align: center;
@@ -329,7 +329,7 @@
                 }
                 a {
                   font-size: 12px;
-                  font-family: $open_sans;
+                  font-family: $font_family;
                   font-weight: bold;
                   line-height: 1.2;
                   text-align: center;
@@ -361,7 +361,7 @@
         justify-self: stretch;
         p {
           font-size: 13px;
-          font-family: $open_sans;
+          font-family: $font_family;
           line-height: 1.2;
           text-align: center;
           font-weight: bold;
@@ -472,7 +472,7 @@
       }
     }
     .filter_content {
-      max-width: 0%; 
+      max-width: 0%;
       padding: 0px;
       overflow: hidden;
       min-height: 344.92px;
@@ -505,12 +505,88 @@
         background: linear-gradient(to right, #263238 50%, #263238 50%);
         p {
           font-size: 13px;
-          font-family: $open_sans;
+          font-family: $font_family;
           line-height: 1.2;
           text-align: center;
           font-weight: bold;
           color: #fff;
         }
+      }
+    }
+  }
+}
+
+.confirmed-flights {
+  background: rgba(0, 0, 0, 1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px rgba(12, 9, 9, 0.42);
+  .col-12 {
+    .col-10 {
+      .col-6 {
+        border-right: 1px solid #f83b52;
+        h6 {
+          font-size: 14px;
+          font-family: $font_family;
+          color: rgb(255, 255, 255);
+          color: rgba(0, 0, 0, 1);
+          font-weight: bold;
+          line-height: 1.286;
+          text-align: left;
+        }
+        P {
+          font-size: 12px;
+          font-family: $font_family;
+          color: rgb(255, 255, 255); // font-weight: bold;
+          color: rgba(0, 0, 0, 1);
+          line-height: 1.286;
+          text-align: left;
+          font-weight: 400;
+        }
+        .material-icons {
+          color: #fff;
+          color: rgba(0, 0, 0, 1);
+        }
+        ul li {
+          font-size: 10px;
+          font-family: $font_family;
+          color: rgb(255, 255, 255); // font-weight: bold;
+          color: rgba(0, 0, 0, 1);
+          line-height: 1.286;
+          text-align: left;
+          font-weight: 400;
+        }
+      }
+    }
+    .col-2 {
+      h6 {
+        font-size: 14px;
+        font-family: $font_family;
+        color: rgb(255, 255, 255);
+        color: rgba(0, 0, 0, 1);
+        font-weight: bold;
+        line-height: 1.286;
+        text-align: left;
+      }
+      p {
+        font-size: 14px;
+        font-family: $font_family;
+        color: rgb(255, 255, 255);
+        color: rgba(0, 0, 0, 1);
+        color: #f6325c;
+        font-weight: bold;
+        line-height: 1.286;
+        text-align: left;
+      }
+      button {
+        background: $pinky-orange;
+        border: 2px solid transparent;
+        color: #fff;
+        border-radius: 2px;
+        font-size: 12px;
+        font-family: $font_family; // line-height: 1.286;
+        margin: 0;
+        background-repeat: no-repeat;
+        padding: 0.3rem 1rem;
       }
     }
   }

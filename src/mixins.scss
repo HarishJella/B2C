@@ -23,7 +23,7 @@
 @mixin button {
   background: $pinky-orange;
   font-size: 14px;
-  font-family: $open_sans;
+  font-family: $font_family;
   font-weight: 400;
   color: rgb(255, 255, 255);
   line-height: 1.2;
@@ -59,7 +59,7 @@
 @mixin button_3{
   background:$gradient-green;
   font-size: 14px;
-  font-family: $open_sans;
+  font-family: $font_family;
   font-weight: 400;
   color: rgb(255, 255, 255);
   line-height: 1.2;

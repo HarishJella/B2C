@@ -24,7 +24,7 @@
         justify-self: center;
         h6 {
           font-size: 12px;
-          font-family: $open_sans;
+          font-family: $font_family;
           color: rgb(38, 38, 38);
           font-weight: bold;
           line-height: 1.2;
@@ -32,7 +32,7 @@
         }
         p {
           font-size: 11px;
-          font-family: $open_sans;
+          font-family: $font_family;
           color: rgb(38, 38, 38);
           font-weight: 600;
           line-height: 1.2;
@@ -54,7 +54,7 @@
           }
           p {
             font-size: 11px;
-            font-family: $open_sans;
+            font-family: $font_family;
             color: rgb(38, 38, 38);
             line-height: 1.2;
             text-align: center;
@@ -88,66 +88,37 @@
               color: #afaeaf;
               font-size: 10px;
             }
-            &.discount{
-              
+          }
+          .discount {
+            h6 {
+              text-decoration: line-through;
+              font-size: 10px;
+            }
+            .material-icons {
+              font-size: 15px;
             }
           }
-          .style-1 {
-            del {
-              color: rgba(red, 0.5);
-              text-decoration: none;
-              position: relative;
-              &:before {
-                content: " ";
-                display: block;
-                width: 100%;
-                border-top: 2px solid rgba(red, 0.8);
-                height: 11px;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                transform: rotate(-7deg);
-              }
-              font-size:12px;
-            }
-            ins {
-              color: green;
-              font-size: 14px;
-              text-decoration: none;
-              // padding: 1em 1em 1em .5em;
-            }
-          }
-          .box {
-            div {
-              width: 20px;
-              height: 20px;
-              p {
-                color: #fff;
-                font-size: 8px;
-              }
-              background: $pinky-orange;
-              &.fund {
-                &.refundable {
-                  
-                }
-                &.nonrefundable {
-                 
-                }
-              }
-              &.details {
-               
-              }
-              &.stops {
-                
-              }
+          .offer {
+            background: #ffd60d;
+            position: absolute;
+            top: 0;
+            border-radius: 2px;
+            h6 {
+              font-size: 11px;
+              font-family: $font_family;
+              color: #263238;
+              font-weight: bold;
+              line-height: 1;
+              text-align: center;
             }
           }
         }
         &.departure {}
         &.trvl_dur {
+          position: initial;
           h6 {
             font-size: 12px;
-            font-family: $open_sans;
+            font-family: $font_family;
             color: rgb(38, 38, 38);
             font-weight: bold;
             line-height: 1.2;
@@ -159,11 +130,45 @@
           }
           p {
             font-size: 11px;
-            font-family: $open_sans;
+            font-family: $font_family;
             color: rgb(38, 38, 38); // font-weight: 300;
             line-height: 1.2;
             text-align: center;
             font-weight: 600;
+          }
+          .provider {
+            background: $pinky-orange;
+            background: #346a86;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            width: 15px;
+            border-radius: 50%;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            p {
+              color: #fff;
+              font-size: 8px;
+            }
+            &.fundable {
+              // width: 20px;
+              // height: 20px;
+              // border-radius: 25px;
+              // background: gray;
+              color: #fff;
+              font-size: 10px;
+              &.refundable {
+                background: green;
+              }
+              &.non_refundable {
+                background: red;
+              }
+            }
           }
         }
       }
@@ -178,11 +183,12 @@
       }
       a {
         font-size: 10px;
-        font-family: $open_sans;
+        font-family: $font_family;
         font-weight: bold;
         line-height: 1.2;
         text-align: center;
-        color: #f26326
+        color: #f26326;
+        color: #212529;
       }
     }
   }
@@ -195,44 +201,124 @@
     .modal-content {
       border-radius: 15px;
       .modal-header {
-        padding: 1.5rem;
+        padding: 1rem;
         h4 {
           @include heading;
           margin: 0px;
-          font-size:20px;
+          font-size: 16px;
+          &::after {
+            width: 60px;
+            height: 2px;
+          }
         }
         button {}
       }
       .modal-body {
+        .current_item_details {
+          border-bottom: 1px dashed gray;
+          padding-bottom: 0.5em;
+          h6 {
+            font-size: 14px;
+            font-family: $font_family;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            line-height: 1.286;
+            text-align: left;
+          }
+          P {
+            font-size: 12px;
+            font-family: $font_family;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 1.286;
+            text-align: left;
+            font-weight: 500;
+          }
+          h4 {
+            font-size: 14px;
+            font-family: $font_family;
+            color: green;
+            font-weight: bold;
+            line-height: 1.286;
+            text-align: left;
+          }
+        }
         .mat-card {
           box-shadow: none;
           padding: 0px;
-          .mat-tab-label-content {
-            font-size: 15px;
-            font-family: $open_sans;
-            color: rgb(0, 0, 0);
-            line-height: 1.556;
-            font-weight: 600;
+          .mat-tab-label-active {
+            // background-color: rgba(242, 99, 38, 0.6);
+            background: $pinky-orange;
+            color: #fff;
+            .mat-tab-label-content {
+              color: #fff;
+            }
+          }
+          .mat-tab-label {
+            height: 34px;
+            .mat-tab-label-content {
+              font-size: 15px;
+              font-family: $font_family;
+              color: rgb(0, 0, 0);
+              line-height: 1.556;
+              font-weight: 600;
+            }
           }
           .mat-ink-bar {
             background: $pinky-orange;
           }
           .tab-content {
-            p {}
-            table {
-              tr {
-                td {
-                  ul {
-                    li {}
-                  }
-                }
-              }
+            h6 {
+              font-size: 14px;
+              font-family: $font_family;
+              color: rgb(0, 0, 0);
+              font-weight: bold;
+              line-height: 1.286;
+              text-align: left;
+            }
+            P {
+              font-size: 12px;
+              font-family: $font_family;
+              color: rgba(0, 0, 0, 0.62);
+              line-height: 1.286;
+              text-align: left;
+              font-weight: 500;
+            }
+            span {
+              font-size: 11px;
+              font-family: $font_family;
+              color: rgba(0, 0, 0, 0.62);
+              line-height: 1.286;
+              text-align: left;
+              font-weight: 500;
+            }
+            .Layover {
+              background: #dee2e6;
             }
           }
         }
+        table.table-sm th,
+        table.table-sm td {
+          font-size: 12px;
+          font-weight: 500;
+          font-family: $font_family;
+        }
+        span {
+          font-size: 11px;
+          font-family: $font_family;
+          color: rgba(0, 0, 0, 0.42);
+          text-align: left;
+          font-weight: 500;
+        }
       }
       .modal-footer {
-        button {}
+        button {
+          &.yes {
+            background: #388e3c !important
+          }
+          &.no {
+            background: #d32f2f !important;
+          }
+        }
       }
     }
   }
