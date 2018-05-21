@@ -4,7 +4,7 @@
   background-image: url(../../../assets/images/banner-img-a.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 85vh;
+  min-height: 85vh; // min-height: calc(100vh - 86px);
   .mat-card {
     padding: 0;
     position: relative;
@@ -124,11 +124,9 @@
   }
 }
 
-.featurs {
+.features {
   text-align: center;
-  img {
-    margin-bottom: 25px;
-  }
+  img {}
   h2 {
     text-align: left;
     @include heading;
@@ -137,14 +135,16 @@
     text-align: center;
     font-size: 18;
     font-weight: bold;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    font-family: $font_family;
   }
   p {
     font-size: 14px;
     text-align: justify;
-    font-weight: 300;
-    line-height: 30px;
+    font-weight: 400;
+    line-height: 24px;
     margin-bottom: 30px;
+    font-family: $font_family;
   }
 }
 
@@ -157,8 +157,9 @@
   p {
     font-size: 14px;
     text-align: justify;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 30px;
+    font-family: $font_family;
   }
 }
 
@@ -168,6 +169,7 @@
   color: #fff;
   text-align: center;
   padding: 30px;
+  font-family: $font_family;
 }
 
 .wide-md-b {

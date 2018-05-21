@@ -28,62 +28,26 @@
           <a class="nav-link waves-light" routerLink="/globaltemplate" routerLinkActive="active" mdbWavesEffect>Template</a>
         </li>
       </ul>
-      <!-- <span class="navbar-text white-text">
-        <ul class="d-flex no_style justify-content-between align-items-center mb-0">
-          <li>
-            <i class="material-icons">description</i>
-          </li>
-          <li>
-            <i class="material-icons">event</i>
-          </li>
-          <li>
-            <i class="material-icons active">important_devices</i>
-          </li>
-          <li>
-            <i class="material-icons">help_outline</i>
-          </li>
-          <li>
-            <i class="material-icons active">feedback</i>
-          </li>
-        </ul>
-      </span> -->
     </links>
   </mdb-navbar>
 
-  <!-- <div class="main-hed section ">
-    <div class="nav-br">
-      <i class="material-icons"> menu </i>
-    </div>
-    <div class="brand">
-      <div class="logo">
-        <img src="../../../assets/images/logo.svg">
+
+  <div class="main-hed d-flex">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="nav-br">
+        <i class="material-icons"> menu </i>
       </div>
-    </div>
-    <div>
-      <i class="material-icons">
-        account_circle
-      </i>
-    </div>
-  </div>
-</div> -->
-
-
-  <div class="main-hed d-flex justify-content-between align-items-center section ">
-    <div class="nav-br">
-      <i class="material-icons"> menu </i>
-    </div>
-
-    <div class="brand">
-      <div class="logo">
-        <img class="img-fluid" src="../../../assets/images/logo.svg">
+      <div class="brand">
+        <div class="logo">
+          <img class="img-fluid" src="../../../assets/images/logo.svg">
+        </div>
       </div>
-    </div>
-
-    <div class="d-flex flex-column justify-content-center align-items-center login">
-      <i class="material-icons" mdbWavesEffect (click)="form.show()">
-        account_circle
-      </i>
-      <P class="mb-0" mdbWavesEffect (click)="form.show()">Login / Signup</P>
+      <div class="d-flex flex-column justify-content-center align-items-center login">
+        <i class="material-icons" mdbWavesEffect (click)="form.show()">
+          account_circle
+        </i>
+        <P class="mb-0" mdbWavesEffect (click)="form.show()">Login / Signup</P>
+      </div>
     </div>
   </div>
 </div>
@@ -93,7 +57,7 @@
 <!--Modal: Login / Register Form-->
 <div mdbModal #form="mdb-modal" class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog cascading-modal" role="document">
+  <div class="modal-dialog" role="document">
     <!--Content-->
     <div class="modal-content">
 
@@ -104,23 +68,23 @@
           <div class="col-12 col-md-6 px-0">
             <img src="../../../assets/images/login_image.png" alt="Login image" class="img-fluid">
           </div>
-          <div class="col-12 col-md-6 px-0">
+          <div class="col-12 col-md-6 p-4  d-flex flex-column justify-content-between">
 
-            <div class="d-flex p-4  justify-content-between align-items-center">
-              <h5>Login/Register</h5>
-              <i class="material-icons">
+            <div class="d-flex justify-content-between align-items-center login_regis">
+              <h5 class="mb-0">Login / Register</h5>
+              <i class="material-icons waves-light" data-dismiss="modal" (click)="form.hide()" mdbWavesEffect>
                 close
               </i>
             </div>
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column form py-3">
 
               <mat-form-field>
                 <input matInput placeholder="Enter your name" required>
-
+                <mat-icon matSuffix>string</mat-icon>
               </mat-form-field>
               <mat-form-field>
                 <input matInput placeholder="Enter your email" required>
-
+                <mat-icon matSuffix>mail</mat-icon>
               </mat-form-field>
               <mat-form-field>
                 <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
@@ -129,13 +93,18 @@
 
             </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                or sign up with
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-google-plus-g"></i>
+            <div class="d-flex justify-content-between align-items-center social_log">
+              <div class="d-flex align-items-center">
+                <p class="mb-0">or sign up with</p>
+                <div class="px-2">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="px-2">
+                  <i class="fab fa-google-plus"></i>
+                </div>
+
               </div>
-              <button>Continue</button>
+              <button mdbWavesEffect>Continue</button>
             </div>
           </div>
 

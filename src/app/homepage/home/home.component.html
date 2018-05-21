@@ -1,7 +1,8 @@
-<div class="section banner">
-  <mat-card>
-    <div class="srch-bnr">
-      <!-- <div class="text-center hl-no">
+<div class="banner">
+  <div class="container">
+    <mat-card>
+      <div class="srch-bnr">
+        <!-- <div class="text-center hl-no">
         <h3>Help Line</h3>
         <p>000-000-000</p>
       </div>
@@ -12,108 +13,113 @@
           <span>Lorem Ipsum</span> is simply dummy text of the printing and type setting industry
         </p>
       </div> -->
-    </div>
-  </mat-card>
-  <mat-tab-group class="main-srch">
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <img src="../../../assets/images/flight.svg ">
-        <!-- <p>flight</p> -->
-      </ng-template>
-      <div class="d-flex  justify-content-center-align-items-center inputs">
-        <div class="md-form col-md-2 input-group">
-
-          <mat-form-field class="example-full-width">
-            <input type="autocomplete" placeholder="Leaving From" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-
-            <mat-autocomplete #auto="matAutocomplete">
-              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                {{ option }}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-
-        </div>
-        <div class="md-form col-md-0.1 d-flex justify-content-center align-items-center  input-group swap">
-
-          <i class="material-icons">
-            swap_horiz
-
-          </i>
-
-        </div>
-
-        <div class="md-form col-md-2 input-group">
-          <mat-form-field class="example-full-width">
-            <input type="autocomplete" placeholder="Going To" aria-label="Number" matInput [formControl]="myControl1" [matAutocomplete]="auto2">
-            <mat-autocomplete #auto2="matAutocomplete">
-              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                {{ option }}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-        </div>
-        <div class="md-form col-md-2 input-group">
-          <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="Departure Date">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-        </div>
-        <div class="md-form col-md-2 input-group">
-          <mat-form-field>
-            <input matInput [matDatepicker]="picker2" placeholder="Return Date">
-            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-            <mat-datepicker #picker2></mat-datepicker>
-          </mat-form-field>
-        </div>
-        <div class="md-form col-md-2 input-group">
-          <mat-form-field>
-            <mat-select placeholder="Traveller">
-              <mat-option *ngFor="let Travel of Travellers" [value]="Travel.value">
-                {{ Travel.viewValue }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-
-        </div>
-        <div class="md-form col-md-1.9 input-group search">
-          <button type="button" class="btn mb-0 w-100 btn-rounded waves-effect primary_btn" mdbWavesEffect> Search</button>
-        </div>
-
-
-
       </div>
+    </mat-card>
+    <mat-tab-group class="main-srch">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="../../../assets/images/flight.svg ">
+          <!-- <p>flight</p> -->
+        </ng-template>
+        <div class="d-flex  justify-content-center-align-items-center inputs">
+          <div class="md-form col-md-2 input-group">
 
-    </mat-tab>
+            <mat-form-field class="example-full-width">
+              <input type="autocomplete" placeholder="Leaving From" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
 
-    <mat-tab>
-      <ng-template mat-tab-label>
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{ option }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
 
-        <img src="../../../assets/images/bus.svg ">
-        <!-- <p>flight</p> -->
-      </ng-template>
-      Content 2</mat-tab>
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <img src="../../../assets/images/hotel.svg">
-        <!-- <p>flight</p> -->
-      </ng-template>
-      Content 3</mat-tab>
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <img src="../../../assets/images/holiday.svg">
-        <!-- <p>flight</p> -->
-      </ng-template>
-      Content 4</mat-tab>
-  </mat-tab-group>
+          </div>
+          <div class="md-form col-md-0.1 d-flex justify-content-center align-items-center  input-group swap">
+
+            <i class="material-icons">
+              swap_horiz
+
+            </i>
+
+          </div>
+
+          <div class="md-form col-md-2 input-group">
+            <mat-form-field class="example-full-width">
+              <input type="autocomplete" placeholder="Going To" aria-label="Number" matInput [formControl]="myControl1" [matAutocomplete]="auto2">
+              <mat-autocomplete #auto2="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{ option }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+          <div class="md-form col-md-2 input-group">
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Departure Date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="md-form col-md-2 input-group">
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker2" placeholder="Return Date">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="md-form col-md-2 input-group">
+            <mat-form-field>
+              <mat-select placeholder="Traveller">
+                <mat-option *ngFor="let Travel of Travellers" [value]="Travel.value">
+                  {{ Travel.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+          <div class="md-form col-md-1.9 input-group search">
+            <button type="button" class="btn mb-0 w-100 btn-rounded waves-effect primary_btn" mdbWavesEffect> Search</button>
+          </div>
+
+
+
+        </div>
+
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+
+          <img src="../../../assets/images/bus.svg ">
+          <!-- <p>flight</p> -->
+        </ng-template>
+        Bus Coming Soon.......
+
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="../../../assets/images/hotel.svg">
+          <!-- <p>flight</p> -->
+        </ng-template>
+        Hotel Coming Soon.......</mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="../../../assets/images/holiday.svg">
+          <!-- <p>flight</p> -->
+        </ng-template>
+        Holidays Coming Soon.......</mat-tab>
+    </mat-tab-group>
+  </div>
 </div>
-<div class="section featurs">
+
+
+<div class="container features">
   <h2 class="heading">Webaxyz Features</h2>
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-4">
-        <img src="../../../assets/images/sec-a.png">
+        <img class="img-fluid mb-4" src="../../../assets/images/sec-a.png">
         <h4>Manage your Money</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure quasi aut fugiat soluta eius recusandae odio
           quo quaerat consequatur consectetur esse, ut facere? Dolor dolorum, qui ab itaque quis veritatis maiores eligendi
@@ -121,7 +127,7 @@
           neque, aut minus aliquam officia fugiat modi porro natus! Reprehenderit, deleniti nostrum!</p>
       </div>
       <div class="col-md-4">
-        <img class="img-fluid" src="../../../assets/images/sec-b.png">
+        <img class="img-fluid mb-4" src="../../../assets/images/sec-b.png">
         <h4>Secure Payment</h4>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure quasi aut fugiat soluta eius recusandae odio
           quo quaerat consequatur consectetur esse, ut facere? Dolor dolorum, qui ab itaque quis veritatis maiores eligendi
@@ -129,7 +135,7 @@
           neque, aut minus aliquam officia fugiat modi porro natus! Reprehenderit, deleniti nostrum!</p>
       </div>
       <div class="col-md-4">
-        <img src="../../../assets/images/sec-c.png">
+        <img class="img-fluid mb-4" src="../../../assets/images/sec-c.png">
         <h4>Your Financial Report</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure quasi aut fugiat soluta eius recusandae odio
           quo quaerat consequatur consectetur esse, ut facere? Dolor dolorum, qui ab itaque quis veritatis maiores eligendi
@@ -139,8 +145,11 @@
     </div>
   </div>
 </div>
+
+
+
 <div class="wide-md">
-  <div class="section">
+  <div class="container">
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-6">
@@ -191,9 +200,12 @@
     </div>
   </div>
 </div>
+
+
+
 <div class="wide-md-b">
   <div class="section">
-    <h2 class="heading">Perfect Hotels</h2>
+    <h2 class="heading">Our Hotels</h2>
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-3">
