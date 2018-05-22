@@ -142,3 +142,41 @@ mat-slider {
 .mat-accent .mat-slider-track-fill {
   background: $pinky-orange !important;
 }
+
+.tol-tip {
+  position: absolute; // left: 0;
+  // right: 0;
+  min-height: auto;
+  min-width: 150px;
+  height: auto;
+  width: auto;
+  display: none;
+  background: rgba(38, 50, 56, 0.9);
+  color: #fff;
+  bottom: 20px;
+  div {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    align-items: center;
+    margin: auto;
+    font-family: $font_family;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    text-align: center;
+    background: transparent;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: solid 10px #3b464c;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+  }
+  &:hover {
+    display: block;
+  }
+}

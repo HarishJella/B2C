@@ -9,6 +9,7 @@
     box-shadow: -10px 0px 20px 0 rgba(0, 0, 0, 0.51);
   }
   .section1 {
+    height: 100%;
     .col-12 {
       border-bottom: 1px dashed #a2a2a2;
       &:last-child {
@@ -115,7 +116,7 @@
         }
         &.departure {}
         &.trvl_dur {
-          position: initial;
+          position: relative;
           h6 {
             font-size: 12px;
             font-family: $font_family;
@@ -217,6 +218,14 @@
         .current_item_details {
           border-bottom: 1px dashed gray;
           padding-bottom: 0.5em;
+          .airline {
+            h6 {
+              color: #13191c;
+            }
+            p {
+              color: #13191c;
+            }
+          }
           h6 {
             font-size: 14px;
             font-family: $font_family;
@@ -245,22 +254,24 @@
         .mat-card {
           box-shadow: none;
           padding: 0px;
-          .mat-tab-label-active {
-            // background-color: rgba(242, 99, 38, 0.6);
-            background: $pinky-orange;
-            color: #fff;
-            .mat-tab-label-content {
-              color: #fff;
-            }
-          }
           .mat-tab-label {
             height: 34px;
+            opacity: 1 !important;
             .mat-tab-label-content {
               font-size: 15px;
               font-family: $font_family;
               color: rgb(0, 0, 0);
               line-height: 1.556;
               font-weight: 600;
+            }
+          }
+          .mat-tab-label-active {
+            // background-color: rgba(242, 99, 38, 0.6);
+            background: $pinky-orange;
+            color: #fff;
+            opacity: 1 !important;
+            .mat-tab-label-content {
+              color: #fff;
             }
           }
           .mat-ink-bar {
@@ -295,8 +306,44 @@
               background: #dee2e6;
             }
           }
+          .mat-card-content {
+            .fare_summary {
+              p {
+                font-weight: 500;
+                color: #000;
+                span {
+                  color: #f2266b;
+                  font-size: 14px;
+                }
+              }
+            }
+            .fare_rules {
+              table {
+                tbody {
+                  tr {
+                    th {
+                      font-weight: 600;
+                    }
+                    td {
+                      padding: 10px;
+                      &:last-child {
+                        div {
+                          max-height: 100px;
+                          overflow: auto;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
-        table.table-sm th,
+        table.table-sm th {
+          font-size: 12px;
+          font-weight: 600;
+          font-family: $font_family;
+        }
         table.table-sm td {
           font-size: 12px;
           font-weight: 500;
@@ -363,4 +410,46 @@
 .tooltipdd:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.tol-tip {
+  position: absolute; // left: 0;
+  // right: 0;
+  min-height: auto;
+  min-width: 150px;
+  height: auto;
+  width: auto;
+  display: none;
+  background: rgba(38, 50, 56, 0.9);
+  color: #fff;
+  bottom: 20px;
+  div {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    align-items: center;
+    margin: auto;
+    font-family: $font_family;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    text-align: center;
+    background: transparent;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: solid 10px #3b464c;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+  }
+  &:hover {
+    display: block;
+  }
+}
+
+.fundable:hover>.tol-tip {
+  display: block;
 }
