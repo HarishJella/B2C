@@ -13,11 +13,21 @@
           <button type="button" class="btn  btn-rounded waves-effect selected_btn" mdbWavesEffect>Selected</button>
         </div>
         <div>
-          <button type="button" class="btn  btn-rounded waves-effect primary_btn" mdbWavesEffect>Ok</button>
+            <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
+            data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>
+            <i class="material-icons">
+              done
+            </i>
+          </button>
         </div>
         <div>
-          <button type="button" class="btn btn-outline-default btn-rounded waves-effect secondary_btn" mdbWavesEffect>Cancel</button>
+            <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
+                <i class="material-icons">
+                  close
+                </i>
+              </button>
         </div>
+       
       </div>
 
       <hr>
@@ -174,11 +184,19 @@
                 <div class="modal-body">
                   ...
                 </div>
-                <div class="modal-footer">
-
-                  <button type="button" class="btn  btn-rounded waves-effect primary_btn" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Ok</button>
-                  <button type="button" class="btn btn-outline-default btn-rounded waves-effect secondary_btn" mdbWavesEffect>Cancel</button>
-                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
+                      data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>
+                      <i class="material-icons">
+                        done
+                      </i>
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
+                      <i class="material-icons">
+                        close
+                      </i>
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
@@ -186,21 +204,15 @@
       </div>
       <hr>
       <h4 class="heading">Tooltip</h4>
-      <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on top" placement="top" mdbWavesEffect>
-        Tooltip on top
-      </button>
+      <div class="provider fundable refundable">
+          R
+          <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+            <div class="p-2">
+              Refundable
+            </div>
+          </div>
 
-      <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on right" placement="right" mdbWavesEffect>
-        Tooltip on right
-      </button>
-
-      <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on bottom" placement="bottom" mdbWavesEffect>
-        Tooltip on bottom
-      </button>
-
-      <button type="button" class="btn btn-primary waves-light" mdbTooltip="Tooltip on left" placement="left" mdbWavesEffect>
-        Tooltip on left
-      </button>
+        </div>
       <hr>
 
       <div class="auto_range">
@@ -242,7 +254,17 @@
         <button mat-button><i class="material-icons">clear</i>Clear</button> /
         <button mat-button><i class="material-icons">clear</i>Cancel</button>
       </div>
-     
+      <div>
+      <div class="provider fundable refundable">
+            R
+            <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+              <div class="p-2">
+                Refundable
+              </div>
+            </div>
+
+          </div>
+        </div>
     </mat-card>
 
 

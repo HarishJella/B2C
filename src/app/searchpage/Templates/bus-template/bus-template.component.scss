@@ -73,7 +73,7 @@
         line-height: 1.2;
         text-align: center;
         background: $pinky-orange;
-        padding: 0.50rem 2.14rem;
+        padding: 0.40rem 1rem;
         white-space: nowrap;
         box-shadow: none !important;
         &:hover {
@@ -89,10 +89,37 @@
         color: #f26326;
       }
     }
+    
+     
+      .discount {
+        h6 {
+          text-decoration: line-through;
+          font-size: 10px;
+        }
+        .material-icons {
+          font-size: 15px;
+        }
+      }
+      .offer {
+        background: #ffd60d;
+        position: absolute;
+        top: -10px;
+        border-radius: 2px;
+        h6 {
+          font-size: 11px;
+          font-family: $font_family;
+          color: #263238;
+          font-weight: bold;
+          line-height: 1;
+          text-align: center;
+        }
+      }
+    
   }
   .bus_footer {
     font-size: 11px;
     font-weight: bold;
+    
     p {
       transition: all .5s ease-in-out;
       &:hover {
@@ -132,60 +159,40 @@
         button {}
       }
       .modal-body {
-        .item {
-          padding: 0 1rem;
-          align-self: center;
-          justify-self: center;
+        .current_item_details {
+          border-bottom: 1px dashed gray;
+          padding-bottom: 0.5em;
+          .airline {
+            h6 {
+              color: #13191c;
+            }
+            p {
+              color: #13191c;
+            }
+          }
           h6 {
-            font-size: 16px;
             font-size: 14px;
             font-family: $font_family;
-            color: rgb(38, 38, 38);
+            color: rgb(0, 0, 0);
             font-weight: bold;
-            line-height: 1.2;
-            text-align: center;
+            line-height: 1.286;
+            text-align: left;
           }
-          p {
-            font-size: 11px;
+          P {
+            font-size: 12px;
             font-family: $font_family;
-            color: rgb(38, 38, 38);
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 1.286;
+            text-align: left;
+            font-weight: 500;
+          }
+          h4 {
+            font-size: 14px;
+            font-family: $font_family;
+            color: green;
             font-weight: bold;
-            line-height: 1.2;
-            text-align: center;
-          }
-          &.trvl_img {
-            img {
-              width: 50px;
-              height: 35px;
-            }
-            p {
-              font-size: 11px;
-              font-family: $font_family;
-              color: rgb(38, 38, 38);
-              line-height: 1.2;
-              text-align: center;
-            }
-          }
-          &.trvl_dur {
-            h6 {
-              font-size: 12px;
-              font-family: $font_family;
-              color: rgb(38, 38, 38);
-              font-weight: bold;
-              line-height: 1.2;
-              text-align: center;
-              &:after {
-                content: '';
-                background: url('../../../../assets/images/right_arrow.png');
-              }
-            }
-            p {
-              font-size: 12px;
-              font-family: $font_family;
-              color: rgb(38, 38, 38); // font-weight: 300;
-              line-height: 1.2;
-              text-align: center;
-            }
+            line-height: 1.286;
+            text-align: left;
           }
         }
         .modal_bus_d {
@@ -194,12 +201,25 @@
         .mat-card {
           box-shadow: none;
           padding: 0px;
-          .mat-tab-label-content {
-            font-size: 18px;
-            font-family: $font_family;
-            color: rgb(0, 0, 0);
-            line-height: 1.556;
-            font-weight: 600;
+          .mat-tab-label {
+            height: 34px;
+            opacity: 1 !important;
+            .mat-tab-label-content {
+              font-size: 15px;
+              font-family: $font_family;
+              color: rgb(0, 0, 0);
+              line-height: 1.556;
+              font-weight: 600;
+            }
+          }
+          .mat-tab-label-active {
+            // background-color: rgba(242, 99, 38, 0.6);
+            background: $pinky-orange;
+            color: #fff;
+            opacity: 1 !important;
+            .mat-tab-label-content {
+              color: #fff;
+            }
           }
           .mat-ink-bar {
             background: $pinky-orange;
@@ -308,8 +328,7 @@
         span {}
         .bd_ponts {
           background-color: #f5f5f5;
-          width: 50%;
-          margin: auto;
+          width: 100%;
           border: 1px solid #ccc;
           padding: 10px;
           border-radius: 10px;
@@ -332,8 +351,28 @@
         }
       }
       .modal-footer {
-        border-top: 1px solid #e9ecef00;
-        button {}
+        button {
+          &.yes {
+            background: #f73855 !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+          &.no {
+            background: #1f3c4a !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+        }
       }
     }
   }
