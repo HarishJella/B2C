@@ -55,6 +55,7 @@
       transition: all 0.5s ease-in-out; // display: grid;
       // grid-template-columns: auto auto 1fr;
       // grid-column-gap: 1em;
+      position: relative;
       .filter_div {
         background: #fff; // display: grid;
         // grid-template-columns: auto;
@@ -191,6 +192,7 @@
             }
             &.success {
               background-color: #9ecb3b;
+              background-color: #008000;
               color: #fff;
             }
             &.active {
@@ -218,7 +220,7 @@
         grid-row-gap: 1em;
         transition: all 0.5s ease-in-out;
         .Header {
-          background: #263238;
+          background: #1f3c4a;
           border-radius: 2px; // display: grid;
           // grid-template-columns: repeat(6, 1fr);
           min-height: 35px;
@@ -236,8 +238,7 @@
             align-self: center;
             justify-self: center;
             align-self: stretch;
-            justify-self: stretch; // border: 1px solid #fff;
-            background: linear-gradient(to right, #263238 50%, #263238 50%);
+            justify-self: stretch;
             p {
               font-size: 13px;
               font-family: $font_family;
@@ -522,8 +523,36 @@
   box-shadow: 0px 0px 20px rgba(12, 9, 9, 0.42);
   .col-12 {
     .col-10 {
-      .col-6 {
-        border-right: 1px solid #f83b52;
+      .single_flight {
+        border-right: 1px solid #ead6d6;
+        position: relative;
+        .tol-tip {
+          display: none;
+          bottom: 120%;
+          top: auto;
+          left: 0%;
+          width: 372px;
+          .single_flight {
+            border: 0px;
+          }
+          h6,
+          p,
+          span,
+          .material-icons {
+            color: #fff;
+          }
+          &:after {
+            left: 20%;
+            border-top: solid 20px #1f3c4a;
+            border-left: solid 20px transparent;
+            border-right: solid 20px transparent;
+          }
+        }
+        &:hover {
+          .tol-tip {
+            display: block;
+          }
+        }
         h6 {
           font-size: 14px;
           font-family: $font_family;
@@ -534,7 +563,7 @@
           text-align: left;
         }
         P {
-          font-size: 12px;
+          font-size: 11px;
           font-family: $font_family;
           color: rgb(255, 255, 255); // font-weight: bold;
           color: rgba(0, 0, 0, 1);
@@ -546,11 +575,10 @@
           color: #fff;
           color: rgba(0, 0, 0, 1);
         }
-        ul li {
+        span {
           font-size: 10px;
           font-family: $font_family;
-          color: rgb(255, 255, 255); // font-weight: bold;
-          color: rgba(0, 0, 0, 1);
+          color: #988c8c;
           line-height: 1.286;
           text-align: left;
           font-weight: 400;
