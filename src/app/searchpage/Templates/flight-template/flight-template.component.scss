@@ -247,6 +247,11 @@
         position: absolute;
         bottom: 0px;
         right: 0;
+        line-height: 0;
+        font-size: 12px;
+        .fa-eye {
+          color: green;
+        }
       }
     }
   }

@@ -20,6 +20,7 @@ import { HotelTemplateComponent } from './searchpage/Templates/hotel-template/ho
 import { FlightComponent } from './searchpage/search/flight/flight.component';
 import { BusComponent } from './searchpage/search/bus/bus.component';
 import { HotelComponent } from './searchpage/search/hotel/hotel.component';
+import { FlightbookingComponent } from './bookingpage/flightbooking/flightbooking.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { HotelComponent } from './searchpage/search/hotel/hotel.component';
     HotelTemplateComponent,
     FlightComponent,
     BusComponent,
-    HotelComponent
+    HotelComponent,
+    FlightbookingComponent
   ],
   imports: [
     BrowserModule,

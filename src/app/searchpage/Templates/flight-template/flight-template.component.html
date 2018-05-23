@@ -63,9 +63,8 @@
           </div>
         </div>
         <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
-          <h6 class="mb-1">X - ROIP</h6>
-          <p class="mb-0 refundable">refundable</p>
-
+          <h6 class="mb-1" matTooltipPosition="above" mat-raised-button matTooltip="Class - X-ROIP">X - ROIP</h6>
+          <p class="mb-0 refundable" matTooltipPosition="above" mat-raised-button matTooltip="Refundable">refundable</p>
 
         </div>
 
@@ -81,11 +80,12 @@
             <i class="material-icons">
               airline_seat_recline_extra
             </i>
-            <p class="mb-0">9 Seats</p>
+
+            <p class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="9 seats remaining  ">9 Seats</p>
           </div>
 
         </div>
-        <div class="offer d-flex justify-content-center align-items-center p-1">
+        <div class="offer d-flex justify-content-center align-items-center p-1" matTooltipPosition="above" mat-raised-button matTooltip="Offer price">
           <h6 class="mb-0 price_right">INR 9600</h6>
         </div>
 
@@ -95,7 +95,10 @@
           mdbWavesEffect>Book</button>
         <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#flight_details" (click)="flightDetails.show()"
           mdbWavesEffect>Flight Details</a>
-        <div class="view_status">
+        <!-- <button mat-raised-button matTooltip="Info about the action" aria-label="Button that displays a tooltip when focused or hovered over">
+          Action
+        </button> -->
+        <div class="view_status" matTooltipPosition="above" mat-raised-button matTooltip="Viewed">
           <i class="far fa-eye"></i>
         </div>
       </div>
