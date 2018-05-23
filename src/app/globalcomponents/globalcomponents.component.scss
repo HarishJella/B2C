@@ -11,6 +11,28 @@
     .selected_btn {
       @include button_3;
     }
+    button {
+      &.yes {
+        background: #f73855 !important;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        .material-icons {
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+      &.no {
+        background: #1f3c4a !important;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        .material-icons {
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+    }
   }
   .check_box {
     display: grid;
@@ -36,9 +58,34 @@
     .modal-header {
       border-bottom: 1px solid #e9ecef00;
     }
-    .modal-footer {
-      border-top: 1px solid #e9ecef00;
-    }
+   
+     
+      .modal-footer {
+        border-top: 1px solid #e9ecef00;
+        button {
+          &.yes {
+            background: #f73855 !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+          &.no {
+            background: #1f3c4a !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+        }
+      }
+    
   }
   .input {
     display: grid;
@@ -51,6 +98,16 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.provider {
+  position: absolute;
+  bottom: 0;
+  border-radius: 1px;
+  text-align: center;
+  p {
+    color: #afaeaf;
+    font-size: 10px;
+  }
+}
 .fundable:hover>.tol-tip {
   display: block;
 }
