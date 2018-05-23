@@ -12,22 +12,20 @@
         <div>
           <button type="button" class="btn  btn-rounded waves-effect selected_btn" mdbWavesEffect>Selected</button>
         </div>
-        <div>
-            <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
-            data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>
+        <div class="d-flex">
+          <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
+            mdbWavesEffect>
             <i class="material-icons">
               done
             </i>
           </button>
+          <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
+            <i class="material-icons">
+              close
+            </i>
+          </button>
         </div>
-        <div>
-            <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
-                <i class="material-icons">
-                  close
-                </i>
-              </button>
-        </div>
-       
+
       </div>
 
       <hr>
@@ -75,7 +73,7 @@
         </div>
         <div>
           <div class="example-container">
-              <mat-form-field>
+            <mat-form-field>
               <mat-select placeholder="Select">
                 <mat-option value="option">1</mat-option>
                 <mat-option value="option">2</mat-option>
@@ -184,19 +182,20 @@
                 <div class="modal-body">
                   ...
                 </div>
-                <div class="modal-footer border-top-0">
-                    <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
-                      data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>
-                      <i class="material-icons">
-                        done
-                      </i>
-                    </button>
-                    <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
-                      <i class="material-icons">
-                        close
-                      </i>
-                    </button>
-                  </div>
+                <div class="modal-footer">
+
+                  <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
+                    mdbWavesEffect>
+                    <i class="material-icons">
+                      done
+                    </i>
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
+                    <i class="material-icons">
+                      close
+                    </i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -216,63 +215,62 @@
       <hr>
 
       <div class="auto_range">
+        <div>
+          <h4 class="heading">Auto Complete</h4>
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input type="text" placeholder="Pick one" aria-label="Number" matInput [myControl]="myControl" [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{ option }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </form>
+        </div>
+        <div>
+          <h4 class="heading">Range Slider</h4>
           <div>
-                <h4 class="heading">Auto Complete</h4>
-                <form class="example-form">
-                  <mat-form-field class="example-full-width">
-                    <input type="text" placeholder="Pick one" aria-label="Number" matInput [myControl]="myControl" [matAutocomplete]="auto">
-                    <mat-autocomplete #auto="matAutocomplete">
-                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                        {{ option }}
-                      </mat-option>
-                    </mat-autocomplete>
-                  </mat-form-field>
-                </form>
-          </div>
-          <div>
-                <h4 class="heading">Range Slider</h4>
-                <div>
-                       
-                        <p>Upto Rs 2,52,369</p>
-                        <mat-slider [thumbLabel]="true" value="50000" [displayWith]="formatLabel" tickInterval="1" min="1" max="100000"></mat-slider>
-                        <div class="d-flex justify-content-between minmax">
-                          <p>min: 0</p>
-                          <p>max: 100k</p>
-                        </div>
-            
-                      </div>
+
+            <p>Upto Rs 2,52,369</p>
+            <mat-slider [thumbLabel]="true" value="50000" [displayWith]="formatLabel" tickInterval="1" min="1" max="100000"></mat-slider>
+            <div class="d-flex justify-content-between minmax">
+              <p>min: 0</p>
+              <p>max: 100k</p>
+            </div>
 
           </div>
+
+        </div>
       </div>
 
-      
+
 
 
       <hr>
       <div>
         <h4 class="heading">Link</h4>
-        <button mat-button><i class="material-icons">clear</i>Clear</button> /
-        <button mat-button><i class="material-icons">clear</i>Cancel</button>
+        <button mat-button>
+          <i class="material-icons">clear</i>Clear</button> /
+        <button mat-button>
+          <i class="material-icons">clear</i>Cancel</button>
       </div>
-      <div>
-      <div class="provider fundable refundable">
-            R
-            <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
-              <div class="p-2">
-                Refundable
-              </div>
-            </div>
+      <hr>
 
+      <!-- <div style="position: relative;">
+        <div class="provider fundable refundable" style="position: relative;">
+          Tooltip
+          <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+            <div class="p-2">
+              Refundable
+            </div>
           </div>
         </div>
+      </div> -->
+
     </mat-card>
 
 
 
 
   </div>
-</div>
-
-
-
-

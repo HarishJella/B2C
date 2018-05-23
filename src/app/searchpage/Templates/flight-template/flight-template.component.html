@@ -63,9 +63,111 @@
           </div>
         </div>
         <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-1">X - ROIP</h6>
+          <p class="mb-0 refundable">refundable</p>
 
-          <p class="mb-0">refundable</p>
-          <p class="mb-0">class = jdfh</p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="col-3  px-0 d-flex  justify-content-center align-items-center item section2 ">
+      <div class="col-6 pt-3 d-flex flex-column justify-content-center align-items-center fare">
+        <div class="discount">
+          <h6 class="mb-0 price_right">INR 9612</h6>
+          <div class="d-flex justify-content-center align-items-center">
+            <i class="material-icons">
+              airline_seat_recline_extra
+            </i>
+            <p class="mb-0">9 Seats</p>
+          </div>
+
+        </div>
+        <div class="offer d-flex justify-content-center align-items-center p-1">
+          <h6 class="mb-0 price_right">INR 9600</h6>
+        </div>
+
+      </div>
+      <div class="col-6 py-3 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
+        <button type="button" class="btn  btn-rounded waves-light mb-1" data-toggle="modal" data-target="#more_flights" (click)="moreFlights.show()"
+          mdbWavesEffect>Book</button>
+        <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#flight_details" (click)="flightDetails.show()"
+          mdbWavesEffect>Flight Details</a>
+        <div class="view_status">
+          <i class="far fa-eye"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- flight2 -->
+  <div class="col-12 px-0 d-flex justify-content-center align-items-stretch border-bottom {{more_flights_show}}">
+    <div class="col-9 px-0 d-flex flex-column justify-content-center align-items-center section1">
+      <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+        <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+          <div class="pr-0">
+            <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+          </div>
+          <div>
+            <h6 class="mb-1">Delta Air Lines</h6>
+            <p class="mb-0 aircode">AI-9506</p>
+          </div>
+
+
+        </div>
+        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+          <div class="mb-1 d-flex">
+            <h6 class="mb-0 mr-1">AGX</h6>
+            <h6 class="mb-0">10:30 </h6>
+          </div>
+          <div>
+            <p class="mb-0">Fri 18 may</p>
+          </div>
+
+
+        </div>
+        <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+          <h6 class="mb-0">1h 55m</h6>
+          <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+          <p class="mb-0">Non Stop</p>
+
+          <!-- <div class="provider fundable refundable">
+              R
+              <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                <div class="p-2">
+                  Refundable
+                </div>
+              </div>
+  
+            </div>
+            <div class="provider fundable refundable">
+              R
+              <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                <div class="p-2">
+                  Refundable
+                </div>
+              </div>
+  
+            </div> -->
+
+
+        </div>
+        <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+          <div class="mb-1 d-flex">
+            <h6 class="mb-0 mr-1">AGX</h6>
+            <h6 class="mb-0">
+              10:30 </h6>
+          </div>
+          <div>
+            <p class="mb-0">Fri 18 may</p>
+          </div>
+        </div>
+        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-1">X - ROIP</h6>
+          <p class="mb-0 refundable">refundable</p>
+
 
         </div>
 
@@ -91,38 +193,42 @@
 
       </div>
       <div class="col-6 py-3 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
-        <button type="button" class="btn  btn-rounded waves-light mb-1" mdbWavesEffect>Book</button>
-        <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
+        <button type="button" class="btn  btn-rounded waves-light mb-1" data-toggle="modal" data-target="#more_flights" (click)="moreFlights.show()"
+          mdbWavesEffect>Book</button>
+        <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#flight_details" (click)="flightDetails.show()"
           mdbWavesEffect>Flight Details</a>
+        <div class="view_status">
+          <i class="far fa-eye"></i>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- flight2 -->
-
 </div>
 
 <!-- more_flights button -->
-<div class="d-flex justify-content-center align-items-center">
-  <button class="btn waves-light m-0 p-1 d-flex justify-content-center align-items-center more_flights" (click)="more_flights()"
-    mdbWavesEffect>
+<div class="d-flex justify-content-center align-items-center ">
+  <div class="d-flex justify-content-center align-items-center waves-light more_flights" (click)="more_flights()" mdbWavesEffect>
+
     <p class="mb-0 pr-1">More</p>
     <i class="material-icons">
       airplanemode_active
     </i>
-  </button>
+
+  </div>
+
 </div>
 
 
 
-<div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div mdbModal #flightDetails="mdb-modal" class="modal fade" id="flight_details" tabindex="-1" role="dialog" aria-labelledby="flightDetails"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 
       <div class="modal-header border-bottom-0">
         <h4 class="modal-title w-100" id="myModalLabel">Flight Details</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="flightDetails.hide()">
           <span aria-hidden="true">×</span>
         </button>
       </div>
@@ -640,7 +746,477 @@
 
       <div class="modal-footer border-top-0">
         <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
-          data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>
+          data-dismiss="modal" (click)="flightDetails.hide()" mdbWavesEffect>
+          <i class="material-icons">
+            done
+          </i>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
+          <i class="material-icons">
+            close
+          </i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div mdbModal #moreFlights="mdb-modal" class="modal fade" id="more_flights" tabindex="-1" role="dialog" aria-labelledby="moreFlights"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header border-bottom-0">
+        <h4 class="modal-title w-100" id="myModalLabel">Chose Fare</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="moreFlights.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="mb-3 d-flex justify-content-between align-items-center current_item_details">
+
+          <div class="d-flex  justify-content-center align-items-start">
+            <div class="d-flex justify-content-between align-items-center airline pr-3">
+              <div class="pr-2">
+                <img width="35" height="35" src="../../../../assets/images/delta_airlines.gif" alt="">
+              </div>
+              <div>
+                <h6 class="mb-0">Air India</h6>
+                <p class="mb-0">AI - 969</p>
+              </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-start">
+              <h6 class="mb-0">New Delhi -> Mumbai</h6>
+              <p class="mb-0">Tue, 22may | 19h 15m | Non Stop</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-end">
+            <h4 class="mb-0">
+              $6,861
+            </h4>
+            <p class="mb-0">(Per Adult)</p>
+          </div>
+        </div>
+        <mat-card>
+          <mat-card-content>
+            <!-- <h2 class="example-h2">Flight Detailss</h2> -->
+            <mat-tab-group class="demo-tab-group">
+
+              <mat-tab label="Fares">
+                <div class="col-12 d-flex flex-wrap justify-content-center align-items-center multiple_fares">
+                  <div class="col-4 my-3 d-flex flex-column justify-content-center align-items-center fares ">
+                    <!-- <h6 class="text-center">Normal Fare</h6> -->
+                    <div class="border select selected">
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th class="w-50">Normal Fare</th>
+                            <th class="w-50">INR 3987.00</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="refundable">Refundable</td>
+                            <td class="nonchangeable">Non changeable</td>
+                          </tr>
+                          <tr>
+                            <td>Baggage </td>
+                            <td>Paid Baggages / Not Applicable</td>
+                          </tr>
+                          <tr>
+                            <td>Meals</td>
+                            <td>Paid Meals / Not Applicable</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                      <div class="d-block text-center ">
+                        <button class="btn  waves-light select selected text-center" mdbWavesEffect>Selected</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 my-3 d-flex flex-column justify-content-center align-items-center fares">
+                    <!-- <h6 class="text-center">Normal Fare</h6> -->
+                    <div class="border select">
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th class="w-50">Normal Fare</th>
+                            <th class="w-50">INR 3987.00</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="nonrefundable">Non Refundable</td>
+                            <td class="changeable">Changeable</td>
+                          </tr>
+                          <tr>
+                            <td>Baggage </td>
+                            <td>Paid Baggages / Not Applicable</td>
+                          </tr>
+                          <tr>
+                            <td>Meals</td>
+                            <td>Paid Meals / Not Applicable</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                      <div class="d-block text-center">
+                        <button class="btn  waves-light select  text-center" mdbWavesEffect>Select</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4 my-3 d-flex flex-column justify-content-center align-items-center fares">
+                    <!-- <h6 class="text-center">Normal Fare</h6> -->
+                    <div class="border select">
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th class="w-50">Normal Fare</th>
+                            <th class="w-50">INR 3987.00</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="nonrefundable">Non Refundable</td>
+                            <td class="changeable">Changeable</td>
+                          </tr>
+                          <tr>
+                            <td>Baggage </td>
+                            <td>Paid Baggages / Not Applicable</td>
+                          </tr>
+                          <tr>
+                            <td>Meals</td>
+                            <td>Paid Meals / Not Applicable</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                      <div class="d-block text-center">
+                        <button class="btn  waves-light select  text-center" mdbWavesEffect>Select</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
+
+              <mat-tab label="Fare Summary">
+                <div class="col-12 d-flex justify-content-center align-items-start fare_summary">
+                  <div class="col-4">
+                    <p class="mt-3 mb-2 text-center">Adult :
+                      <span>4</span>
+                    </p>
+                    <table class="table table-striped table-bordered table-sm mb-0">
+                      <thead>
+                        <tr>
+                          <th>Sl no</th>
+                          <th>Item</th>
+                          <th>Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td scope="row">1</td>
+                          <td>Fare Summary</td>
+                          <td>ADT * 1</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">2</td>
+                          <td>Base fare</td>
+                          <td class="price_right">$ 6,225</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">3</td>
+                          <td>Airlinr fuel surcharges</td>
+                          <td class="price_right">$ 636</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">4</td>
+                          <td>Total</td>
+                          <td class="price_right">$6861</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <span>* Total fare displayed above has been rounded off and may thus show a slight difference</span>
+
+                  </div>
+                  <div class="col-4">
+                    <p class="mt-3 mb-2 text-center">Child :
+                      <span>4</span>
+                    </p>
+                    <table class="table table-striped table-bordered table-sm mb-0">
+                      <thead>
+                        <tr>
+                          <th>Sl no</th>
+                          <th>Item</th>
+                          <th>Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td scope="row">1</td>
+                          <td>Fare Summary</td>
+                          <td>ADT * 1</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">2</td>
+                          <td>Base fare</td>
+                          <td class="price_right">$ 6,225</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">3</td>
+                          <td>Airlinr fuel surcharges</td>
+                          <td class="price_right">$ 636</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">4</td>
+                          <td>Total</td>
+                          <td class="price_right">$6861</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <span>* Total fare displayed above has been rounded off and may thus show a slight difference</span>
+
+                  </div>
+                  <div class="col-4">
+                    <p class="mt-3 mb-2 text-center">Infant :
+                      <span>4</span>
+                    </p>
+                    <table class="table table-striped table-bordered table-sm mb-0">
+                      <thead>
+                        <tr>
+                          <th>Sl no</th>
+                          <th>Item</th>
+                          <th>Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td scope="row">1</td>
+                          <td>Fare Summary</td>
+                          <td>ADT * 1</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">2</td>
+                          <td>Base fare</td>
+                          <td class="price_right">$ 6,225</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">3</td>
+                          <td>Airlinr fuel surcharges</td>
+                          <td class="price_right">$ 636</td>
+
+                        </tr>
+                        <tr>
+                          <td scope="row">4</td>
+                          <td>Total</td>
+                          <td class="price_right">$6861</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <span>* Total fare displayed above has been rounded off and may thus show a slight difference</span>
+
+                  </div>
+
+                </div>
+              </mat-tab>
+
+
+
+              <mat-tab label="Fare Rules">
+                <div class="col-12 d-flex justify-content-between align-items-start fare_rules">
+                  <div class="col-12 px-0">
+
+                    <table class="table table-sm my-3 table-bordered">
+                      <thead>
+                        <tr>
+
+                          <th>Category</th>
+                          <th>Type</th>
+                          <th colspan="2">Fare Rule</th>
+
+
+
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">
+                            <div>
+                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem nostrum eos. Velit tempora
+                              reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam aspernatur, architecto
+                              mollitia non deleniti neque veniam voluptates corrupti vero veritatis suscipit natus soluta
+                              sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta. nostrum eos. Velit tempora
+                              reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam aspernatur, architecto
+                              mollitia non deleniti neque veniam voluptates corrupti vero veritatis suscipit natus soluta
+                              sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta. nostrum eos. Velit tempora
+                              reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam aspernatur, architecto
+                              mollitia non deleniti neque veniam voluptates corrupti vero veritatis suscipit natus soluta
+                              sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta. nostrum eos. Velit tempora
+                              reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam aspernatur, architecto
+                              mollitia non deleniti neque veniam voluptates corrupti vero veritatis suscipit natus soluta
+                              sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta. aspernatur, architecto
+                              mollitia non deleniti neque veniam voluptates corrupti vero veritatis suscipit natus soluta
+                              sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta. Delectus, dolore?
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem
+                            nostrum eos. Velit tempora reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam
+                            aspernatur, architecto mollitia non deleniti neque veniam voluptates corrupti vero veritatis
+                            suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
+                            Delectus, dolore?</td>
+                        </tr>
+
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem
+                            nostrum eos. Velit tempora reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam
+                            aspernatur, architecto mollitia non deleniti neque veniam voluptates corrupti vero veritatis
+                            suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
+                            Delectus, dolore?</td>
+                        </tr>
+
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem
+                            nostrum eos. Velit tempora reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam
+                            aspernatur, architecto mollitia non deleniti neque veniam voluptates corrupti vero veritatis
+                            suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
+                            Delectus, dolore?</td>
+                        </tr>
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem
+                            nostrum eos. Velit tempora reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam
+                            aspernatur, architecto mollitia non deleniti neque veniam voluptates corrupti vero veritatis
+                            suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
+                            Delectus, dolore?</td>
+                        </tr>
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem
+                            nostrum eos. Velit tempora reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam
+                            aspernatur, architecto mollitia non deleniti neque veniam voluptates corrupti vero veritatis
+                            suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
+                            Delectus, dolore?</td>
+                        </tr>
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem
+                            nostrum eos. Velit tempora reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam
+                            aspernatur, architecto mollitia non deleniti neque veniam voluptates corrupti vero veritatis
+                            suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
+                            Delectus, dolore?</td>
+                        </tr>
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem
+                            nostrum eos. Velit tempora reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam
+                            aspernatur, architecto mollitia non deleniti neque veniam voluptates corrupti vero veritatis
+                            suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
+                            Delectus, dolore?</td>
+                        </tr>
+                        <tr>
+                          <td>0000</td>
+                          <td>Rule</td>
+                          <td colspan="2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis commodi amet error, voluptatem
+                            nostrum eos. Velit tempora reprehenderit nulla sunt, maiores doloribus aliquam provident, ullam
+                            aspernatur, architecto mollitia non deleniti neque veniam voluptates corrupti vero veritatis
+                            suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
+                            Delectus, dolore?</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+              </mat-tab>
+
+              <mat-tab label="Baggage Policy">
+
+                <!--Table-->
+                <div class="col-12">
+                  <table class="mt-4 table table-bordered table-sm text-center baggage_policy">
+
+                    <!--Table head-->
+                    <thead class="">
+                      <tr>
+                        <th>Sector</th>
+                        <th>Adult</th>
+                        <th>Child</th>
+                        <th>Infant</th>
+                      </tr>
+                    </thead>
+                    <!--Table head-->
+
+                    <!--Table body-->
+                    <tbody>
+                      <tr>
+                        <td>HYD-MAA</td>
+                        <td>25 Kilograms</td>
+                        <td>NOT APPLICABLE</td>
+                        <td>NOT APPLICABLE</td>
+                      </tr>
+                      <tr>
+                        <td>HYD-MAA</td>
+                        <td>25 Kilograms</td>
+                        <td>NOT APPLICABLE</td>
+                        <td>NOT APPLICABLE</td>
+                      </tr>
+                      <tr>
+                        <td>HYD-MAA</td>
+                        <td>25 Kilograms</td>
+                        <td>NOT APPLICABLE</td>
+                        <td>NOT APPLICABLE</td>
+                      </tr>
+                    </tbody>
+                    <!--Table body-->
+                  </table>
+                </div>
+                <!--Table-->
+
+                <!--Table-->
+
+
+              </mat-tab>
+
+            </mat-tab-group>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
+          data-dismiss="modal" (click)="moreFlights.hide()" mdbWavesEffect>
           <i class="material-icons">
             done
           </i>
