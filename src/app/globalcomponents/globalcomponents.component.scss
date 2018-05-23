@@ -50,3 +50,58 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.fundable:hover>.tol-tip {
+  display: block;
+}
+
+button {
+  &.yes {
+    background: #f73855 !important;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    .material-icons {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+  &.no {
+    background: #1f3c4a !important;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    .material-icons {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+}
+
+.mat-card {
+  box-shadow: none;
+  padding: 0px;
+  .mat-tab-label {
+    height: 34px;
+    opacity: 1 !important;
+    .mat-tab-label-content {
+      font-size: 15px;
+      font-family: $font_family;
+      color: rgb(0, 0, 0);
+      line-height: 1.556;
+      font-weight: 600;
+    }
+  }
+  .mat-tab-label-active {
+    // background-color: rgba(242, 99, 38, 0.6);
+    background: $pinky-orange;
+    color: #fff;
+    opacity: 1 !important;
+    .mat-tab-label-content {
+      color: #fff;
+    }
+  }
+  .mat-ink-bar {
+    background: $pinky-orange;
+  }
+}

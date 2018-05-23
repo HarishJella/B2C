@@ -11,7 +11,7 @@
         h6 {
           font-size: 14px;
           font-family: $font_family;
-          color: rgb(0, 0, 0);
+          color: #1f3c4a;
           font-weight: bold;
           line-height: 1.286;
           text-align: left;
@@ -19,7 +19,7 @@
         P {
           font-size: 12px;
           font-family: $font_family;
-          color: rgb(0, 0, 0); // font-weight: bold;
+          color: #1f3c4a; // font-weight: bold;
           line-height: 1.286;
           text-align: left;
           font-weight: 400;
@@ -27,7 +27,7 @@
         span {
           font-size: 12px;
           font-family: $font_family;
-          color: rgb(0, 0, 0); // font-weight: bold;
+          color: #1f3c4a; // font-weight: bold;
           line-height: 1.286;
           text-align: left;
           font-weight: 400;
@@ -36,7 +36,7 @@
           border: 2px solid #f52b64 !important;
           border-image: $pinky-orange;
           background-color: transparent !important;
-          color: #000 !important;
+          color: #1f3c4a !important;
           border-radius: 10em;
           font-size: 12px;
           font-family: $font_family; // line-height: 1.286;
@@ -199,13 +199,13 @@
               animation: pulse-shadow 1s infinite;
               @keyframes pulse-shadow {
                 0% {
-                  box-shadow: 0 0 0 0 #d2d2d2;
+                  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5)
                 }
                 70% {
-                  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0);
+                  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.5)
                 }
                 100% {
-                  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+                  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5)
                 }
               }
             }
@@ -224,15 +224,6 @@
           border-radius: 2px; // display: grid;
           // grid-template-columns: repeat(6, 1fr);
           min-height: 35px;
-          .section1 {
-            .col-12 {
-              .col-2 {
-                max-width: 20%;
-                min-width: 20%;
-                flex: 0 0 20%;
-              }
-            }
-          }
           .item {
             padding: 0 1rem;
             align-self: center;
@@ -432,13 +423,13 @@
               animation: pulse-shadow 1s infinite;
               @keyframes pulse-shadow {
                 0% {
-                  box-shadow: 0 0 0 0 #d2d2d2;
+                  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5)
                 }
                 70% {
-                  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0);
+                  box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.5)
                 }
                 100% {
-                  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+                  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5)
                 }
               }
             }

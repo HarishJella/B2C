@@ -28,7 +28,7 @@
   color: rgb(255, 255, 255);
   line-height: 1.2;
   text-align: center;
-  padding: 0.54rem 1.3rem;
+  padding: 0.4rem 1rem;
   margin: 0.375rem;
   &:focus {
     outline: 0;
@@ -41,23 +41,23 @@
 }
 
 @mixin button_2 {
-  border:2px solid #f6325c !important;
+  border: 2px solid #f6325c !important;
   background-color: transparent !important;
   color: #000 !important;
-  padding: 0.54rem 2.14rem!important;
+  padding: 0.4rem 1rem !important;
   margin: 0;
   &:hover,
   &:active,
   &:focus {
-    border:2px solid #f6325c !important;
+    border: 2px solid #f6325c !important;
     border-color: #f6325c !important;
     background-color: transparent !important;
     color: #000 !important;
   }
 }
 
-@mixin button_3{
-  background:$gradient-green;
+@mixin button_3 {
+  background: $gradient-green;
   font-size: 14px;
   font-family: $font_family;
   font-weight: 400;
@@ -74,7 +74,6 @@
   &:active {
     background: $gradient-green !important;
   }
-
 }
 
 @mixin text_box {

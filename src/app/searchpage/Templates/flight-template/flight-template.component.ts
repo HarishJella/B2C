@@ -15,6 +15,7 @@ export class FlightTemplateComponent implements OnInit {
     this.more_flights_show = this.more_flights_show === 'slideOutUp d-none' ? 'slideInDown d-flex' : 'slideOutUp d-none';
   }
 
+
   constructor() { }
 
   ngOnInit() {

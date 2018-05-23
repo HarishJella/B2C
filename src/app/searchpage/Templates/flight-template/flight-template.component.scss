@@ -8,9 +8,9 @@
     box-shadow: -15px 2px 13px -1px rgba(0, 0, 0, 0.160784);
     box-shadow: -10px 0px 20px 0 rgba(0, 0, 0, 0.51);
   }
-  &.border-bottom {
+  .border-bottom {
     &:last-child {
-      border: 0px !important;
+      border-bottom: 0px !important;
     }
   }
   .d-flex {
@@ -56,6 +56,15 @@
           color: red;
           font-weight: 700;
         }
+      }
+      .refundable {
+        color: green;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+      .nonrefundable {
+        color: red;
+        font-weight: 700;
       }
       .trvl_img {
         position: initial;
@@ -174,7 +183,7 @@
       }
     }
     .fare {
-      position: initial;
+      position: relative;
       .provider {
         position: absolute;
         bottom: 0;
@@ -197,7 +206,7 @@
       .offer {
         background: #ffd60d;
         position: absolute;
-        top: 0;
+        top: -17px;
         border-radius: 2px;
         h6 {
           font-size: 11px;
@@ -210,10 +219,20 @@
       }
     }
     .trvl_book_btn {
+      position: relative;
       button {
         @include button;
         padding: 0.4rem 1.5rem;
         margin: 0px;
+        &.soldout {
+          background: #d86363 !important;
+          cursor: no-drop;
+          color: #fff;
+          white-space: nowrap;
+        }
+        &.selected {
+          background: green !important;
+        }
       }
       a {
         font-size: 10px;
@@ -224,20 +243,31 @@
         color: #f26326;
         color: #212529;
       }
+      .view_status {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+      }
     }
   }
 }
 
 .more_flights {
-  background: #fff;
+  background: transparent url('../../../../assets/images/more_option.png') no-repeat;
+  background-size: contain;
+  width: 219px;
+  height: 18px;
+  cursor: pointer;
   p {
     font-size: 10px;
     color: #1f3c4a;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
   }
   .material-icons {
     font-size: 10px;
+    cursor: pointer;
   }
 }
 
@@ -353,6 +383,62 @@
             }
           }
           .mat-card-content {
+            .multiple_fares {
+              .fares {
+                .select {
+                  transition: all 0.5s ease-in-out;
+                  &:hover {
+                    box-shadow: 0px 0px 20px gray;
+                    transition: all 0.5s ease-in-out;
+                  }
+                  &.selected {
+                    box-shadow: 0px 0px 20px gray;
+                    transition: all 0.5s ease-in-out;
+                  }
+                  h6 {
+                    font-size: 14px;
+                    font-family: $font_family;
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                    line-height: 1.286;
+                  }
+                  table {
+                    th {
+                      font-size: 14px;
+                      font-family: $font_family;
+                      color: #000;
+                      font-weight: bold;
+                      line-height: 1.286;
+                      border: none;
+                    }
+                    td {
+                      font-size: 12px;
+                      font-weight: 500;
+                      font-family: $font_family;
+                      &.refundable,
+                      &.changeable {
+                        color: green;
+                        text-transform: capitalize;
+                      }
+                      &.nonrefundable,
+                      &.nonchangeable {
+                        color: red;
+                        text-transform: capitalize;
+                      }
+                    }
+                  }
+                  .select {
+                    color: #fff;
+                    background: $pinky-orange;
+                    padding: 0.4rem 1rem;
+                    border-radius: 25px;
+                    &.selected {
+                      background: green;
+                    }
+                  }
+                }
+              }
+            }
             .fare_summary {
               p {
                 font-weight: 500;

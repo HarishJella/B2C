@@ -36,16 +36,16 @@
           <img src="../../../../assets/images/filter icons/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="../../../../assets/images/filter icons/re_or_non-re.svg" alt="" class="img-fluid deptState" (click)="open_filter($event)">
+          <img src="../../../../assets/images/filter icons/depature.svg" alt="" class="img-fluid deptState" (click)="open_filter($event)">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="../../../../assets/images/filter icons/stops.svg" alt="" class="img-fluid stopsState" (click)="open_filter($event)">
+          <img src="../../../../assets/images/filter icons/hand.svg" alt="" class="img-fluid stopsState" (click)="open_filter($event)">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="../../../../assets/images/filter icons/price.svg" alt="" class="img-fluid fairState" (click)="open_filter($event)">
+          <img src="../../../../assets/images/filter icons/fare.svg" alt="" class="img-fluid fairState" (click)="open_filter($event)">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="../../../../assets/images/filter icons/airline.svg" alt="" class="img-fluid airlineState" (click)="open_filter($event)">
+          <img src="../../../../assets/images/filter icons/flight.svg" alt="" class="img-fluid airlineState" (click)="open_filter($event)">
         </div>
       </div>
 
@@ -148,28 +148,31 @@
 
         <div class="d-flex  justify-content-center align-items-center Header">
           <div class="col-12 px-0 d-flex justify-content-center align-items-center">
-            <div class="col-10 px-0 d-flex flex-column justify-content-center align-items-center section1">
+            <div class="col-9 px-0 d-flex flex-column justify-content-center align-items-center section1">
               <div class="col-12 px-0 d-flex justify-content-center align-items-center ">
-                <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center item">
                   <p class="mb-0">Delta Air Lines</p>
                 </div>
                 <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
                   <p class="mb-0">Depature</p>
                 </div>
-                <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
+                <div class="col-3 d-flex flex-column justify-content-center align-items-center item ">
                   <p class="mb-0">Duration</p>
                 </div>
                 <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
                   <p class="mb-0">Return</p>
                 </div>
                 <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
-                  <p class="mb-0">Price</p>
+                  <p class="mb-0">Class</p>
                 </div>
               </div>
             </div>
-            <div class="col-2 px-0 d-flex flex-column justify-content-center align-items-center item ">
-              <div class="col-12 d-flex flex-column justify-content-center align-items-center item">
-                <p class="mb-0">Showing 18 of 18 Flights</p>
+            <div class="col-3 px-0 d-flex  justify-content-center align-items-center item ">
+              <div class="col-6 d-flex flex-column justify-content-center align-items-center item">
+                <p class="mb-0">Price</p>
+              </div>
+              <div class="col-6 d-flex flex-column justify-content-center align-items-center item">
+                <p class="mb-0">Book</p>
               </div>
             </div>
           </div>
@@ -181,6 +184,410 @@
           <app-flight-template></app-flight-template>
           <app-flight-template></app-flight-template>
           <app-flight-template></app-flight-template>
+
+
+          <!-- flight Template -->
+          <div class="d-flex  flex-column justify-content-center align-items-center flight_template">
+            <!-- flight1 -->
+            <div class="col-12 px-0 d-flex justify-content-center align-items-stretch border-bottom">
+              <div class="col-9 px-0 d-flex flex-column justify-content-center align-items-center section1">
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="pr-0">
+                      <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Delta Air Lines</h6>
+                      <p class="mb-0 aircode">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0">Non Stop</p>
+
+
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1">X - ROIP</h6>
+                    <p class="mb-0 refundable">refundable</p>
+
+
+                  </div>
+
+                </div>
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="pr-0">
+                      <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Delta Air Lines</h6>
+                      <p class="mb-0 aircode">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0">Non Stop</p>
+
+
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1">X - ROIP</h6>
+                    <p class="mb-0 refundable">refundable</p>
+
+
+                  </div>
+
+                </div>
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="pr-0">
+                      <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Delta Air Lines</h6>
+                      <p class="mb-0 aircode">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0">Non Stop</p>
+
+
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1">X - ROIP</h6>
+                    <p class="mb-0 refundable">refundable</p>
+
+
+                  </div>
+
+                </div>
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="pr-0">
+                      <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Delta Air Lines</h6>
+                      <p class="mb-0 aircode">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0">Non Stop</p>
+
+
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1">X - ROIP</h6>
+                    <p class="mb-0 refundable">refundable</p>
+
+
+                  </div>
+
+                </div>
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="pr-0">
+                      <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Delta Air Lines</h6>
+                      <p class="mb-0 aircode">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0">Non Stop</p>
+
+
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1">X - ROIP</h6>
+                    <p class="mb-0 nonrefundable">Non Refundable</p>
+
+
+                  </div>
+
+                </div>
+
+
+              </div>
+              <div class="col-3  px-0 d-flex  justify-content-center align-items-center item section2 ">
+                <div class="col-6 pt-3 d-flex flex-column justify-content-center align-items-center fare">
+                  <div class="discount">
+                    <h6 class="mb-0 price_right">INR 9612</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="material-icons">
+                        airline_seat_recline_extra
+                      </i>
+                      <p class="mb-0">9 Seats</p>
+                    </div>
+
+                  </div>
+                  <div class="offer d-flex justify-content-center align-items-center p-1">
+                    <h6 class="mb-0 price_right">INR 9600</h6>
+                  </div>
+
+                </div>
+                <div class="col-6 py-3 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
+                  <button type="button" class="btn  btn-rounded waves-light mb-1 soldout" data-toggle="modal" data-target="#more_flights" (click)="moreFlights.show()"
+                    mdbWavesEffect>Sold Out</button>
+                  <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#flight_details" (click)="flightDetails.show()"
+                    mdbWavesEffect>Flight Details</a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+
+
+          <!-- flight Template -->
+          <div class="d-flex  flex-column justify-content-center align-items-center flight_template">
+            <!-- flight1 -->
+            <div class="col-12 px-0 d-flex justify-content-center align-items-stretch border-bottom">
+              <div class="col-9 px-0 d-flex flex-column justify-content-center align-items-center section1">
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="pr-0">
+                      <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Delta Air Lines</h6>
+                      <p class="mb-0 aircode">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0">Non Stop</p>
+
+                    <!-- <div class="provider fundable refundable">
+            R
+            <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+              <div class="p-2">
+                Refundable
+              </div>
+            </div>
+
+          </div>
+          <div class="provider fundable refundable">
+            R
+            <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+              <div class="p-2">
+                Refundable
+              </div>
+            </div>
+
+          </div> -->
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1">AGX</h6>
+                      <h6 class="mb-0">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1">X - ROIP</h6>
+                    <p class="mb-0 refundable">refundable</p>
+
+
+                  </div>
+
+                </div>
+
+
+              </div>
+              <div class="col-3  px-0 d-flex  justify-content-center align-items-center item section2 ">
+                <div class="col-6 pt-3 d-flex flex-column justify-content-center align-items-center fare">
+                  <div class="discount">
+                    <h6 class="mb-0 price_right">INR 9612</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="material-icons">
+                        airline_seat_recline_extra
+                      </i>
+                      <p class="mb-0">9 Seats</p>
+                    </div>
+
+                  </div>
+                  <div class="offer d-flex justify-content-center align-items-center p-1">
+                    <h6 class="mb-0 price_right">INR 9600</h6>
+                  </div>
+
+                </div>
+                <div class="col-6 py-3 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
+                  <button type="button" class="btn  btn-rounded waves-light mb-1 selected" data-toggle="modal" data-target="#more_flights"
+                    (click)="moreFlights.show()" mdbWavesEffect>Booked</button>
+                  <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#flight_details" (click)="flightDetails.show()"
+                    mdbWavesEffect>Flight Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
         </div>
 
 
@@ -443,7 +850,7 @@
   </div>
 </div> -->
 <!-- if multicity -->
-<!-- <div class="animated slideInLeft confirmed-flights container-fluid fixed-bottom">
+<div class="animated slideInLeft confirmed-flights container-fluid fixed-bottom">
   <div class="col-12 d-flex justify-content-center align-items-center px-0">
     <div class="col-10  d-flex flex-wrap justify-content-center align-items-center px-0">
       <div class="col-2 py-2 d-flex justify-content-center align-items-center px-0 single_flight">
@@ -766,4 +1173,4 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
