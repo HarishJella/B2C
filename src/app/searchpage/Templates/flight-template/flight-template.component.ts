@@ -9,12 +9,16 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class FlightTemplateComponent implements OnInit {
 
+  more_flights_show: string = 'slideOutUp d-none';
 
+  more_flights() {
+    this.more_flights_show = this.more_flights_show === 'slideOutUp d-none' ? 'slideInDown d-flex' : 'slideOutUp d-none';
+  }
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  
+
 }

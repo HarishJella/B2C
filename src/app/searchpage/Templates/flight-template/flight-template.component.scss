@@ -8,6 +8,17 @@
     box-shadow: -15px 2px 13px -1px rgba(0, 0, 0, 0.160784);
     box-shadow: -10px 0px 20px 0 rgba(0, 0, 0, 0.51);
   }
+  &.border-bottom {
+    &:last-child {
+      border: 0px !important;
+    }
+  }
+  .d-flex {
+    display: flex !important;
+  }
+  .d-none {
+    display: none !important;
+  }
   .section1 {
     height: 100%;
     .col-12 {
@@ -16,13 +27,70 @@
         border-bottom: 0px dashed #a2a2a2; // padding-bottom: 0px;
         // padding-top: 0px;
       }
-      position:relative;
-      .col-2 {
-        max-width: 20%;
-        min-width: 20%;
-        flex: 0 0 20%; // padding: 0 1rem;
-        align-self: center;
-        justify-self: center;
+      position:relative; // .col-2 {
+      // max-width: 20%;
+      // min-width: 20%;
+      // flex: 0 0 20%; // padding: 0 1rem;
+      align-self: center;
+      justify-self: center;
+      h6 {
+        font-size: 12px;
+        font-family: $font_family;
+        color: rgb(38, 38, 38);
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: center;
+      }
+      p {
+        font-size: 11px;
+        font-family: $font_family;
+        color: rgb(38, 38, 38);
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: center;
+        &.refundable {
+          color: green;
+          font-weight: 700;
+        }
+        &.nonrefundable {
+          color: red;
+          font-weight: 700;
+        }
+      }
+      .trvl_img {
+        position: initial;
+        img {
+          width: 35px;
+          height: 35px;
+        }
+        p {
+          font-size: 11px;
+          font-family: $font_family;
+          color: rgb(38, 38, 38);
+          line-height: 1.2;
+          text-align: center;
+          font-weight: 600;
+          &.aircode {
+            font-weight: 600;
+          }
+        }
+        .provider {
+          background: $pinky-orange;
+          background: #346a86;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 1px;
+          box-shadow: 9px 5px 20px rgba(108, 119, 105, 0.47058823529411764);
+          p {
+            color: #fff;
+            font-size: 8px;
+          }
+        }
+      }
+      .departure {}
+      .trvl_dur {
+        position: relative;
         h6 {
           font-size: 12px;
           font-family: $font_family;
@@ -30,152 +98,117 @@
           font-weight: bold;
           line-height: 1.2;
           text-align: center;
+          &:after {
+            content: '';
+            background: url('../../../../assets/images/right_arrow.png');
+          }
         }
         p {
           font-size: 11px;
           font-family: $font_family;
-          color: rgb(38, 38, 38);
-          font-weight: 600;
+          color: rgb(38, 38, 38); // font-weight: 300;
           line-height: 1.2;
           text-align: center;
-          &.refundable {
-            color: green;
-            font-weight: 700;
-          }
-          &.nonrefundable {
-            color: red;
-            font-weight: 700;
-          }
+          font-weight: 600;
         }
-        &.trvl_img {
-          position: initial;
-          img {
-            width: 35px;
-            height: 35px;
-          }
+        .provider {
+          background: $pinky-orange;
+          background: #346a86;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          width: 15px;
+          border-radius: 50%;
+          height: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
           p {
-            font-size: 11px;
-            font-family: $font_family;
-            color: rgb(38, 38, 38);
-            line-height: 1.2;
-            text-align: center;
-            font-weight: 600;
-            &.aircode {
-              font-weight: 600;
-            }
+            color: #fff;
+            font-size: 8px;
           }
-          .provider {
-            background: $pinky-orange;
-            background: #346a86;
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 1px;
-            box-shadow: 9px 5px 20px rgba(108, 119, 105, 0.47058823529411764);
-            p {
-              color: #fff;
-              font-size: 8px;
+          &.fundable {
+            // width: 20px;
+            // height: 20px;
+            // border-radius: 25px;
+            // background: gray;
+            color: #fff;
+            font-size: 10px;
+            &.refundable {
+              background: green;
+            }
+            &.non_refundable {
+              background: red;
             }
           }
         }
-        &.fare {
-          position: initial;
-          .provider {
-            position: absolute;
-            bottom: 0;
-            border-radius: 1px;
-            text-align: center;
-            p {
-              color: #afaeaf;
-              font-size: 10px;
-            }
-          }
-          .discount {
-            h6 {
-              text-decoration: line-through;
-              font-size: 10px;
-            }
-            .material-icons {
-              font-size: 15px;
-            }
-          }
-          .offer {
-            background: #ffd60d;
-            position: absolute;
-            top: 0;
-            border-radius: 2px;
-            h6 {
-              font-size: 11px;
-              font-family: $font_family;
-              color: #263238;
-              font-weight: bold;
-              line-height: 1;
-              text-align: center;
-            }
-          }
-        }
-        &.departure {}
-        &.trvl_dur {
-          position: relative;
-          h6 {
-            font-size: 12px;
-            font-family: $font_family;
-            color: rgb(38, 38, 38);
-            font-weight: bold;
-            line-height: 1.2;
-            text-align: center;
-            &:after {
-              content: '';
-              background: url('../../../../assets/images/right_arrow.png');
-            }
-          }
-          p {
-            font-size: 11px;
-            font-family: $font_family;
-            color: rgb(38, 38, 38); // font-weight: 300;
-            line-height: 1.2;
-            text-align: center;
-            font-weight: 600;
-          }
-          .provider {
-            background: $pinky-orange;
-            background: #346a86;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            width: 15px;
-            border-radius: 50%;
-            height: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            p {
-              color: #fff;
-              font-size: 8px;
-            }
-            &.fundable {
-              // width: 20px;
-              // height: 20px;
-              // border-radius: 25px;
-              // background: gray;
-              color: #fff;
-              font-size: 10px;
-              &.refundable {
-                background: green;
-              }
-              &.non_refundable {
-                background: red;
-              }
-            }
-          }
-        }
-      }
+      } // }
     }
   }
   .section2 {
+    h6 {
+      font-size: 12px;
+      font-family: $font_family;
+      color: rgb(38, 38, 38);
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+    }
+    p {
+      font-size: 11px;
+      font-family: $font_family;
+      color: rgb(38, 38, 38);
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      &.refundable {
+        color: green;
+        font-weight: 700;
+      }
+      &.nonrefundable {
+        color: red;
+        font-weight: 700;
+      }
+    }
+    .fare {
+      position: initial;
+      .provider {
+        position: absolute;
+        bottom: 0;
+        border-radius: 1px;
+        text-align: center;
+        p {
+          color: #afaeaf;
+          font-size: 10px;
+        }
+      }
+      .discount {
+        h6 {
+          text-decoration: line-through;
+          font-size: 10px;
+        }
+        .material-icons {
+          font-size: 15px;
+        }
+      }
+      .offer {
+        background: #ffd60d;
+        position: absolute;
+        top: 0;
+        border-radius: 2px;
+        h6 {
+          font-size: 11px;
+          font-family: $font_family;
+          color: #263238;
+          font-weight: bold;
+          line-height: 1;
+          text-align: center;
+        }
+      }
+    }
     .trvl_book_btn {
       button {
         @include button;
@@ -192,6 +225,19 @@
         color: #212529;
       }
     }
+  }
+}
+
+.more_flights {
+  background: #fff;
+  p {
+    font-size: 10px;
+    color: #1f3c4a;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+  }
+  .material-icons {
+    font-size: 10px;
   }
 }
 
@@ -312,7 +358,7 @@
                 font-weight: 500;
                 color: #000;
                 span {
-                  color: #f2266b;
+                  color: #1f3c4a;
                   font-size: 14px;
                 }
               }
@@ -339,10 +385,20 @@
             }
           }
         }
+        .baggage_policy thead {
+          background: #1f3c4a;
+          th {
+            color: #fff;
+          }
+        }
+        table.table-sm thead {
+          background: #1f3c4a;
+        }
         table.table-sm th {
           font-size: 12px;
           font-weight: 600;
           font-family: $font_family;
+          color: #fff;
         }
         table.table-sm td {
           font-size: 12px;
@@ -360,93 +416,28 @@
       .modal-footer {
         button {
           &.yes {
-            background: #388e3c !important
+            background: #f73855 !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
           }
           &.no {
-            background: #d32f2f !important;
+            background: #1f3c4a !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
           }
         }
       }
     }
-  }
-}
-
-.tooltipdd {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltipdd .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-.tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  /* At the bottom of the tooltip */
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black transparent transparent transparent;
-}
-
-.tooltipdd:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-.tol-tip {
-  position: absolute; // left: 0;
-  // right: 0;
-  min-height: auto;
-  min-width: 150px;
-  height: auto;
-  width: auto;
-  display: none;
-  background: rgba(38, 50, 56, 0.9);
-  color: #fff;
-  bottom: 20px;
-  div {
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    align-items: center;
-    margin: auto;
-    font-family: $font_family;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    text-align: center;
-    background: transparent;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-top: solid 10px #3b464c;
-    border-left: solid 10px transparent;
-    border-right: solid 10px transparent;
-  }
-  &:hover {
-    display: block;
   }
 }
 

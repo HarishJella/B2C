@@ -1,8 +1,10 @@
-<div class="d-flex  justify-content-center align-items-center flight_template">
-  <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
-    <div class="col-10 px-0 d-flex flex-column justify-content-center align-items-center section1">
+<!-- flight Template -->
+<div class="d-flex  flex-column justify-content-center align-items-center flight_template">
+  <!-- flight1 -->
+  <div class="col-12 px-0 d-flex justify-content-center align-items-stretch border-bottom">
+    <div class="col-9 px-0 d-flex flex-column justify-content-center align-items-center section1">
       <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
-        <div class="col-2 py-3  d-flex justify-content-center align-items-center  trvl_img">
+        <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
           <div class="pr-0">
             <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
           </div>
@@ -24,12 +26,12 @@
 
 
         </div>
-        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+        <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
           <h6 class="mb-0">1h 55m</h6>
           <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
           <p class="mb-0">Non Stop</p>
 
-          <div class="provider fundable refundable">
+          <!-- <div class="provider fundable refundable">
             R
             <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
               <div class="p-2">
@@ -46,7 +48,7 @@
               </div>
             </div>
 
-          </div>
+          </div> -->
 
 
         </div>
@@ -60,41 +62,55 @@
             <p class="mb-0">Fri 18 may</p>
           </div>
         </div>
-        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center fare">
-          <!-- <h6 class="mb-1">INR.8908</h6> -->
-          <!-- <p class="mb-0 refundable">Refundable </p> -->
-          <!-- <div class="tooltipdd">
-            Hover over me
-            <span class="tooltiptext">Tooltip text</span>
-          </div> -->
-          <!-- <div class="p-1 provider waves-light" mdbWavesEffect>
-            <p class="mb-0">Fare Details</p>
-          </div> -->
-          <div class="discount">
-            <h6 class="mb-0">INR 9612</h6>
-            <div class="d-flex justify-content-center align-items-center">
-              <i class="material-icons">
-                airline_seat_recline_extra
-              </i>
-              <p class="mb-0">9 Seats</p>
-            </div>
+        <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
 
-          </div>
-          <div class="offer d-flex justify-content-center align-items-center p-1">
-            <h6 class="mb-0">INR 9600</h6>
+          <p class="mb-0">refundable</p>
+          <p class="mb-0">class = jdfh</p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="col-3  px-0 d-flex  justify-content-center align-items-center item section2 ">
+      <div class="col-6 py-3 d-flex flex-column justify-content-center align-items-center fare">
+        <div class="discount">
+          <h6 class="mb-0 price_right">INR 9612</h6>
+          <div class="d-flex justify-content-center align-items-center">
+            <i class="material-icons">
+              airline_seat_recline_extra
+            </i>
+            <p class="mb-0">9 Seats</p>
           </div>
 
         </div>
+        <div class="offer d-flex justify-content-center align-items-center p-1">
+          <h6 class="mb-0 price_right">INR 9600</h6>
+        </div>
+
       </div>
-    </div>
-    <div class="col-2 py-3 px-0 d-flex flex-column justify-content-center align-items-center item section2 ">
-      <div class="col-12 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
+      <div class="col-6 py-3 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
         <button type="button" class="btn  btn-rounded waves-light mb-1" mdbWavesEffect>Book</button>
         <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#basicExample" (click)="demoBasic.show()"
           mdbWavesEffect>Flight Details</a>
       </div>
     </div>
   </div>
+
+  <!-- flight2 -->
+
+</div>
+
+<!-- more_flights button -->
+<div class="d-flex justify-content-center align-items-center">
+  <button class="btn waves-light m-0 p-1 d-flex justify-content-center align-items-center more_flights" (click)="more_flights()"
+    mdbWavesEffect>
+    <p class="mb-0 pr-1">More</p>
+    <i class="material-icons">
+      airplanemode_active
+    </i>
+  </button>
 </div>
 
 
@@ -104,7 +120,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 
-      <div class="modal-header">
+      <div class="modal-header border-bottom-0">
         <h4 class="modal-title w-100" id="myModalLabel">Flight Details</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
           <span aria-hidden="true">×</span>
@@ -294,27 +310,27 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">1</th>
+                          <td scope="row">1</td>
                           <td>Fare Summary</td>
                           <td>ADT * 1</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
+                          <td scope="row">2</td>
                           <td>Base fare</td>
-                          <td>$ 6,225</td>
+                          <td class="price_right">$ 6,225</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">3</th>
+                          <td scope="row">3</td>
                           <td>Airlinr fuel surcharges</td>
-                          <td>$ 636</td>
+                          <td class="price_right">$ 636</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">4</th>
+                          <td scope="row">4</td>
                           <td>Total</td>
-                          <td>$6861</td>
+                          <td class="price_right">$6861</td>
                         </tr>
                       </tbody>
                     </table>
@@ -335,27 +351,27 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">1</th>
+                          <td scope="row">1</td>
                           <td>Fare Summary</td>
                           <td>ADT * 1</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
+                          <td scope="row">2</td>
                           <td>Base fare</td>
-                          <td>$ 6,225</td>
+                          <td class="price_right">$ 6,225</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">3</th>
+                          <td scope="row">3</td>
                           <td>Airlinr fuel surcharges</td>
-                          <td>$ 636</td>
+                          <td class="price_right">$ 636</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">4</th>
+                          <td scope="row">4</td>
                           <td>Total</td>
-                          <td>$6861</td>
+                          <td class="price_right">$6861</td>
                         </tr>
                       </tbody>
                     </table>
@@ -376,27 +392,27 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">1</th>
+                          <td scope="row">1</td>
                           <td>Fare Summary</td>
                           <td>ADT * 1</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
+                          <td scope="row">2</td>
                           <td>Base fare</td>
-                          <td>$ 6,225</td>
+                          <td class="price_right">$ 6,225</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">3</th>
+                          <td scope="row">3</td>
                           <td>Airlinr fuel surcharges</td>
-                          <td>$ 636</td>
+                          <td class="price_right">$ 636</td>
 
                         </tr>
                         <tr>
-                          <th scope="row">4</th>
+                          <td scope="row">4</td>
                           <td>Total</td>
-                          <td>$6861</td>
+                          <td class="price_right">$6861</td>
                         </tr>
                       </tbody>
                     </table>
@@ -446,7 +462,8 @@
                               mollitia non deleniti neque veniam voluptates corrupti vero veritatis suscipit natus soluta
                               sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta. aspernatur, architecto
                               mollitia non deleniti neque veniam voluptates corrupti vero veritatis suscipit natus soluta
-                              sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta. Delectus, dolore?</div>
+                              sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta. Delectus, dolore?
+                            </div>
                           </td>
                         </tr>
 
@@ -536,10 +553,10 @@
 
                 <!--Table-->
                 <div class="col-12">
-                  <table class="mt-4 table table-bordered table-sm text-center">
+                  <table class="mt-4 table table-bordered table-sm text-center baggage_policy">
 
                     <!--Table head-->
-                    <thead class="mdb-color lighten-4">
+                    <thead class="">
                       <tr>
                         <th>Sector</th>
                         <th>Adult</th>
@@ -552,19 +569,19 @@
                     <!--Table body-->
                     <tbody>
                       <tr>
-                        <th>HYD-MAA</th>
+                        <td>HYD-MAA</td>
                         <td>25 Kilograms</td>
                         <td>NOT APPLICABLE</td>
                         <td>NOT APPLICABLE</td>
                       </tr>
                       <tr>
-                        <th>HYD-MAA</th>
+                        <td>HYD-MAA</td>
                         <td>25 Kilograms</td>
                         <td>NOT APPLICABLE</td>
                         <td>NOT APPLICABLE</td>
                       </tr>
                       <tr>
-                        <th>HYD-MAA</th>
+                        <td>HYD-MAA</td>
                         <td>25 Kilograms</td>
                         <td>NOT APPLICABLE</td>
                         <td>NOT APPLICABLE</td>
@@ -621,9 +638,18 @@
         </mat-card>
       </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm yes waves-light" data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>Yes</button>
-        <button type="button" class="btn btn-secondary btn-sm no waves-light" mdbWavesEffect>No</button>
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
+          data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>
+          <i class="material-icons">
+            done
+          </i>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
+          <i class="material-icons">
+            close
+          </i>
+        </button>
       </div>
 
     </div>
