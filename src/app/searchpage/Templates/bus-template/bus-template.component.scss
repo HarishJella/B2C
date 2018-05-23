@@ -117,6 +117,7 @@
 
 // modal style
 .modal {
+  overflow-y: auto !important;
   .modal-dialog {
     .modal-content {
       border-radius: 15px;
@@ -154,7 +155,7 @@
           }
           &.trvl_img {
             img {
-              width: 35px;
+              width: 50px;
               height: 35px;
             }
             p {
@@ -205,77 +206,129 @@
           }
           .tab-content {
             .bus_layout {
-              width: auto;
-              height: auto;
+              width: 250px;
               border-radius: 15px;
               background: #464444;
               position: relative;
+              margin: auto;
+              padding-top: 10px;
+              padding-bottom: 10px;
               .seat_layout {
-                background: #5b5757;
-                width: auto;
-                height: 100%;
+                background: #6b5e5e;
+                width: 250px;
+                min-height: 100px;
                 margin: auto;
-             
-                
-                border-radius: 15px;
               }
               .driver_seat {
                 background: #746e6e;
-                width: 85%;
-                height: 200px;
+                height: 100px;
               }
-              .passenger_seat{
-                background-color: #6d6262; 
+              .passenger_seat {
+                background-color: #6d6262;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                div,ul,li{
+                  margin-bottom: .5rem;
+                }
               }
               .wheel_1 {
-                width: 85px;
-                height: 10px;
+                width: 6px;
+                height: 80px;
                 background-color: #fff;
                 position: absolute;
-                border-bottom-left-radius: 4px;
+                border-top-right-radius: 4px;
                 border-bottom-right-radius: 4px;
-                top: -6px;
+                left: 0;
+                top:130px;
               }
               .wheel_2 {
-                width: 85px;
-                height: 10px;
+                width: 6px;
+                height: 80px;
                 background-color: #fff;
                 position: absolute;
+                border-top-left-radius: 4px;
                 border-bottom-left-radius: 4px;
-                border-bottom-right-radius: 4px;
-                top: -6px;
-                right: 55px;
+                right: 0px;
+                top:130px;
               }
               .wheel_3 {
-                width: 85px;
-                height: 10px;
+                width: 6px;
+                height: 80px;
                 background-color: #fff;
                 position: absolute;
-                border-top-left-radius: 4px;
                 border-top-right-radius: 4px;
-                bottom: -5px;
+                border-bottom-right-radius: 4px;
+                left: 0;
+                bottom:100px;
               }
               .wheel_4 {
-                width: 85px;
-                height: 10px;
+                width: 6px;
+                height: 80px;
                 background-color: #fff;
                 position: absolute;
                 border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
-                right: 55px;
-                bottom: -5px;
+                border-bottom-left-radius: 4px;
+                right: 0px;
+                bottom:100px
               }
             }
-            
-           
+            .reviews {
+              border: 1px dashed #ccc;
+              padding: 10px;
+              .user {
+                h5 i {
+                  color: #ed1d78;
+                }
+              }
+              .prog_bar {
+                label {
+                  font-weight: bold;
+                }
+                .mat-progress-bar {
+                  border-radius: 5px;
+                  height: 8px;
+                }
+                .mat-progress-bar-buffer {
+                  background-color: #f5f5f5;
+                }
+                .mat-progress-bar-background {
+                  fill: #f5f5f5;
+                }
+                .mat-progress-bar .mat-progress-bar-element,
+                .mat-progress-bar .mat-progress-bar-fill::after {
+                  border-radius: 5px;
+                }
+              }
+            }
           }
         }
-        .seat_define,div,span {
-         
-          
-        }
-        .bd_ponts{
+        .seat_define,
+        div,
+        span {}
+        .bd_ponts {
           background-color: #f5f5f5;
+          width: 50%;
+          margin: auto;
+          border: 1px solid #ccc;
+          padding: 10px;
+          border-radius: 10px;
+          .bdy_brd {
+            border-bottom: 1px dashed #ccc;
+            label {
+              font-weight: bold;
+            }
+          }
+          .bus_fare {
+            label {
+              font-weight: bold;
+            }
+          }
+          .button {
+            @include button;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
         }
       }
       .modal-footer {

@@ -15,6 +15,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatAutocompleteModule, MatInputModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
@@ -23,8 +24,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
 
-  imports: [MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule],
-  exports: [MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule],
+  imports: [MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule, MatProgressBarModule],
+  exports: [MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule, MatProgressBarModule],
 
 })
 
