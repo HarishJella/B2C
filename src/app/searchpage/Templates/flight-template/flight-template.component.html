@@ -5,7 +5,7 @@
     <div class="col-9 px-0 d-flex flex-column justify-content-center align-items-center section1">
       <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
         <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
-          <div class="pr-0">
+          <div class="pr-0" matTooltipPosition="above" mat-raised-button matTooltip="AI-9506">
             <img class="img-fluid" src="../../../assets/images/delta_airlines.gif" alt="Delata Airlines Image">
           </div>
           <div>
@@ -29,7 +29,7 @@
         <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
           <h6 class="mb-0">1h 55m</h6>
           <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
-          <p class="mb-0">Non Stop</p>
+          <p class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="Non Stop">Non Stop</p>
 
           <!-- <div class="provider fundable refundable">
             R
@@ -211,7 +211,8 @@
 
 <!-- more_flights button -->
 <div class="d-flex justify-content-center align-items-center ">
-  <div class="d-flex justify-content-center align-items-center waves-light more_flights" (click)="more_flights()" mdbWavesEffect>
+  <div class="d-flex justify-content-center align-items-center waves-light more_flights" (click)="more_flights()" mdbWavesEffect
+    matTooltipPosition="above" mat-raised-button matTooltip="2 More Similar Flights Available">
 
     <p class="mb-0 pr-1">More</p>
     <i class="material-icons">

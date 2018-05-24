@@ -10,7 +10,7 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  slidePassangers: string = 'slideOutUp';
   constructor() {
 
   }
@@ -48,12 +48,12 @@ export class HomeComponent implements OnInit {
       option.toLowerCase().includes(val.toLowerCase()));
   }
   Travellers = [
-    { value: 'Air India', viewValue: 'Air India' },
-    { value: 'Indonesia', viewValue: 'Indonesia' },
-    { value: 'Indigo Airways', viewValue: 'Indigo Airways' }
+    { value: 'Economy', viewValue: 'Economy' },
+    { value: 'Business', viewValue: 'Business' },
+    { value: 'Primary', viewValue: 'Primary' }
   ];
   passengers() {
-    alert('hi');
+    this.slidePassangers = this.slidePassangers === 'slideOutUp' ? 'slideInDown' : 'slideOutUp';
   }
 
 }

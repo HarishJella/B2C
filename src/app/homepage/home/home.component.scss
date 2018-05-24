@@ -95,19 +95,37 @@
         //   border-bottom: 1px solid #4285f4;
         // }
       }
-      .mat-radio-outer-circle{
+      .advance_search {
+        cursor: pointer;
+        .material-icons {
+          font-size: 16px;
+          cursor: pointer;
+        }
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+      }
+      .mat-radio-container {
+        width: 15px;
+        height: 15px;
+      }
+      .mat-radio-outer-circle {
         height: 15px;
         width: 15px;
       }
-      .mat-radio-label{
+      .mat-radio-label {
         font-size: 14px;
+        font-weight: 400;
+        line-height: 1.125;
       }
-      .mat-radio-button.mat-accent .mat-radio-inner-circle{
-        background:none;
+      .mat-radio-button.mat-accent .mat-radio-inner-circle {
+        background: none;
+        height: 15px;
+        width: 15px;
       }
-      .mat-radio-button.mat-accent .mat-radio-inner-circle{
-        
-      }
+      .mat-radio-button.mat-accent .mat-radio-inner-circle {}
     }
     .mat-tab-header {
       .mat-tab-label-container {
@@ -150,8 +168,6 @@
             .mat-ink-bar {
               background: $pinky-orange;
             }
-          
-          
           }
         }
       }
