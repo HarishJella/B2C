@@ -10,12 +10,14 @@ import { FlightbookingComponent } from './bookingpage/flightbooking/flightbookin
 import { AboutComponent } from './aboutpage/about/about.component';
 import { FaqComponent } from './FAQpage/faq/faq.component';
 import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
+import { BusbookingComponent } from './bookingpage/busbooking/busbooking.component';
 
 
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
   { path: 'bus', component: BusComponent },
+  { path: 'busbooking', component : BusbookingComponent},
   { path: 'hotel', component: HotelComponent },
   { path: 'flight', component: FlightComponent },
   { path: 'flight_booking', component: FlightbookingComponent },

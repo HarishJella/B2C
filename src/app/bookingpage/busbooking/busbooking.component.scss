@@ -54,7 +54,7 @@
     .ticket_body {
       background-color: #fff;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr;
       padding: 10px 10px;
       position: relative;
       @media (max-width: 425px) {
@@ -228,6 +228,20 @@
           h6{
             font-weight: bold;
           }
+      
+
+        .mat-radio-group{
+             .mat-radio-outer-circle{
+            height: 15px;
+            width: 15px;
+          }
+          .mat-radio-label{
+            font-size: 14px;
+          }
+          .mat-radio-button.mat-accent .mat-radio-inner-circle{
+            background:none;
+          }
+        }
         }
       }
       .traveler_infomation {
