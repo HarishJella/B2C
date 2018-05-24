@@ -1,14 +1,28 @@
 @import '~variables.scss';
 @import '~mixins.scss';
-.top-hed {
-  height: 25px;
-  width: 100%;
+.sub_head {
   color: #fff;
   background: $pinky-orange;
   @include font-12;
   a {
     padding: 0 14px;
     line-height: 2;
+  }
+  .helpline{
+    line-height: 2;
+    align-items: center;
+    a{
+      color: #fff !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        color: #fff;
+        font-size: 16px;
+        align-items: center;
+        line-height: 0;
+      }
+    }
   }
 }
 
@@ -99,6 +113,9 @@
   height: 100%;
   float: left;
   display: flex;
+  img {
+    width: 45px;
+  }
   i {
     justify-content: center;
     align-items: center;
