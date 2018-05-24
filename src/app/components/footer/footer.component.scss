@@ -35,5 +35,29 @@
     h6 {
       font-weight: 500 !important;
     }
+    ul,li,a{
+      transition: all .5s ease-in-out;
+      color: #000;
+      &:hover {
+        color: #f26326;
+        &::after {
+          width: 100%;
+        }
+      }
+      &::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: $pinky-orange;
+        display: block;
+        clear: both;
+        transition: all .5s ease-in-out;
+      }
+      &:active {}
+    }
+    p{
+      font-size: 14px;
+    }
   }
 }
+  

@@ -8,6 +8,22 @@
     padding: 0 14px;
     line-height: 2;
   }
+  .helpline{
+    line-height: 2;
+    align-items: center;
+    a{
+      color: #fff !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        color: #fff;
+        font-size: 16px;
+        align-items: center;
+        line-height: 0;
+      }
+    }
+  }
 }
 
 .navbar {

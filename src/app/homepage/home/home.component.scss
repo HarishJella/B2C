@@ -95,6 +95,19 @@
         //   border-bottom: 1px solid #4285f4;
         // }
       }
+      .mat-radio-outer-circle{
+        height: 15px;
+        width: 15px;
+      }
+      .mat-radio-label{
+        font-size: 14px;
+      }
+      .mat-radio-button.mat-accent .mat-radio-inner-circle{
+        background:none;
+      }
+      .mat-radio-button.mat-accent .mat-radio-inner-circle{
+        
+      }
     }
     .mat-tab-header {
       .mat-tab-label-container {
@@ -137,6 +150,8 @@
             .mat-ink-bar {
               background: $pinky-orange;
             }
+          
+          
           }
         }
       }
