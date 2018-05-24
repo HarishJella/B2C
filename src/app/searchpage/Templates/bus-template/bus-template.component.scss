@@ -119,26 +119,36 @@
   .bus_footer {
     font-size: 11px;
     font-weight: bold;
-    
-    p {
-      transition: all .5s ease-in-out;
-      &:hover {
-        color: #f26326;
-        &::after {
-          width: 100%;
-        }
-      }
-      &::after {
-        content: '';
-        width: 0%;
-        height: 2px;
-        background: $pinky-orange;
-        display: block;
-        clear: both;
+    position: relative;
+    .provider {
+     
+      bottom: 0;
+      border-radius: 1px;
+      text-align: center;
+      p {
         transition: all .5s ease-in-out;
+        &:hover {
+          color: #f26326;
+          &::after {
+            width: 100%;
+          }
+        }
+        &::after {
+          content: '';
+          width: 0%;
+          height: 2px;
+          background: $pinky-orange;
+          display: block;
+          clear: both;
+          transition: all .5s ease-in-out;
+        }
+        &:active {}
       }
-      &:active {}
     }
+    .fundable:hover>.tol-tip {
+      display: block;
+    }
+   
   }
 }
 
