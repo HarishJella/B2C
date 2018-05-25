@@ -23,10 +23,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
+
 @NgModule({
 
-  imports: [ MatTooltipModule, MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule, MatProgressBarModule],
-  exports: [ MatTooltipModule, MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule, MatProgressBarModule],
+  imports: [MatTooltipModule, MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule, MatProgressBarModule],
+  exports: [MatTooltipModule, MatDialogModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatGridListModule, MatIconModule, MatTabsModule, MatCardModule, MatSidenavModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatExpansionModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatAutocompleteModule, MatSliderModule, MatProgressBarModule],
 
 })
 
