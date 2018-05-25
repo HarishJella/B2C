@@ -1,27 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './homepage/home/home.component';
-import { SearchComponent } from './searchpage/search/search.component';
-import { BusComponent } from './searchpage/search/bus/bus.component';
-import { HotelComponent } from './searchpage/search/hotel/hotel.component';
-import { FlightComponent } from './searchpage/search/flight/flight.component';
+import { BusComponent } from './Bus/bus-page/bus.component';
+import { HotelComponent } from './Hotel/hotel-page/hotel.component';
+import { FlightComponent } from './Flight/flight-result/flight.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
-import { FlightbookingComponent } from './bookingpage/flightbooking/flightbooking.component';
+import { FlightbookingComponent } from './Flight/flight-booking/flightbooking.component';
 import { AboutComponent } from './aboutpage/about/about.component';
 import { FaqComponent } from './FAQpage/faq/faq.component';
 import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
-import { BusbookingComponent } from './bookingpage/busbooking/busbooking.component';
-
+import { BusbookingComponent } from './Bus/bus-booking/busbooking.component';
+import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
 
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
-  { path: 'bus', component: BusComponent },
-  { path: 'busbooking', component : BusbookingComponent},
-  { path: 'hotel', component: HotelComponent },
   { path: 'flight', component: FlightComponent },
   { path: 'flight_booking', component: FlightbookingComponent },
-  { path: 'booking', component: BookingComponent },
+  { path: 'bus', component: BusComponent },
+  { path: 'bus_booking', component: BusbookingComponent },
+  { path: 'hotel', component: HotelComponent },
+  { path: 'hotel_booking', component: HotelBookingComponent },
   { path: 'about', component: AboutComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'globaltemplate', component: GlobalcomponentsComponent }

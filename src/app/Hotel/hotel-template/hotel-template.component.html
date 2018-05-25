@@ -1,0 +1,308 @@
+<div class="col-md-12 px-0 Hotel-Template">
+
+  <div class="card card-cascade narrower">
+    <div class=" img_pad view overlay hm-white-slight waves-light" mdbWavesEffect>
+      <img src="assets/images/Hotel-image1.jpg" class="img-fluid" alt="">
+      <a>
+        <div class="mask"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="d-flex justify-content-between align-items-center">
+        <i class="material-icons active">
+          wifi
+        </i>
+        <i class="material-icons">
+          camera
+        </i>
+        <i class="material-icons active">
+          commute
+        </i>
+        <i class="material-icons">
+          description
+        </i>
+        <i class="material-icons">
+          event
+        </i>
+
+        <i class="material-icons active">
+          important_devices
+        </i>
+        <i class="material-icons">
+          help_outline
+        </i>
+        <i class="material-icons active">
+          feedback
+        </i>
+      </h5>
+
+      <div class="d-flex justify-content-between">
+        <h4 class="card-title mb-0">G Hotel Kelawai</h4>
+        <h4 class="mb-0 pipe">|</h4>
+        <h4 class="mb-0 rateing">4.5/5</h4>
+
+      </div>
+      <h5 class="d-flex  align-items-center">
+        <i class="material-icons active">
+          star
+        </i>
+        <i class="material-icons active">
+          star
+        </i>
+        <i class="material-icons active">
+          star
+        </i>
+        <i class="material-icons active">
+          star
+        </i>
+        <i class="material-icons ">
+          star
+        </i>
+      </h5>
+
+      <p class="mb-1 card-text">Near Wat Chaiya Mangkalaram, Penang</p>
+      <p class="mb-2 card-text">For 8 Night :
+        <span>56,151/-</span>
+      </p>
+      <div class="text-center">
+        <button type="button" class="btn btn-default btn-rounded waves-light theme-button" mdbWavesEffect data-toggle="modal" data-target="#hotel_details"
+          (click)="hotelDetails.show()">Take Room</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div mdbModal #hotelDetails="mdb-modal" class="modal fade" id="hotel_details" tabindex="-1" role="dialog" aria-labelledby="hotel_details"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header border-bottom-0">
+        <h4 class="modal-title w-100" id="myModalLabel">Chose Room and Hotel Details</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hotelDetails.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="mb-3 d-flex justify-content-between align-items-center current_item_details">
+
+          <div class="d-flex  justify-content-center align-items-start">
+            <div class="d-flex justify-content-between align-items-center airline pr-3">
+              <div class="pr-2">
+                <i class="material-icons">
+                  hotel
+                </i>
+              </div>
+              <div>
+                <div class="d-flex align-items-center">
+                  <h6 class="mb-0">HOTEL K.R.IN </h6>
+                  <p class="mb-0">2*</p>
+                </div>
+
+                <p class="mb-0">K.R.Puram After Extension Bus Stop, Bangalore</p>
+
+              </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-start">
+              <div class="d-flex align-items-center">
+                <h6 class="mb-0"> 3.75/5</h6>
+                <p class="mb-0">55 Reviews</p>
+              </div>
+
+              <p class="mb-0">81% guests recommended</p>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-start">
+              <h6 class="mb-0">check in </h6>
+              <p class="mb-0">11:00</p>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-start">
+              <h6 class="mb-0">check out</h6>
+              <p class="mb-0">23:00</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-end">
+            <div class="d-flex">
+              <i class="material-icons">
+                announcement
+              </i>
+              <p class="mb-0">
+                Save Rs.536
+              </p>
+            </div>
+            <div class="d-flex">
+              <p class="mb-0">Rs. 1357</p>
+              <p class="mb-0">Rs. 1357</p>
+            </div>
+
+
+            <p class="mb-0">Per Room/Night</p>
+          </div>
+        </div>
+        <mat-card>
+          <mat-card-content>
+            <!-- <h2 class="example-h2">Flight Detailss</h2> -->
+            <mat-tab-group class="demo-tab-group">
+              <mat-tab label="Room Type">
+
+
+                <div class="tab-content py-4">
+                  <div class="col-12 d-flex justify-content-center align-items-center border">
+                    <div class="col-3">
+                      <img src="assets/images/Hotel-image.jpg" alt="" class="img-fluid">
+                      <div class="content">
+                        <h6 class="mb-0">Standard Room (2 variants)</h6>
+                        <p class="mb-0">Room size 15*15 sq.ft</p>
+                      </div>
+                    </div>
+                    <div class="col-9">
+                      <div class="col-12 d-flex flex-column justify-content-between align-items-center border-bottom">
+                        <div class="col-12 d-flex justify-content-around mt-1 mb-3">
+                          <i class="material-icons active">
+                            wifi
+                          </i>
+                          <i class="material-icons">
+                            camera
+                          </i>
+                          <i class="material-icons active">
+                            commute
+                          </i>
+                          <i class="material-icons">
+                            description
+                          </i>
+                          <i class="material-icons">
+                            event
+                          </i>
+
+                          <i class="material-icons active">
+                            important_devices
+                          </i>
+                          <i class="material-icons">
+                            help_outline
+                          </i>
+                          <i class="material-icons active">
+                            feedback
+                          </i>
+                        </div>
+                        <div class="col-12 d-flex">
+                          <div class="col-2">
+                            <h6>Single Standard</h6>
+                            <p>1 Adult, 1 Children, 1 Infant</p>
+                          </div>
+                          <div class="col-2">
+                            <h6>American Breakfast</h6>
+                          </div>
+                          <div class="col-2">
+                            <h6>Map</h6>
+                            <p>Free cancellation Policy</p>
+                          </div>
+                          <div class="col-2">
+                            <h6>Bed Type</h6>
+                            <p>Double</p>
+                          </div>
+                          <div class="col-2">
+                            <h6 class="price">$7896</h6>
+                          </div>
+                          <div class="col-2">
+                            <button class="btn">Book</button>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Images">
+                images
+              </mat-tab>
+
+
+
+              <mat-tab label="Map">
+                Map Location
+              </mat-tab>
+
+              <mat-tab label="Amenities">
+
+                Amenities
+
+              </mat-tab>
+              <mat-tab label="Rating and Reviews">
+
+                Review
+              </mat-tab>
+              <mat-tab label="Near by Locations">
+
+                Near by Locations
+
+              </mat-tab>
+              <mat-tab label="Hotel Policy's">
+
+                Hotel Policies
+
+              </mat-tab>
+              <mat-tab label="Cancellation Policy">
+                <div class="my-3  demo-tab-content">
+                  <table class="table table-bordered">
+                    <thead>
+                      <th></th>
+                      <th></th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Airline Cancellation Charges</td>
+                        <td>As per airline policy. Paytm doesn't change any additional cancellation processing fee.</td>
+                      </tr>
+                      <tr>
+                        <td>Direct Cancellation with Airline</td>
+                        <td>Post Cancellation with airline, Please contact paytm customer care for refund</td>
+                      </tr>
+                      <tr>
+                        <td>Booking Modifications</td>
+                        <td>Date/Flight change is allowed upto 24hrs before depature as per airline policy. Contact our paytm
+                          flights customer care - 99</td>
+                      </tr>
+                      <tr>
+                        <td>Terms & Conditions</td>
+                        <td>
+                          <ul>
+                            <li>We accept cancellation, only before 24Hrs from depature time</li>
+                            <li>For cancellations, within 24 hours before depature you need to contact the airline. Post cancellation
+                              by airline, you can contact paytm for refund, if any</li>
+                            <li>Convenience fee is non-refundable. Any cashback availed will be adjusted in final amount</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </mat-tab>
+
+            </mat-tab-group>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="modal-footer border-top-0">
+        <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
+          data-dismiss="modal" (click)="hotelDetails.hide()" mdbWavesEffect>
+          <i class="material-icons">
+            done
+          </i>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
+          <i class="material-icons">
+            close
+          </i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

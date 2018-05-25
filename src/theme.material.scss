@@ -57,7 +57,9 @@ $mat-tooltip-handset-margin: 24px;
   max-width: $mat-tooltip-max-width;
   padding-left: $mat-tooltip-horizontal-padding;
   padding-right: $mat-tooltip-horizontal-padding;
-  font-size: 14px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 400;
   background: #263238;
   opacity: 1;
   @include cdk-high-contrast {

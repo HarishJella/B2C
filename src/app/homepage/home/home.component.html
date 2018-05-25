@@ -18,93 +18,11 @@
     <mat-tab-group class="main-srch">
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="../../../assets/images/flight.svg ">
+          <img src="assets/images/flight.svg ">
           <!-- <p>flight</p> -->
         </ng-template>
-        <div class="d-flex mt-3 radio">
-          <mat-radio-group class="px-3">
-            <mat-radio-button class="pr-4" value="1">One Way</mat-radio-button>
-            <mat-radio-button class="pr-4" value="2">Round Trip</mat-radio-button>
-            <mat-radio-button class="pr-4" value="3">Round Trip Special</mat-radio-button>
-            <mat-radio-button class="pr-4" value="4">Multicity</mat-radio-button>
-          </mat-radio-group>
 
-        </div>
-        <div class="d-flex  justify-content-center-align-items-center inputs">
-          <div class="md-form col-md-2 input-group">
-
-            <mat-form-field class="example-full-width">
-              <input type="autocomplete" placeholder="Leaving From" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-
-              <mat-autocomplete #auto="matAutocomplete">
-                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                  {{ option }}
-                </mat-option>
-              </mat-autocomplete>
-            </mat-form-field>
-
-          </div>
-          <div class="md-form col-md-0.1 d-flex justify-content-center align-items-center  input-group swap">
-
-            <i class="material-icons">
-              swap_horiz
-
-            </i>
-
-          </div>
-
-          <div class="md-form col-md-2 input-group">
-            <mat-form-field class="example-full-width">
-              <input type="autocomplete" placeholder="Going To" aria-label="Number" matInput [formControl]="myControl1" [matAutocomplete]="auto2">
-              <mat-autocomplete #auto2="matAutocomplete">
-                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                  {{ option }}
-                </mat-option>
-              </mat-autocomplete>
-            </mat-form-field>
-          </div>
-          <div class="md-form col-md-2 input-group">
-            <mat-form-field>
-              <input matInput [matDatepicker]="picker" placeholder="Departure Date">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-          </div>
-          <div class="md-form col-md-2 input-group">
-            <mat-form-field>
-              <input matInput [matDatepicker]="picker2" placeholder="Return Date">
-              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-              <mat-datepicker #picker2></mat-datepicker>
-            </mat-form-field>
-          </div>
-          <div class="md-form col-md-2 input-group">
-            <mat-form-field>
-              <mat-select placeholder="Class">
-                <mat-option *ngFor="let Travel of Travellers" [value]="Travel.value">
-                  {{ Travel.viewValue }}
-                </mat-option>
-              </mat-select>
-
-              <!-- <input matInput placeholder="Input"> -->
-
-            </mat-form-field>
-
-          </div>
-          <div class="md-form col-md-1.9 input-group search">
-            <button type="button" class="btn mb-0 w-100 btn-rounded waves-effect primary_btn" mdbWavesEffect> Search</button>
-          </div>
-
-
-
-        </div>
-
-        <div class="d-flex align-items-center justify-content-end align-items-center px-3 advance_search" (click)="passengers()">
-          <i class="material-icons pr-2">
-            add_circle
-          </i>
-          <p class="mb-0"> Advance Search</p>
-        </div>
-
+        <app-flight-form></app-flight-form>
         <!-- <div class="d-flex animated d-none {{slidePassangers}}">
           <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique recusandae exercitationem illum aliquid doloribus
             eius molestiae accusantium numquam soluta, porro, distinctio rem? Quam esse delectus, nisi, ratione quisquam
@@ -116,7 +34,7 @@
       <mat-tab>
         <ng-template mat-tab-label>
 
-          <img src="../../../assets/images/bus.svg ">
+          <img src="assets/images/bus.svg ">
           <!-- <p>flight</p> -->
         </ng-template>
         Bus Coming Soon.......
@@ -124,13 +42,13 @@
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="../../../assets/images/hotel.svg">
+          <img src="assets/images/hotel.svg">
           <!-- <p>flight</p> -->
         </ng-template>
         Hotel Coming Soon.......</mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="../../../assets/images/holiday.svg">
+          <img src="assets/images/holiday.svg">
           <!-- <p>flight</p> -->
         </ng-template>
         Holidays Coming Soon.......</mat-tab>
@@ -146,19 +64,19 @@
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-4">
-        <img class="img-fluid mb-4" src="../../../assets/images/sec-a.png">
+        <img class="img-fluid mb-4" src="assets/images/sec-a.png">
         <h4>Manage your Money</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure quasi aut fugiat soluta eius recusandae odio
           quo quaerat consequatur consectetur esse.</p>
       </div>
       <div class="col-md-4">
-        <img class="img-fluid mb-4" src="../../../assets/images/sec-b.png">
+        <img class="img-fluid mb-4" src="assets/images/sec-b.png">
         <h4>Secure Payment</h4>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure quasi aut fugiat soluta eius recusandae odio
           quo quaerat consequatur consectetur esse.</p>
       </div>
       <div class="col-md-4">
-        <img class="img-fluid mb-4" src="../../../assets/images/sec-c.png">
+        <img class="img-fluid mb-4" src="assets/images/sec-c.png">
         <h4>Your Financial Report</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi iure quasi aut fugiat soluta eius recusandae odio
           quo quaerat consequatur consectetur esse.</p>
@@ -184,7 +102,7 @@
 
         </div>
         <div class="col-md-6">
-          <img src="../../../assets/images/ix.svg">
+          <img src="assets/images/ix.svg">
         </div>
       </div>
     </div>
@@ -231,7 +149,7 @@
       <div class="row">
         <div class="col-md-3">
           <div class="mat-card">
-            <img src="../../../assets/images/hol-a.jpeg">
+            <img src="assets/images/hol-a.jpeg">
             <div class="col-md-12">
               <div class="row">
                 <div class="col-md-7">
@@ -246,7 +164,7 @@
         </div>
         <div class="col-md-3">
           <div class="mat-card">
-            <img src="../../../assets/images/hol-b.jpeg">
+            <img src="assets/images/hol-b.jpeg">
             <div class="col-md-12">
               <div class="row">
                 <div class="col-md-7">
@@ -261,7 +179,7 @@
         </div>
         <div class="col-md-3">
           <div class="mat-card">
-            <img src="../../../assets/images/hol-c.jpeg">
+            <img src="assets/images/hol-c.jpeg">
             <div class="col-md-12">
               <div class="row">
                 <div class="col-md-7">
@@ -276,7 +194,7 @@
         </div>
         <div class="col-md-3">
           <div class="mat-card">
-            <img src="../../../assets/images/hol-d.jpeg">
+            <img src="assets/images/hol-d.jpeg">
             <div class="col-md-12">
               <div class="row">
                 <div class="col-md-7">

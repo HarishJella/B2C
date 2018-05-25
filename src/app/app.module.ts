@@ -9,19 +9,20 @@ import { ComponentsModule } from './components/components.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './homepage/home/home.component';
-import { SearchComponent } from './searchpage/search/search.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
 import { AboutComponent } from './aboutpage/about/about.component';
 import { FaqComponent } from './FAQpage/faq/faq.component';
 import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
-import { FlightTemplateComponent } from './searchpage/Templates/flight-template/flight-template.component';
-import { BusTemplateComponent } from './searchpage/Templates/bus-template/bus-template.component';
-import { HotelTemplateComponent } from './searchpage/Templates/hotel-template/hotel-template.component';
-import { FlightComponent } from './searchpage/search/flight/flight.component';
-import { BusComponent } from './searchpage/search/bus/bus.component';
-import { HotelComponent } from './searchpage/search/hotel/hotel.component';
-import { FlightbookingComponent } from './bookingpage/flightbooking/flightbooking.component';
-import { BusbookingComponent } from './bookingpage/busbooking/busbooking.component';
+import { FlightTemplateComponent } from './Flight/flight-template/flight-template.component';
+import { BusTemplateComponent } from './Bus/bus-template/bus-template.component';
+import { HotelTemplateComponent } from './Hotel/hotel-template/hotel-template.component';
+import { FlightComponent } from './Flight/flight-result/flight.component';
+import { BusComponent } from './Bus/bus-page/bus.component';
+import { HotelComponent } from './Hotel/hotel-page/hotel.component';
+import { FlightbookingComponent } from './Flight/flight-booking/flightbooking.component';
+import { BusbookingComponent } from './Bus/bus-booking/busbooking.component';
+import { FlightFormComponent } from './Flight/flight-form/flight-form.component';
+import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
 
 
 @NgModule({
@@ -30,7 +31,6 @@ import { BusbookingComponent } from './bookingpage/busbooking/busbooking.compone
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    SearchComponent,
     BookingComponent,
     AboutComponent,
     FaqComponent,
@@ -42,7 +42,9 @@ import { BusbookingComponent } from './bookingpage/busbooking/busbooking.compone
     BusComponent,
     HotelComponent,
     FlightbookingComponent,
-    BusbookingComponent
+    BusbookingComponent,
+    FlightFormComponent,
+    HotelBookingComponent
   ],
   imports: [
     BrowserModule,

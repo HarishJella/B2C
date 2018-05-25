@@ -1,0 +1,407 @@
+@import '~variables.scss';
+@import '~mixins.scss';
+.items {
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    box-shadow: -15px 2px 13px -1px rgba(0, 0, 0, 0.160784);
+  }
+  .item {
+    padding: 0 1rem;
+    align-self: center;
+    justify-self: center;
+    h6 {
+      font-size: 16px;
+      font-size: 14px;
+      font-family: $font_family;
+      color: rgb(38, 38, 38);
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+    }
+    p {
+      font-size: 11px;
+      font-family: $font_family;
+      color: rgb(38, 38, 38);
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+    }
+    &.trvl_img {
+      img {
+        width: 35px;
+        height: 35px;
+      }
+      p {
+        font-size: 11px;
+        font-family: $font_family;
+        color: rgb(38, 38, 38);
+        line-height: 1.2;
+        text-align: center;
+      }
+    }
+    &.trvl_dur {
+      h6 {
+        font-size: 12px;
+        font-family: $font_family;
+        color: rgb(38, 38, 38);
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: center;
+        &:after {
+          content: '';
+          background: url('assets/images/right_arrow.png');
+        }
+      }
+      p {
+        font-size: 12px;
+        font-family: $font_family;
+        color: rgb(38, 38, 38); // font-weight: 300;
+        line-height: 1.2;
+        text-align: center;
+      }
+    }
+    .refund {
+      color: #9ecb3b !important;
+    }
+    &.trvl_book_btn {
+      position: relative;
+      button {
+        font-size: 18px;
+        font-size: 14px;
+        font-family: $font_family;
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        text-align: center;
+        background: $pinky-orange;
+        padding: 0.40rem 1rem;
+        white-space: nowrap;
+        box-shadow: none !important;
+        &:hover {
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+        }
+        
+      }
+      .view_status {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        line-height: 0;
+        font-size: 12px;
+        .fa-eye {
+          color: green;
+        }
+      }
+      a {
+        font-size: 12px;
+        font-family: $font_family;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: center;
+        color: #f26326;
+      }
+    }
+    
+     
+      .discount {
+        h6 {
+          text-decoration: line-through;
+          font-size: 10px;
+        }
+        .material-icons {
+          font-size: 15px;
+        }
+      }
+      .offer {
+        background: #ffd60d;
+        position: absolute;
+        top: -10px;
+        border-radius: 2px;
+        h6 {
+          font-size: 11px;
+          font-family: $font_family;
+          color: #263238;
+          font-weight: bold;
+          line-height: 1;
+          text-align: center;
+        }
+      }
+
+    
+  }
+  .bus_footer {
+    font-size: 11px;
+    font-weight: bold;
+    position: relative;
+    .provider {
+     
+      bottom: 0;
+      border-radius: 1px;
+      text-align: center;
+      p {
+        transition: all .5s ease-in-out;
+        &:hover {
+          color: #f26326;
+          &::after {
+            width: 100%;
+          }
+        }
+        &::after {
+          content: '';
+          width: 0%;
+          height: 2px;
+          background: $pinky-orange;
+          display: block;
+          clear: both;
+          transition: all .5s ease-in-out;
+        }
+        &:active {}
+      }
+    }
+    .fundable:hover>.tol-tip {
+      display: block;
+    }
+    .refund {
+      color:green !important;
+    }
+    .non_refund{
+     color:red;
+    }
+  }
+}
+
+// modal style
+.modal {
+  overflow-y: auto !important;
+  .modal-dialog {
+    .modal-content {
+      border-radius: 15px;
+      .modal-header {
+        padding: 1.5rem;
+        border-bottom: 1px solid #e9ecef00;
+        h6 {
+          @include heading;
+          margin: 0px;
+          font-size: 22px !important;
+        }
+        button {}
+      }
+      .modal-body {
+        .current_item_details {
+          border-bottom: 1px dashed gray;
+          padding-bottom: 0.5em;
+          .airline {
+            h6 {
+              color: #13191c;
+            }
+            p {
+              color: #13191c;
+            }
+          }
+          h6 {
+            font-size: 14px;
+            font-family: $font_family;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            line-height: 1.286;
+            text-align: left;
+          }
+          P {
+            font-size: 12px;
+            font-family: $font_family;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 1.286;
+            text-align: left;
+            font-weight: 500;
+          }
+          h4 {
+            font-size: 14px;
+            font-family: $font_family;
+            color: green;
+            font-weight: bold;
+            line-height: 1.286;
+            text-align: left;
+          }
+        }
+        .modal_bus_d {
+          background-color: #f5f5f5;
+        }
+        .mat-card {
+          box-shadow: none;
+          padding: 0px;
+          .mat-tab-label {
+            height: 34px;
+            opacity: 1 !important;
+            .mat-tab-label-content {
+              font-size: 15px;
+              font-family: $font_family;
+              color: rgb(0, 0, 0);
+              line-height: 1.556;
+              font-weight: 600;
+            }
+          }
+          .mat-tab-label-active {
+            // background-color: rgba(242, 99, 38, 0.6);
+            background: $pinky-orange;
+            color: #fff;
+            opacity: 1 !important;
+            .mat-tab-label-content {
+              color: #fff;
+            }
+          }
+          .mat-ink-bar {
+            background: $pinky-orange;
+          }
+          .tab-content {
+            .bus_layout {
+              width: 250px;
+              border-radius: 15px;
+              background: #464444;
+              position: relative;
+              margin: auto;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              .seat_layout {
+                background: #6b5e5e;
+                width: 250px;
+                min-height: 100px;
+                margin: auto;
+              }
+              .driver_seat {
+                background: #746e6e;
+                height: 100px;
+              }
+              .passenger_seat {
+                background-color: #6d6262;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                div,ul,li{
+                  margin-bottom: .5rem;
+                }
+              }
+              .wheel_1 {
+                width: 6px;
+                height: 80px;
+                background-color: #fff;
+                position: absolute;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                left: 0;
+                top:130px;
+              }
+              .wheel_2 {
+                width: 6px;
+                height: 80px;
+                background-color: #fff;
+                position: absolute;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                right: 0px;
+                top:130px;
+              }
+              .wheel_3 {
+                width: 6px;
+                height: 80px;
+                background-color: #fff;
+                position: absolute;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                left: 0;
+                bottom:100px;
+              }
+              .wheel_4 {
+                width: 6px;
+                height: 80px;
+                background-color: #fff;
+                position: absolute;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                right: 0px;
+                bottom:100px
+              }
+            }
+            .reviews {
+              border: 1px dashed #ccc;
+              padding: 10px;
+              .user {
+                h5 i {
+                  color: #ed1d78;
+                }
+              }
+              .prog_bar {
+                label {
+                  font-weight: bold;
+                }
+                .mat-progress-bar {
+                  border-radius: 5px;
+                  height: 8px;
+                }
+                .mat-progress-bar-buffer {
+                  background-color: #f5f5f5;
+                }
+                .mat-progress-bar-background {
+                  fill: #f5f5f5;
+                }
+                .mat-progress-bar .mat-progress-bar-element,
+                .mat-progress-bar .mat-progress-bar-fill::after {
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
+        }
+        .seat_define,
+        div,
+        span {}
+        .bd_ponts {
+          background-color: #f5f5f5;
+          width: 100%;
+          border: 1px solid #ccc;
+          padding: 10px;
+          border-radius: 10px;
+          .bdy_brd {
+            border-bottom: 1px dashed #ccc;
+            label {
+              font-weight: bold;
+            }
+          }
+          .bus_fare {
+            label {
+              font-weight: bold;
+            }
+          }
+          .button {
+            @include button;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .modal-footer {
+        button {
+          &.yes {
+            background: #f73855 !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+          &.no {
+            background: #1f3c4a !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

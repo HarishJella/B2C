@@ -133,9 +133,13 @@
           font-weight: 700;
         }
       }
+      img {
+        width: 35px;
+      }
     }
     .tip {
-      font-size: 12px;
+      font-size: 10px;
+      font-weight: 400;
       p {
         margin: .5em .5em !important;
       }
@@ -217,6 +221,14 @@
             }
           }
         }
+        form{
+          .mat-form-field{
+            font-size: 14px !important;
+          }
+          h6{
+            font-weight: bold;
+          }
+        }
       }
       .traveler_infomation {
         border-radius: 10px !important;
@@ -246,6 +258,7 @@
               align-items: center;
             }
           }
+          
         }
         .travler {
           text-align: center;
@@ -256,12 +269,15 @@
           p {
             font-size: 12px;
           }
+          h6{
+            font-weight: bold;
+          }
         }
         .please {
           font-size: 12px;
           position: absolute;
           bottom: 0;
-          font-weight: 300;
+          font-weight:bold;
         }
       }
     }
@@ -269,40 +285,61 @@
   .price_div {
     margin-top: 47px;
     .mat-card {
-      padding: 10px 20px !important;
       border-radius: 10px !important;
-      h4 {
-        float: left;
-        margin: 0px !important;
-        font-size: 1rem !important;
-        font-weight: bold;
+      .fare_breakup {
+        h4 {
+          float: left;
+          font-size: 15px;
+          font-weight: bold;
+          font-size: 18px;
+          font-family: $font_family;
+          color: rgb(0, 0, 0);
+        }
+        p {
+          font-size: 10px;
+          font-weight: 500;
+          text-align: right;
+        }
       }
-      p {
-        text-align: right;
-        font-size: 12px;
+      .fare {
+        table {
+          tr {
+            padding: 0 5px;
+            td {
+              font-size: 14px;
+              font-family: $font_family;
+              color: rgb(0, 0, 0);
+              font-weight: 400;
+            }
+            &.total {
+              td {
+                font-weight: bold;
+              }
+            }
+          }
+        }
       }
       .grand {
         grid-template-columns: 1fr 0.1fr 1fr;
         background-color: #eee;
-        border-radius: 1.25em;
+        border-radius: 5px;
         margin: auto;
-        padding: 0px 15px;
-        table,
-        tr,
-        th {
-          font-weight: bold;
+        font-weight: bold;
+        padding: 0 5px;
+        td {
+          font-weight: bold !important;
         }
       }
       .button {
         @include button;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        padding: 0.6rem 1rem !important;
       }
     }
   }
   .agree {
     p {
       text-align: center !important;
+      font-size: 10px;
     }
   }
 }
