@@ -1,0 +1,5 @@
+https://angularfirebase.com/lessons/animation-examples-in-angular-4-3/
+
+https://www.concretepage.com/angular-2/angular-2-4-animations-example
+
+https://davidwalsh.name/css-flip

@@ -5,27 +5,24 @@
     border-radius: 10px;
     box-shadow: none;
     transition: all .5sec ease-in-out;
-    &:hover{
+    &:hover {
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
       transition: all .5sec ease-in-out;
-
     }
-    .img_pad  {
+    .img_pad {
       padding: 20px !important;
     }
-    img{
+    img {
       border-radius: 10px;
     }
     .card-body {
-      padding-top:0px;
-     
+      padding-top: 0px;
       h5 {
         i {
           color: #cdcccd;
           font-size: 18px;
           &.active {
             color: #0776bc;
-
           }
         }
       }
@@ -36,10 +33,10 @@
         font-weight: bold;
         line-height: 1.778;
       }
-      .pipe{
+      .pipe {
         color: #ccc;
       }
-      .rateing{
+      .rateing {
         color: #76a70a;
       }
       p {
@@ -54,9 +51,265 @@
       button {
         @include button;
         padding: 0.54rem 1.14rem;
-        box-shadow:none;
-        &:hover{
+        box-shadow: none;
+        &:hover {
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+      }
+    }
+  }
+}
+
+// modal style
+.modal {
+  overflow-y: auto !important;
+  .modal-dialog {
+    .modal-content {
+      border-radius: 15px;
+      .modal-header {
+        padding: 1rem;
+        h4 {
+          @include heading;
+          margin: 0px;
+          font-size: 16px;
+          &::after {
+            width: 60px;
+            height: 2px;
+          }
+        }
+        button {}
+      }
+      .modal-body {
+        .current_item_details {
+          border-bottom: 1px dashed gray;
+          padding-bottom: 0.5em;
+          .airline {
+            h6 {
+              color: #13191c;
+            }
+            p {
+              color: #13191c;
+            }
+          }
+          h6 {
+            font-size: 14px;
+            font-family: $font_family;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            line-height: 1.286;
+            text-align: left;
+          }
+          P {
+            font-size: 12px;
+            font-family: $font_family;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 1.286;
+            text-align: left;
+            font-weight: 500;
+          }
+          h4 {
+            font-size: 14px;
+            font-family: $font_family;
+            color: green;
+            font-weight: bold;
+            line-height: 1.286;
+            text-align: left;
+          }
+        }
+        .mat-card {
+          box-shadow: none;
+          padding: 0px;
+          .mat-tab-label {
+            height: 34px;
+            opacity: 1 !important;
+            .mat-tab-label-content {
+              font-size: 15px;
+              font-family: $font_family;
+              color: rgb(0, 0, 0);
+              line-height: 1.556;
+              font-weight: 600;
+            }
+          }
+          .mat-tab-label-active {
+            // background-color: rgba(242, 99, 38, 0.6);
+            background: $pinky-orange;
+            color: #fff;
+            opacity: 1 !important;
+            .mat-tab-label-content {
+              color: #fff;
+            }
+          }
+          .mat-ink-bar {
+            background: $pinky-orange;
+          }
+          .tab-content {
+            h6 {
+              font-size: 14px;
+              font-family: $font_family;
+              color: rgb(0, 0, 0);
+              font-weight: bold;
+              line-height: 1.286;
+              text-align: left;
+            }
+            P {
+              font-size: 12px;
+              font-family: $font_family;
+              color: rgba(0, 0, 0, 0.62);
+              line-height: 1.286;
+              text-align: left;
+              font-weight: 500;
+            }
+            span {
+              font-size: 11px;
+              font-family: $font_family;
+              color: rgba(0, 0, 0, 0.62);
+              line-height: 1.286;
+              text-align: left;
+              font-weight: 500;
+            }
+            .Layover {
+              background: #dee2e6;
+            }
+          }
+          .mat-card-content {
+            .multiple_fares {
+              .fares {
+                .select {
+                  transition: all 0.5s ease-in-out;
+                  &:hover {
+                    box-shadow: 0px 0px 20px gray;
+                    transition: all 0.5s ease-in-out;
+                  }
+                  &.selected {
+                    box-shadow: 0px 0px 20px gray;
+                    transition: all 0.5s ease-in-out;
+                  }
+                  h6 {
+                    font-size: 14px;
+                    font-family: $font_family;
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                    line-height: 1.286;
+                  }
+                  table {
+                    th {
+                      font-size: 14px;
+                      font-family: $font_family;
+                      color: #000;
+                      font-weight: bold;
+                      line-height: 1.286;
+                      border: none;
+                    }
+                    td {
+                      font-size: 12px;
+                      font-weight: 500;
+                      font-family: $font_family;
+                      &.refundable,
+                      &.changeable {
+                        color: green;
+                        text-transform: capitalize;
+                      }
+                      &.nonrefundable,
+                      &.nonchangeable {
+                        color: red;
+                        text-transform: capitalize;
+                      }
+                    }
+                  }
+                  .select {
+                    color: #fff;
+                    background: $pinky-orange;
+                    padding: 0.4rem 1rem;
+                    border-radius: 25px;
+                    &.selected {
+                      background: green;
+                    }
+                  }
+                }
+              }
+            }
+            .fare_summary {
+              p {
+                font-weight: 500;
+                color: #000;
+                span {
+                  color: #1f3c4a;
+                  font-size: 14px;
+                }
+              }
+            }
+            .fare_rules {
+              table {
+                tbody {
+                  tr {
+                    th {
+                      font-weight: 600;
+                    }
+                    td {
+                      padding: 10px;
+                      &:last-child {
+                        div {
+                          max-height: 100px;
+                          overflow: auto;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .baggage_policy thead {
+          background: #1f3c4a;
+          th {
+            color: #fff;
+          }
+        }
+        table.table-sm thead {
+          background: #1f3c4a;
+        }
+        table.table-sm th {
+          font-size: 12px;
+          font-weight: 600;
+          font-family: $font_family;
+          color: #fff;
+        }
+        table.table-sm td {
+          font-size: 12px;
+          font-weight: 500;
+          font-family: $font_family;
+        }
+        span {
+          font-size: 11px;
+          font-family: $font_family;
+          color: rgba(0, 0, 0, 0.42);
+          text-align: left;
+          font-weight: 500;
+        }
+      }
+      .modal-footer {
+        button {
+          &.yes {
+            background: #f73855 !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+          &.no {
+            background: #1f3c4a !important;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            .material-icons {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
         }
       }
     }

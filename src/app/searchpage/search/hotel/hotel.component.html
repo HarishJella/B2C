@@ -1,6 +1,6 @@
 <section class="my-5 availability">
   <div class="section">
-    <div class="col-12 p-0 mb-2 modify_search sticky-top mb-5">
+    <div class="col-12 p-0 mb-2 modify_search  mb-5">
       <div></div>
       <div class="item p-3 seater_class text-center">
         <h6 class="mb-0">Bangalore</h6>
@@ -19,44 +19,27 @@
       </div>
     </div>
     <div class="col-12 px-0 search_results">
-      <div class="col-1 px-0 filter_div">
-        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item priceState" #filter (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">price</p>
-        </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item amenitiesState" #price (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">Amenities</p>
-        </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item locationState" #deoart (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">Location</p>
-        </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item ratingState" #airlines (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">Rating</p>
-        </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item propertyTypeState" #fair (click)="open_filter($event)">
-          <i class="material-icons">
-            sort
-          </i>
-          <p class="mb-0">Property</p>
-        </div>
-        <!-- <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item 6" #stops (click)="open_filter($event)">
-              <i class="material-icons">
-                sort
-              </i>
-            </div> -->
-      </div>
 
+      <div class="col-1 px-0 filter_div">
+        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)">
+        </div>
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState"
+            (click)="open_filter($event)">
+        </div>
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)">
+        </div>
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState"
+            (click)="open_filter($event)">
+        </div>
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="../../../../assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState"
+            (click)="open_filter($event)">
+        </div>
+      </div>
       <div class="col-2 filter_section {{priceState}}">
         <div class="content py-3">
           <h1>Filter Section</h1>
@@ -155,7 +138,7 @@
       <div class="{{dynamicClass}} px-0 results_div">
         <div class="col-12 px-0 d-flex justify-content-center align-items-center Header">
 
-          <div class="col-1 d-flex flex-column justify-content-center align-items-center item ">
+          <div class="col-0 d-flex flex-column justify-content-center align-items-center item ">
             <p class="mb-0"></p>
           </div>
           <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
@@ -167,10 +150,10 @@
           <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
             <p class="mb-0">Price</p>
           </div>
-          <div class="col-1 d-flex flex-column justify-content-center align-items-center item ">
+          <div class="col-0 d-flex flex-column justify-content-center align-items-center item ">
             <p class="mb-0"></p>
           </div>
-          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+          <div class="col-4 d-flex flex-column justify-content-center align-items-center item">
             <p class="mb-0">Showing 18 of 18 Hotels</p>
           </div>
         </div>
