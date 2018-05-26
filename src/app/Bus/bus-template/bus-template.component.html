@@ -7,7 +7,7 @@
           <div class="pr-2">
             <img src="assets/images/bus.svg" />
           </div>
-          <div>
+          <div matTooltipPosition="above" mat-raised-button matTooltip="City name">
             <h6>Kallada Tours & Travels</h6>
             <p class="mb-0">VOLVO MULTI AXLE SEMI SLEEPER</p>
           </div>
@@ -17,7 +17,7 @@
         <h6 class="mb-0">06:30</h6>
         <p class="mb-0">Bangalore</p>
       </div>
-      <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center item trvl_dur">
+      <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center item trvl_dur" matTooltipPosition="above" mat-raised-button matTooltip="Duration">
         <h6 class="mb-0">1h 55m</h6>
         <img class="img-fluid" src="https://assetscdn.paytm.com/travel/rtravel/assets/50a2b752.svg" alt="">
         <p class="mb-0">Non Stop</p>
@@ -27,38 +27,41 @@
         <p class="mb-0">Mangalore</p>
       </div>
       <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center item ">
-        <div class="discount">
+        <div class="discount" matTooltipPosition="above" mat-raised-button matTooltip="offer price">
           <h6 class="mb-0 price_right">INR 9612</h6>
-          <div class="d-flex justify-content-center align-items-center">
+          <div class="d-flex justify-content-center align-items-center" matTooltipPosition="above" mat-raised-button matTooltip="9 seats remaining">
             <i class="material-icons">
               airline_seat_recline_extra
             </i>
-            <p class="mb-0">9 Seats</p>
-          </div>
-
+            <p class="mb-0" >9 Seats</p>
+          </div> 
         </div>
         <div class="offer d-flex justify-content-center align-items-center p-1">
           <h6 class="mb-0 price_right">INR 9600</h6>
         </div>
       </div>
-
     </div>
 
     <div class="col-2 py-2 d-flex flex-column justify-content-center align-items-center item trvl_book_btn">
       <button type="button" class="btn btn-default btn-rounded waves-light" mdbWavesEffect data-toggle="modal" data-target="#basicExample"
         (click)="demoBasic.show()">View Seats</button>
-        <div class="view_status" matTooltipPosition="above" mat-raised-button matTooltip="Viewed">
-            <i class="far fa-eye"></i>
+        <div class="view_status d-flex" matTooltipPosition="above" mat-raised-button matTooltip="Viewed">
+            <i class="material-icons">
+                done
+                </i>
+               <span>Viewed</span>
           </div>
     </div>
-
-
   </div>
   <div class="d-flex py-1 bus_footer w-100 justify-content-center align-items-center">
     <p class="mb-0 px-5 refund"  matTooltipPosition="above" mat-raised-button matTooltip="Refundable">Refunadable</p>
     <div class="provider fundable">
-        <p class="mb-0 px-5">Boarding</p>
-        <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+        
+      <!-- <div class="div-with-triangle animated slideInDown" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+             <p>hello</p>                        
+      </div> -->
+      <p class="mb-0 px-5">Boarding</p>   
+      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
             <div class="p-2 d-flex justify-content-between align-items-center">
                <span>Bally</span>
                <span>05:00</span>
@@ -87,11 +90,10 @@
                 <span>Bally</span>
                 <span>05:00</span>
                </div>
-              
-          </div>
+              </div>
     </div>
     <div class="provider fundable">
-        <p class="mb-0 px-5">Drooping</p>
+        <p class="mb-0 px-5">Dropping</p>
         <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
           <div class="p-2 d-flex justify-content-between align-items-center">
             <span>Bally</span>
@@ -124,7 +126,7 @@
           </div>
     </div>
     <div class="provider fundable">
-        <p class="mb-0 px-5">Cancelation</p>
+        <p class="mb-0 px-5">cancellation</p>
         <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
             <div class="col-12 d-flex justify-content-between align-items-center">
                  <div class="col-4">
@@ -138,22 +140,15 @@
                  </div>
               </div>
           </div>
-    </div>
-     
-      
-    </div>
-  
-</div>
-
-
-
+    </div> 
+  </div>
+  </div>
 
 <div mdbModal #demoBasic="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-
-      <div class="modal-header py-3">
+    <div class="modal-header py-3">
         <h6 class="modal-title w-100" id="myModalLabel">Bus Details</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="demoBasic.hide()">
           <span aria-hidden="true">×</span>
@@ -212,7 +207,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class=" passenger_seat">
+                            <div class=" passenger_seat py-2">
                               <div class="wheel_1"></div>
                               <div class="wheel_2"></div>
                               <div class="d-flex  align-items-center justify-content-between">
@@ -224,8 +219,21 @@
                                         <img src="assets/images/bus seat icons/lady.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/lady.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/lady.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
+                                        
                                     </div>
                                     <div class="col-2 px-0">
+                                        <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/booked.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
@@ -240,8 +248,14 @@
                                         <img src="assets/images/bus seat icons/booked.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
-                                    </div>
-                                    <div class="col-4 px-0">
+                                        <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/booked.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select.svg" class="mb-2" />
+                                      </div>
+                                    <div class="col-2 px-0">
                                       
                                     </div>
                                     <div class="col-2 px-0">
@@ -251,17 +265,35 @@
                                         <img src="assets/images/bus seat icons/lady_sleeper.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/avail_sleeper.svg" class="mb-2" />
                                         <img src="assets/images/bus seat icons/select_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/booked_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/lady_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select_sleeper.svg" class="mb-2" />
+                                    </div>
+                                    <div class="col-2 px-0">
+                                        <img src="assets/images/bus seat icons/select_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/booked_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/lady_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/booked_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/lady_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/avail_sleeper.svg" class="mb-2" />
+                                        <img src="assets/images/bus seat icons/select_sleeper.svg" class="mb-2" />
                                     </div>
                                   </div>
-                              </div>
-                             
+                              </div> 
                               <div class="wheel_3"></div>
                               <div class="wheel_4"></div>
                             </div>
                           </div>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-md-6 seat_define ">
                       <div class="col-12 d-flex justify-content-between align-items-center">
@@ -272,7 +304,6 @@
                             </span>
                             <p class="mb-0 mt-1">Ladies</p>
                           </div>
-
                           <div class="d-flex justify-content-between align-items-center clearfix pb-2">
                             <span class="Booked">
                               <img src="assets/images/bus seat icons/booked.svg" />
@@ -292,29 +323,29 @@
                             <p class="mb-0 mt-1">Selected</p>
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 sleep">
                             <div class="d-flex justify-content-between align-items-center clearfix pb-2 ">
                                 <span class="Ladies">
-                                  <img src="assets/images/bus seat icons/lady_sleeper_1.svg" />
+                                  <img src="assets/images/bus seat icons/lady_sleeper_1.svg" class="pr-2" />
                                 </span>
                                 <p class="mb-0 mt-1">Ladies Sleeper</p>
                               </div>
     
                               <div class="d-flex justify-content-between align-items-center clearfix pb-2">
                                 <span class="Booked">
-                                  <img src="assets/images/bus seat icons/booked_sleeper_1.svg" />
+                                  <img src="assets/images/bus seat icons/booked_sleeper_1.svg" class="pr-2"    />
                                 </span>
                                 <p class="mb-0 mt-1">Booked Sleeper</p>
                               </div>
                               <div class="d-flex justify-content-between align-items-center clearfix pb-2">
                                 <span class="Available">
-                                  <img src="assets/images/bus seat icons/avail_sleeper_1.svg" />
+                                  <img src="assets/images/bus seat icons/avail_sleeper_1.svg" class="pr-2"  />
                                 </span>
                                 <p class="mb-0 mt-1">Available Sleeper</p>
                               </div>
                               <div class="d-flex justify-content-between align-items-center clearfix pb-2">
                                 <span class="Selected">
-                                  <img src="assets/images/bus seat icons/select_sleeper_1.svg" />
+                                  <img src="assets/images/bus seat icons/select_sleeper_1.svg" class="pr-2"   />
                                 </span>
                                 <p class="mb-0 mt-1">Selected Sleeper</p>
                               </div>
@@ -325,11 +356,9 @@
                             <p class="text-center">Choose your Boarding and Drooping Points</p>
                             <div>
                               <label>Boarding Point :</label>
-        
                             </div>
                             <div>
                               <label>Drooping Point :</label>
-        
                             </div>
                             <div class="d-flex justify-content-between">
                               <label>Seat No :</label>
@@ -343,7 +372,6 @@
                               <label>INR
                                 <span>763.00</span>
                               </label>
-        
                             </div>
                             <div class="text-center">
                               <button type="button" class="btn btn-default btn-rounded button">Procced</button>
@@ -351,19 +379,12 @@
                             </div>
                           </div>
                           <div>
-        
                           </div>
                         </div>
-
-
-
-                    </div>
+                      </div>
                   </div>
-
-                </div>
-               
-
-              </mat-tab>
+                 </div>
+               </mat-tab>
 
               <mat-tab label="Amenities">
                 <div class="tab-content py-4">
@@ -396,47 +417,43 @@
               <mat-tab label="Reviews">
                 <div class="tab-content py-4">
                   <div class="d-flex reviews">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                       <div class="text-center user">
                         <img src="assets/images/user.svg" />
                         <p class="mb-2">Ms.Dhoni</p>
-                        <h5 class="d-flex  align-items-center justify-content-center ">
-                          <i class="material-icons active"> star </i>
-                          <i class="material-icons active"> star </i>
-                          <i class="material-icons active"> star </i>
-                          <i class="material-icons active"> star </i>
-                          <i class="material-icons "> star </i>
-                        </h5>
-                      </div>
+                        <h3 class="">4.5/5</h3>
+                        </div>
                     </div>
                     <div class="col-md-4">
                       <div class="">
-                        <p class="mb-0 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis autem asperiores facere. Fuga nesciunt
-                          mollitia doloremque quisquam voluptatibus illum, alias deleniti odit voluptas molestiae esse id.</p>
-                      </div>
+                        <p class="mb-0 text-justify">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis autem asperiores facere."</p>
+                       </div>
                     </div>
-                    <div class="col-md-5">
-
-                      <div class="col-12 d-flex justify-content-between align-items-center px-0 prog_bar">
-                        <label class="col-6 mb-0">Staff Behaviour</label>
-                        <mat-progress-bar mode="determinate" value="50" class="col-6"></mat-progress-bar>
+                    <div class="col-md-6 px-0">
+                    <div class="col-12 d-flex justify-content-between align-items-center px-0 bus_rating">
+                        <div class="col-4 text-center">
+                            <label class=" mb-0">Staff Behaviour</label>
+                            <div class="rat_green">
+                              <h4>4.5/5</h4>
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <label class=" mb-0">Punctuality</label>
+                            <div class="rat_blue">
+                              <h4>4.5/5</h4>
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <label class=" mb-0">Bus Quality</label>
+                            <div class="rat_orange">
+                                <h4>3.5/5</h4>
+                              </div>
+                        </div>
                       </div>
-                      <div class="d-flex justify-content-between align-items-center px-0 prog_bar">
-                        <label class="col-6 mb-0">Punctuality</label>
-                        <mat-progress-bar mode="determinate" value="50" class="col-6"></mat-progress-bar>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center px-0 prog_bar">
-                        <label class="col-6 mb-0">Bus Quality</label>
-                        <mat-progress-bar mode="determinate" value="90" class="col-6"></mat-progress-bar>
-                      </div>
-
-
                     </div>
                   </div>
                 </div>
               </mat-tab>
-
-
             </mat-tab-group>
           </mat-card-content>
         </mat-card>
@@ -444,18 +461,17 @@
 
       <div class="modal-footer border-top-0">
           <button type="button" class="btn btn-secondary btn-sm d-flex justify-content-center align-items-center px-0 yes waves-light"
-            data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>
+            mdbWavesEffect>
             <i class="material-icons">
               done
             </i>
           </button>
-          <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light" mdbWavesEffect>
+          <button type="button" class="btn btn-secondary btn-sm justify-content-center align-items-center px-0 no waves-light"  data-dismiss="modal" (click)="demoBasic.hide()" mdbWavesEffect>
             <i class="material-icons">
               close
             </i>
           </button>
         </div>
-
-    </div>
+      </div>
   </div>
 </div>
