@@ -9,6 +9,9 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class FlightTemplateComponent implements OnInit {
 
+  col0: string = 'col-md-0';
+  col2: string = 'col-md-2';
+
   more_flights_show: string = 'slideOutUp d-none';
 
   more_flights() {
@@ -19,6 +22,8 @@ export class FlightTemplateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.col0 = 'col-md-0';
+    this.col2 = 'col-md-2';
   }
 
 
