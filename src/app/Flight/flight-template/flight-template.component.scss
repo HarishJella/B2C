@@ -204,7 +204,9 @@
         }
       }
       .offer {
-        background: #ffd60d;
+        // background: #ffd60d;
+        background: #ffd60d url('assets/images/price.svg') no-repeat;
+        background-size: cover;
         position: absolute;
         top: -17px;
         border-radius: 2px;
@@ -248,9 +250,14 @@
         bottom: 0px;
         right: 0;
         line-height: 0;
-        font-size: 12px;
-        .fa-eye {
+        font-size: 10px;
+        p {
           color: green;
+          font-size: 10px;
+        }
+        .material-icons {
+          color: green;
+          font-size: 10px;
         }
       }
     }
@@ -359,6 +366,19 @@
             background: $pinky-orange;
           }
           .tab-content {
+            .sector {
+              background: #3a3b3b;
+              display: inline-block;
+              p {
+                font-size: 11px;
+                font-family: $font_family;
+                color: #fff;
+                line-height: 1.286;
+                text-align: left;
+                font-weight: 500;
+                letter-spacing: 1px;
+              }
+            }
             h6 {
               font-size: 14px;
               font-family: $font_family;
@@ -536,4 +556,9 @@
   display: block;
 }
 
-
+.slide-down {
+  transition-property: height;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  overflow-y: hidden;
+}
