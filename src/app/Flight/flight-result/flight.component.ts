@@ -1,5 +1,7 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
+import { MatDialog } from '@angular/material';
+import { modifySearchComponent } from '../dailog.components';
 
 @Component({
   selector: 'app-flight',
@@ -9,10 +11,19 @@ import { DOCUMENT } from '@angular/platform-browser';
 export class FlightComponent implements OnInit {
 
 
-
-  constructor(public el: ElementRef) { }
+  constructor(public el: ElementRef, public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(modifySearchComponent, {
+      height: 'auto'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   formatLabel(value: number | null) {

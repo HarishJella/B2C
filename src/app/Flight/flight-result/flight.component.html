@@ -1,43 +1,36 @@
 <section class="my-5 availability">
   <div class="container">
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flipper {{flipper_state}}">
-        <!-- modify panel with soure to destination details div -->
-        <div class="col-12 p-0 mb-2 modify_search mb-3 border front">
-          <div class="">
 
-          </div>
-          <div class="item p-3 source ">
-            <h6 class="mb-0">BLR</h6>
-            <p class="mb-0">Bangalore, Karnataka</p>
-            <span>24/06/2018</span>
-          </div>
-          <div class="item p-3 destination">
-            <h6 class="mb-0">CCj</h6>
-            <p class="mb-0">Bangalore, Karnataka</p>
-            <span>24/06/2018</span>
-          </div>
-          <div class="item p-3 travels">
-            <h6 class="mb-0">5 travellers</h6>
-            <p class="mb-0">Bangalore, Karnataka</p>
-            <span>24/06/2018</span>
-          </div>
-          <div class="item p-3 seater_class">
-            <h6 class="mb-0">Economy</h6>
-            <p class="mb-0">Bangalore, Karnataka</p>
-            <span>24/06/2018</span>
-          </div>
-          <div class="item p-3 d-flex justify-content-center align-items-center search_button">
-            <button (click)="modify_panel()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect>Modify Search</button>
-          </div>
-        </div>
-        <!-- modify panel with search form -->
-        <div class="back">
-          <app-flight-form></app-flight-form>
-        </div>
+    <!-- modify panel with soure to destination details div -->
+    <div class="col-12 p-0 mb-3 modify_search mb-4 border front">
+      <div class="">
 
       </div>
+      <div class="item p-3 source ">
+        <h6 class="mb-0">BLR</h6>
+        <p class="mb-0">Bangalore, Karnataka</p>
+        <span>24/06/2018</span>
+      </div>
+      <div class="item p-3 destination">
+        <h6 class="mb-0">CCj</h6>
+        <p class="mb-0">Bangalore, Karnataka</p>
+        <span>24/06/2018</span>
+      </div>
+      <div class="item p-3 travels">
+        <h6 class="mb-0">5 travellers</h6>
+        <p class="mb-0">Bangalore, Karnataka</p>
+        <span>24/06/2018</span>
+      </div>
+      <div class="item p-3 seater_class">
+        <h6 class="mb-0">Economy</h6>
+        <p class="mb-0">Bangalore, Karnataka</p>
+        <span>24/06/2018</span>
+      </div>
+      <div class="item p-3 d-flex justify-content-center align-items-center search_button">
+        <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect>Modify Search</button>
+      </div>
     </div>
+
 
     <!-- <div class="col-12 p-0 count_flights">
       <p class="mb-0">Showing 18 of 18 flights</p>
@@ -46,19 +39,24 @@
     <div class="col-12 px-0 search_results">
 
       <div class="col-1 px-0 filter_div">
-        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item priceState" matTooltipPosition="above"
+          mat-raised-button matTooltip="Price select" (click)="open_filter($event)">
           <img src="assets/images/filter icons/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)">
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item deptState" matTooltipPosition="above"
+          mat-raised-button matTooltip="Depature" (click)="open_filter($event)">
           <img src="assets/images/filter icons/depature.svg" alt="" class="img-fluid deptState" (click)="open_filter($event)">
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item stopsState" matTooltipPosition="above"
+          mat-raised-button matTooltip="Stops" (click)="open_filter($event)">
           <img src="assets/images/filter icons/hand.svg" alt="" class="img-fluid stopsState" (click)="open_filter($event)">
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item fairState" matTooltipPosition="above"
+          mat-raised-button matTooltip="Fair select" (click)="open_filter($event)">
           <img src="assets/images/filter icons/fare.svg" alt="" class="img-fluid fairState" (click)="open_filter($event)">
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item airlineState" matTooltipPosition="above"
+          mat-raised-button matTooltip="Airline" (click)="open_filter($event)">
           <img src="assets/images/filter icons/flight.svg" alt="" class="img-fluid airlineState" (click)="open_filter($event)">
         </div>
       </div>

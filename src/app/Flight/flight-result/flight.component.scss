@@ -2,56 +2,13 @@
 @import '~mixins.scss';
 .availability {
   .container {
-    /* entire container, keeps perspective */
-    .flip-container {
-      perspective: 1000px;
-    }
-    /* flip the pane when hovered */
-    // .flip-container:hover .flipper,
-    // .flip-container.hover .flipper {
-    //   transform: rotateY(180deg);
-    // }
-    .flip-container .flipper1 {
-      transform: rotateY(180deg);
-    }
-    .flip-container,
-    .front,
-    .back {
-      width: 100%;
-      min-height: 89px; // height: 100%;
-      margin-bottom: 10px;
-    }
-    /* flip speed goes here */
-    .flipper {
-      transition: 0.8s;
-      transform-style: preserve-3d;
-      position: relative;
-    }
-    /* hide back of pane during swap */
-    .front,
-    .back {
-      backface-visibility: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    /* front pane, placed above back */
-    .front {
-      z-index: 2;
-      /* for firefox 31 */
-      transform: rotateY(0deg);
-    }
-    /* back, initially hidden pane */
-    .back {
-      transform: rotateY(180deg);
-    }
     .modify_search {
       display: grid; // grid-template-columns: repeat(6, 1fr);
       grid-template-columns: 72px 1fr 1fr 1fr 1fr 1fr;
-      background-color: #fff;
-      border-radius: 4px;
+      background-color: #ffffff; // border-radius: 4px;
       display: flex;
       justify-content: space-around;
+      box-shadow: 0 0 10px rgb(160, 160, 160);
       .item {
         h6 {
           font-size: 14px;
@@ -78,14 +35,24 @@
           font-weight: 400;
         }
         button {
-          border: 2px solid #f52b64 !important;
-          border-image: $pinky-orange;
+          // border: 2px solid #f52b64 !important;
+          // border-image: $pinky-orange;
           background-color: transparent !important;
           color: #1f3c4a !important;
-          border-radius: 10em;
+          border-radius: 4px;
           font-size: 12px;
-          font-family: $font_family; // line-height: 1.286;
+          font-family: "Roboto", sans-serif;
           margin: auto;
+          border-color: #1f3c4a !important;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            // background: $pinky-orange;
+            // transition: all 0.5s ease-in-out;
+            // color: #fff !important;
+            // border: 2px solid #f52b64 !important;
+            // border-image: $pinky-orange !important;
+            // border-color: #f52b64 !important;
+          }
         }
       }
     }

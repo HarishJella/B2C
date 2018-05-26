@@ -23,7 +23,7 @@ import { FlightbookingComponent } from './Flight/flight-booking/flightbooking.co
 import { BusbookingComponent } from './Bus/bus-booking/busbooking.component';
 import { FlightFormComponent } from './Flight/flight-form/flight-form.component';
 import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
-
+import { modifySearchComponent } from './Flight/dailog.components';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.compo
     FlightbookingComponent,
     BusbookingComponent,
     FlightFormComponent,
-    HotelBookingComponent
+    HotelBookingComponent,
+    modifySearchComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +56,9 @@ import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.compo
     BrowserAnimationsModule,
     ComponentsModule
 
+  ],
+  entryComponents: [
+    modifySearchComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],

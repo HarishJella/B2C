@@ -5,6 +5,7 @@ import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-flight-form',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './flight-form.component.html',
   styleUrls: ['./flight-form.component.scss']
 })
