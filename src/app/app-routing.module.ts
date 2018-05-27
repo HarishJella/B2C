@@ -7,11 +7,10 @@ import { FlightComponent } from './Flight/flight-result/flight.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
 import { FlightbookingComponent } from './Flight/flight-booking/flightbooking.component';
 import { AboutComponent } from './aboutpage/about/about.component';
-import { FaqComponent } from './FAQpage/faq/faq.component';
 import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
 import { BusbookingComponent } from './Bus/bus-booking/busbooking.component';
 import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
-
+import { FaqComponent } from './Staticpages/faq/faq.component';
 const routes: Routes = [
 
   { path: '', component: HomeComponent },

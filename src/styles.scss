@@ -154,12 +154,16 @@ mat-slider {
   position: absolute;
   min-height: auto;
   min-width: 150px;
-  height:auto;
+  height: auto;
   width: auto;
   display: none;
   background: #1f3c4a;
   color: #fff;
   bottom: 20px;
+  left: -3%;
+  &.cancellation {
+    left: -58%;
+  }
   div {
     display: flex;
     justify-content: center;
@@ -193,4 +197,9 @@ mat-slider {
 
 .material-icons {
   color: #1f3c4a;
+}
+
+// tooltip slidedown animation duration
+.animated {
+  animation-duration: 0.5s;
 }

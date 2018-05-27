@@ -13,4 +13,9 @@ export class BusTemplateComponent implements OnInit {
   ngOnInit() {
   }
 
+  seat: string = 'assets/images/bus seat icons/avail.svg';
+  select_seat(event) {
+    this.seat = this.seat === 'assets/images/bus seat icons/avail.svg' ? 'assets/images/bus seat icons/select.svg' : 'assets/images/bus seat icons/avail.svg';
+    console.log(event);
+  }
 }
