@@ -10,7 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './homepage/home/home.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
-import { AboutComponent } from './aboutpage/about/about.component';
+import { AboutComponent } from './Staticpages/about/about.component';
 import { FaqComponent } from './Staticpages/faq/faq.component';
 import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
 import { FlightTemplateComponent } from './Flight/flight-template/flight-template.component';

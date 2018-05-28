@@ -51,4 +51,10 @@ export class FlightFormComponent implements OnInit {
     { value: 'Primary', viewValue: 'Primary' }
   ];
 
+  passengers_state: string = 'd-none fadeOutRightBig';
+  passengers_class() {
+    this.passengers_state = this.passengers_state === 'd-block fadeInLeftBig' ? 'd-none fadeOutRightBig' : 'd-block fadeInLeftBig';
+
+  }
+
 }
