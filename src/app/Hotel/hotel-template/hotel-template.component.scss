@@ -61,9 +61,10 @@
 }
 
 // modal style
-.modal {
+.modal#hotel_details {
   overflow-y: auto !important;
   .modal-dialog {
+    max-width: 90%;
     .modal-content {
       border-radius: 15px;
       .modal-header {
@@ -142,6 +143,11 @@
           .mat-ink-bar {
             background: $pinky-orange;
           }
+          .amenities {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 2em;
+          }
           .tab-content {
             h6 {
               font-size: 14px;
@@ -169,6 +175,69 @@
             }
             .Layover {
               background: #dee2e6;
+            }
+            .hotel_details {
+              .single_room {
+                border-bottom: 1px dashed #c1c1c1;
+                &:last-child {
+                  border-bottom: 0px;
+                }
+                .content {
+                  h6 {
+                    color: rgb(31, 60, 74);
+                    font-size: 16px;
+                  }
+                  p {
+                    color: rgba(31, 60, 74, 0.75);
+                    font-size: 14px;
+                  }
+                }
+              }
+              .room_details {
+                .btn {
+                  @include button;
+                  padding: 0.4rem 1rem;
+                }
+                .room_amenities {
+                  font-size: 12px;
+                  h6 {
+                    font-size: 12px;
+                  }
+                  .material-icons {
+                    color: green;
+                    font-size: 18px;
+                  }
+                }
+                p {
+                  span {
+                    font-size: 12px;
+                    font-family: $font_family;
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                    line-height: 1.286;
+                    text-align: left;
+                    &:last-child {
+                      font-size: 11px;
+                      font-family: $font_family;
+                      color: rgba(0, 0, 0, 0.62);
+                      line-height: 1.286;
+                      text-align: left;
+                      font-weight: 500;
+                    }
+                  }
+                }
+                .price {
+                  .old_price {
+                    text-decoration: line-through;
+                  }
+                  .new_price {
+                    font-size: 20px;
+                  }
+                  .save {
+                    color: green;
+                  }
+                }
+              }
             }
           }
           .mat-card-content {
