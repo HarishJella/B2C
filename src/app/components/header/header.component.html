@@ -51,11 +51,34 @@
           </a>
         </div>
       </div>
-      <div class="d-flex flex-column justify-content-center align-items-center login">
-        <i class="material-icons" mdbWavesEffect (click)="form.show()">
-          account_circle
-        </i>
-        <P class="mb-0" mdbWavesEffect (click)="form.show()">Login / Signup</P>
+      <div class="d-flex justify-content-center align-items-center login">
+
+        <div class="d-flex flex-column justify-content-center align-items-center pr-2">
+          <i class="material-icons" mdbWavesEffect (click)="form.show()">
+            account_circle
+          </i>
+          <P class="mb-0" mdbWavesEffect (click)="form.show()">Login / Signup</P>
+        </div>
+
+        <div class="d-flex flex-column justify-content-center align-items-center login_profile_details">
+          <img src="assets/images/profile_pic.jpg" alt="Profile Image" class="img-fluid">
+          <button mat-button [matMenuTriggerFor]="menu" class="d-flex justify-content-center align-items-center">
+            <p class="mb-0">
+              Harish Jella
+            </p>
+
+            <i class="material-icons">
+              keyboard_arrow_down
+            </i>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>View Profile</button>
+            <button mat-menu-item>Your Orders</button>
+            <button mat-menu-item>Your Wallet</button>
+            <button mat-menu-item>24*7 Help</button>
+            <button mat-menu-item>Logout</button>
+          </mat-menu>
+        </div>
       </div>
     </div>
   </div>
@@ -80,30 +103,68 @@
           <div class="col-12 col-md-6 p-4  d-flex flex-column justify-content-between">
 
             <div class="d-flex justify-content-between align-items-center login_regis">
-              <h5 class="mb-0">Login / Register</h5>
+              <h5 class="mb-0 d-flex justify-content-center align-items-center">
+                <p class="mb-0 pr-1" (click)="Login()">Login</p>
+                <p class="mb-0 pr-1">/</p>
+                <p class="mb-0" (click)="Register()">Register</p>
+
+              </h5>
               <i class="material-icons waves-light" data-dismiss="modal" (click)="form.hide()" mdbWavesEffect>
                 close
               </i>
             </div>
-            <div class="d-flex flex-column form py-3">
+            <div class="form_fields">
+              <div class="animated flex-column form py-3 {{login_form}}">
 
-              <mat-form-field>
-                <input matInput placeholder="Enter your name" required>
-                <mat-icon matSuffix>string</mat-icon>
-              </mat-form-field>
-              <mat-form-field>
-                <input matInput placeholder="Enter your email" required>
-                <mat-icon matSuffix>mail</mat-icon>
-              </mat-form-field>
-              <mat-form-field>
-                <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-              </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your name" required>
+                  <mat-icon matSuffix>string</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your email" required>
+                  <mat-icon matSuffix>mail</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                </mat-form-field>
 
+              </div>
+              <div class="animated  flex-column form py-3 {{forgot_password_form}}">
+                <p>forgot password</p>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your name" required>
+                  <mat-icon matSuffix>string</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your email" required>
+                  <mat-icon matSuffix>mail</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                </mat-form-field>
+
+              </div>
+              <div class="animated  flex-column form py-3 {{register_form}}">
+                <p>register</p>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your name" required>
+                  <mat-icon matSuffix>string</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your email" required>
+                  <mat-icon matSuffix>mail</mat-icon>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                </mat-form-field>
+
+              </div>
             </div>
-
-            <div class="d-flex justify-content-between align-items-center social_log">
-              <div class="d-flex align-items-center">
+            <div class="d-flex justify-content-between align-items-end social_log">
+              <div class="d-flex align-items-center pr-2">
                 <p class="mb-0">or sign up with</p>
                 <div class="px-2">
                   <i class="fab fa-facebook-f"></i>
@@ -113,7 +174,11 @@
                 </div>
 
               </div>
-              <button mdbWavesEffect>Continue</button>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <p class="mb-0 text-center forgot_password" (click)="ForgotPassword()">Forgot Password ?</p>
+                <button mdbWavesEffect>Continue</button>
+              </div>
+
             </div>
           </div>
 

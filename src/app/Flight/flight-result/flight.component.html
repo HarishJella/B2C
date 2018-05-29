@@ -207,31 +207,31 @@
     </div> -->
     <div class="col-12 px-0 search_results">
 
-      <div class="col-1 px-0 filter_div">
-        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item" matTooltipPosition="above" mat-raised-button
-          matTooltip="Price select">
-          <img src="assets/images/filter icons/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)">
+      <div class="col-1 px-0 filter_div sticky-top">
+        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="assets/images/filter icons/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)" matTooltipPosition="above"
+            mat-raised-button matTooltip="Price select">
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item" matTooltipPosition="above" mat-raised-button
-          matTooltip="Depature">
-          <img src="assets/images/filter icons/depature.svg" alt="" class="img-fluid deptState" (click)="open_filter($event)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="assets/images/filter icons/depature.svg" alt="" class="img-fluid deptState" (click)="open_filter($event)" matTooltipPosition="above"
+            mat-raised-button matTooltip="Depature">
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item" matTooltipPosition="above" mat-raised-button
-          matTooltip="Stops">
-          <img src="assets/images/filter icons/hand.svg" alt="" class="img-fluid stopsState" (click)="open_filter($event)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="assets/images/filter icons/hand.svg" alt="" class="img-fluid stopsState" (click)="open_filter($event)" matTooltipPosition="above"
+            mat-raised-button matTooltip="Stops">
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item" matTooltipPosition="above" mat-raised-button
-          matTooltip="Fair select">
-          <img src="assets/images/filter icons/fare.svg" alt="" class="img-fluid fairState" (click)="open_filter($event)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="assets/images/filter icons/fare.svg" alt="" class="img-fluid fairState" (click)="open_filter($event)" matTooltipPosition="above"
+            mat-raised-button matTooltip="Fair select">
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item" matTooltipPosition="above" mat-raised-button
-          matTooltip="Airline">
-          <img src="assets/images/filter icons/flight.svg" alt="" class="img-fluid airlineState" (click)="open_filter($event)">
+        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+          <img src="assets/images/filter icons/flight.svg" alt="" class="img-fluid airlineState" (click)="open_filter($event)" matTooltipPosition="above"
+            mat-raised-button matTooltip="Airline">
         </div>
       </div>
 
 
-      <div class="col-2 filter_section {{priceState}}">
+      <div class="col-2 filter_section {{priceState}} sticky-top">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -246,7 +246,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 filter_section {{deptState}}">
+      <div class="col-2 filter_section {{deptState}} sticky-top">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -259,7 +259,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 filter_section {{stopsState}}">
+      <div class="col-2 filter_section {{stopsState}} sticky-top">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -271,7 +271,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 filter_section {{fairState}}">
+      <div class="col-2 filter_section {{fairState}} sticky-top">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -282,7 +282,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 filter_section {{airlineState}}">
+      <div class="col-2 filter_section {{airlineState}} sticky-top">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -299,7 +299,7 @@
 
 
 
-      <div class="col-1 px-0 dest_nav">
+      <div class="col-1 px-0 dest_nav sticky-top">
         <div #emptyDivRequired>
 
         </div>
@@ -329,10 +329,10 @@
 
 
 
-      <div class="{{dynamicClass}} px-0 results_div">
+      <div class="{{dynamicClass}} px-0 results_div sticky-top">
 
 
-        <div class="d-flex  justify-content-center align-items-center Header">
+        <div class="d-flex  justify-content-center align-items-center Header sticky-top">
           <div class="col-12 px-0 d-flex justify-content-center align-items-center">
             <div class="col-9 px-0 d-flex flex-column justify-content-center align-items-center section1">
               <div class="col-12 px-0 d-flex justify-content-center align-items-center ">
@@ -370,8 +370,400 @@
           <app-flight-template></app-flight-template>
           <app-flight-template></app-flight-template>
           <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
+          <app-flight-template></app-flight-template>
 
 
+
+          <div class="d-flex  flex-column justify-content-center align-items-center flight_template">
+            <!-- flight1 -->
+            <div class="col-12 px-0 d-flex justify-content-center align-items-stretch border-bottom">
+              <div class="col-9 px-0 d-flex flex-column justify-content-center align-items-center section1">
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="d-flex flex-column justify-content-center align-items-center" style="position:relative">
+                      <div class="pr-0" matTooltipPosition="above" mat-raised-button matTooltip="Airline Logo">
+                        <img class="img-fluid" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                      </div>
+                      <div class="d-flex justify-content-around connecting_flights">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 1">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 2">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 3">
+                      </div>
+                    </div>
+
+                    <div>
+                      <h6 class="mb-1" matTooltipPosition="above" matTooltip="Airline Name">Delta Air Lines</h6>
+                      <p class="mb-0 aircode" matTooltipPosition="below" matTooltip="Airline Code">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Bangalore">BLR</h6>
+                      <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="18th Moring">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="Journey Duration">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0" matTooltipPosition="below" mat-raised-button matTooltip="Non Stop">Non Stop</p>
+                    <div class="d-flex justify-content-around meals_baggage">
+                      <img src="assets/images/meals.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Meals">
+                      <img src="assets/images/baggage.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Baggages">
+                    </div>
+                    <!-- <div class="provider fundable refundable">
+                      R
+                      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                        <div class="p-2">
+                          Refundable
+                        </div>
+                      </div>
+          
+                    </div>
+                    <div class="provider fundable refundable">
+                      R
+                      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                        <div class="p-2">
+                          Refundable
+                        </div>
+                      </div>
+          
+                    </div> -->
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Agatti Island">AGX</h6>
+                      <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="18th Night">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1" matTooltipPosition="above" mat-raised-button matTooltip="Class - X-ROIP">X - ROIP</h6>
+                    <p class="mb-0 refundable" matTooltipPosition="below" mat-raised-button matTooltip="Refundable">refundable</p>
+
+                  </div>
+
+                </div>
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="d-flex flex-column justify-content-center align-items-center" style="position:relative">
+                      <div class="pr-0" matTooltipPosition="above" mat-raised-button matTooltip="Airline Logo">
+                        <img class="img-fluid" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                      </div>
+                      <div class="d-flex justify-content-around connecting_flights">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 1">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 2">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 3">
+                      </div>
+                    </div>
+
+                    <div>
+                      <h6 class="mb-1" matTooltipPosition="above" matTooltip="Airline Name">Delta Air Lines</h6>
+                      <p class="mb-0 aircode" matTooltipPosition="below" matTooltip="Airline Code">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Bangalore">BLR</h6>
+                      <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="18th Moring">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="Journey Duration">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0" matTooltipPosition="below" mat-raised-button matTooltip="Non Stop">Non Stop</p>
+                    <div class="d-flex justify-content-around meals_baggage">
+                      <img src="assets/images/meals.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Meals">
+                      <img src="assets/images/baggage.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Baggages">
+                    </div>
+                    <!-- <div class="provider fundable refundable">
+                      R
+                      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                        <div class="p-2">
+                          Refundable
+                        </div>
+                      </div>
+          
+                    </div>
+                    <div class="provider fundable refundable">
+                      R
+                      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                        <div class="p-2">
+                          Refundable
+                        </div>
+                      </div>
+          
+                    </div> -->
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Agatti Island">AGX</h6>
+                      <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="18th Night">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1" matTooltipPosition="above" mat-raised-button matTooltip="Class - X-ROIP">X - ROIP</h6>
+                    <p class="mb-0 refundable" matTooltipPosition="below" mat-raised-button matTooltip="Refundable">refundable</p>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="d-flex flex-column justify-content-center align-items-center" style="position:relative">
+                      <div class="pr-0" matTooltipPosition="above" mat-raised-button matTooltip="Airline Logo">
+                        <img class="img-fluid" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                      </div>
+                      <div class="d-flex justify-content-around connecting_flights">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 1">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 2">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 3">
+                      </div>
+                    </div>
+
+                    <div>
+                      <h6 class="mb-1" matTooltipPosition="above" matTooltip="Airline Name">Delta Air Lines</h6>
+                      <p class="mb-0 aircode" matTooltipPosition="below" matTooltip="Airline Code">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Bangalore">BLR</h6>
+                      <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="18th Moring">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="Journey Duration">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0" matTooltipPosition="below" mat-raised-button matTooltip="Non Stop">Non Stop</p>
+                    <div class="d-flex justify-content-around meals_baggage">
+                      <img src="assets/images/meals.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Meals">
+                      <img src="assets/images/baggage.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Baggages">
+                    </div>
+                    <!-- <div class="provider fundable refundable">
+                      R
+                      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                        <div class="p-2">
+                          Refundable
+                        </div>
+                      </div>
+          
+                    </div>
+                    <div class="provider fundable refundable">
+                      R
+                      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                        <div class="p-2">
+                          Refundable
+                        </div>
+                      </div>
+          
+                    </div> -->
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Agatti Island">AGX</h6>
+                      <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="18th Night">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1" matTooltipPosition="above" mat-raised-button matTooltip="Class - X-ROIP">X - ROIP</h6>
+                    <p class="mb-0 refundable" matTooltipPosition="below" mat-raised-button matTooltip="Refundable">refundable</p>
+
+                  </div>
+
+                </div>
+
+                <div class="col-12 px-0 d-flex justify-content-center align-items-stretch ">
+                  <div class="col-3 py-3  d-flex justify-content-center align-items-center trvl_img">
+                    <div class="d-flex flex-column justify-content-center align-items-center" style="position:relative">
+                      <div class="pr-0" matTooltipPosition="above" mat-raised-button matTooltip="Airline Logo">
+                        <img class="img-fluid" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image">
+                      </div>
+                      <div class="d-flex justify-content-around connecting_flights">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 1">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 2">
+                        <img class="img-fluid mx-1" src="assets/images/delta_airlines.gif" alt="Delata Airlines Image" matTooltipPosition="above"
+                          mat-raised-button matTooltip="Sector 3">
+                      </div>
+                    </div>
+
+                    <div>
+                      <h6 class="mb-1" matTooltipPosition="above" matTooltip="Airline Name">Delta Air Lines</h6>
+                      <p class="mb-0 aircode" matTooltipPosition="below" matTooltip="Airline Code">AI-9506</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Bangalore">BLR</h6>
+                      <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="18th Moring">10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 py-3 d-flex flex-column justify-content-center align-items-center trvl_dur">
+                    <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="Journey Duration">1h 55m</h6>
+                    <img class="img-fluid" src="https://paytm.com/travel/images/flights/srp_arrow.svg" alt="arrow">
+                    <p class="mb-0" matTooltipPosition="below" mat-raised-button matTooltip="Non Stop">Non Stop</p>
+                    <div class="d-flex justify-content-around meals_baggage">
+                      <img src="assets/images/meals.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Meals">
+                      <img src="assets/images/baggage.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Baggages">
+                    </div>
+                    <!-- <div class="provider fundable refundable">
+                      R
+                      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                        <div class="p-2">
+                          Refundable
+                        </div>
+                      </div>
+          
+                    </div>
+                    <div class="provider fundable refundable">
+                      R
+                      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+                        <div class="p-2">
+                          Refundable
+                        </div>
+                      </div>
+          
+                    </div> -->
+
+
+                  </div>
+                  <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="mb-1 d-flex">
+                      <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Agatti Island">AGX</h6>
+                      <h6 class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="18th Night">
+                        10:30 </h6>
+                    </div>
+                    <div>
+                      <p class="mb-0">Fri 18 may</p>
+                    </div>
+                  </div>
+                  <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
+                    <h6 class="mb-1" matTooltipPosition="above" mat-raised-button matTooltip="Class - X-ROIP">X - ROIP</h6>
+                    <p class="mb-0 refundable" matTooltipPosition="below" mat-raised-button matTooltip="Refundable">refundable</p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-3  px-0 d-flex  justify-content-center align-items-center item section2 ">
+                <div class="col-6 pt-3 d-flex flex-column justify-content-center align-items-center fare">
+                  <div class="discount">
+                    <h6 class="mb-0 price_right">INR 9612</h6>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <i class="material-icons">
+                        airline_seat_recline_extra
+                      </i>
+
+                      <p class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="9 seats remaining  ">9 Seats</p>
+                    </div>
+
+                  </div>
+                  <div class="offer d-flex justify-content-center align-items-center p-1" matTooltipPosition="above" mat-raised-button matTooltip="Offer price">
+                    <h6 class="mb-0 price_right">INR 9600</h6>
+                  </div>
+
+                </div>
+                <div class="col-6 py-3 d-flex flex-column justify-content-center align-items-center trvl_book_btn">
+                  <button type="button" class="btn  btn-rounded waves-light mb-1" data-toggle="modal" data-target="#more_flights" (click)="moreFlights.show()"
+                    mdbWavesEffect>Book</button>
+                  <a href="javascript:void(0)" class="waves-light" data-toggle="modal" data-target="#flight_details" (click)="flightDetails.show()"
+                    mdbWavesEffect matTooltipPosition="below" matTooltip="click to open flight details">Flight Details</a>
+                  <!-- <button mat-raised-button matTooltip="Info about the action" aria-label="Button that displays a tooltip when focused or hovered over">
+                    Action
+                  </button> -->
+                  <div class="d-flex view_status px-2" matTooltipPosition="above" mat-raised-button matTooltip="Viewed">
+                    <i class="d-flex justify-content-center align-items-center material-icons pr-1">
+                      done
+                    </i>
+                    <p class="mb-0">Viewed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
 
 
 

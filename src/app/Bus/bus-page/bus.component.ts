@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
+import { MatDialog } from '@angular/material';
+import { modifySearchComponent } from '../../Flight/dailog.components';
 
 @Component({
   selector: 'app-bus',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(modifySearchComponent, {
+      height: 'auto'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   formatLabel(value: number | null) {

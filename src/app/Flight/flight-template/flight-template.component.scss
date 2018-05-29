@@ -166,7 +166,7 @@
         }
         .meals_baggage {
           position: absolute;
-          bottom: 0px;
+          bottom: 20%;
           width: 100%;
         }
       } // }
@@ -232,6 +232,7 @@
           font-weight: bold;
           line-height: 1;
           text-align: center;
+          padding: 3px 8px;
         }
       }
     }

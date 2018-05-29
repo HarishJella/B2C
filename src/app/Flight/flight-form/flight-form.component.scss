@@ -13,6 +13,37 @@
   .input-group {
     margin-top: 1.25rem;
     position: relative;
+    .passengers {
+      position: absolute;
+      top: 100%;
+      background: #ffffff;
+      box-shadow: 0 0 20px #d2d2d2;
+      .btn {
+        padding: 0.2rem 0.8rem;
+        color: #000;
+        border: 1px solid #e6e6e6;
+        border: 1px solid #ffffff;
+        box-shadow: none;
+        transition: all 0.5s ease-in-out;
+        margin: 0px;
+        &:hover {
+          transition: all 0.5s ease-in-out;
+          color: #fff;
+          background: $pinky-orange;
+        }
+      }
+      p {
+        font-size: 12px;
+        font-family: $font_family;
+        font-weight: 500;
+      }
+      h6 {
+        font-size: 14px;
+      }
+    }
+    .animated {
+      animation-duration: 1s;
+    }
     .mat-form-field {
       .mat-form-field-wrapper {
         .mat-form-field-flex {
@@ -165,3 +196,9 @@
   height: 15px !important;
   width: 15px !important;
 }
+
+// .mat-tab-body-wrapper,
+// .mat-tab-body,
+// .mat-tab-body-content {
+//   overflow: visible !important; // overflow-x: hidden !important;
+// }

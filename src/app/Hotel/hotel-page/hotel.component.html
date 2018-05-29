@@ -1,6 +1,6 @@
 <section class="my-5 availability">
   <div class="section">
-    <div class="col-12 p-0 mb-2 modify_search  mb-5">
+    <!-- <div class="col-12 p-0 mb-2 modify_search  mb-5">
       <div></div>
       <div class="item p-3 seater_class text-center">
         <h6 class="mb-0">Bangalore</h6>
@@ -17,6 +17,48 @@
       <div class="item p-3 d-flex justify-content-center align-items-center search_button">
         <button type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect>Modify Search</button>
       </div>
+    </div> -->
+
+    <div class="col-12 p-0 mb-3 modify_search mb-4 border front">
+
+      <div class="item p-3 col-5  d-flex flex-column justify-content-center align-items-center">
+        <div class="col-12  d-flex">
+          <div class="source col-5 d-flex flex-column justify-content-center align-items-center">
+            <h6 class="mb-1">From</h6>
+            <p class="mb-0">Bangalore (BLR)</p>
+            <span>24 may 2018</span>
+          </div>
+          <div class="col-2 d-flex justify-content align-items-center">
+            <!-- <i class="material-icons">
+                arrow_right_alt
+              </i> -->
+            <i class="material-icons">
+              swap_horiz
+            </i>
+          </div>
+          <div class="destination col-5 d-flex flex-column justify-content-center align-items-center">
+            <h6 class="mb-1">To</h6>
+            <p class="mb-0">Chennai (MAA)</p>
+            <span>25 may 2018</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="item p-3 travels col-2 d-flex flex-column justify-content-center align-items-center">
+        <h6 class="mb-1">Travellers</h6>
+        <p class="mb-0">5 Passengers</p>
+        <span>Adult 5, Child 1, Infant 1</span>
+      </div>
+      <div class="item p-3 seater_class col-2 d-flex flex-column justify-content-start align-items-center">
+        <h6 class="mb-1">Class</h6>
+        <p class="mb-0">Business</p>
+        <!-- <span>24/06/2018</span> -->
+      </div>
+      <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
+        <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
+          matTooltip="Modify Results">Modify Search</button>
+      </div>
     </div>
     <div class="col-12 px-0 search_results">
 
@@ -25,19 +67,16 @@
           <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState"
-            (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState" (click)="open_filter($event)">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
           <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState"
-            (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState" (click)="open_filter($event)">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState"
-            (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState" (click)="open_filter($event)">
         </div>
       </div>
       <div class="col-2 filter_section {{priceState}}">

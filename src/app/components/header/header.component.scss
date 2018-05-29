@@ -97,6 +97,46 @@
         font-size: 12px;
         cursor: pointer;
       }
+      .login_profile_details {
+        img {
+          width: 24px;
+          height: 24px;
+          border-radius: 25px;
+          box-shadow: 0 0 20px rgba(128, 128, 128, 0.7490196078431373);
+        }
+        button {
+          line-height: 1;
+          padding: 0px;
+          &:hover {
+            background: transparent;
+          }
+          &:focus {
+            outline: 0;
+          }
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              color: #000;
+              font-weight: 600;
+              font-family: $font_family;
+              font-size: 12px;
+              cursor: pointer;
+            }
+            .material-icons {
+              font-size: 18px;
+            }
+          }
+        }
+        .mat-button-focus-overlay,
+        .mat-button-ripple {
+          display: none;
+        }
+        .mat-button-focus-overlay {
+          display: none;
+        }
+      }
     }
   }
   .active {
@@ -146,12 +186,18 @@
     max-width: 65%;
     .modal-content {
       .modal-c-tabs {
+        .form_fields {
+          overflow: hidden;
+        }
         .login_regis {
           h5 {
             font-family: $font_family;
             font-weight: 500;
           }
           .material-icons {
+            cursor: pointer;
+          }
+          p {
             cursor: pointer;
           }
         }
@@ -169,6 +215,12 @@
           button {
             @include button;
             border-radius: 4px;
+            margin: 0px;
+          }
+          .forgot_password {
+            cursor: pointer;
+            color: #4087b9;
+            font-size: 10px;
           }
         }
       }
