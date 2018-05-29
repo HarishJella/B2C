@@ -82,7 +82,7 @@
     <div class="modal-content">
 
       <div class="modal-header border-bottom-0">
-        <h4 class="modal-title w-100" id="myModalLabel">Chose Room and Hotel Details</h4>
+        <h4 class="modal-title w-100" id="myModalLabel">Cho0se Room and Hotel Details</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hotelDetails.hide()">
           <span aria-hidden="true">×</span>
         </button>
@@ -99,48 +99,53 @@
                 </i>
               </div>
               <div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center justify-content-between">
                   <h6 class="mb-0">HOTEL K.R.IN </h6>
-                  <p class="mb-0">2*</p>
+
+                  <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 20%, #c1c1c1 1%, #f9191938 99%);">
+                    <span aria-hidden="true">
+                      ★★★★★
+                    </span>
+                  </span>
                 </div>
 
                 <p class="mb-0">K.R.Puram After Extension Bus Stop, Bangalore</p>
 
               </div>
             </div>
-            <div class="d-flex flex-column justify-content-center align-items-start">
+            <!-- <div class="d-flex flex-column justify-content-center align-items-start">
               <div class="d-flex align-items-center">
                 <h6 class="mb-0"> 3.75/5</h6>
                 <p class="mb-0">55 Reviews</p>
               </div>
 
               <p class="mb-0">81% guests recommended</p>
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-start">
+            </div> -->
+            <!-- <div class="d-flex flex-column justify-content-center align-items-start">
               <h6 class="mb-0">check in </h6>
               <p class="mb-0">11:00</p>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-start">
               <h6 class="mb-0">check out</h6>
               <p class="mb-0">23:00</p>
-            </div>
+            </div> -->
           </div>
-          <div class="d-flex flex-column justify-content-center align-items-end">
-            <div class="d-flex">
-              <i class="material-icons">
+          <div class="d-flex flex-column justify-content-center align-items-end header_price">
+            <!-- <div class="d-flex"> -->
+            <!-- <i class="material-icons">
                 announcement
               </i>
               <p class="mb-0">
                 Save Rs.536
-              </p>
-            </div>
-            <div class="d-flex">
-              <p class="mb-0">Rs. 1357</p>
-              <p class="mb-0">Rs. 1357</p>
+              </p> -->
+            <!-- </div> -->
+            <div class="d-flex price">
+              <!-- <p class="mb-0">Rs. 1357</p> -->
+              <p class="mb-0 ">Rs. 1357</p>
             </div>
 
 
-            <p class="mb-0">Per Room/Night</p>
+            <p class="mb-0">Per Room / Night</p>
           </div>
         </div>
         <mat-card>
@@ -157,7 +162,7 @@
                       <img src="assets/images/Hotel-image.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="col-9 hotel_details ">
-                      <div class="col-12 px-0 d-flex flex-column justify-content-between align-items-center  pb-2 single_room my-2">
+                      <div class="col-12 px-0 d-flex flex-column justify-content-between align-items-center  pb-2 single_room my-3">
                         <!-- <div class="col-12  d-flex justify-content-around mt-1 mb-3">
                           <i class="material-icons active">
                             wifi
@@ -186,7 +191,7 @@
                           </i>
                         </div> -->
                         <div class="col-12">
-                          <div class="d-flex align-items-center mb-2 content">
+                          <div class="d-flex align-items-center mb-3 content">
                             <h6 class="mb-0 pr-2">Standard Room (2 variants)</h6>
                             <p class="mb-0">Room size 15*15 sq.ft</p>
                           </div>
@@ -246,7 +251,7 @@
                             <p class="">You Save:
                               <span class="save">$400</span>
                             </p>
-                            <button class="btn">Book</button>
+                            <button class="btn waves-light" mdbWavesEffect>Book</button>
                           </div>
 
                         </div>
@@ -632,16 +637,70 @@
               </mat-tab>
 
               <mat-tab label="Rating and Reviews">
-                <div class="col-12 rating">
-                  <div class="col-6">
+                <div class="col-12 d-flex my-4 rating">
+                  <div class="col-4 hotel_rating">
                     <h2>Hotel Rating</h2>
-                    <div>
+                    <div class="d-flex flex-column reviews">
+                      <div>
+                        <h6 class="mb-0">3.5/5</h6>
+                      </div>
+                      <div>
+                        <p class="mb-0">314 reviews</p>
+                      </div>
+                    </div>
 
+                    <div class="d-flex flex-column recommended">
+                      <div>
+                        <h6 class="mb-0">81%</h6>
+                      </div>
+                      <div>
+                        <p class="mb-0">user recommended</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-8 user_rating">
+                    <h2>User Rating</h2>
+                    <div>
+                      <div class="d-flex">
+                        <div>
+                          <img src="assets/images/profile_pic.jpg" alt="">
+                          <p>23 May,2018</p>
+                        </div>
+                        <div>
+                          <div>
+                            3.5/5
+                          </div>
+                          <div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est repellat
+                              inventore eum cum provident rerum harum vero!</p>
+                          </div>
+                          <div>
+                            <p>9 hours ago</p>
+                          </div>
+                        </div>
+                      </div>
 
+                      <div class="d-flex">
+                        <div>
+                          <img src="assets/images" alt="">
+                          <p>23 May,2018</p>
+                        </div>
+                        <div>
+                          <div>
+                            3.5/5
+                          </div>
+                          <div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est repellat
+                              inventore eum cum provident rerum harum vero!</p>
+                          </div>
+                          <div>
+                            <p>9 hours ago</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
                 </div>
               </mat-tab>
 

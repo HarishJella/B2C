@@ -51,7 +51,7 @@ import { TCComponent } from './Staticpages/tc/tc.component';
     FlightFormComponent,
     HotelBookingComponent,
     modifySearchComponent,
-    HotelFormComponent
+    HotelFormComponent,
     PrivacyPolicyComponent,
     ContactUsComponent,
     TCComponent
