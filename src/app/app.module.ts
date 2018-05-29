@@ -25,6 +25,9 @@ import { FlightFormComponent } from './Flight/flight-form/flight-form.component'
 import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
 import { modifySearchComponent } from './Flight/dailog.components';
 import { PrivacyPolicyComponent } from './Staticpages/privacy-policy/privacy-policy.component';
+import { ContactUsComponent } from './Staticpages/contact-us/contact-us.component';
+import { TCComponent } from './Staticpages/tc/tc.component';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +50,9 @@ import { PrivacyPolicyComponent } from './Staticpages/privacy-policy/privacy-pol
     FlightFormComponent,
     HotelBookingComponent,
     modifySearchComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    ContactUsComponent,
+    TCComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,10 @@
   @include heading;
   font-size: 1.20rem !important;
   margin-top:0px !important;
+  &::after {
+    content: "";
+    width: 60px;
+  }
 }
 
 .about_us {
