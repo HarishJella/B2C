@@ -1,0 +1,158 @@
+@import '~variables.scss';
+@import '~mixins.scss';
+.banner_inner_content_agile_w3l{
+    background:url("assets/images/about/2.jpg") no-repeat;
+    background-size: cover;
+    min-height: 250px;
+}
+.about {
+   
+   
+   
+    .About_heading{
+    @include heading;
+    margin: 20px 0;
+    
+    text-align: center;
+    &::after{
+             margin:auto ;
+            }
+    }
+    .wthree_head_section p {
+        font-size: 15px;
+        text-align: center;
+        margin: 10px auto;
+        width: 60%;
+        color: #5e5e5e;
+        line-height: 1.8em;
+    }
+   
+    .about-w3right {
+        padding: 0 2em;
+    }
+    .stats {
+        background: url("assets/images/about/3.jpg") no-repeat 0px 0px;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        text-align: center;
+        background-attachment: fixed;
+
+        .agile_overlay2{
+            background:url("assets/images/about/overlay.png")repeat;
+            background-size: cover;
+            padding: 5em 0;
+        }
+        .ttt{
+            color: #fff;
+        }
+        h3.w3l_header.ttt, h3.w3l_header.ttt span, p.ppp {
+            color: #fff;
+        }
+        h3.w3l_header.ttt, h3.w3l_header.ttt span, p.ppp {
+            color: #fff;
+        }
+        .w3layouts_stats_left i {
+            font-size: 2.5em;
+            color: #fff;
+        }
+        .w3layouts_stats_left p {
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+            margin: 0.5em 0;
+        }
+
+        .w3layouts_stats_left h3 {
+            font-size: 1.3em;
+            color: #ed1d78;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        
+    }
+    .Professionals{
+        .team-social {
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            margin-bottom: 1em;
+            a i {
+                color: #000;
+                font-size: 16px;
+                padding: 10px;
+                width: 35px;
+                height: 35px;
+                line-height: 15px;
+                text-align: center;
+                border-radius: 50%;
+                -webkit-border-radius:50%;
+                -o-border-radius:50%;
+                -moz-border-radius:50%;
+                -ms-border-radius:50%;
+            }
+         }
+        .fa.fa-facebook {
+            color: #3b5998;
+            border: 1px solid #3b5998;
+        }
+        .fa.fa-facebook:hover {
+            color: #fff;
+            background: #3b5998;
+            border: 1px solid #3b5998;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            transition: 1s all;
+            -o-transition: all 1s;
+            -ms-transition: all 1s;
+        }
+        .fa.fa-twitter {
+            color: #1da1f2;
+            border: 1px solid #1da1f2;
+        }
+        .fa.fa-twitter:hover {
+            color: #fff;
+            background: #1da1f2;
+            border: 1px solid #1da1f2;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            transition: 1s all;
+            -o-transition: all 1s;
+            -ms-transition: all 1s;
+        }
+        .fa.fa-linkedin {
+            color: #e68523;
+            border: 1px solid #e68523;
+        }
+        .fa.fa-linkedin:hover {
+            color: #fff;
+            background: #e68523;
+            border: 1px solid #e68523;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            transition: 1s all;
+            -o-transition: all 1s;
+            -ms-transition: all 1s;
+        }
+        .fa.fa-pinterest-p {
+            color: #bd081c;
+            border: 1px solid #bd081c;
+        }
+        .fa.fa-pinterest-p:hover {
+            color: #fff;
+            background: #bd081c;
+            border: 1px solid #bd081c;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            transition: 1s all;
+            -o-transition: all 1s;
+            -ms-transition: all 1s;
+        }
+    }
+}

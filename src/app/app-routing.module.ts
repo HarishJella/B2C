@@ -6,11 +6,12 @@ import { HotelComponent } from './Hotel/hotel-page/hotel.component';
 import { FlightComponent } from './Flight/flight-result/flight.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
 import { FlightbookingComponent } from './Flight/flight-booking/flightbooking.component';
-import { AboutComponent } from './aboutpage/about/about.component';
+import { AboutComponent } from './Staticpages/about/about.component';
 import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
 import { BusbookingComponent } from './Bus/bus-booking/busbooking.component';
 import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
 import { FaqComponent } from './Staticpages/faq/faq.component';
+import {PrivacyPolicyComponent} from './Staticpages/privacy-policy/privacy-policy.component';
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
@@ -22,7 +23,9 @@ const routes: Routes = [
   { path: 'hotel_booking', component: HotelBookingComponent },
   { path: 'about', component: AboutComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'globaltemplate', component: GlobalcomponentsComponent }
+  { path: 'globaltemplate', component: GlobalcomponentsComponent },
+  { path: 'privacy-policy', component:PrivacyPolicyComponent }
+
 ];
 
 @NgModule({

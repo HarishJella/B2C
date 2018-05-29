@@ -1,0 +1,26 @@
+@import '~variables.scss';
+@import '~mixins.scss';
+.aboutus_heading {
+  @include heading;
+  font-size: 1.20rem !important;
+  margin-top:0px !important;
+}
+
+.about_us {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  p {
+    font-size: 14px;
+    margin-bottom: .4rem;
+    text-align: justify;
+  }
+  .privacy_heading{
+      font-weight: bold;
+  }
+  .bold{
+      font-weight:bold;
+  }
+  ol li{
+      font-size: 14px;
+  }
+}

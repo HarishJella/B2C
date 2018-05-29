@@ -10,7 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './homepage/home/home.component';
 import { BookingComponent } from './bookingpage/booking/booking.component';
-import { AboutComponent } from './aboutpage/about/about.component';
+import { AboutComponent } from './Staticpages/about/about.component';
 import { FaqComponent } from './Staticpages/faq/faq.component';
 import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.component';
 import { FlightTemplateComponent } from './Flight/flight-template/flight-template.component';
@@ -24,6 +24,7 @@ import { BusbookingComponent } from './Bus/bus-booking/busbooking.component';
 import { FlightFormComponent } from './Flight/flight-form/flight-form.component';
 import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
 import { modifySearchComponent } from './Flight/dailog.components';
+import { PrivacyPolicyComponent } from './Staticpages/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { modifySearchComponent } from './Flight/dailog.components';
     BusbookingComponent,
     FlightFormComponent,
     HotelBookingComponent,
-    modifySearchComponent
+    modifySearchComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
