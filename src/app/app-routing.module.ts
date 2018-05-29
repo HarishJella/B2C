@@ -11,6 +11,10 @@ import { GlobalcomponentsComponent } from './globalcomponents/globalcomponents.c
 import { BusbookingComponent } from './Bus/bus-booking/busbooking.component';
 import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
 import { FaqComponent } from './Staticpages/faq/faq.component';
+import { PrivacyPolicyComponent } from './Staticpages/privacy-policy/privacy-policy.component';
+import { ContactUsComponent } from './Staticpages/contact-us/contact-us.component';
+import { TCComponent } from './Staticpages/tc/tc.component';
+
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
@@ -22,7 +26,10 @@ const routes: Routes = [
   { path: 'hotel_booking', component: HotelBookingComponent },
   { path: 'about', component: AboutComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'globaltemplate', component: GlobalcomponentsComponent }
+  { path: 'globaltemplate', component: GlobalcomponentsComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'tc', component: TCComponent }
 ];
 
 @NgModule({
