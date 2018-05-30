@@ -1,7 +1,7 @@
 @import '~variables.scss';
 @import '~mixins.scss';
 .footer {
-  background: $pinky-orange;
+  background: #000;
   .footer-top {
     .footer_img {
       display: flex;
@@ -48,7 +48,7 @@
 
 .fotr-btm {
   color: #fff;
-  background: #000;
+  background: $pinky-orange;
   font-size: 10px;
   font-weight: 500;
   display: flex;

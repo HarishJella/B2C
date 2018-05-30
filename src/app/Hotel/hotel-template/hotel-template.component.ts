@@ -12,5 +12,5 @@ export class HotelTemplateComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }
