@@ -1,13 +1,13 @@
-<div class="col-md-12 px-0 Hotel-Template">
+ <div class="col-md-12 px-0 Hotel-Template">
 
-  <div class="card card-cascade narrower">
+  <div class="card cardc card-cascade narrower">
     <div class=" img_pad view overlay hm-white-slight waves-light" mdbWavesEffect>
       <img src="assets/images/Hotel-image1.jpg" class="img-fluid" alt="">
       <a>
         <div class="mask"></div>
       </a>
     </div>
-    <div class="card-body">
+    <div class="card-body cardbody">
       <h5 class="d-flex justify-content-between align-items-center">
         <i class="material-icons active">
           wifi
@@ -70,9 +70,48 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
 
-
+<!-- <div class="col-12 px-0 d-flex border Hotel_List_Template">
+  <div class="col-2 pl-0 hotel_image">
+    <img src="assets/images/Hotel-image1.jpg" class="img-fluid" alt="">
+  </div>
+  <div class="col-10">
+    <div class="col-12 px-0">
+      <div class="d-flex justify-content-start align-items-center py-2">
+        <i class="material-icons pr-2 active">
+          wifi
+        </i>
+        <i class="material-icons pr-2">
+          camera
+        </i>
+        <i class="material-icons pr-2 active">
+          commute
+        </i>
+        <i class="material-icons pr-2">
+          description
+        </i>
+        <i class="material-icons pr-2">
+          event
+        </i>
+        <i class="material-icons pr-2 active">
+          important_devices
+        </i>
+        <i class="material-icons pr-2">
+          help_outline
+        </i>
+        <i class="material-icons pr-2 active">
+          feedback
+        </i>
+      </div>
+      <div class="d-flex justify-content-start align-items-center py-2">
+        <h4 class="hotel_name mb-0">G Hotel Kelawai</h4>
+        <h4 class="mb-0 pipe">|</h4>
+        <h4 class="mb-0 rateing">4.5/5</h4>
+      </div>
+    </div>
+  </div>
+</div> -->
 
 
 
@@ -82,7 +121,7 @@
     <div class="modal-content">
 
       <div class="modal-header border-bottom-0">
-        <h4 class="modal-title w-100" id="myModalLabel">Chose Room and Hotel Details</h4>
+        <h4 class="modal-title w-100" id="myModalLabel">Choose Room and Hotel Details</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hotelDetails.hide()">
           <span aria-hidden="true">×</span>
         </button>
@@ -99,69 +138,70 @@
                 </i>
               </div>
               <div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center justify-content-between">
                   <h6 class="mb-0">HOTEL K.R.IN </h6>
-                  <p class="mb-0">2*</p>
+
+                  <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 20%, #c1c1c1 1%, #f9191938 99%);">
+                    <span aria-hidden="true">
+                      ★★★★★
+                    </span>
+                  </span>
                 </div>
 
                 <p class="mb-0">K.R.Puram After Extension Bus Stop, Bangalore</p>
 
               </div>
             </div>
-            <div class="d-flex flex-column justify-content-center align-items-start">
+            <!-- <div class="d-flex flex-column justify-content-center align-items-start">
               <div class="d-flex align-items-center">
                 <h6 class="mb-0"> 3.75/5</h6>
                 <p class="mb-0">55 Reviews</p>
               </div>
 
               <p class="mb-0">81% guests recommended</p>
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-start">
+            </div> -->
+            <!-- <div class="d-flex flex-column justify-content-center align-items-start">
               <h6 class="mb-0">check in </h6>
               <p class="mb-0">11:00</p>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-start">
               <h6 class="mb-0">check out</h6>
               <p class="mb-0">23:00</p>
-            </div>
+            </div> -->
           </div>
-          <div class="d-flex flex-column justify-content-center align-items-end">
-            <div class="d-flex">
-              <i class="material-icons">
+          <div class="d-flex flex-column justify-content-center align-items-end header_price">
+            <!-- <div class="d-flex"> -->
+            <!-- <i class="material-icons">
                 announcement
               </i>
               <p class="mb-0">
                 Save Rs.536
-              </p>
-            </div>
-            <div class="d-flex">
-              <p class="mb-0">Rs. 1357</p>
-              <p class="mb-0">Rs. 1357</p>
+              </p> -->
+            <!-- </div> -->
+            <div class="d-flex price">
+              <!-- <p class="mb-0">Rs. 1357</p> -->
+              <p class="mb-0 ">Rs. 1357</p>
             </div>
 
 
-            <p class="mb-0">Per Room/Night</p>
+            <p class="mb-0">Per Room / Night</p>
           </div>
         </div>
         <mat-card>
           <mat-card-content>
             <!-- <h2 class="example-h2">Flight Detailss</h2> -->
-            <mat-tab-group class="demo-tab-group">
+            <mat-tab-group class="hotel-tab-group">
+
               <mat-tab label="Room Type">
-
-
                 <div class="tab-content py-4">
-                  <div class="col-12 d-flex justify-content-center align-items-center border">
-                    <div class="col-3">
+                  <!-- single room -->
+                  <div class="col-12 p-3 d-flex justify-content-center align-items-center border  mb-3">
+                    <div class="col-3 px-0">
                       <img src="assets/images/Hotel-image.jpg" alt="" class="img-fluid">
-                      <div class="content">
-                        <h6 class="mb-0">Standard Room (2 variants)</h6>
-                        <p class="mb-0">Room size 15*15 sq.ft</p>
-                      </div>
                     </div>
-                    <div class="col-9">
-                      <div class="col-12 d-flex flex-column justify-content-between align-items-center border-bottom">
-                        <div class="col-12 d-flex justify-content-around mt-1 mb-3">
+                    <div class="col-9 hotel_details ">
+                      <div class="col-12 px-0 d-flex flex-column justify-content-between align-items-center  pb-2 single_room my-3">
+                        <!-- <div class="col-12  d-flex justify-content-around mt-1 mb-3">
                           <i class="material-icons active">
                             wifi
                           </i>
@@ -187,65 +227,975 @@
                           <i class="material-icons active">
                             feedback
                           </i>
+                        </div> -->
+                        <div class="col-12">
+                          <div class="d-flex align-items-center mb-3 content">
+                            <h6 class="mb-0 pr-2">Standard Room (2 variants)</h6>
+                            <p class="mb-0">Room size 15*15 sq.ft</p>
+                          </div>
                         </div>
-                        <div class="col-12 d-flex">
-                          <div class="col-2">
-                            <h6>Single Standard</h6>
-                            <p>1 Adult, 1 Children, 1 Infant</p>
+                        <div class="col-12 px-0 d-flex room_details">
+                          <div class="col-3 d-flex flex-column justify-content-between">
+                            <div>
+                              <h6>Single Standard</h6>
+                              <p>1 Adult, 1 Children, 1 Infant</p>
+                            </div>
+                            <div class="d-flex">
+                              <p class="d-flex flex-column pr-2">
+
+                                <span>
+                                  Check In</span>
+                                <span>11:00 am</span>
+                              </p>
+                              <p class="d-flex flex-column">
+                                <span>
+                                  Check Out</span>
+                                <span>11:00 pm</span>
+                              </p>
+                            </div>
                           </div>
-                          <div class="col-2">
-                            <h6>American Breakfast</h6>
+                          <div class="col-3 room_amenities">
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> American Breakfast</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Wifi</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Laundry Service</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Cancellation Policy </h6>
                           </div>
-                          <div class="col-2">
-                            <h6>Map</h6>
-                            <p>Free cancellation Policy</p>
-                          </div>
-                          <div class="col-2">
+                          <div class="col-3 ">
                             <h6>Bed Type</h6>
                             <p>Double</p>
                           </div>
-                          <div class="col-2">
-                            <h6 class="price">$7896</h6>
+                          <!-- <div class="col-4">
+                            <h6>Map</h6>
+                            <p>Free cancellation Policy</p>
+                          </div> -->
+
+                          <div class="col-3 price">
+                            <div class="d-flex align-items-center">
+                              <p class="mb-2 pr-2 old_price">$1750</p>
+                              <h6 class="new_price mb-2">$1350</h6>
+                            </div>
+                            <p class="">You Save:
+                              <span class="save">$400</span>
+                            </p>
+                            <button class="btn waves-light" mdbWavesEffect>Book</button>
                           </div>
-                          <div class="col-2">
-                            <button class="btn">Book</button>
-                          </div>
+
                         </div>
 
                       </div>
 
                     </div>
                   </div>
+                  <!-- single room -->
+                  <div class="col-12 p-3 d-flex justify-content-center align-items-center border  mb-3">
+                    <div class="col-3 px-0">
+                      <img src="assets/images/Hotel-image.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-9 hotel_details ">
+                      <div class="col-12 px-0 d-flex flex-column justify-content-between align-items-center  pb-2 single_room my-2">
+                        <!-- <div class="col-12  d-flex justify-content-around mt-1 mb-3">
+                            <i class="material-icons active">
+                              wifi
+                            </i>
+                            <i class="material-icons">
+                              camera
+                            </i>
+                            <i class="material-icons active">
+                              commute
+                            </i>
+                            <i class="material-icons">
+                              description
+                            </i>
+                            <i class="material-icons">
+                              event
+                            </i>
+  
+                            <i class="material-icons active">
+                              important_devices
+                            </i>
+                            <i class="material-icons">
+                              help_outline
+                            </i>
+                            <i class="material-icons active">
+                              feedback
+                            </i>
+                          </div> -->
+                        <div class="col-12">
+                          <div class="d-flex align-items-center mb-2 content">
+                            <h6 class="mb-0 pr-2">Standard Room (2 variants)</h6>
+                            <p class="mb-0">Room size 15*15 sq.ft</p>
+                          </div>
+                        </div>
+                        <div class="col-12 px-0 d-flex room_details">
+                          <div class="col-3 d-flex flex-column justify-content-between">
+                            <div>
+                              <h6>Single Standard</h6>
+                              <p>1 Adult, 1 Children, 1 Infant</p>
+                            </div>
+                            <div class="d-flex">
+                              <p class="d-flex flex-column pr-2">
+
+                                <span>
+                                  Check In</span>
+                                <span>11:00 am</span>
+                              </p>
+                              <p class="d-flex flex-column">
+                                <span>
+                                  Check Out</span>
+                                <span>11:00 pm</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col-3 room_amenities">
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> American Breakfast</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Wifi</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Laundry Service</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Cancellation Policy </h6>
+                          </div>
+                          <div class="col-3 ">
+                            <h6>Bed Type</h6>
+                            <p>Double</p>
+                          </div>
+                          <!-- <div class="col-4">
+                              <h6>Map</h6>
+                              <p>Free cancellation Policy</p>
+                            </div> -->
+
+                          <div class="col-3 price">
+                            <div class="d-flex align-items-center">
+                              <p class="mb-2 pr-2 old_price">$1750</p>
+                              <h6 class="new_price mb-2">$1350</h6>
+                            </div>
+                            <p class="">You Save:
+                              <span class="save">$400</span>
+                            </p>
+                            <button class="btn">Book</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- double room -->
+                  <div class="col-12 p-3 d-flex justify-content-center align-items-center border  mb-3">
+                    <div class="col-3 px-0">
+                      <img src="assets/images/Hotel-image.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-9 hotel_details ">
+                      <div class="col-12 px-0 d-flex flex-column justify-content-between align-items-center  pb-2 single_room my-2">
+
+                        <div class="col-12">
+                          <div class="d-flex align-items-center mb-2 content">
+                            <h6 class="mb-0 pr-2">Standard Room (2 variants)</h6>
+                            <p class="mb-0">Room size 15*15 sq.ft</p>
+                          </div>
+                        </div>
+                        <div class="col-12 px-0 d-flex room_details">
+                          <div class="col-3 d-flex flex-column justify-content-between">
+                            <div>
+                              <h6>Single Standard</h6>
+                              <p>1 Adult, 1 Children, 1 Infant</p>
+                            </div>
+                            <div class="d-flex">
+                              <p class="d-flex flex-column pr-2">
+
+                                <span>
+                                  Check In</span>
+                                <span>11:00 am</span>
+                              </p>
+                              <p class="d-flex flex-column">
+                                <span>
+                                  Check Out</span>
+                                <span>11:00 pm</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col-3 room_amenities">
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> American Breakfast</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Wifi</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Laundry Service</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Cancellation Policy </h6>
+                          </div>
+                          <div class="col-3 ">
+                            <h6>Bed Type</h6>
+                            <p>Double</p>
+                          </div>
+                          <!-- <div class="col-4">
+                              <h6>Map</h6>
+                              <p>Free cancellation Policy</p>
+                            </div> -->
+
+                          <div class="col-3 price">
+                            <div class="d-flex align-items-center">
+                              <p class="mb-2 pr-2 old_price">$1750</p>
+                              <h6 class="new_price mb-2">$1350</h6>
+                            </div>
+                            <p class="">You Save:
+                              <span class="save">$400</span>
+                            </p>
+                            <button class="btn">Book</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+                      <div class="col-12 px-0 d-flex flex-column justify-content-between align-items-center  pb-2 single_room my-2">
+
+                        <div class="col-12">
+                          <div class="d-flex align-items-center mb-2 content">
+                            <h6 class="mb-0 pr-2">Standard Room (2 variants)</h6>
+                            <p class="mb-0">Room size 15*15 sq.ft</p>
+                          </div>
+                        </div>
+                        <div class="col-12 px-0 d-flex room_details">
+                          <div class="col-3 d-flex flex-column justify-content-between">
+                            <div>
+                              <h6>Single Standard</h6>
+                              <p>1 Adult, 1 Children, 1 Infant</p>
+                            </div>
+                            <div class="d-flex">
+                              <p class="d-flex flex-column pr-2">
+
+                                <span>
+                                  Check In</span>
+                                <span>11:00 am</span>
+                              </p>
+                              <p class="d-flex flex-column">
+                                <span>
+                                  Check Out</span>
+                                <span>11:00 pm</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col-3 room_amenities">
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> American Breakfast</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Wifi</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Laundry Service</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Cancellation Policy </h6>
+                          </div>
+                          <div class="col-3 ">
+                            <h6>Bed Type</h6>
+                            <p>Double</p>
+                          </div>
+                          <!-- <div class="col-4">
+                                <h6>Map</h6>
+                                <p>Free cancellation Policy</p>
+                              </div> -->
+
+                          <div class="col-3 price">
+                            <div class="d-flex align-items-center">
+                              <p class="mb-2 pr-2 old_price">$1750</p>
+                              <h6 class="new_price mb-2">$1350</h6>
+                            </div>
+                            <p class="">You Save:
+                              <span class="save">$400</span>
+                            </p>
+                            <button class="btn">Book</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+                      <div class="col-12 px-0 d-flex flex-column justify-content-between align-items-center  pb-2 single_room my-2">
+
+                        <div class="col-12">
+                          <div class="d-flex align-items-center mb-2 content">
+                            <h6 class="mb-0 pr-2">Standard Room (2 variants)</h6>
+                            <p class="mb-0">Room size 15*15 sq.ft</p>
+                          </div>
+                        </div>
+                        <div class="col-12 px-0 d-flex room_details">
+                          <div class="col-3 d-flex flex-column justify-content-between">
+                            <div>
+                              <h6>Single Standard</h6>
+                              <p>1 Adult, 1 Children, 1 Infant</p>
+                            </div>
+                            <div class="d-flex">
+                              <p class="d-flex flex-column pr-2">
+
+                                <span>
+                                  Check In</span>
+                                <span>11:00 am</span>
+                              </p>
+                              <p class="d-flex flex-column">
+                                <span>
+                                  Check Out</span>
+                                <span>11:00 pm</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col-3 room_amenities">
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> American Breakfast</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Wifi</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Laundry Service</h6>
+                            <h6 class="d-flex align-items-center">
+                              <i class="material-icons pr-1">
+                                done
+                              </i> Free Cancellation Policy </h6>
+                          </div>
+                          <div class="col-3 ">
+                            <h6>Bed Type</h6>
+                            <p>Double</p>
+                          </div>
+                          <!-- <div class="col-4">
+                                  <h6>Map</h6>
+                                  <p>Free cancellation Policy</p>
+                                </div> -->
+
+                          <div class="col-3 price">
+                            <div class="d-flex align-items-center">
+                              <p class="mb-2 pr-2 old_price">$1750</p>
+                              <h6 class="new_price mb-2">$1350</h6>
+                            </div>
+                            <p class="">You Save:
+                              <span class="save">$400</span>
+                            </p>
+                            <button class="btn">Book</button>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
                 </div>
               </mat-tab>
+
               <mat-tab label="Images">
-                images
+                <div class="col-12 px-0 d-flex flex-column align-items-center mt-4">
+                  <div class="col-8 mb-4">
+                    <!--Carousel Wrapper-->
+                    <mdb-carousel [isControls]="true" [animation]="'slide'">
+                      <!--First slide-->
+                      <mdb-slide>
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+                      </mdb-slide>
+                      <!--/First slide-->
+                      <!--Second slide-->
+                      <mdb-slide>
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
+                      </mdb-slide>
+                      <!--/Second slide-->
+                      <!--Third slide-->
+                      <mdb-slide>
+                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
+                      </mdb-slide>
+                      <!--/Third slide-->
+                    </mdb-carousel>
+                    <!--/.Carousel Wrapper-->
+                  </div>
+                  <div class="col-12">
+                    <h6>Description</h6>
+                    <p>Nestled In the heart of the city, Gokulam Grand Hotel Spa is in close proximity to the business district
+                      of Bangalore. Featuring multiple restaurants, this luxurious Bangalore hotel also has an outdoor pool
+                      with sunbeds. It is located at a distance of 11 km from Bangalore Cantonment Railway Station and 15
+                      km from Bangalore Fort. </p>
+                    <p>It comprises of 11 floors and 182 spacious and well-kept rooms and suites. Coffee/tea maker, in-room
+                      safe, television and attached bathroom with bath amenities and bathtubs are few of the conveniences.
+                    </p>
+                    <p>It comprises of 11 floors and 182 spacious and well-kept rooms and suites. Coffee/tea maker, in-room
+                      safe, television and attached bathroom with bath amenities and bathtubs are few of the conveniences.
+                    </p>
+                    <p>Services offered are concierge, laundry service and room service. Places worth visiting are Iskcon Temple
+                      (7 km), M Chinnaswamy Stadium (12 km) and St. Mary's Basilica (12 km). This hotel is 13 km from Bengaluru
+                      City Junction Railway Station and 30 km from Kempegowda International Airport. </p>
+                    <p>Fun World (7 km), Bangalore Palace (9 km) and Cubbon Park (11 km). Moreover, there are numerous IT parks
+                      and corporate hubs in its proximity including World Trade Centre (6 km) and Embassy Manyata Business
+                      Park (10 km). 30 km from Kempegowda International Airport.</p>
+                  </div>
+                </div>
               </mat-tab>
 
-
-
               <mat-tab label="Map">
-                Map Location
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2361735188765!2d77.64569661442442!3d13.020626790823725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1683fb688b7b%3A0x9f64a15c2c63b179!2sWebaxyz+IT+Consulting+Private+Limited!5e0!3m2!1sen!2sin!4v1527593778834"
+                  width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
               </mat-tab>
 
               <mat-tab label="Amenities">
-
-                Amenities
-
+                <div class="px-3 amenities my-3">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/aircondiction.svg" alt="">
+                    <p class="mb-0">Air Condition</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/bar.svg" alt="">
+                    <p class="mb-0">Bar</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/conference-hall.svg" alt="">
+                    <p class="mb-0">Conference Hall</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/gym.svg" alt="">
+                    <p class="mb-0">Gym</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/hair-dryer.svg" alt="">
+                    <p class="mb-0">Hair Dryer</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/handicap.svg" alt="">
+                    <p class="mb-0">Handicap</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/parking.svg" alt="">
+                    <p class="mb-0">Parking</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/restaurant.svg" alt="">
+                    <p class="mb-0">Restaurant</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/tv.svg" alt="">
+                    <p class="mb-0">Tv</p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <img class="pr-3" src="assets/images/hotel_amenities/wifi.svg" alt="">
+                    <p class="mb-0">Wifi</p>
+                  </div>
+                </div>
               </mat-tab>
+
               <mat-tab label="Rating and Reviews">
+                <div class="col-12 d-flex my-4 rating">
+                  <div class="col-3 hotel_rating">
+                    <h2>Hotel Rating</h2>
+                    <div class="d-flex flex-column reviews">
+                      <div class="hotel_rate_value">
+                        <span class="rating" data-rating="3.5" style="background: linear-gradient(to right, #ef2172, #ef2172 20%, rgba(123, 112, 112, 0.02) 1%, rgba(104, 95, 95, 0.02) 99%);">
+                          <span aria-hidden="true">
+                            ❤❤❤❤❤
+                          </span>
+                        </span>
+                      </div>
+                      <div>
+                        <p class="mb-0">314 reviews</p>
+                      </div>
+                    </div>
 
-                Review
+                    <div class="d-flex flex-column recommended">
+                      <div>
+                        <h6 class="mb-0">81%</h6>
+                      </div>
+                      <div>
+                        <p class="mb-0">user recommended</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 user_rating">
+                    <h2>User Rating</h2>
+                    <div class="user_review_height">
+                      <!-- single_review -->
+                      <div class="single_review border-bottom">
+                        <div class="col-12 px-0 d-flex">
+                          <div class="col-1 px-0">
+                            <img src="assets/images/profile_pic.jpg" alt="">
+
+                          </div>
+                          <div class="col-11 px-0">
+                            <div class="d-flex align-items-end user_value">
+                              <!-- <span class="user_given_value green pr-1">3.5</span>
+                              <span class="pr-1">/</span>
+                              <span class="">5</span> -->
+                              <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 20%, #c1c1c1 1%, #f9191938 99%);">
+                                <span aria-hidden="true">
+                                  ★★★★★
+                                </span>
+                              </span>
+                            </div>
+                            <div>
+                              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="mb-1 pr-3">23 May,2018</p>
+                              <p class="mb-1">9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--<div class="col-12 px-0 d-flex ">
+                          <div class="col-1 px-0">
+                            <i class="material-icons pr-3">
+                              reply
+                            </i>
+                          </div>
+
+                          <div class="col-11 px-0 manager_reply">
+                            <div class="col-2 px-0">
+                              <img src="assets/images/Empty_image_icon.png" alt="">
+                              <p class="mb-1">Manager</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+
+                              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                             <div class="d-flex align-items-center justify-content-end">
+                              <p class="pr-3">23 May,2018</p>
+                              <p>9 hours ago</p>
+                            </div> 
+                          </div>
+                      </div>-->
+                      </div>
+
+                      <div class="single_review border-bottom">
+                        <div class="col-12 px-0 d-flex">
+                          <div class="col-1 px-0">
+                            <img src="assets/images/profile_pic.jpg" alt="">
+
+                          </div>
+                          <div class="col-11 px-0">
+                            <div class="d-flex align-items-end user_value">
+                              <!-- <span class="user_given_value green pr-1">3.5</span>
+                                <span class="pr-1">/</span>
+                                <span class="">5</span> -->
+                              <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 50%, #c1c1c1 1%, #f9191938 99%);">
+                                <span aria-hidden="true">
+                                  ★★★★★
+                                </span>
+                              </span>
+                            </div>
+                            <div>
+                              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="mb-1 pr-3">23 May,2018</p>
+                              <p class="mb-1">9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--<div class="col-12 px-0 d-flex ">
+                            <div class="col-1 px-0">
+                              <i class="material-icons pr-3">
+                                reply
+                              </i>
+                            </div>
+  
+                            <div class="col-11 px-0 manager_reply">
+                              <div class="col-2 px-0">
+                                <img src="assets/images/Empty_image_icon.png" alt="">
+                                <p class="mb-1">Manager</p>
+                              </div>
+                              <div class="col-12 d-flex align-items-start">
+  
+                                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                  repellat inventore eum cum provident rerum harum vero!</p>
+                              </div>
+                               <div class="d-flex align-items-center justify-content-end">
+                                <p class="pr-3">23 May,2018</p>
+                                <p>9 hours ago</p>
+                              </div> 
+                            </div>
+                        </div>-->
+                      </div>
+
+                      <div class="single_review border-bottom">
+                        <div class="col-12 px-0 d-flex">
+                          <div class="col-1 px-0">
+                            <img src="assets/images/profile_pic.jpg" alt="">
+
+                          </div>
+                          <div class="col-11 px-0">
+                            <div class="d-flex align-items-end user_value">
+                              <!-- <span class="user_given_value green pr-1">3.5</span>
+                                  <span class="pr-1">/</span>
+                                  <span class="">5</span> -->
+                              <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 10%, #c1c1c1 1%, #f9191938 99%);">
+                                <span aria-hidden="true">
+                                  ★★★★★
+                                </span>
+                              </span>
+                            </div>
+                            <div>
+                              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="mb-1 pr-3">23 May,2018</p>
+                              <p class="mb-1">9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--<div class="col-12 px-0 d-flex ">
+                              <div class="col-1 px-0">
+                                <i class="material-icons pr-3">
+                                  reply
+                                </i>
+                              </div>
+    
+                              <div class="col-11 px-0 manager_reply">
+                                <div class="col-2 px-0">
+                                  <img src="assets/images/Empty_image_icon.png" alt="">
+                                  <p class="mb-1">Manager</p>
+                                </div>
+                                <div class="col-12 d-flex align-items-start">
+    
+                                  <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                    repellat inventore eum cum provident rerum harum vero!</p>
+                                </div>
+                                 <div class="d-flex align-items-center justify-content-end">
+                                  <p class="pr-3">23 May,2018</p>
+                                  <p>9 hours ago</p>
+                                </div> 
+                              </div>
+                          </div>-->
+                      </div>
+
+                      <div class="single_review border-bottom">
+                        <div class="col-12 px-0 d-flex">
+                          <div class="col-1 px-0">
+                            <img src="assets/images/profile_pic.jpg" alt="">
+
+                          </div>
+                          <div class="col-11 px-0">
+                            <div class="d-flex align-items-end user_value">
+                              <!-- <span class="user_given_value green pr-1">3.5</span>
+                                    <span class="pr-1">/</span>
+                                    <span class="">5</span> -->
+                              <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 20%, #c1c1c1 1%, #f9191938 99%);">
+                                <span aria-hidden="true">
+                                  ★★★★★
+                                </span>
+                              </span>
+                            </div>
+                            <div>
+                              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="mb-1 pr-3">23 May,2018</p>
+                              <p class="mb-1">9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--<div class="col-12 px-0 d-flex ">
+                                <div class="col-1 px-0">
+                                  <i class="material-icons pr-3">
+                                    reply
+                                  </i>
+                                </div>
+      
+                                <div class="col-11 px-0 manager_reply">
+                                  <div class="col-2 px-0">
+                                    <img src="assets/images/Empty_image_icon.png" alt="">
+                                    <p class="mb-1">Manager</p>
+                                  </div>
+                                  <div class="col-12 d-flex align-items-start">
+      
+                                    <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                      repellat inventore eum cum provident rerum harum vero!</p>
+                                  </div>
+                                   <div class="d-flex align-items-center justify-content-end">
+                                    <p class="pr-3">23 May,2018</p>
+                                    <p>9 hours ago</p>
+                                  </div> 
+                                </div>
+                            </div>-->
+                      </div>
+
+
+                      <div class="single_review border-bottom">
+                        <div class="col-12 px-0 d-flex">
+                          <div class="col-1 px-0">
+                            <img src="assets/images/profile_pic.jpg" alt="">
+
+                          </div>
+                          <div class="col-11 px-0">
+                            <div class="d-flex align-items-end user_value">
+                              <!-- <span class="user_given_value green pr-1">3.5</span>
+                                      <span class="pr-1">/</span>
+                                      <span class="">5</span> -->
+                              <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 40%, #c1c1c1 1%, #f9191938 99%);">
+                                <span aria-hidden="true">
+                                  ★★★★★
+                                </span>
+                              </span>
+                            </div>
+                            <div>
+                              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="mb-1 pr-3">23 May,2018</p>
+                              <p class="mb-1">9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--<div class="col-12 px-0 d-flex ">
+                                  <div class="col-1 px-0">
+                                    <i class="material-icons pr-3">
+                                      reply
+                                    </i>
+                                  </div>
+        
+                                  <div class="col-11 px-0 manager_reply">
+                                    <div class="col-2 px-0">
+                                      <img src="assets/images/Empty_image_icon.png" alt="">
+                                      <p class="mb-1">Manager</p>
+                                    </div>
+                                    <div class="col-12 d-flex align-items-start">
+        
+                                      <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                        repellat inventore eum cum provident rerum harum vero!</p>
+                                    </div>
+                                     <div class="d-flex align-items-center justify-content-end">
+                                      <p class="pr-3">23 May,2018</p>
+                                      <p>9 hours ago</p>
+                                    </div> 
+                                  </div>
+                              </div>-->
+                      </div>
+
+
+
+                      <div class="single_review border-bottom">
+                        <div class="col-12 px-0 d-flex">
+                          <div class="col-1 px-0">
+                            <img src="assets/images/profile_pic.jpg" alt="">
+
+                          </div>
+                          <div class="col-11 px-0">
+                            <div class="d-flex align-items-end user_value">
+                              <!-- <span class="user_given_value green pr-1">3.5</span>
+                                        <span class="pr-1">/</span>
+                                        <span class="">5</span> -->
+                              <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 60%, #c1c1c1 1%, #f9191938 99%);">
+                                <span aria-hidden="true">
+                                  ★★★★★
+                                </span>
+                              </span>
+                            </div>
+                            <div>
+                              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="mb-1 pr-3">23 May,2018</p>
+                              <p class="mb-1">9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--<div class="col-12 px-0 d-flex ">
+                                    <div class="col-1 px-0">
+                                      <i class="material-icons pr-3">
+                                        reply
+                                      </i>
+                                    </div>
+          
+                                    <div class="col-11 px-0 manager_reply">
+                                      <div class="col-2 px-0">
+                                        <img src="assets/images/Empty_image_icon.png" alt="">
+                                        <p class="mb-1">Manager</p>
+                                      </div>
+                                      <div class="col-12 d-flex align-items-start">
+          
+                                        <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                          repellat inventore eum cum provident rerum harum vero!</p>
+                                      </div>
+                                       <div class="d-flex align-items-center justify-content-end">
+                                        <p class="pr-3">23 May,2018</p>
+                                        <p>9 hours ago</p>
+                                      </div> 
+                                    </div>
+                                </div>-->
+                      </div>
+
+
+                      <div class="single_review border-bottom">
+                        <div class="col-12 px-0 d-flex">
+                          <div class="col-1 px-0">
+                            <img src="assets/images/profile_pic.jpg" alt="">
+
+                          </div>
+                          <div class="col-11 px-0">
+                            <div class="d-flex align-items-end user_value">
+                              <!-- <span class="user_given_value green pr-1">3.5</span>
+                                          <span class="pr-1">/</span>
+                                          <span class="">5</span> -->
+                              <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 80%, #c1c1c1 1%, #f9191938 99%);">
+                                <span aria-hidden="true">
+                                  ★★★★★
+                                </span>
+                              </span>
+                            </div>
+                            <div>
+                              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="mb-1 pr-3">23 May,2018</p>
+                              <p class="mb-1">9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--<div class="col-12 px-0 d-flex ">
+                                      <div class="col-1 px-0">
+                                        <i class="material-icons pr-3">
+                                          reply
+                                        </i>
+                                      </div>
+            
+                                      <div class="col-11 px-0 manager_reply">
+                                        <div class="col-2 px-0">
+                                          <img src="assets/images/Empty_image_icon.png" alt="">
+                                          <p class="mb-1">Manager</p>
+                                        </div>
+                                        <div class="col-12 d-flex align-items-start">
+            
+                                          <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                            repellat inventore eum cum provident rerum harum vero!</p>
+                                        </div>
+                                         <div class="d-flex align-items-center justify-content-end">
+                                          <p class="pr-3">23 May,2018</p>
+                                          <p>9 hours ago</p>
+                                        </div> 
+                                      </div>
+                                  </div>-->
+                      </div>
+
+
+                      <div class="single_review border-bottom">
+                        <div class="col-12 px-0 d-flex">
+                          <div class="col-1 px-0">
+                            <img src="assets/images/profile_pic.jpg" alt="">
+
+                          </div>
+                          <div class="col-11 px-0">
+                            <div class="d-flex align-items-end user_value">
+                              <!-- <span class="user_given_value green pr-1">3.5</span>
+                                            <span class="pr-1">/</span>
+                                            <span class="">5</span> -->
+                              <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 100%, #c1c1c1 1%, #f9191938 99%);">
+                                <span aria-hidden="true">
+                                  ★★★★★
+                                </span>
+                              </span>
+                            </div>
+                            <div>
+                              <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="mb-1 pr-3">23 May,2018</p>
+                              <p class="mb-1">9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--<div class="col-12 px-0 d-flex ">
+                                        <div class="col-1 px-0">
+                                          <i class="material-icons pr-3">
+                                            reply
+                                          </i>
+                                        </div>
+              
+                                        <div class="col-11 px-0 manager_reply">
+                                          <div class="col-2 px-0">
+                                            <img src="assets/images/Empty_image_icon.png" alt="">
+                                            <p class="mb-1">Manager</p>
+                                          </div>
+                                          <div class="col-12 d-flex align-items-start">
+              
+                                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                              repellat inventore eum cum provident rerum harum vero!</p>
+                                          </div>
+                                           <div class="d-flex align-items-center justify-content-end">
+                                            <p class="pr-3">23 May,2018</p>
+                                            <p>9 hours ago</p>
+                                          </div> 
+                                        </div>
+                                    </div>-->
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
               </mat-tab>
-              <mat-tab label="Near by Locations">
 
-                Near by Locations
-
-              </mat-tab>
-              <mat-tab label="Hotel Policy's">
-
-                Hotel Policies
-
+              <mat-tab label="Hotel Policies">
+                <p>The standard check-in time is 02:00 PM and the standard check-out time is 12:00 PM. Early check-in or late
+                  check-out is strictly subjected to availability and may be chargeable by the hotel. Any early check-in
+                  or late check-out request must be directed and reconfirmed with hotel directly We do not allow unmarried
+                  / unrelated couples to check in. This is at the full discretion of the hotel management. No refund would
+                  be applicable in case the check-in is denied under such circumstances</p>
+                <p>Hotel Policy: Most hotels do not allow unmarried/unrelated couples to check-in. This is at the full discretion
+                  of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.
+                  Most hotels do not allow same city/local ID Proofs for check-in.Kindly check with your hotel about the
+                  same before checking in. This is at full discretion of the hotel management. No refund would be applicable
+                  in case the hotel denies check-in under such circumstances. Standard hotel checkout time will not be available
+                  here. Kindly plan accordingly. Extended checkout time will be at the sole discretion of the hotelier. No
+                  refund shall be applicable in such cases.</p>
               </mat-tab>
               <mat-tab label="Cancellation Policy">
                 <div class="my-3  demo-tab-content">

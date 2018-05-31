@@ -21,39 +21,25 @@
 
     <div class="col-12 p-0 mb-3 modify_search mb-4 border front">
 
-      <div class="item p-3 col-5  d-flex flex-column justify-content-center align-items-center">
-        <div class="col-12  d-flex">
-          <div class="source col-5 d-flex flex-column justify-content-center align-items-center">
-            <h6 class="mb-1">From</h6>
-            <p class="mb-0">Bangalore (BLR)</p>
-            <span>24 may 2018</span>
-          </div>
-          <div class="col-2 d-flex justify-content align-items-center">
-            <!-- <i class="material-icons">
-                arrow_right_alt
-              </i> -->
-            <i class="material-icons">
-              swap_horiz
-            </i>
-          </div>
-          <div class="destination col-5 d-flex flex-column justify-content-center align-items-center">
-            <h6 class="mb-1">To</h6>
-            <p class="mb-0">Chennai (MAA)</p>
-            <span>25 may 2018</span>
-          </div>
-        </div>
+      <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
+        <h6 class="mb-1">Place</h6>
+        <p class="mb-0">Bangalore (BLR)</p>
+        <span>Karnataka</span>
       </div>
-
-
-      <div class="item p-3 travels col-2 d-flex flex-column justify-content-center align-items-center">
-        <h6 class="mb-1">Travellers</h6>
-        <p class="mb-0">5 Passengers</p>
-        <span>Adult 5, Child 1, Infant 1</span>
+      <div class="item p-3  col-2 d-flex flex-column justify-content-center align-items-center">
+        <h6 class="mb-1">Check In</h6>
+        <p class="mb-0">11:00</p>
+        <span>24 May,2018</span>
       </div>
-      <div class="item p-3 seater_class col-2 d-flex flex-column justify-content-start align-items-center">
-        <h6 class="mb-1">Class</h6>
-        <p class="mb-0">Business</p>
-        <!-- <span>24/06/2018</span> -->
+      <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
+        <h6 class="mb-1">Check Out</h6>
+        <p class="mb-0">11:00</p>
+        <span>25 May,2018</span>
+      </div>
+      <div class="item p-3 seater_class col-3 d-flex flex-column justify-content-start align-items-center">
+        <h6 class="mb-1">Type</h6>
+        <p class="mb-0">Double Deck Room - 8 Nights</p>
+        <span>Adult 1, Child 2</span>
       </div>
       <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
         <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
@@ -196,7 +182,17 @@
             <p class="mb-0">Showing 18 of 18 Hotels</p>
           </div>
         </div>
-
+        <div class="d-flex justify-content-end align-items-center">
+          <i class="material-icons">
+            list_alt
+          </i>
+          <i class="material-icons">
+            view_list
+          </i>
+          <i class="material-icons">
+            place
+          </i>
+        </div>
         <div class="result hotelresult {{hotelresult}}">
           <app-hotel-template></app-hotel-template>
           <app-hotel-template></app-hotel-template>

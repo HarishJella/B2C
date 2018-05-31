@@ -1,50 +1,58 @@
 @import '~variables.scss';
 @import '~mixins.scss';
 .footer {
-  background-color: #fff;
-  .section {}
+  background: #000;
   .footer-top {
-    .row {
-      .footer_img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .footer_logo {
-          width: 50%;
-        }
-        @media (max-width: 425px) {
-          align-items: left;
-          justify-content: left;
-        }
+    .footer_img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .footer_logo {
+        width: 50%;
       }
-      h6 {
-        font-weight: 700;
-        font-family: $font_family;
-        font-size: 14px;
+      @media (max-width: 425px) {
+        align-items: left;
+        justify-content: left;
       }
-      a {
-        text-decoration: none;
-        p {
-          font-size: 12px;
-          font-family: $font_family;
-          font-weight: 400;
-          margin-bottom: 5px;
-        }
-      }
+    }
+    h6 {
+      font-weight: 700;
+      font-family: $font_family;
+      font-size: 14px;
+      color: #fff;
+    }
+    a {
+      color: #fff;
+      transition: all 0.5s ease-in-out;
       p {
         font-size: 12px;
         font-family: $font_family;
         font-weight: 400;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
+        color: #fff;
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover {
+        transition: all 0.5s ease-in-out;
       }
     }
+    p {
+      font-size: 12px;
+      font-family: $font_family;
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: #fff;
+    }
   }
-  .fotr-btm {
-    height: 25px;
-    width: 100%;
-    color: #fff;
-    background: $pinky-orange;
-    @include font-12;
-    line-height: 2;
-  }
+}
+
+.fotr-btm {
+  color: #fff;
+  background: $pinky-orange;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 1.5rem;
 }

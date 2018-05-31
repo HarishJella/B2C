@@ -4,9 +4,27 @@
 // .mat-expansion-panel-header.mat-expanded:hover {
 //   background: $pinky_orange;
 // }
-
 // .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled='true']).cdk-keyboard-focused,
 // .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled='true']).cdk-program-focused,
 // .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled='true']):hover {
 //   background: $pinky_orange;
 // }
+.container {
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  h3 {
+    @include heading;
+    margin-bottom: 1.1rem;
+    margin-top: 0px;
+    font-weight: 400;
+    font-size: 24px;
+    &::after {
+      width: 80px;
+    }
+  }
+  .material-icons {
+    font-size: 20px;
+  }
+}

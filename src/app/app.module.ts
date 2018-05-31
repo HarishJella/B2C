@@ -24,6 +24,7 @@ import { BusbookingComponent } from './Bus/bus-booking/busbooking.component';
 import { FlightFormComponent } from './Flight/flight-form/flight-form.component';
 import { HotelBookingComponent } from './Hotel/hotel-booking/hotel-booking.component';
 import { modifySearchComponent } from './Flight/dailog.components';
+import { HotelFormComponent } from './Hotel/hotel-form/hotel-form.component';
 import { PrivacyPolicyComponent } from './Staticpages/privacy-policy/privacy-policy.component';
 import { ContactUsComponent } from './Staticpages/contact-us/contact-us.component';
 import { TCComponent } from './Staticpages/tc/tc.component';
@@ -53,6 +54,7 @@ import { CancellationPolicyComponent } from './Staticpages/cancellation-policy/c
     FlightFormComponent,
     HotelBookingComponent,
     modifySearchComponent,
+    HotelFormComponent,
     PrivacyPolicyComponent,
     ContactUsComponent,
     TCComponent,

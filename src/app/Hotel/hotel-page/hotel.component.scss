@@ -168,7 +168,7 @@
           grid-template-columns: 1fr; // grid-template-rows: 0.1fr;
           grid-row-gap: 0.5rem;
           transition: all 0.5s ease-in-out; // display: flex;
-          // flex-wrap: wrap;
+          grid-template-columns: 1fr 1fr 1fr; // flex-wrap: wrap;
           &.hotelresult {
             grid-gap: 1em;
             transition: all 0.5s ease-in-out;
@@ -176,11 +176,11 @@
           &.hotelresult3 {
             grid-template-columns: 1fr 1fr 1fr;
             transition: all 0.5s ease-in-out;
-            padding: 5px;
+            padding: 5px; // grid-template-columns: 1fr;
           }
           &.hotelresult2 {
             grid-template-columns: 1fr 1fr 1fr;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out; // grid-template-columns: 1fr;
           }
           .items {
             // display: grid;
