@@ -1,4 +1,4 @@
- <div class="col-md-12 px-0 Hotel-Template">
+<div class="animated col-md-12 px-0 Hotel-Template {{ hotel_grid }} ">
 
   <div class="card cardc card-cascade narrower">
     <div class=" img_pad view overlay hm-white-slight waves-light" mdbWavesEffect>
@@ -70,48 +70,113 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
 
-<!-- <div class="col-12 px-0 d-flex border Hotel_List_Template">
-  <div class="col-2 pl-0 hotel_image">
+<div class="animated col-12 px-0  border Hotel_List_Template {{ hotel_list }}">
+  <div class="col-2 pl-0 d-flex justify-content-center align-items-center hotel_image">
     <img src="assets/images/Hotel-image1.jpg" class="img-fluid" alt="">
   </div>
-  <div class="col-10">
-    <div class="col-12 px-0">
-      <div class="d-flex justify-content-start align-items-center py-2">
-        <i class="material-icons pr-2 active">
-          wifi
-        </i>
-        <i class="material-icons pr-2">
-          camera
-        </i>
-        <i class="material-icons pr-2 active">
-          commute
-        </i>
-        <i class="material-icons pr-2">
-          description
-        </i>
-        <i class="material-icons pr-2">
-          event
-        </i>
-        <i class="material-icons pr-2 active">
-          important_devices
-        </i>
-        <i class="material-icons pr-2">
-          help_outline
-        </i>
-        <i class="material-icons pr-2 active">
-          feedback
-        </i>
+  <div class="col-10 hotel_body_content">
+    <div class="col-12 px-0 d-flex justify-content-between">
+
+      <div class="d-flex flex-column">
+        <div class="d-flex justify-content-start align-items-center py-2 title">
+          <h4 class="hotel_name mb-0 pr-4">Bhavana Kelawai Hotel</h4>
+          <!-- <h4 class="mb-0 pipe pr-3">|</h4> -->
+          <h4 class="mb-0 d-flex align-items-end rating_numbers" matTooltipPosition="above" mat-raised-button matTooltip="Hotel Rating">
+            <span class="pr-1 green">4.5</span>
+            <span class="pr-1">/</span>
+            <span class="">5</span>
+          </h4>
+        </div>
+        <p class="mb-1 d-flex align-items-end">
+          <span class="location d-flex align-items-start">
+            <i class="material-icons pr-1">
+              place
+            </i>
+          </span>Near Wat Chaiya Mangkalaram, Penang</p>
+        <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 20%, #c1c1c1 1%, #f9191938 99%);">
+          <span aria-hidden="true" matTooltipPosition="above" mat-raised-button matTooltip="User Rating">
+            ★★★★★
+          </span>
+        </span>
+        <div class="d-flex justify-content-start align-items-center py-2">
+          <i class="material-icons pr-2 active" matTooltipPosition="above" mat-raised-button matTooltip="Free Wifi">
+            wifi
+          </i>
+          <i class="material-icons pr-2" matTooltipPosition="above" mat-raised-button matTooltip="Free camera">
+            camera
+          </i>
+          <i class="material-icons pr-2 active" matTooltipPosition="above" mat-raised-button matTooltip="Free commute">
+            commute
+          </i>
+          <i class="material-icons pr-2" matTooltipPosition="above" mat-raised-button matTooltip="Free description">
+            description
+          </i>
+          <i class="material-icons pr-2" matTooltipPosition="above" mat-raised-button matTooltip="Free event">
+            event
+          </i>
+          <i class="material-icons pr-2 active" matTooltipPosition="above" mat-raised-button matTooltip="Free important_devices">
+            important_devices
+          </i>
+          <i class="material-icons pr-2" matTooltipPosition="above" mat-raised-button matTooltip="Free help_outline">
+            help_outline
+          </i>
+          <i class="material-icons pr-2 active" matTooltipPosition="above" mat-raised-button matTooltip="Free feedback">
+            feedback
+          </i>
+        </div>
       </div>
-      <div class="d-flex justify-content-start align-items-center py-2">
-        <h4 class="hotel_name mb-0">G Hotel Kelawai</h4>
-        <h4 class="mb-0 pipe">|</h4>
-        <h4 class="mb-0 rateing">4.5/5</h4>
+      <div class="d-flex flex-column justify-content-center">
+        <p class="mb-2 d-flex align-items-start" matTooltipPosition="above" mat-raised-button matTooltip="Free Cancellation Policy">
+          <span class="policy pr-1">
+            <i class="material-icons">
+              done
+            </i>
+          </span>Free cancellation Policy</p>
+        <p class="mb-2 d-flex align-items-start" matTooltipPosition="above" mat-raised-button matTooltip="Check In">
+          <span class="check-in pr-1">
+            <i class="material-icons">
+              meeting_room
+            </i>
+          </span> Check in : 12:00</p>
+        <p class="mb-2 d-flex align-items-start" matTooltipPosition="above" mat-raised-button matTooltip="Check Out">
+          <span class="check-out pr-1">
+            <i class="material-icons">
+              no_meeting_room
+            </i>
+          </span>Check out : 1:00</p>
+      </div>
+      <div class="d-flex">
+        <div class="d-flex flex-column align-items-end justify-content-end">
+          <p class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="Saving Price">You save:
+            <span class="save">$151 /- </span>
+          </p>
+          <p class="mb-0 offer" matTooltipPosition="above" mat-raised-button matTooltip="Offer Price">56,000/-</p>
+          <p class="mb-0">For 8 Night :
+            <span class="price" matTooltipPosition="above" mat-raised-button matTooltip="Base Price">56,151/-</span>
+          </p>
+          <div class="text-right mb-2">
+            <button type="button" class="btn btn-default btn-rounded waves-light theme-button mx-0" mdbWavesEffect data-toggle="modal"
+              data-target="#hotel_details" (click)="hotelDetails.show()">Take Room</button>
+          </div>
+          <div class="d-flex view_status px-0 align-items-center" matTooltipPosition="before" mat-raised-button matTooltip="Viewed">
+            <i class="d-flex justify-content-center align-items-center material-icons pr-1">
+              done
+            </i>
+            <p class="mb-0">Viewed</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</div> -->
+</div>
+
+<div class="animated col-12 px-0 border {{hotel_map}}">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2361735188765!2d77.64569661442442!3d13.020626790823725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1683fb688b7b%3A0x9f64a15c2c63b179!2sWebaxyz+IT+Consulting+Private+Limited!5e0!3m2!1sen!2sin!4v1527593778834"
+    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
 
 
 

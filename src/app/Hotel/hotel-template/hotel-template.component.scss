@@ -61,7 +61,7 @@
 }
 
 .Hotel_List_Template {
-  border-radius: 10px;
+  // border-radius: 10px;
   box-shadow: none;
   transition: all 0.5s ease-in-out;
   background: #fff;
@@ -71,8 +71,108 @@
   }
   .hotel_image {
     img {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+      // border-top-left-radius: 10px;
+      // border-bottom-left-radius: 10px;
+    }
+  }
+  .hotel_body_content {
+    .material-icons {
+      font-size: 1rem;
+    }
+    .title {
+      h4 {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #000;
+      }
+      .rating_numbers {
+        span {
+          font-size: 10px;
+          &:first-child {
+            font-size: 0.9rem;
+          }
+          &.green {
+            background: transparent !important;
+            color: green;
+          }
+          &.red {
+            background: transparent !important;
+            color: red;
+          }
+          &.yellow {
+            background: transparent !important;
+            color: yellow;
+          }
+        }
+      }
+    }
+    .rating {
+      font-size: 0.7rem;
+      background-clip: text !important;
+      -webkit-background-clip: text !important;
+      color: rgba(0, 0, 0, 0);
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      span {
+        font-size: 1rem;
+      }
+    }
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      &.offer {
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      span {
+        font-size: 14px;
+        font-family: $font_family;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        line-height: 1.5;
+        &.price {
+          text-decoration: line-through;
+        }
+        &.save {
+          color: green;
+          font-size: 12px;
+          font-weight: 500;
+        }
+        &.location,
+        &.check-in,
+        &.check-out {
+          line-height: 0.5;
+        }
+        &.policy {
+          line-height: 0.5;
+          color: green;
+        }
+      }
+    }
+    button {
+      @include button;
+      box-shadow: none;
+      font-size: 12px;
+      padding: 0.5rem 1rem;
+      line-height: 1;
+      &:hover {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      }
+    }
+    .view_status {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      line-height: 0;
+      font-size: 10px;
+      p {
+        color: green;
+        font-size: 10px;
+      }
+      .material-icons {
+        color: green;
+        font-size: 10px;
+      }
     }
   }
 }
