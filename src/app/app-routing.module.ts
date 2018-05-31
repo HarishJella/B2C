@@ -14,6 +14,9 @@ import { FaqComponent } from './Staticpages/faq/faq.component';
 import { PrivacyPolicyComponent } from './Staticpages/privacy-policy/privacy-policy.component';
 import { ContactUsComponent } from './Staticpages/contact-us/contact-us.component';
 import { TCComponent } from './Staticpages/tc/tc.component';
+import { RefundPolicyComponent} from './Staticpages/refund-policy/refund-policy.component';
+import { CancellationPolicyComponent} from './Staticpages/cancellation-policy/cancellation-policy.component';
+
 
 const routes: Routes = [
 
@@ -29,7 +32,10 @@ const routes: Routes = [
   { path: 'globaltemplate', component: GlobalcomponentsComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  { path: 'tc', component: TCComponent }
+  { path: 'tc', component: TCComponent },
+  { path: 'refund', component: RefundPolicyComponent},
+  { path: 'cancel', component:CancellationPolicyComponent},
+ 
 ];
 
 @NgModule({

@@ -27,6 +27,9 @@ import { modifySearchComponent } from './Flight/dailog.components';
 import { PrivacyPolicyComponent } from './Staticpages/privacy-policy/privacy-policy.component';
 import { ContactUsComponent } from './Staticpages/contact-us/contact-us.component';
 import { TCComponent } from './Staticpages/tc/tc.component';
+import { RefundPolicyComponent } from './Staticpages/refund-policy/refund-policy.component';
+import { CancellationPolicyComponent } from './Staticpages/cancellation-policy/cancellation-policy.component';
+
 
 
 @NgModule({
@@ -52,7 +55,10 @@ import { TCComponent } from './Staticpages/tc/tc.component';
     modifySearchComponent,
     PrivacyPolicyComponent,
     ContactUsComponent,
-    TCComponent
+    TCComponent,
+    RefundPolicyComponent,
+    CancellationPolicyComponent,
+  
   ],
   imports: [
     BrowserModule,
