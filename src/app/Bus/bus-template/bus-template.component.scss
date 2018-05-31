@@ -225,6 +225,12 @@
     .non_refund {
       color: red;
     }
+    .elipise{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 150px;
+    }
   }
 }
 
@@ -461,6 +467,34 @@
                     margin-bottom: 0;
                   }
                 }
+              }
+            }
+            .boarding {
+              thead {
+                background-color: #1f3c4a;
+                color: #fff;
+              }
+              td{
+                font-size: 12px;
+                font-weight: 500;
+                font-family: "Roboto", sans-serif;
+              }
+              h6 {
+                font-weight: bold;
+              }
+            }
+            .cancellation {
+              thead {
+                background-color: #1f3c4a;
+                color: #fff;
+              }
+              td{
+                font-size: 12px;
+                font-weight: 500;
+                font-family: "Roboto", sans-serif;
+              }
+              h6 {
+                font-weight: bold;
               }
             }
           }
