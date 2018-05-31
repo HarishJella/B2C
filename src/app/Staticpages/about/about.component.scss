@@ -71,6 +71,12 @@
       font-weight: 600;
     }
   }
+  .product_section{
+    background-color: #fff;
+    p{
+      font-weight: bold;
+    }
+  }
   .Professionals {
     .team-social {
       -webkit-transition: all 0.5s;
@@ -124,6 +130,10 @@
   }
 
   .join_web{
-    background-color: #ccc;
+    background-color: #fff;
+    width: 100%;
+    h2{
+      font-weight: bold;
+    }
   }
 }

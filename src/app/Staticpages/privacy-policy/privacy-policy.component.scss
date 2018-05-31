@@ -3,7 +3,7 @@
 .aboutus_heading {
   @include heading;
   font-size: 1.20rem !important;
-  margin-top:0px !important;
+  margin-top: 0px !important;
   &::after {
     content: "";
     width: 60px;
@@ -17,14 +17,35 @@
     font-size: 14px;
     margin-bottom: .4rem;
     text-align: justify;
+    font-weight: 400;
+   
   }
-  .privacy_heading{
-      font-weight: bold;
+  .privacy_heading {
+    font-weight: bold;
   }
-  .bold{
-      font-weight:bold;
+  .bold {
+    font-weight: bold;
   }
-  ol li{
-      font-size: 14px;
+  ol li {
+    font-size: 18px;
+    list-style: circle;
+    color: #ed1d78;
+    font-weight: 400;
+  }
+  ol li span {
+    color: #000;
+    font-size: 14px;
+  }
+  ul li {
+    font-size: 18px;
+    list-style: circle;
+    color: #ed1d78;
+    font-weight: 400;
+   
+  }
+  ul li span {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
   }
 }

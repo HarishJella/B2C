@@ -57,86 +57,75 @@
   <div class="d-flex py-1 bus_footer w-100 justify-content-center align-items-center">
     <p class="mb-0 px-5 refund" matTooltipPosition="above" mat-raised-button matTooltip="Refundable">Refunadable</p>
     <div class="provider fundable">
-    <p class="mb-0 px-5">Boarding</p>
-      <div class="animated slideInDown tol-tip" data-wow-delay="0s" data-wow-offset="100" data-wow-duration="0s">
+      <p class="mb-0 px-5">Boarding</p>
+      <!-- <div class="animated slideInDown tol-tip" data-wow-delay="0s" data-wow-offset="100" data-wow-duration="0s">
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span class="pr-2">BallyBallyBallyBallyBally</span>
+          <span class="pr-2 elipise">Narayana Hrudayalaya Bommasandra</span>
           <span>05:00</span>
         </div>
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span class="pr-2" >Bally</span>
+          <span class="pr-2 elipise">	Hebbugodi</span>
           <span>05:00</span>
         </div>
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span class="pr-2">Bally</span>
+          <span class="pr-2 elipise">	Bommasandra Bommasandra</span>
           <span>05:00</span>
         </div>
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span class="pr-2">Bally</span>
+          <span class="pr-2 elipise">Narayana Hrudayalaya Hrudayalaya</span>
           <span>05:00</span>
         </div>
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span class="pr-2">Bally</span>
+          <span class="pr-2 elipise">Bommasandra Bommasandra</span>
           <span>05:00</span>
         </div>
-        <div class="p-2 d-flex justify-content-between align-items-center">
-          <span class="pr-2">Bally</span>
-          <span>05:00</span>
-        </div>
-        <div class="p-2 d-flex justify-content-between align-items-center">
-          <span class="pr-2">Bally</span>
-          <span>05:00</span>
-        </div>
-      </div>
+       
+      </div> -->
     </div>
     <div class="provider fundable">
       <p class="mb-0 px-5">Dropping</p>
-      <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+      <!-- <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span>Bally</span>
+          <span class="pr-2 elipise">MANI JUNCTION</span>
           <span>05:00</span>
         </div>
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span>Bally</span>
+          <span class="pr-2 elipise">Bommasandra</span>
           <span>05:00</span>
         </div>
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span>Bally</span>
+          <span class="pr-2 elipise">BOLIYAR</span>
           <span>05:00</span>
         </div>
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span>Bally</span>
+          <span class="pr-2 elipise">KONAJE MANGALORE UNIVERSITY</span>
           <span>05:00</span>
         </div>
         <div class="p-2 d-flex justify-content-between align-items-center">
-          <span>Bally</span>
+          <span class="pr-2 elipise">MADANAYAKANAHALLI</span>
           <span>05:00</span>
         </div>
-        <div class="p-2 d-flex justify-content-between align-items-center">
-          <span>Bally</span>
-          <span>05:00</span>
-        </div>
-        <div class="p-2 d-flex justify-content-between align-items-center">
-          <span>Bally</span>
-          <span>05:00</span>
-        </div>
-      </div>
+       
+      </div> -->
     </div>
     <div class="provider fundable">
       <p class="mb-0 px-5">cancellation</p>
-      <div class="animated slideInDown tol-tip cancellation" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
+      <!-- <div class="animated slideInDown tol-tip cancellation" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
         <div class="col-12 d-flex justify-content-between align-items-center">
           <div class="col-4">
             <p>Description</p>
+            <span>Before 24th May 08:15 PM</span>
           </div>
           <div class="col-4">
             <p>Cancelation Chargers</p>
+            <span>15%</span>
           </div>
-          <div class="col-4">
+          <div class="col-4  d-flex">
             <p>Percentage</p>
+            <span>Rs. 75 / 82 / 90</span>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -209,7 +198,7 @@
                               <div class="wheel_2"></div>
                               <div class="d-flex  align-items-center justify-content-between">
                                 <div class="col-12 d-flex align-items-center justify-content-between px-0">
-                               <table class="table bus_seats">
+                                  <table class="table bus_seats">
                                     <thead>
                                       <th></th>
                                       <th></th>
@@ -312,7 +301,7 @@
                                         <td>
                                           <img src="{{seat}}" (click)="select_seat()" matTooltipPosition="above" mat-raised-button matTooltip="1A" />
                                         </td>
-                                      </tr> 
+                                      </tr>
                                       <tr>
                                         <td>
                                           <img src="assets/images/bus seat icons/avail.svg" />
@@ -497,6 +486,138 @@
                   </div>
                 </div>
               </mat-tab>
+
+              <mat-tab label="Boarding & Dropping Points ">
+                <div class="tab-content py-4">
+                  <div class="col-12 d-flex boarding">
+                    <div class="col-6 justify-content-center">
+                      <h6 class="">Boarding point</h6>
+                      <table class="table table-striped table-bordered table-sm mb-0">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Place</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">05:00</td>
+                            <td>Narayana Hrudayalaya</td>
+
+
+                          </tr>
+                          <tr>
+                            <td scope="row">20:20</td>
+                            <td>Bommasandra</td>
+
+
+                          </tr>
+                          <tr>
+                            <td scope="row">20:25</td>
+                            <td>Hebbugodi</td>
+
+
+                          </tr>
+                          <tr>
+                            <td scope="row">4</td>
+                            <td>Total</td>
+
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="col-6 justify-content-center">
+                      <h6 class="">Dropping Point</h6>
+                      <table class="table table-striped table-bordered table-sm mb-0 ">
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Place</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">04:30</td>
+                            <td>Urwa Store</td>
+
+
+                          </tr>
+                          <tr>
+                            <td scope="row">04:36</td>
+                            <td>Kottara Chowki</td>
+
+
+                          </tr>
+                          <tr>
+                            <td scope="row">04:30</td>
+                            <td>KANKANADY Near Mangalore Gate</td>
+
+
+                          </tr>
+                          <tr>
+                            <td scope="row">04:36</td>
+                            <td>Kottara Chowki</td>
+
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div> 
+                </div>
+              </mat-tab>
+
+              <mat-tab label="Bus cancellation">
+                <div class="tab-content py-4 ">
+                  <div class="cancellation">
+
+               
+                    <h6 class="">Cancellation</h6>
+                    <table class="table table-striped table-bordered table-sm mb-0 ">
+                      <thead>
+                        <tr>
+                          <th>Time of Cancellation</th>
+                          <th>Deduction Percentage</th>
+                          <th>Cancellation Charges</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td scope="row">Before 24th May 08:15 PM</td>
+                          <td>15%</td>
+                          <td>Rs. 75 / 82 / 90</td>
+
+
+                        </tr>
+                        <tr>
+                          <td scope="row">After 24th May 08:15 PM & Before 28th May 08:15 PM</td>
+                          <td>20%</td>
+                          <td>Rs. 100 / 110 / 120</td>
+
+
+                        </tr>
+                        <tr>
+                          <td scope="row">After 28th May 08:15 PM & Before 30th May 08:15 PM</td>
+                          <td>25%</td>
+                          <td>Rs. 125 / 138 / 150</td>
+
+
+                        </tr>
+                        <tr>
+                          <td scope="row">After 30th May 08:15 PM & Before 31st May 04:15 PM</td>
+                          <td>50%</td>
+                          <td>Rs. 250 / 275 / 300</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </mat-tab>
+
+
             </mat-tab-group>
           </mat-card-content>
         </mat-card>
