@@ -5,6 +5,7 @@ import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-hotel-form',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './hotel-form.component.html',
   styleUrls: ['./hotel-form.component.scss']
 })
@@ -23,7 +24,11 @@ export class HotelFormComponent implements OnInit {
     'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
     'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
   ];
-
+  Travellers = [
+    { value: 'Economy', viewValue: 'Economy' },
+    { value: 'Business', viewValue: 'Business' },
+    { value: 'Primary', viewValue: 'Primary' }
+  ];
   filteredOptions: Observable<string[]>;
 
   ngOnInit() {

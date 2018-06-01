@@ -22,7 +22,7 @@ export class FlightComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      // console.log(`Dialog result: ${result}`);
     });
   }
 
@@ -147,8 +147,8 @@ export class FlightComponent implements OnInit {
     const scrollPosition = window.pageYOffset
 
     // console.log(componentPosition);
-    console.log('br');
-    console.log(scrollPosition);
+    // console.log('br');
+    // console.log(scrollPosition);
 
   }
 

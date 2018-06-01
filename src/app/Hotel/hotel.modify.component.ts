@@ -1,14 +1,13 @@
-
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { AnimationQueryMetadata } from '@angular/animations';
 
 @Component({
-    selector: 'modify-search',
-    templateUrl: 'dailog.component.html',
+    selector: 'hotel-modify-search',
+    templateUrl: 'hotel.modify.component.html',
 })
-export class modifySearchComponent {
-    constructor(private dialogRef: MatDialogRef<modifySearchComponent>) {
+export class hotelModifySearch {
+    constructor(private dialogRef: MatDialogRef<hotelModifySearch>) {
         // dialogRef.disableClose = true;
     }
     closeDailog() {

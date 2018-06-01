@@ -1,16 +1,15 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { modifySearchComponent } from '../dailog.components';
 
 @Component({
-  selector: 'app-flight-form',
+  selector: 'app-bus-form',
   encapsulation: ViewEncapsulation.None,
-  templateUrl: './flight-form.component.html',
-  styleUrls: ['./flight-form.component.scss']
+  templateUrl: './bus-form.component.html',
+  styleUrls: ['./bus-form.component.scss']
 })
-export class FlightFormComponent implements OnInit {
+export class BusFormComponent implements OnInit {
 
   constructor() { }
 

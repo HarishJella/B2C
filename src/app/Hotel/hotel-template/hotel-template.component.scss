@@ -614,6 +614,23 @@
               }
             }
           }
+          .hotel_description {
+            h6 {
+              font-size: 16px;
+            }
+            p {
+              color: rgba(0, 0, 0, 0.7);
+              font-size: 13px;
+              line-height: 1.5;
+            }
+          }
+          .hotel_policy {
+            p {
+              color: rgba(0, 0, 0, 0.7);
+              font-size: 13px;
+              line-height: 1.5;
+            }
+          }
         }
         .baggage_policy thead {
           background: #1f3c4a;

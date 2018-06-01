@@ -1,7 +1,7 @@
 @import '~variables.scss';
 @import '~mixins.scss';
 .contact_us_banner{
-    background: url("assets/images/about/2.png") no-repeat;
+    background: url("/assets/images/about/2.png") no-repeat;
     background-size: cover;
     min-height: 250px;
 }
@@ -14,7 +14,7 @@
         position: relative;
     }
     .cont_div{
-        background: url("assets/images/contact.png") no-repeat;
+        background: url("/assets/images/contact.png") no-repeat;
         background-size: cover;
         position: absolute;
         width: 100%;

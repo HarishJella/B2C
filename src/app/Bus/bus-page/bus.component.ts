@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
-import { modifySearchComponent } from '../../Flight/dailog.components';
+import { busModifySearch } from '../bus.modify.component';
 
 @Component({
   selector: 'app-bus',
@@ -16,7 +16,7 @@ export class BusComponent implements OnInit {
   ngOnInit() {
   }
   openDialog() {
-    const dialogRef = this.dialog.open(modifySearchComponent, {
+    const dialogRef = this.dialog.open(busModifySearch, {
       height: 'auto'
     });
 

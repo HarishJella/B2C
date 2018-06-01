@@ -30,8 +30,9 @@ import { ContactUsComponent } from './Staticpages/contact-us/contact-us.componen
 import { TCComponent } from './Staticpages/tc/tc.component';
 import { RefundPolicyComponent } from './Staticpages/refund-policy/refund-policy.component';
 import { CancellationPolicyComponent } from './Staticpages/cancellation-policy/cancellation-policy.component';
-
-
+import { BusFormComponent } from './Bus/bus-form/bus-form.component';
+import { hotelModifySearch } from './Hotel/hotel.modify.component';
+import { busModifySearch } from './Bus/bus.modify.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,10 @@ import { CancellationPolicyComponent } from './Staticpages/cancellation-policy/c
     TCComponent,
     RefundPolicyComponent,
     CancellationPolicyComponent,
-  
+    BusFormComponent,
+    hotelModifySearch,
+    busModifySearch
+
   ],
   imports: [
     BrowserModule,
@@ -73,7 +77,9 @@ import { CancellationPolicyComponent } from './Staticpages/cancellation-policy/c
 
   ],
   entryComponents: [
-    modifySearchComponent
+    modifySearchComponent,
+    hotelModifySearch,
+    busModifySearch
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],

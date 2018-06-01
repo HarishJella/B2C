@@ -73,7 +73,7 @@
       }
       .dots {
         height: 100%;
-        background-image: url(assets/images/circle.svg);
+        background-image: url('/assets/images/circle.svg');
         background-repeat: repeat-y;
         position: relative;
         left: -12px;
@@ -101,7 +101,7 @@
           right: -6px;
         }
         .shap {
-          background-image: url(assets/images/dot.svg);
+          background-image: url('/assets/images/dot.svg');
           position: relative;
           height: 100%;
           width: 40px;
