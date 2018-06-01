@@ -24,26 +24,31 @@
       </div>
       <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
         <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
-          matTooltip="Modify Results">Modify Search</button>
+          matTooltip="Modify Results" matTooltipPosition="above" mat-raised-button matTooltip="Modify Search">Modify Search</button>
       </div>
     </div>
     <div class="col-12 px-0 search_results">
 
       <div class="col-1 px-0 filter_div">
         <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Price Filter">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Aminities Filter">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Location Filter">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Rating Filter">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Property Filter">
         </div>
       </div>
       <div class="col-2 filter_section {{priceState}}">
@@ -164,13 +169,13 @@
           </div>
         </div>
         <div class="d-flex justify-content-end align-items-center">
-          <i class="material-icons" (click)="gridView()">
+          <i class="material-icons" (click)="gridView()" matTooltipPosition="below" mat-raised-button matTooltip="Grid View">
             list_alt
           </i>
-          <i class="material-icons" (click)="listView()">
+          <i class="material-icons" (click)="listView()" matTooltipPosition="below" mat-raised-button matTooltip="List View">
             view_list
           </i>
-          <i class="material-icons" (click)="mapView()">
+          <i class="material-icons" (click)="mapView()" matTooltipPosition="below" mat-raised-button matTooltip="Map View">
             place
           </i>
         </div>
