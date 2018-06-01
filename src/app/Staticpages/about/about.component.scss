@@ -5,7 +5,10 @@
   background-size: cover;
   min-height: 250px;
 }
+.ab_hd{
+  font-weight: bold;
 
+}
 .about {
   .About_heading {
     @include heading;
@@ -27,7 +30,7 @@
     padding: 0 2em;
   }
   .stats {
-    background: url("assets/images/about/3.jpg") no-repeat 0px 0px;
+    background: url("assets/images/about/bk_1.jpg")no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
