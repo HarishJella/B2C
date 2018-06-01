@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hotel-template',
@@ -11,6 +11,12 @@ export class HotelTemplateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
-  
+  @Input('hotel_grid') hotel_grid: number;
+  @Input('hotel_list') hotel_list: string;
+  @Input('hotel_map') hotel_map: string;
+  //  hotel_grid: string = 'fadeIn';
+  // hotel_list: string = 'd-none';
+
 }

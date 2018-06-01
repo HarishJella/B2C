@@ -1,24 +1,5 @@
 <section class="my-5 availability">
   <div class="section">
-    <!-- <div class="col-12 p-0 mb-2 modify_search  mb-5">
-      <div></div>
-      <div class="item p-3 seater_class text-center">
-        <h6 class="mb-0">Bangalore</h6>
-        <p class="mb-0">
-          <span>Tue, 15 May-WED</span>
-          <span>(8 NIGHTS)</span>
-          <span>|</span>
-          <span>1 Room</span>
-          <span>|</span>
-          <span>2 ADULTS</span>
-        </p>
-
-      </div>
-      <div class="item p-3 d-flex justify-content-center align-items-center search_button">
-        <button type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect>Modify Search</button>
-      </div>
-    </div> -->
-
     <div class="col-12 p-0 mb-3 modify_search mb-4 border front">
 
       <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
@@ -43,26 +24,31 @@
       </div>
       <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
         <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
-          matTooltip="Modify Results">Modify Search</button>
+          matTooltip="Modify Results" matTooltipPosition="above" mat-raised-button matTooltip="Modify Search">Modify Search</button>
       </div>
     </div>
     <div class="col-12 px-0 search_results">
 
       <div class="col-1 px-0 filter_div">
         <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Price Filter">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Aminities Filter">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Location Filter">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Rating Filter">
         </div>
         <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState" (click)="open_filter($event)">
+          <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState" (click)="open_filter($event)"
+            matTooltipPosition="above" mat-raised-button matTooltip="Property Filter">
         </div>
       </div>
       <div class="col-2 filter_section {{priceState}}">
@@ -183,23 +169,38 @@
           </div>
         </div>
         <div class="d-flex justify-content-end align-items-center">
-          <i class="material-icons">
+          <i class="material-icons" (click)="gridView()" matTooltipPosition="below" mat-raised-button matTooltip="Grid View">
             list_alt
           </i>
-          <i class="material-icons">
+          <i class="material-icons" (click)="listView()" matTooltipPosition="below" mat-raised-button matTooltip="List View">
             view_list
           </i>
-          <i class="material-icons">
+          <i class="material-icons" (click)="mapView()" matTooltipPosition="below" mat-raised-button matTooltip="Map View">
             place
           </i>
         </div>
-        <div class="result hotelresult {{hotelresult}}">
-          <app-hotel-template></app-hotel-template>
-          <app-hotel-template></app-hotel-template>
-          <app-hotel-template></app-hotel-template>
-          <app-hotel-template></app-hotel-template>
-          <app-hotel-template></app-hotel-template>
-          <app-hotel-template></app-hotel-template>
+        <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+
+
+
+
         </div>
 
 

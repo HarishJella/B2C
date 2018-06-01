@@ -13,6 +13,7 @@ export class HotelComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+
   }
 
   openDialog() {
@@ -44,6 +45,11 @@ export class HotelComponent implements OnInit {
   propertyTypeState: string = 'filter_content';
   dynamicClass: string = 'col-11';
   hotelresult: string = 'hotelresult3';
+  hotelGridView: string = "gridView";
+  hotelListView: string = "";
+  hotel_grid: string = 'fadeIn';
+  hotel_list: string = 'd-none';
+  hotel_map: string = 'd-none';
 
   open_filter(event) {
     let length = event.target.classList.length;
@@ -123,5 +129,31 @@ export class HotelComponent implements OnInit {
     // console.log(className);
     // this.menuState = this.menuState === 'filter_content' ? 'fil' : 'filter_content';
   }
+
+  // Grid view
+  gridView() {
+    this.hotelGridView = 'gridView';
+    this.hotelListView = '';
+    this.hotel_grid = 'd-block fadeIn';
+    this.hotel_list = 'd-none fadeOut';
+    this.hotel_map = 'd-none fadeOut';
+  }
+  // List view
+  listView() {
+    this.hotelGridView = '';
+    this.hotelListView = 'listView';
+    this.hotel_grid = 'd-none fadeOut';
+    this.hotel_list = 'd-flex fadeIn';
+    this.hotel_map = 'd-none fadeOut';
+  }
+  mapView() {
+    this.hotelGridView = '';
+    this.hotelListView = 'listView';
+    this.hotel_grid = 'd-none fadeOut';
+    this.hotel_list = 'd-none fadeOut';
+    this.hotel_map = 'd-block fadeIn';
+  }
+
+
 }
 
