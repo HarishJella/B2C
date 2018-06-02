@@ -33,7 +33,7 @@
   </div>
 
   <div class="md-form col-md-2 input-group">
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="input">
       <input type="autocomplete" placeholder="Going To" aria-label="Number" matInput [formControl]="myControl1" [matAutocomplete]="auto2">
       <mat-autocomplete #auto2="matAutocomplete">
         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">

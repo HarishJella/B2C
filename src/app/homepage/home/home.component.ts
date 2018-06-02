@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, HostListener } from '@angular/core';
 
 
 @Component({
@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit {
     this.col2 = 'col-md-1.9';
   }
 
-
-
+  public modalToggleVisiblity;
+  public passengers_state:string = "d-none fadeOutRightBig";
+  tab() {
+    this.modalToggleVisiblity = "passengerFormHidden";
+    this.passengers_state = "d-none fadeOutRightBig";
+  }
 }

@@ -10,7 +10,7 @@ import { modifySearchComponent } from '../dailog.components';
 })
 export class FlightComponent implements OnInit {
 
-
+  stickyTop: string = "sticky-top";
   constructor(public el: ElementRef, public dialog: MatDialog) { }
 
   ngOnInit() {
@@ -24,6 +24,8 @@ export class FlightComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       // console.log(`Dialog result: ${result}`);
     });
+    this.stickyTop = "";
+
   }
 
   formatLabel(value: number | null) {

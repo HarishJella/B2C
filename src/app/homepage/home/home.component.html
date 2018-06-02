@@ -15,14 +15,14 @@
       </div> -->
       </div>
     </mat-card>
-    <mat-tab-group class="main-srch">
+    <mat-tab-group class="main-srch {{modalToggleVisiblity}}">
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/flight.svg ">
+          <img src="assets/images/flight.svg" (click)="tab()">
           <!-- <p>flight</p> -->
         </ng-template>
 
-        <app-flight-form></app-flight-form>
+        <app-flight-form (passengerFormEvent)="modalToggleVisiblity=$event" [passengers_state]="passengers_state"></app-flight-form>
         <!-- <div class="d-flex animated d-none {{slidePassangers}}">
           <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique recusandae exercitationem illum aliquid doloribus
             eius molestiae accusantium numquam soluta, porro, distinctio rem? Quam esse delectus, nisi, ratione quisquam
@@ -33,20 +33,20 @@
 
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/bus.svg ">
+          <img src="assets/images/bus.svg " (click)="tab()">
         </ng-template>
         <app-bus-form></app-bus-form>
       </mat-tab>
 
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/hotel.svg">
+          <img src="assets/images/hotel.svg" (click)="tab()">
         </ng-template>
         <app-hotel-form></app-hotel-form>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/holiday.svg">
+          <img src="assets/images/holiday.svg" (click)="tab()">
         </ng-template>
         Holidays Coming Soon.......
       </mat-tab>

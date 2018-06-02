@@ -171,6 +171,25 @@
           }
         }
       }
+    } // modal toggle
+    .mat-tab-body-wrapper,
+    .mat-tab-body,
+    .mat-tab-body-content {
+      overflow: hidden !important; // overflow-x: hidden !important;
+    }
+    &.passengerFormVisible {
+      .mat-tab-body-wrapper,
+      .mat-tab-body,
+      .mat-tab-body-content {
+        overflow: visible !important; // overflow-x: hidden !important;
+      }
+    }
+    &.passengerFormHidden {
+      .mat-tab-body-wrapper,
+      .mat-tab-body,
+      .mat-tab-body-content {
+        overflow: hidden !important; // overflow-x: hidden !important;
+      }
     }
   }
 }
