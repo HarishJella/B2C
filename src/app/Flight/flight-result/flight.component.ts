@@ -15,7 +15,7 @@ export class FlightComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public passengers_state;
   openDialog() {
     const dialogRef = this.dialog.open(modifySearchComponent, {
       height: 'auto'
@@ -25,7 +25,7 @@ export class FlightComponent implements OnInit {
       // console.log(`Dialog result: ${result}`);
     });
     this.stickyTop = "";
-
+    this.passengers_state = 'd-none fadeOutRightBig';
   }
 
   formatLabel(value: number | null) {

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, HostListener, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -43,12 +43,20 @@ export class HotelFormComponent implements OnInit {
       option.toLowerCase().includes(val.toLowerCase()));
   }
 
-  passengers_state: string = '2';
 
 
-  passengers_class() {
+
+  @Input('passengers_state') public passengers_state: string;
+
+
+  // passing value from flightForm to homepage to toggle modal visibility
+
+  @Output() public passengerFormEvent = new EventEmitter();
+
+  public passengers_class() {
     this.passengers_state = this.passengers_state === 'd-block fadeInLeftBig' ? 'd-none fadeOutRightBig' : 'd-block fadeInLeftBig';
-
+    // modal visiv=bility toggle
+    this.passengerFormEvent.emit("passengerFormVisible");
   }
 
 }
