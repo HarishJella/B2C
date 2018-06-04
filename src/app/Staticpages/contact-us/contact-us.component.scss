@@ -3,7 +3,17 @@
 .contact_us_banner {
   background: url("/assets/images/about/2.png") no-repeat;
   background-size: cover;
-  min-height: 250px;
+  height: 400px;
+  h2 {
+    color: #fff;
+    font-weight: bold;
+  }
+  h4 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 .contact_us {
@@ -24,75 +34,70 @@
         margin: auto;
       }
     }
-  
-    address{
-        line-height: 1.722;
-        text-align: center;
-        min-height: 90px;
-        max-width: 100%;
-        margin-bottom: 1.5rem;
-        font-size: 16px;
-        font-weight: 400;
+    address {
+      line-height: 1.722;
+      text-align: center;
+      min-height: 90px;
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+      font-size: 16px;
+      font-weight: 400;
     }
     a {
       color: #000;
       text-decoration: underline;
     }
-    .cont_icon{
-        position: absolute;
-        width: 70px;
-        height: 70px;
-        top: -50px;
-        left: 145px;
-        border-radius: 6px;
-        i{
-            color: #fff;
-            font-size: 36px;
-        }
+    .cont_icon {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      top: -50px;
+      left: 145px;
+      border-radius: 6px;
+      i {
+        color: #fff;
+        font-size: 36px;
+      }
     }
-    .location{
-        background-color: #ed1d78;
-        &:hover{
-            border:1px solid #ed1d78;
-            background-color: #fff;
-            i{
-                color: #ed1d78;
-               
-            }
+    .location {
+      background-color: #ed1d78;
+      &:hover {
+        border: 1px solid #ed1d78;
+        background-color: #fff;
+        i {
+          color: #ed1d78;
         }
+      }
     }
-    .phone{
-        background-color: #0776bc;
-        &:hover{
-            border:1px solid #0776bc;
-            background-color: #fff;
-            i{
-                color: #0776bc;
-               
-            }
+    .phone {
+      background-color: #0776bc;
+      &:hover {
+        border: 1px solid #0776bc;
+        background-color: #fff;
+        i {
+          color: #0776bc;
         }
+      }
     }
-    .email{
-        background-color: #9ecb3b;
-        &:hover{
-            border:1px solid #9ecb3b;
-            background-color: #fff;
-            i{
-                color: #9ecb3b;
-               
-            }
+    .email {
+      background-color: #9ecb3b;
+      &:hover {
+        border: 1px solid #9ecb3b;
+        background-color: #fff;
+        i {
+          color: #9ecb3b;
         }
+      }
     }
   }
-  
 }
 
-.contact_us_form{
-    background-color: #fff;
-    .cont_frm{
-        .send{
-            @include button;
-            padding: .50rem 2.5rem;
-        }
+.contact_us_form {
+  background-color: #fff;
+  .cont_frm {
+    .send {
+      @include button;
+      padding: .50rem 2.5rem;
     }
+  }
 }
