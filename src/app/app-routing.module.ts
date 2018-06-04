@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'globaltemplate', component: GlobalcomponentsComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
-  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'contact', component: ContactUsComponent },
   { path: 'tc', component: TCComponent },
   { path: 'refund', component: RefundPolicyComponent},
   { path: 'cancel', component:CancellationPolicyComponent},
