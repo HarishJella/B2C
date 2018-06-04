@@ -113,7 +113,7 @@
       }
     }
     .offer {
-      background: #ffd60d;
+      background: #ffd60d url(/assets/images/price.jpg) no-repeat;
       position: absolute;
       top: -10px;
       border-radius: 2px;
@@ -124,6 +124,7 @@
         font-weight: bold;
         line-height: 1;
         text-align: center;
+        padding: 3px 5px;
       }
     }
   } // .bus_footer {
