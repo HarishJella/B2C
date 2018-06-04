@@ -1,7 +1,7 @@
 @import '~variables.scss';
 @import '~mixins.scss';
 .banner_inner_content_agile_w3l {
-  background: url("/assets/images/about/2.png") no-repeat;
+  background: url("/assets/images/About/about.jpg") no-repeat;
   background-size: cover;
   height:400px;
   h2{
@@ -40,7 +40,7 @@
     padding: 0 2em;
   }
   .stats {
-    background: url("/assets/images/about/bk_1.jpg")no-repeat 0px 0px;
+    background: url("/assets/images/About/bk_1.jpg")no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -49,7 +49,7 @@
     text-align: center;
     background-attachment: fixed;
     .agile_overlay2 {
-      background: url("/assets/images/about/overlay.png")repeat;
+      background: url("/assets/images/About/overlay.png")repeat;
       background-size: cover;
       padding: 5em 0;
     }
