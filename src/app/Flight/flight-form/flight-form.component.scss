@@ -159,17 +159,17 @@
 }
 
 .mat-radio-outer-circle {
-  background: none !important;
-  background-color: #fff !important;
+  background: none !important; // background-color: #fff !important;
+  background: #ed1d78 !important;
 }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle {
   background: none !important;
-  background-color: #ed1d78 !important;
+  background-color: #fff !important;
 }
 
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-  border-color: #c1c1c1 !important;
+  border-color: #ed1d78 !important;
 }
 
 // .mat-radio-inner-circle {
@@ -195,4 +195,12 @@
   background: none;
   height: 15px !important;
   width: 15px !important;
+}
+
+.mat-radio-outer-circle {
+  border-color: #c1c1c1 !important;
+}
+
+.mat-dialog-container {
+  overflow: visible;
 }

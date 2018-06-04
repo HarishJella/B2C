@@ -12,6 +12,7 @@
   .helpline {
     line-height: 2;
     align-items: center;
+    z-index: 2;
     p {
       font-weight: bold;
     }
@@ -238,3 +239,6 @@
 //     flex-grow: 1;
 //   }
 // }
+.social_icons {
+  z-index: 2;
+}

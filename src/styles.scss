@@ -84,12 +84,16 @@ body {
 // }
 .mat-radio-button.mat-accent .mat-radio-inner-circle {
   // background-color: rgb(66, 134, 244);
-  background: $pinky_orange;
+  // background: $pinky_orange;
 }
 
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
   // border-color: rgb(66, 134, 244);
-  background: $pinky_orange;
+  // background: $pinky_orange;
+}
+
+.mat-radio-outer-circle {
+  border-color: #c1c1c1 !important;
 }
 
 // .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
