@@ -179,10 +179,12 @@
   }
 }
 
-.modal {
-  // display: flex;
-  justify-content: center;
-  align-items: center;
+.modal#modalLRForm {
+  &.fade.in {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
   .modal-dialog {
     max-width: 65%;
     .modal-content {

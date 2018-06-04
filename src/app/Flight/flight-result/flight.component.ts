@@ -10,20 +10,22 @@ import { modifySearchComponent } from '../dailog.components';
 })
 export class FlightComponent implements OnInit {
 
-
+  stickyTop: string = "sticky-top";
   constructor(public el: ElementRef, public dialog: MatDialog) { }
 
   ngOnInit() {
   }
-
+  public passengers_state;
   openDialog() {
     const dialogRef = this.dialog.open(modifySearchComponent, {
       height: 'auto'
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      // console.log(`Dialog result: ${result}`);
     });
+    this.stickyTop = "";
+    this.passengers_state = 'd-none fadeOutRightBig';
   }
 
   formatLabel(value: number | null) {
@@ -147,8 +149,8 @@ export class FlightComponent implements OnInit {
     const scrollPosition = window.pageYOffset
 
     // console.log(componentPosition);
-    console.log('br');
-    console.log(scrollPosition);
+    // console.log('br');
+    // console.log(scrollPosition);
 
   }
 

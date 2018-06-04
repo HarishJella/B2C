@@ -119,7 +119,7 @@
           text-align: center;
           &:after {
             content: '';
-            background: url('assets/images/right_arrow.png');
+            background: url('/assets/images/right_arrow.png');
           }
         }
         p {
@@ -220,7 +220,7 @@
       }
       .offer {
         // background: #ffd60d;
-        background: #ffd60d url('assets/images/price.jpg') no-repeat;
+        background: #ffd60d url('/assets/images/price.jpg') no-repeat;
         background-size: cover;
         position: absolute;
         top: -17px;
@@ -281,7 +281,7 @@
 }
 
 .more_flights {
-  background: transparent url('assets/images/more_option.png') no-repeat;
+  background: transparent url('/assets/images/more_option.png') no-repeat;
   background-size: contain;
   width: 219px;
   height: 18px;

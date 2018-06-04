@@ -24,7 +24,7 @@
       </div>
       <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
         <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
-          matTooltip="Modify Results" matTooltipPosition="above" mat-raised-button matTooltip="Modify Search">Modify Search</button>
+          matTooltip="Modify Results" matTooltipPosition="above"  matTooltip="Modify Search">Modify Search</button>
       </div>
     </div>
     <div class="col-12 px-0 search_results">
@@ -168,14 +168,14 @@
             <p class="mb-0">Showing 18 of 18 Hotels</p>
           </div>
         </div>
-        <div class="d-flex justify-content-end align-items-center">
-          <i class="material-icons" (click)="gridView()" matTooltipPosition="below" mat-raised-button matTooltip="Grid View">
+        <div class="d-flex justify-content-end align-items-center views my-1">
+          <i class="material-icons pl-2" (click)="gridView()" matTooltipPosition="below" mat-raised-button matTooltip="Grid View">
             list_alt
           </i>
-          <i class="material-icons" (click)="listView()" matTooltipPosition="below" mat-raised-button matTooltip="List View">
+          <i class="material-icons pl-2" (click)="listView()" matTooltipPosition="below" mat-raised-button matTooltip="List View">
             view_list
           </i>
-          <i class="material-icons" (click)="mapView()" matTooltipPosition="below" mat-raised-button matTooltip="Map View">
+          <i class="material-icons pl-2" (click)="mapView()" matTooltipPosition="below" mat-raised-button matTooltip="Map View">
             place
           </i>
         </div>

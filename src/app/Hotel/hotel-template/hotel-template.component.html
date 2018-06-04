@@ -691,7 +691,7 @@
 
               <mat-tab label="Images">
                 <div class="col-12 px-0 d-flex flex-column align-items-center mt-4">
-                  <div class="col-8 mb-4">
+                  <div class="col-12 mb-4">
                     <!--Carousel Wrapper-->
                     <mdb-carousel [isControls]="true" [animation]="'slide'">
                       <!--First slide-->
@@ -712,7 +712,7 @@
                     </mdb-carousel>
                     <!--/.Carousel Wrapper-->
                   </div>
-                  <div class="col-12">
+                  <div class="col-12 hotel_description">
                     <h6>Description</h6>
                     <p>Nestled In the heart of the city, Gokulam Grand Hotel Spa is in close proximity to the business district
                       of Bangalore. Featuring multiple restaurants, this luxurious Bangalore hotel also has an outdoor pool
@@ -788,7 +788,7 @@
                 <div class="col-12 d-flex my-4 rating">
                   <div class="col-3 hotel_rating">
                     <h2>Hotel Rating</h2>
-                    <div class="d-flex flex-column reviews">
+                    <div class="d-flex flex-column reviews pb-3">
                       <div class="hotel_rate_value">
                         <span class="rating" data-rating="3.5" style="background: linear-gradient(to right, #ef2172, #ef2172 20%, rgba(123, 112, 112, 0.02) 1%, rgba(104, 95, 95, 0.02) 99%);">
                           <span aria-hidden="true">
@@ -801,9 +801,9 @@
                       </div>
                     </div>
 
-                    <div class="d-flex flex-column recommended">
-                      <div>
-                        <h6 class="mb-0">81%</h6>
+                    <div class="d-flex recommended">
+                      <div class="pr-2">
+                        <h6 class="mb-0 green">81%</h6>
                       </div>
                       <div>
                         <p class="mb-0">user recommended</p>
@@ -1249,18 +1249,20 @@
               </mat-tab>
 
               <mat-tab label="Hotel Policies">
-                <p>The standard check-in time is 02:00 PM and the standard check-out time is 12:00 PM. Early check-in or late
-                  check-out is strictly subjected to availability and may be chargeable by the hotel. Any early check-in
-                  or late check-out request must be directed and reconfirmed with hotel directly We do not allow unmarried
-                  / unrelated couples to check in. This is at the full discretion of the hotel management. No refund would
-                  be applicable in case the check-in is denied under such circumstances</p>
-                <p>Hotel Policy: Most hotels do not allow unmarried/unrelated couples to check-in. This is at the full discretion
-                  of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.
-                  Most hotels do not allow same city/local ID Proofs for check-in.Kindly check with your hotel about the
-                  same before checking in. This is at full discretion of the hotel management. No refund would be applicable
-                  in case the hotel denies check-in under such circumstances. Standard hotel checkout time will not be available
-                  here. Kindly plan accordingly. Extended checkout time will be at the sole discretion of the hotelier. No
-                  refund shall be applicable in such cases.</p>
+                <div class="p-3 hotel_policy">
+                  <p>The standard check-in time is 02:00 PM and the standard check-out time is 12:00 PM. Early check-in or late
+                    check-out is strictly subjected to availability and may be chargeable by the hotel. Any early check-in
+                    or late check-out request must be directed and reconfirmed with hotel directly We do not allow unmarried
+                    / unrelated couples to check in. This is at the full discretion of the hotel management. No refund would
+                    be applicable in case the check-in is denied under such circumstances</p>
+                  <p>Hotel Policy: Most hotels do not allow unmarried/unrelated couples to check-in. This is at the full discretion
+                    of the hotel management. No refund would be applicable in case the hotel denies check-in under such circumstances.
+                    Most hotels do not allow same city/local ID Proofs for check-in.Kindly check with your hotel about the
+                    same before checking in. This is at full discretion of the hotel management. No refund would be applicable
+                    in case the hotel denies check-in under such circumstances. Standard hotel checkout time will not be
+                    available here. Kindly plan accordingly. Extended checkout time will be at the sole discretion of the
+                    hotelier. No refund shall be applicable in such cases.</p>
+                </div>
               </mat-tab>
               <mat-tab label="Cancellation Policy">
                 <div class="my-3  demo-tab-content">

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
-import { modifySearchComponent } from '../../Flight/dailog.components';
+import { hotelModifySearch } from '../hotel.modify.component';
 
 @Component({
   selector: 'app-hotel',
@@ -17,7 +17,7 @@ export class HotelComponent implements OnInit {
   }
 
   openDialog() {
-    const dialogRef = this.dialog.open(modifySearchComponent, {
+    const dialogRef = this.dialog.open(hotelModifySearch, {
       height: 'auto'
     });
 

@@ -19,7 +19,7 @@ import { CancellationPolicyComponent} from './Staticpages/cancellation-policy/ca
 
 
 const routes: Routes = [
-
+  // { path: '', redirectTo: 'init', pathMatch: 'full' },
   { path: '', component: HomeComponent },
   { path: 'flight', component: FlightComponent },
   { path: 'flight_booking', component: FlightbookingComponent },

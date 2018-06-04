@@ -17,14 +17,14 @@
 
   <div class="md-form col-md-2 input-group">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Departure Date">
+      <input matInput [matDatepicker]="picker" placeholder="Check In">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </div>
   <div class="md-form col-md-2 input-group">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker2" placeholder="Return Date">
+      <input matInput [matDatepicker]="picker2" placeholder="Check Out">
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
       <mat-datepicker #picker2></mat-datepicker>
     </mat-form-field>
@@ -39,21 +39,12 @@
   <div class="md-form col-md-2 input-group">
     <mat-form-field>
 
-      <input (click)="passengers_class()" matInput placeholder="Input" value="1 Traveller, Economy">
+      <input (click)="passengers_class()" matInput placeholder="Input" value="Adult 1, Child 0">
 
       <div class="animated {{passengers_state}} passengers">
-        <div class="col-12 d-flex flex-column">
+        <div class="col-12 d-flex flex-column p-3">
           <!-- <h6>Class : Economy</h6>
           <h6>Adult 1,Child 2,Infant 3</h6> -->
-          <div class="d-flex justify-content-between align-items-center pt-3">
-            <mat-form-field>
-              <mat-select placeholder="Class">
-                <mat-option *ngFor="let Travel of Travellers" selected [value]="Travel.value">
-                  {{ Travel.viewValue }}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
           <div class="d-flex justify-content-between align-items-center">
             <p class="mb-0">Adult</p>
             <div>
@@ -63,13 +54,6 @@
           </div>
           <div class="d-flex justify-content-between align-items-center pt-3">
             <p class="mb-0">Child</p>
-            <div>
-              <button class="btn waves-effect" mdbWavesEffect>+</button>
-              <button class="btn waves-effect" mdbWavesEffect>-</button>
-            </div>
-          </div>
-          <div class="d-flex justify-content-between align-items-center py-3">
-            <p class="mb-0">Infant</p>
             <div>
               <button class="btn waves-effect" mdbWavesEffect>+</button>
               <button class="btn waves-effect" mdbWavesEffect>-</button>

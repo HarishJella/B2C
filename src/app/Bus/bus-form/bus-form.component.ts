@@ -1,19 +1,20 @@
-import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-hotel-form',
+  selector: 'app-bus-form',
   encapsulation: ViewEncapsulation.None,
-  templateUrl: './hotel-form.component.html',
-  styleUrls: ['./hotel-form.component.scss']
+  templateUrl: './bus-form.component.html',
+  styleUrls: ['./bus-form.component.scss']
 })
-export class HotelFormComponent implements OnInit {
+export class BusFormComponent implements OnInit {
 
   constructor() { }
 
   myControl: FormControl = new FormControl();
+  myControl1: FormControl = new FormControl();
 
   options = [
     'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
@@ -24,11 +25,7 @@ export class HotelFormComponent implements OnInit {
     'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
     'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
   ];
-  Travellers = [
-    { value: 'Economy', viewValue: 'Economy' },
-    { value: 'Business', viewValue: 'Business' },
-    { value: 'Primary', viewValue: 'Primary' }
-  ];
+
   filteredOptions: Observable<string[]>;
 
   ngOnInit() {
@@ -37,26 +34,33 @@ export class HotelFormComponent implements OnInit {
         startWith(''),
         map(val => this.filter(val))
       );
+    this.filteredOptions = this.myControl1.valueChanges
+      .pipe(
+        startWith(''),
+        map(val => this.filter(val))
+      );
   }
+
   filter(val: string): string[] {
     return this.options.filter(option =>
       option.toLowerCase().includes(val.toLowerCase()));
   }
+  Travellers = [
+    { value: 'Economy', viewValue: 'Economy' },
+    { value: 'Business', viewValue: 'Business' },
+    { value: 'Primary', viewValue: 'Primary' }
+  ];
 
-
-
-
-  @Input('passengers_state') public passengers_state: string;
-
-
-  // passing value from flightForm to homepage to toggle modal visibility
-
-  @Output() public passengerFormEvent = new EventEmitter();
-
-  public passengers_class() {
+  passengers_state: string = 'd-none fadeOutRightBig';
+  passengers_class() {
     this.passengers_state = this.passengers_state === 'd-block fadeInLeftBig' ? 'd-none fadeOutRightBig' : 'd-block fadeInLeftBig';
-    // modal visiv=bility toggle
-    this.passengerFormEvent.emit("passengerFormVisible");
+
   }
+
+  closeDailog() {
+    console.log();
+  }
+  col0: string;
+  col2: string;
 
 }

@@ -1,7 +1,8 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, HostListener, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { modifySearchComponent } from '../dailog.components';
 
 @Component({
   selector: 'app-flight-form',
@@ -11,7 +12,12 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class FlightFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private eRef: ElementRef) { }
+
+
+  // passing value from flightForm to homepage to toggle modal visibility
+
+  @Output() public passengerFormEvent = new EventEmitter();
 
   myControl: FormControl = new FormControl();
   myControl1: FormControl = new FormControl();
@@ -51,10 +57,22 @@ export class FlightFormComponent implements OnInit {
     { value: 'Primary', viewValue: 'Primary' }
   ];
 
-  passengers_state: string = 'd-none fadeOutRightBig';
-  passengers_class() {
-    this.passengers_state = this.passengers_state === 'd-block fadeInLeftBig' ? 'd-none fadeOutRightBig' : 'd-block fadeInLeftBig';
+  @Input('passengers_state') public passengers_state;
 
+
+  public passengers_class() {
+    this.passengers_state = this.passengers_state === 'd-block fadeInLeftBig' ? 'd-none fadeOutRightBig' : 'd-block fadeInLeftBig';
+    // modal visiv=bility toggle
+    this.passengerFormEvent.emit("passengerFormVisible");
   }
+
+
+  closeDailog() {
+    console.log();
+  }
+  col0: string;
+  col2: string;
+
+
 
 }
