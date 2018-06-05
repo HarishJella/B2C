@@ -28,17 +28,17 @@
         <p class="mb-0">Mangalore</p>
       </div>
       <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center item ">
-        <div class="discount" matTooltipPosition="above" mat-raised-button matTooltip="offer price">
-          <h6 class="mb-0 price_right">INR 9612</h6>
-          <div class="d-flex justify-content-center align-items-center" matTooltipPosition="above" mat-raised-button matTooltip="9 seats remaining">
+        <div class="discount" >
+          <h6 class="mb-0 price_right" >INR 9612</h6>
+          <div class="d-flex justify-content-center align-items-center" >
             <i class="material-icons">
               airline_seat_recline_extra
             </i>
-            <p class="mb-0">9 Seats</p>
+            <p class="mb-0" matTooltipPosition="above" mat-raised-button matTooltip="9 seats remaining">9 Seats</p>
           </div>
         </div>
         <div class="offer d-flex justify-content-center align-items-center p-1">
-          <h6 class="mb-0 price_right">INR 9600</h6>
+          <h6 class="mb-0 price_right" matTooltipPosition="above" mat-raised-button matTooltip="offer price">INR 9600</h6>
         </div>
       </div>
     </div>
@@ -51,13 +51,14 @@
           done
         </i>
         <span>Viewed</span>
-      </div>
+      </div> 
     </div>
   </div>
   <div class="d-flex py-1 bus_footer w-100 justify-content-center align-items-center">
     <p class="mb-0 px-5 refund" matTooltipPosition="above" mat-raised-button matTooltip="Refundable">Refunadable</p>
     <div class="provider fundable">
-      <p class="mb-0 px-5">Boarding</p>
+      <p class="mb-0 px-5 bord_tab"(click)="bus_inf($event)"  mdbWavesEffect data-toggle="modal" data-target="#basicExample"
+      (click)="demoBasic.show()">Boarding</p>
       <!-- <div class="animated slideInDown tol-tip" data-wow-delay="0s" data-wow-offset="100" data-wow-duration="0s">
         <div class="p-2 d-flex justify-content-between align-items-center">
           <span class="pr-2 elipise">Narayana Hrudayalaya Bommasandra</span>
@@ -83,7 +84,8 @@
       </div> -->
     </div>
     <div class="provider fundable">
-      <p class="mb-0 px-5">Dropping</p>
+      <p class="mb-0 px-5" (click)="bus_inf()"  mdbWavesEffect data-toggle="modal" data-target="#basicExample"
+      (click)="demoBasic.show()">Dropping</p>
       <!-- <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
         <div class="p-2 d-flex justify-content-between align-items-center">
           <span class="pr-2 elipise">MANI JUNCTION</span>
@@ -109,7 +111,8 @@
       </div> -->
     </div>
     <div class="provider fundable">
-      <p class="mb-0 px-5">cancellation</p>
+      <p class="mb-0 px-5 can_tab"(click)="bus_inf($event)" mdbWavesEffect data-toggle="modal" data-target="#basicExample"
+      (click)="demoBasic.show()">cancellation</p>
       <!-- <div class="animated slideInDown tol-tip cancellation" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
         <div class="col-12 d-flex justify-content-between align-items-center">
           <div class="col-4">
@@ -385,7 +388,7 @@
                       </div>
                       <div class="bd_ponts animated slideInRight">
                         <div class="bdy_brd">
-                          <p class="text-center">Choose your Boarding and Drooping Points</p>
+                          <p class="text-center" matTooltipPosition="above" mat-raised-button matTooltip="Refundable" >Choose your Boarding and Drooping Points</p>
                           <div>
                             <label>Boarding Point :</label>
                           </div>
@@ -487,7 +490,7 @@
                 </div>
               </mat-tab>
 
-              <mat-tab label="Boarding & Dropping Points ">
+              <mat-tab label="Boarding & Dropping Points" >
                 <div class="tab-content py-4">
                   <div class="col-12 d-flex boarding">
                     <div class="col-6 justify-content-center">
@@ -497,32 +500,24 @@
                           <tr>
                             <th>Time</th>
                             <th>Place</th>
-
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td scope="row">05:00</td>
                             <td>Narayana Hrudayalaya</td>
-
-
                           </tr>
                           <tr>
                             <td scope="row">20:20</td>
                             <td>Bommasandra</td>
-
-
                           </tr>
                           <tr>
                             <td scope="row">20:25</td>
                             <td>Hebbugodi</td>
-
-
                           </tr>
                           <tr>
                             <td scope="row">4</td>
                             <td>Total</td>
-
                           </tr>
                         </tbody>
                       </table>
@@ -540,26 +535,19 @@
                         <tbody>
                           <tr>
                             <td scope="row">04:30</td>
-                            <td>Urwa Store</td>
-
-
+                            <td>Urwa Store</td> 
                           </tr>
                           <tr>
                             <td scope="row">04:36</td>
                             <td>Kottara Chowki</td>
-
-
                           </tr>
                           <tr>
                             <td scope="row">04:30</td>
                             <td>KANKANADY Near Mangalore Gate</td>
-
-
                           </tr>
                           <tr>
                             <td scope="row">04:36</td>
                             <td>Kottara Chowki</td>
-
                           </tr>
                         </tbody>
                       </table>
@@ -580,44 +568,34 @@
                           <th>Time of Cancellation</th>
                           <th>Deduction Percentage</th>
                           <th>Cancellation Charges</th>
-
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td scope="row">Before 24th May 08:15 PM</td>
                           <td>15%</td>
-                          <td>Rs. 75 / 82 / 90</td>
-
-
+                          <td>Rs. 75 / 82 / 90</td> 
                         </tr>
                         <tr>
                           <td scope="row">After 24th May 08:15 PM & Before 28th May 08:15 PM</td>
                           <td>20%</td>
-                          <td>Rs. 100 / 110 / 120</td>
-
-
+                          <td>Rs. 100 / 110 / 120</td> 
                         </tr>
                         <tr>
                           <td scope="row">After 28th May 08:15 PM & Before 30th May 08:15 PM</td>
                           <td>25%</td>
                           <td>Rs. 125 / 138 / 150</td>
-
-
                         </tr>
                         <tr>
                           <td scope="row">After 30th May 08:15 PM & Before 31st May 04:15 PM</td>
                           <td>50%</td>
                           <td>Rs. 250 / 275 / 300</td>
-
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
-              </mat-tab>
-
-
+              </mat-tab> 
             </mat-tab-group>
           </mat-card-content>
         </mat-card>

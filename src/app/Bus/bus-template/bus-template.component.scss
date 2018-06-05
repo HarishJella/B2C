@@ -117,6 +117,7 @@
       position: absolute;
       top: -10px;
       border-radius: 2px;
+      background-size: cover;
       h6 {
         font-size: 11px;
         font-family: $font_family;
@@ -124,65 +125,10 @@
         font-weight: bold;
         line-height: 1;
         text-align: center;
-        padding: 3px 5px;
+        padding: 3px 10px;
       }
     }
-  } // .bus_footer {
-  //   font-size: 11px;
-  //   font-weight: bold;
-  //   position: relative;
-  //   .provider {
-  //     bottom: 0;
-  //     border-radius: 1px;
-  //     text-align: center;
-  //     p {
-  //       transition: all .5s ease-in-out;
-  //       &:hover {
-  //         color: #f26326;
-  //         &::after {
-  //           width: 100%;
-  //         }
-  //       }
-  //       &::after {
-  //         content: '';
-  //         width: 0%;
-  //         height: 2px;
-  //         background: $pinky-orange;
-  //         display: block;
-  //         clear: both;
-  //         transition: all .5s ease-in-out;
-  //       }
-  //       &:active {}
-  //     }
-  //     .div-with-triangle {
-  //       background-color: grey;
-  //       width: 300px;
-  //       height: 300px;
-  //       position: relative;
-  //       display: none;
-  //       &:after {
-  //         content: '';
-  //         position: absolute;
-  //         top: 99%;
-  //         right: 20%;
-  //         width: 0;
-  //         height: 0;
-  //         border-left: 20px solid transparent;
-  //         border-right: 20px solid transparent;
-  //         border-top: 20px solid grey;
-  //       }
-  //     }
-  //   }
-  //   .fundable:hover>.div-with-triangle {
-  //     display: block;
-  //   }
-  //   .refund {
-  //     color: green !important;
-  //   }
-  //   .non_refund {
-  //     color: red;
-  //   }
-  // }
+  } 
   .bus_footer {
     font-size: 11px;
     font-weight: bold;
@@ -199,6 +145,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         &:hover {
           color: #f26326;
           &::after {
@@ -306,7 +253,7 @@
             }
           }
           .mat-tab-label-active {
-            // background-color: rgba(242, 99, 38, 0.6);
+           
             background: $pinky-orange;
             color: #fff;
             opacity: 1 !important;
@@ -502,7 +449,9 @@
         }
         .seat_define,
         div,
-        span {}
+        span {
+          
+        }
         .bd_ponts {
           background-color: #f5f5f5;
           width: 100%;

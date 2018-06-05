@@ -4,11 +4,7 @@
   width: auto;
 }
 
-// .back {
-//   background-color: #fff;
-//   min-height: 100px;
-//   border-bottom-left-radius: 10px;
-//   border-bottom-right-radius: 10px;
+
 .inputs {
   .input-group {
     margin-top: 1.25rem;
@@ -111,7 +107,7 @@
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle {}
 
-// }
+
 .mat-tab-header {
   .mat-tab-label-container {
     .mat-tab-list {
@@ -126,12 +122,12 @@
             width: 60px;
           }
           &.mat-tab-label-active {
-            // background-color: rgba(242, 99, 38, 0.6);
+           
             background: $pinky-orange;
           }
         }
         .mat-tab-label {
-          // height: 34px;
+          
           opacity: 1 !important;
           .mat-tab-label-content {
             font-size: 15px;
@@ -142,7 +138,7 @@
           }
         }
         .mat-tab-label-active {
-          // background-color: rgba(242, 99, 38, 0.6);
+        
           background: $pinky-orange;
           color: #fff;
           opacity: 1 !important;
@@ -172,9 +168,7 @@
   border-color: #c1c1c1 !important;
 }
 
-// .mat-radio-inner-circle {
-//   background: #fff !important;
-// }
+
 .mat-radio-container {
   width: 15px !important;
   height: 15px !important;
@@ -195,4 +189,32 @@
   background: none;
   height: 15px !important;
   width: 15px !important;
+}
+
+mat-option.htl_opt.mat-option {
+  line-height: 18px !important;
+  font-size: 14px;
+  height: 60px !important;
+  border-bottom: 1px dashed #ccc;
+  .fly_city {
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    span {
+      font-size: 11px;
+      margin-top: 3px;
+    }
+  }
+  .airport{
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 230px;
+  }
+}
+
+.htlat.mat-autocomplete-panel {
+  min-width: 200px !important;
 }

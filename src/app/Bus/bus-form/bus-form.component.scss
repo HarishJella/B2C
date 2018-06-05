@@ -197,8 +197,34 @@
   width: 15px !important;
 }
 
-// .mat-tab-body-wrapper,
-// .mat-tab-body,
-// .mat-tab-body-content {
-//   overflow: visible !important; // overflow-x: hidden !important;
-// }
+
+mat-option.busopt.mat-option {
+  line-height: 18px !important;
+  font-size: 14px;
+  height: 50px !important;
+  border-bottom: 1px dashed #ccc;
+  .fly_city {
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    span {
+      font-size: 11px;
+      margin-top: 3px;
+    }
+  }
+  i{
+    font-size: 18px;
+  }
+  .airport{
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 230px;
+  }
+}
+.bus_at.mat-autocomplete-panel {
+  min-width: 180px !important;
+}
+
