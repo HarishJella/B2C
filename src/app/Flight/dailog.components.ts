@@ -8,11 +8,11 @@ import { AnimationQueryMetadata } from '@angular/animations';
     templateUrl: 'dailog.component.html',
 })
 export class modifySearchComponent {
-    constructor(private dialogRef: MatDialogRef<modifySearchComponent>) {
-        // dialogRef.disableClose = true;
+    constructor(public dialogRef: MatDialogRef<modifySearchComponent>) {
+        dialogRef.disableClose = true;
     }
-    closeDailog() {
-        // this.dialogRef.close();
-        console.log();
+    public closeDailog() {
+        this.dialogRef.close();
+        console.log("success");
     }
 }

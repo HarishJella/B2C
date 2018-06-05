@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation, OnInit, HostListener } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-home',
   encapsulation: ViewEncapsulation.None,
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   public modalToggleVisiblity;
-  public passengers_state:string = "d-none fadeOutRightBig";
+  public passengers_state: string = "d-none fadeOutRightBig";
   tab() {
     this.modalToggleVisiblity = "passengerFormHidden";
     this.passengers_state = "d-none fadeOutRightBig";

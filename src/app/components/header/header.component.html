@@ -105,9 +105,9 @@
 
             <div class="d-flex justify-content-between align-items-center login_regis">
               <h5 class="mb-0 d-flex justify-content-center align-items-center">
-                <p class="mb-0 pr-1" (click)="Login()">Login</p>
-                <p class="mb-0 pr-1">/</p>
-                <p class="mb-0" (click)="Register()">Register</p>
+                <p class="mb-0 mr-1 px-2 py-1 {{loginActive}}" (click)="Login()">Login</p>
+                <p class="mb-0 mr-1 px-2 py-1">/</p>
+                <p class="mb-0 px-2 py-1 {{registerActive}}" (click)="Register()">Register</p>
 
               </h5>
               <i class="material-icons waves-light" data-dismiss="modal" (click)="form.hide()" mdbWavesEffect>
@@ -132,7 +132,7 @@
 
               </div>
               <div class="animated  flex-column form py-3 {{forgot_password_form}}">
-                <p>forgot password</p>
+                <p>Forgot Password</p>
                 <mat-form-field>
                   <input matInput placeholder="Enter your name" required>
                   <mat-icon matSuffix>string</mat-icon>
@@ -148,19 +148,47 @@
 
               </div>
               <div class="animated  flex-column form py-3 {{register_form}}">
-                <p>register</p>
-                <mat-form-field>
-                  <input matInput placeholder="Enter your name" required>
-                  <mat-icon matSuffix>string</mat-icon>
-                </mat-form-field>
-                <mat-form-field>
-                  <input matInput placeholder="Enter your email" required>
-                  <mat-icon matSuffix>mail</mat-icon>
-                </mat-form-field>
-                <mat-form-field>
-                  <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-                </mat-form-field>
+                <div class="d-flex">
+                  <div class="col-6 pl-0">
+                    <mat-form-field>
+                      <input matInput placeholder="Enter your name" required>
+                      <mat-icon matSuffix>string</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Enter your email" required>
+                      <mat-icon matSuffix>mail</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Enter your Password" required>
+                      <mat-icon matSuffix>password</mat-icon>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-6 pr-0">
+                    <mat-form-field>
+                      <input matInput placeholder="D.O.B" required>
+                      <mat-icon matSuffix>string</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Country" required>
+                      <mat-icon matSuffix>mail</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="phone" required>
+                      <mat-icon matSuffix>mail</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <input matInput placeholder="Gender" required>
+                      <mat-icon matSuffix>mail</mat-icon>
+                    </mat-form-field>
+
+                  </div>
+                </div>
+
 
               </div>
             </div>
@@ -168,10 +196,10 @@
               <div class="d-flex align-items-center pr-2">
                 <p class="mb-0">or sign up with</p>
                 <div class="px-2">
-                  <i class="fa fa-facebook-square" aria-hidden="true" matTooltipPosition="below" mat-raised-button matTooltip="Login Through Facebook"></i>
+                  <i class="fa fa-facebook-square" aria-hidden="true"></i>
                 </div>
                 <div class="px-2">
-                  <i class="fa fa-google-plus-square" aria-hidden="true" matTooltipPosition="below" mat-raised-button matTooltip="Login Through Google Plus"></i>
+                  <i class="fa fa-google-plus-square" aria-hidden="true"></i>
                 </div>
 
               </div>

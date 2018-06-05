@@ -203,6 +203,12 @@
           }
           p {
             cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &.active {
+              background: $pinky-orange;
+              color: #fff;
+              transition: all 0.5s ease-in-out;
+            }
           }
         }
         .form {

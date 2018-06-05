@@ -36,6 +36,11 @@
     }
   }
   .main-srch {
+    app-flight-form {
+      button.close {
+        display: none !important;
+      }
+    }
     .mat-tab-body {
       background-color: #fff;
       min-height: 100px;
