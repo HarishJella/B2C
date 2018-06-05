@@ -24,7 +24,7 @@
       </div>
       <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
         <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
-          matTooltip="Modify Results" matTooltipPosition="above"  matTooltip="Modify Search">Modify Search</button>
+          matTooltip="Modify Results" matTooltipPosition="above" matTooltip="Modify Search">Modify Search</button>
       </div>
     </div>
     <div class="col-12 px-0 search_results">
@@ -180,6 +180,8 @@
           </i>
         </div>
         <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of HotelDetails"></app-hotel-template>
+          <!-- <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
@@ -194,9 +196,7 @@
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template> -->
 
 
 

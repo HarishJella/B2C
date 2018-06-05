@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, Input } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { modifySearchComponent } from '../dailog.components';
@@ -23,9 +23,15 @@ export class FlightComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       // console.log(`Dialog result: ${result}`);
+      this.stickyTop = "sticky-top";
+      this.passengers_state = 'd-none fadeOutRightBig';
     });
     this.stickyTop = "";
     this.passengers_state = 'd-none fadeOutRightBig';
+  }
+
+  public closeDailog() {
+    this.stickyTop = "sticky-top";
   }
 
   formatLabel(value: number | null) {

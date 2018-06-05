@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
+import { HotelServiceService } from '../hotel-service/hotel-service.service'
+
+// import { catchError, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-hotel',
@@ -9,11 +12,22 @@ import { hotelModifySearch } from '../hotel.modify.component';
   styleUrls: ['./hotel.component.scss']
 })
 export class HotelComponent implements OnInit {
+  HotelDetails;
+  constructor(public dialog: MatDialog, private HotelData: HotelServiceService) { }
 
-  constructor(public dialog: MatDialog) { }
+
 
   ngOnInit() {
 
+    this.showHotelDetails();
+  }
+  // HotelResponseDetails: {};
+  showHotelDetails() {
+    this.HotelData.getHotelDeatils()
+      .subscribe(HotelDetails => this.HotelDetails = HotelDetails);
+    this.HotelDetails = JSON.stringify(JSON.parse(this.HotelDetails));
+    // this.HotelDetails = JSON.stringify(this.HotelDetails);
+    // console.log(this.HotelDetails);
   }
 
   openDialog() {
