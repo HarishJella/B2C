@@ -204,3 +204,31 @@
 .mat-dialog-container {
   overflow: visible !important;
 }
+
+mat-option.mtoption.mat-option {
+  line-height: 18px !important;
+  font-size: 14px;
+  height: 60px !important;
+  border-bottom: 1px dashed #ccc;
+  .fly_city {
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    span {
+      font-size: 11px;
+      margin-top: 3px;
+    }
+  }
+  .airport{
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 230px;
+  }
+}
+
+.mat-autocomplete-panel {
+  min-width: 275px !important;
+}

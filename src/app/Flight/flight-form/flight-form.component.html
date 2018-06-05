@@ -13,12 +13,33 @@
 <div class="d-flex  justify-content-center align-items-center inputs">
   <div class="md-form col-md-2 input-group">
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width flight_form">
       <input type="autocomplete" placeholder="Leaving From" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
 
       <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-          {{ option }}
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="mtoption">
+          <div class="d-flex flex-column">
+           <div class="d-flex align-items-center justify-content-between ">
+             <div class="d-flex align-items-center justify-content-between fly_city">
+                <h4 class=" pr-2 mb-0">{{ option }}</h4>
+                <span>(BLR)</span>
+             </div>
+            
+              <div>
+             
+              <img src="/assets/images/india.jpg"/>
+            </div>
+           </div>
+           <div class="d-flex align-items-center justify-content-between ">
+             <div class="airport">
+               <p class="mb-0">Kempegowda Internal Airport ,<span>India</span></p>
+             </div>
+
+           </div>
+          
+          </div>
+         
+        
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
@@ -36,8 +57,23 @@
     <mat-form-field class="input">
       <input type="autocomplete" placeholder="Going To" aria-label="Number" matInput [formControl]="myControl1" [matAutocomplete]="auto2">
       <mat-autocomplete #auto2="matAutocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-          {{ option }}
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="mtoption">
+            <div class="d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between ">
+                  <div class="d-flex align-items-center justify-content-between fly_city">
+                     <h4 class=" pr-2 mb-0">{{ option }}</h4>
+                     <span>(BLR)</span>
+                  </div>
+                  <div>
+                  <img src="/assets/images/india.jpg"/>
+                 </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between ">
+                  <div class="airport">
+                    <p class="mb-0">Kempegowda Internal Airport ,<span>India</span></p>
+                  </div> 
+                </div>
+                </div>
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>

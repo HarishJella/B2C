@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit() {
     this.col0 = 'col-md-0.1';
+    this.col0 = 'col-md-0.1';
     this.col2 = 'col-md-1.9';
   }
 
