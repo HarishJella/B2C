@@ -33,17 +33,19 @@
 
       <mat-tab>
         <ng-template mat-tab-label>
+          <img src="assets/images/hotel.svg" (click)="tab()">
+        </ng-template>
+        <app-hotel-form (passengerFormEvent)="modalToggleVisiblity=$event" [passengers_state]="passengers_state"></app-hotel-form>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
           <img src="assets/images/bus.svg " (click)="tab()">
         </ng-template>
         <app-bus-form></app-bus-form>
       </mat-tab>
 
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="assets/images/hotel.svg" (click)="tab()">
-        </ng-template>
-        <app-hotel-form (passengerFormEvent)="modalToggleVisiblity=$event" [passengers_state]="passengers_state"></app-hotel-form>
-      </mat-tab>
+
       <mat-tab>
         <ng-template mat-tab-label>
           <img src="assets/images/holiday.svg" (click)="tab()">

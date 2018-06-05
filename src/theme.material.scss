@@ -36,6 +36,7 @@ $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $cus
   @include mat-toolbar-theme($theme);
   @include mat-tooltip-theme($theme);
   @include mat-slider-theme($theme);
+  @include mat-radio-theme($theme);
 }
 
 $mat-tooltip-horizontal-padding: 8px;

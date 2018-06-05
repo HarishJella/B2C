@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   login_form: string = 'd-flex';
   forgot_password_form: string = 'd-none';
   register_form: string = 'd-none';
+  loginActive: string = 'active';
+  registerActive: string = '';
   constructor() { }
 
   ngOnInit() {
@@ -20,11 +22,17 @@ export class HeaderComponent implements OnInit {
     this.login_form = 'd-flex slideInLeft';
     this.register_form = 'd-none slideOutRight';
     this.forgot_password_form = 'd-none slideOutDown';
+    // Toggle Active
+    this.loginActive = "active";
+    this.registerActive = "";
   }
   Register() {
     this.login_form = 'd-none slideOutLeft';
     this.register_form = 'd-flex slideInRight';
     this.forgot_password_form = 'd-none slideOutDown';
+    // Toggle Active
+    this.loginActive = "";
+    this.registerActive = "active";
   }
   ForgotPassword() {
 

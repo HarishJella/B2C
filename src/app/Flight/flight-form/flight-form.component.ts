@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { modifySearchComponent } from '../dailog.components';
 
+// import { MatDialogRef } from '@angular/material';
+
 @Component({
   selector: 'app-flight-form',
   encapsulation: ViewEncapsulation.None,
@@ -12,7 +14,9 @@ import { modifySearchComponent } from '../dailog.components';
 })
 export class FlightFormComponent implements OnInit {
 
-  constructor(private eRef: ElementRef) { }
+  constructor(private eRef: ElementRef) {
+
+  }
 
 
   // passing value from flightForm to homepage to toggle modal visibility
@@ -67,11 +71,11 @@ export class FlightFormComponent implements OnInit {
   }
 
 
-  closeDailog() {
-    console.log();
+  public closeDailog() {
+
   }
-  col0: string;
-  col2: string;
+  // col0: string;
+  // col2: string;
 
 
 

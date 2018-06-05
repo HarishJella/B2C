@@ -159,8 +159,8 @@
 }
 
 .mat-radio-outer-circle {
-  background: none !important;
-  background-color: #fff !important;
+  background: none !important; // background-color: #fff !important;
+  background: #fff !important;
 }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle {
@@ -195,4 +195,12 @@
   background: none;
   height: 15px !important;
   width: 15px !important;
+}
+
+.mat-radio-outer-circle {
+  border-color: #c1c1c1 !important;
+}
+
+.mat-dialog-container {
+  overflow: visible !important;
 }

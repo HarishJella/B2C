@@ -3,38 +3,71 @@
 .banner_inner_content_agile_w3l {
   background: url("/assets/images/About/about.jpg") no-repeat;
   background-size: cover;
-  height:400px;
-  h2{
+  height: 400px;
+  h2 {
     color: #fff;
     font-weight: bold;
   }
-  h4{
+  h4 {
     color: #fff;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.5;
   }
 }
-.ab_hd{
-  font-weight: bold;
 
-}
-.about {
-  .About_heading {
+.about_desc {
+  h2 {
     @include heading;
-    margin: 20px 0;
-    text-align: center;
     &::after {
       margin: auto;
     }
   }
-  .wthree_head_section p {
-    font-size: 15px;
-    text-align: center;
-    margin: 10px auto;
-    width: 60%;
-    color: #5e5e5e;
-    line-height: 1.8em;
+  p {
+    font-size: 14px;
+    font-family: $font_family;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    line-height: 1.7;
+  }
+}
+
+.about {
+  .About_heading {
+    h2 {
+      @include heading;
+      &::after {
+        margin: auto;
+      }
+    }
+    p {
+      font-size: 14px;
+      font-family: $font_family;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: 500;
+      line-height: 1.7;
+    }
+  }
+  .wthree_head_section {
+    h2 {
+      @include heading;
+      color: #fff;
+      &::after {
+        margin: auto;
+      }
+    }
+    p {
+      font-size: 14px;
+      font-family: $font_family;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 500;
+      line-height: 1.7;
+    } // font-size: 15px;
+    // text-align: center;
+    // margin: 10px auto;
+    // width: 60%;
+    // color: #5e5e5e;
+    // line-height: 1.8em;
   }
   .about-w3right {
     padding: 0 2em;
@@ -51,7 +84,7 @@
     .agile_overlay2 {
       background: url("/assets/images/About/overlay.png")repeat;
       background-size: cover;
-      padding: 5em 0;
+      box-shadow: inset 2000px 2000px 2000px rgba(0, 0, 0, .3);
     }
     .ttt {
       color: #fff;
@@ -84,13 +117,24 @@
       font-weight: 600;
     }
   }
-  .product_section{
+  .product_section {
     // background:url("assets/images/about/p.jpg") no-repeat;
     // background-size: cover;
-    background-color: #fff;
-    p{
-      font-weight: bold;
+    h2 {
+      @include heading;
+      color: #000;
+      &::after {
+        margin: auto;
+      }
     }
+    p {
+      font-size: 14px;
+      font-family: $font_family;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: 500;
+      line-height: 1.7;
+    }
+    background-color: #fff;
   }
   .Professionals {
     .team-social {
@@ -119,7 +163,7 @@
       border: 1px solid #ed1d78;
     }
     .fa.fa-facebook:hover {
-        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     }
     .fa.fa-twitter {
       color: #0776bc;
@@ -133,21 +177,56 @@
       border: 1px solid #9ecb3b;
     }
     .fa.fa-linkedin:hover {
-        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
     }
     .fa.fa-pinterest-p {
       color: #f26326;
       border: 1px solid #f26326;
     }
     .fa.fa-pinterest-p:hover {
-        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    }
+    .card {
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0px 0px 20px gray;
+      }
+      .card-body {
+        h4 {
+          font-weight: 700;
+          font-size: 1rem;
+          font-family: $font_family;
+        }
+        .material-icon {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          font-family: $font_family;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+        }
+        .team-social {
+          i {
+            font-size: 12px;
+            padding: 5px;
+            width: 25px;
+            height: 25px;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 50%;
+          }
+        }
+      }
     }
   }
-
-  .join_web{
+  .join_web {
     background-color: #fff;
     width: 100%;
-    h2{
+    h2 {
       font-weight: bold;
     }
   }

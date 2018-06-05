@@ -12,6 +12,7 @@
   .helpline {
     line-height: 2;
     align-items: center;
+    z-index: 2;
     p {
       font-weight: bold;
     }
@@ -202,6 +203,12 @@
           }
           p {
             cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &.active {
+              background: $pinky-orange;
+              color: #fff;
+              transition: all 0.5s ease-in-out;
+            }
           }
         }
         .form {
@@ -238,3 +245,6 @@
 //     flex-grow: 1;
 //   }
 // }
+.social_icons {
+  z-index: 2;
+}
