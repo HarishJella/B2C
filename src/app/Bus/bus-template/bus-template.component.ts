@@ -18,4 +18,14 @@ export class BusTemplateComponent implements OnInit {
     this.seat = this.seat === 'assets/images/bus seat icons/avail.svg' ? 'assets/images/bus seat icons/select.svg' : 'assets/images/bus seat icons/avail.svg';
     console.log(event);
   }
+
+
+  bord_tab: string = '';
+  droppingTab_active: string = '';
+  can_tab: string = '';
+
+
+  bus_inf() {
+    this.droppingTab_active = "mat-tab-label-active";
+  }
 }
