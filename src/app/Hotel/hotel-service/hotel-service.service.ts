@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { RequestOptions, Request, RequestMethod } from '@angular/http';
 // import 'rxjs/add/operator/map';
 // import { hotelInterface } from '../hotel.interface';
 
@@ -27,15 +28,11 @@ const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
     'Authorization': 'basic QWRtaW46QWRtaW4=',
-    'Accept-Language': 'en-US'
-    // 'Access-Control-Allow-Origin': 'http://localhost:4200/',
-    // 'Access-Control-Allow-Methods ': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
-    // 'Access-Control-Allow-Headers ': 'X-Requested-With,content-type',
-    // 'Access-Control-Allow-Credentials': 'true'
+    'Accept-Language': 'en-US',
   })
 };
 
-const body = {
+const Body = {
   "AgentDetails": {
     "ApiKey": "WE01ABXzy08USER",
     "ApiSecret": "8j8Qh6Y6%2f3cbT%2bmIOazO1A%3d%3d",
@@ -70,6 +67,8 @@ const body = {
 };
 
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -98,9 +97,11 @@ export class HotelServiceService {
 
 
   // HotelUrl = 'assets/api.json';
+
+
   HotelUrl = 'http://localhost:13161/api/HotelSearch';
   getHotelDeatils(): Observable<any> {
-    return this.http.post<any>(this.HotelUrl, body, httpOptions);
+    return this.http.post<any>(this.HotelUrl, Body, httpOptions);
   }
 
 }
