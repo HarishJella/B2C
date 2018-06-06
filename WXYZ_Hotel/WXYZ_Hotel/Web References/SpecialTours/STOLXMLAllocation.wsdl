@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://b2b.stglobe.com/STOLXMLAllocation" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://b2b.stglobe.com/STOLXMLAllocation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://b2b.stglobe.com/STOLXMLAllocation">
+      <s:element name="ServiceStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServiceStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceStatusResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllocationSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllocationSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllocationSearchResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllocationSearchHL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllocationSearchHLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllocationSearchHLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ServiceStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceStatus" />
+  </wsdl:message>
+  <wsdl:message name="ServiceStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllocationSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:AllocationSearch" />
+  </wsdl:message>
+  <wsdl:message name="AllocationSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:AllocationSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllocationSearchHLSoapIn">
+    <wsdl:part name="parameters" element="tns:AllocationSearchHL" />
+  </wsdl:message>
+  <wsdl:message name="AllocationSearchHLSoapOut">
+    <wsdl:part name="parameters" element="tns:AllocationSearchHLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceStatusHttpPostIn" />
+  <wsdl:message name="ServiceStatusHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AllocationSearchHttpPostIn">
+    <wsdl:part name="pXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AllocationSearchHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="AllocationSearchHLHttpPostIn">
+    <wsdl:part name="pXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AllocationSearchHLHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="STOLXMLAllocationSoap">
+    <wsdl:operation name="ServiceStatus">
+      <wsdl:input message="tns:ServiceStatusSoapIn" />
+      <wsdl:output message="tns:ServiceStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Hotel Allocation Params in XML</wsdl:documentation>
+      <wsdl:input message="tns:AllocationSearchSoapIn" />
+      <wsdl:output message="tns:AllocationSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearchHL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Hotel Allocation Params in XML</wsdl:documentation>
+      <wsdl:input message="tns:AllocationSearchHLSoapIn" />
+      <wsdl:output message="tns:AllocationSearchHLSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="STOLXMLAllocationHttpPost">
+    <wsdl:operation name="ServiceStatus">
+      <wsdl:input message="tns:ServiceStatusHttpPostIn" />
+      <wsdl:output message="tns:ServiceStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Hotel Allocation Params in XML</wsdl:documentation>
+      <wsdl:input message="tns:AllocationSearchHttpPostIn" />
+      <wsdl:output message="tns:AllocationSearchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearchHL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Hotel Allocation Params in XML</wsdl:documentation>
+      <wsdl:input message="tns:AllocationSearchHLHttpPostIn" />
+      <wsdl:output message="tns:AllocationSearchHLHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="STOLXMLAllocationSoap" type="tns:STOLXMLAllocationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ServiceStatus">
+      <soap:operation soapAction="http://b2b.stglobe.com/STOLXMLAllocation/ServiceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearch">
+      <soap:operation soapAction="http://b2b.stglobe.com/STOLXMLAllocation/AllocationSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearchHL">
+      <soap:operation soapAction="http://b2b.stglobe.com/STOLXMLAllocation/AllocationSearchHL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="STOLXMLAllocationSoap12" type="tns:STOLXMLAllocationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ServiceStatus">
+      <soap12:operation soapAction="http://b2b.stglobe.com/STOLXMLAllocation/ServiceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearch">
+      <soap12:operation soapAction="http://b2b.stglobe.com/STOLXMLAllocation/AllocationSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearchHL">
+      <soap12:operation soapAction="http://b2b.stglobe.com/STOLXMLAllocation/AllocationSearchHL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="STOLXMLAllocationHttpPost" type="tns:STOLXMLAllocationHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ServiceStatus">
+      <http:operation location="/ServiceStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearch">
+      <http:operation location="/AllocationSearch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllocationSearchHL">
+      <http:operation location="/AllocationSearchHL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="STOLXMLAllocation">
+    <wsdl:port name="STOLXMLAllocationSoap" binding="tns:STOLXMLAllocationSoap">
+      <soap:address location="http://xmltest.stglobe.com/STOLXMLAllocation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="STOLXMLAllocationSoap12" binding="tns:STOLXMLAllocationSoap12">
+      <soap12:address location="http://xmltest.stglobe.com/STOLXMLAllocation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="STOLXMLAllocationHttpPost" binding="tns:STOLXMLAllocationHttpPost">
+      <http:address location="http://xmltest.stglobe.com/STOLXMLAllocation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\Murali\Publish_hotel_api_service</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/AllCity.xml">
+      <publishTime>05/25/2018 15:25:07</publishTime>
+    </File>
+    <File Include="App_Data/AVAILABILITY_RES.XML">
+      <publishTime>05/14/2018 15:23:13</publishTime>
+    </File>
+    <File Include="App_Data/City.xml">
+      <publishTime>05/16/2018 15:15:22</publishTime>
+    </File>
+    <File Include="App_Data/Credential.xml">
+      <publishTime>05/05/2018 18:52:47</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/07/2018 11:08:36</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>04/07/2018 11:08:38</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>04/07/2018 11:08:38</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>04/07/2018 11:08:38</publishTime>
+    </File>
+    <File Include="bin/WXYZ_Hotel.dll">
+      <publishTime>06/04/2018 10:35:46</publishTime>
+    </File>
+    <File Include="bin/WXYZ_Hotel.XmlSerializers.dll">
+      <publishTime>06/04/2018 10:35:47</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/07/2018 11:08:34</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/07/2018 11:08:38</publishTime>
+    </File>
+    <File Include="Web References/SpecialTours/Reference.map">
+      <publishTime>04/07/2018 17:08:32</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/22/2018 19:25:49</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

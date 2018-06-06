@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HtlAllocation>
+	<Version>1.40</Version>
+	<Criteria>
+		<Agent>
+			<UName>OL-OASISINDIAXMLTEST</UName>
+			<UPsw>*****</UPsw>
+		</Agent>
+		<ClientCountryID>5</ClientCountryID>
+		<CoID>23</CoID>
+		<CiID>9532</CiID>
+		<HoID>
+		</HoID>
+		<RT>SGL</RT>
+		<Rooms>2</Rooms>
+		<inDate>
+			<Day>01</Day>
+			<Month>06</Month>
+			<Year>2018</Year>
+		</inDate>
+		<outDate>
+			<Day>02</Day>
+			<Month>06</Month>
+			<Year>2018</Year>
+		</outDate>
+		<OnlyAvailable>1</OnlyAvailable>
+		<IncludeCLXPolicy>1</IncludeCLXPolicy>
+	</Criteria>
+	<MsgTimeStamp>2018-05-09 11:49:50.608</MsgTimeStamp>
+	<AllocCount>38</AllocCount>
+	<Alloc>
+		<HoID>3153</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>45.4500</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>K7I9LRLJ0ZEFAL7LLZU</PrCD>
+		<TotalEUR>90.90</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-29 14:00:00</LastNoChargeCLX>
+			<NonShow charge="90.90" currency="EUR" />
+			<CLXDetails from="2018-05-29 14:00:00" charge="90.90" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3153</HoID>
+		<RST>SUP</RST>
+		<RoomDescr><![CDATA[Single Superior]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>69.7400</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>K7BK9JT9MZEFAL7LLZU</PrCD>
+		<TotalEUR>139.48</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-29 14:00:00</LastNoChargeCLX>
+			<NonShow charge="139.48" currency="EUR" />
+			<CLXDetails from="2018-05-29 14:00:00" charge="139.48" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3168</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>39.7700</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>61M47HHIBZEFAL7LLZU</PrCD>
+		<TotalEUR>79.54</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-29 14:00:00</LastNoChargeCLX>
+			<NonShow charge="79.54" currency="EUR" />
+			<CLXDetails from="2018-05-29 14:00:00" charge="79.54" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3170</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>139.4800</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>5OCNIS82SHZEFAL7LLZU</PrCD>
+		<TotalEUR>278.96</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="278.96" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="278.96" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Athens Koukaki']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3170</HoID>
+		<RST>EXE</RST>
+		<RoomDescr><![CDATA[Single Executive]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>160.9400</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>5OCHRARAWDZEFAL7LLZU</PrCD>
+		<TotalEUR>321.88</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="321.88" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="321.88" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Athens Koukaki']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3173</HoID>
+		<RST>CLA</RST>
+		<RoomDescr><![CDATA[Single Classic]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>268.1200</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>S7KASS91BZEFAL7LLZU</PrCD>
+		<TotalEUR>536.24</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="536.24" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="536.24" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3173</HoID>
+		<RST>DLX</RST>
+		<RoomDescr><![CDATA[Single Deluxe]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>301.6400</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>S7K9X4HIHZEFAL7LLZU</PrCD>
+		<TotalEUR>603.28</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="603.28" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="603.28" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3173</HoID>
+		<RST>DAC</RST>
+		<RoomDescr><![CDATA[Single Deluxe Acropolis View]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>383.0400</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>S7R63D8D0ZEFAL7LLZU</PrCD>
+		<TotalEUR>766.08</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="766.08" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="766.08" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3173</HoID>
+		<RST>JNR</RST>
+		<RoomDescr><![CDATA[Single Junior Suite]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>406.9700</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>S7JU9DH0BZEFAL7LLZU</PrCD>
+		<TotalEUR>813.94</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="813.94" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="813.94" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3180</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>85.8400</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>1SU3WQP8I4ZEFAL7LLZU</PrCD>
+		<TotalEUR>171.68</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-29 14:00:00</LastNoChargeCLX>
+			<NonShow charge="171.68" currency="EUR" />
+			<CLXDetails from="2018-05-29 14:00:00" charge="171.68" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3180</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>180.2600</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>1SU3FSMQATZEFAL7LLZU</PrCD>
+		<TotalEUR>360.52</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="360.52" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="360.52" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3180</HoID>
+		<RST>DEW</RST>
+		<RoomDescr><![CDATA[Single Deluxe Rooms With View]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>196.3500</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>1SU3RD0N2BZEFAL7LLZU</PrCD>
+		<TotalEUR>392.70</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="392.70" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="392.70" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3180</HoID>
+		<RST>ACR</RST>
+		<RoomDescr><![CDATA[Single Standard Acropolis View]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>223.1800</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>1SU3GICSE0ZEFAL7LLZU</PrCD>
+		<TotalEUR>446.36</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="446.36" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="446.36" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3522</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>122.3200</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>UJI9WKK5CZEFAL7LLZU</PrCD>
+		<TotalEUR>244.64</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="244.64" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="244.64" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Athens Koukaki']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>3552</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>82.6200</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>1K1H9EC29NZEFAL7LLZU</PrCD>
+		<TotalEUR>165.24</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="165.24" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="165.24" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Athens Koukaki']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>6191</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>64.3800</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>7FFBSEDU3ZEFAL7LLZU</PrCD>
+		<TotalEUR>128.76</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="128.76" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="128.76" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>6191</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>HB</BKF>
+		<Pr>91.2000</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>7FFC2PSX3ZEFAL7LLZU</PrCD>
+		<TotalEUR>182.4</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="182.40" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="182.40" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>6416</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BF</BKF>
+		<Pr>118.0300</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>QERWVU9D5BZEFAL7LLZU</PrCD>
+		<TotalEUR>236.06</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="236.06" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="236.06" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Athens Koukaki']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>6416</HoID>
+		<RST>SUP</RST>
+		<RoomDescr><![CDATA[Single Superior]]></RoomDescr>
+		<BKF>BF</BKF>
+		<Pr>139.4800</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>QERWGMEGC9ZEFAL7LLZU</PrCD>
+		<TotalEUR>278.96</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="278.96" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="278.96" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Athens Koukaki']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>6416</HoID>
+		<RST>EXE</RST>
+		<RoomDescr><![CDATA[Single Executive]]></RoomDescr>
+		<BKF>BF</BKF>
+		<Pr>177.0400</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>QERWH547PAZEFAL7LLZU</PrCD>
+		<TotalEUR>354.08</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="354.08" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="354.08" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Athens Koukaki']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>6416</HoID>
+		<RST>SQB</RST>
+		<RoomDescr><![CDATA[Single Suite  Queen Bed]]></RoomDescr>
+		<BKF>BF</BKF>
+		<Pr>289.7000</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>QERWSW6TXOZEFAL7LLZU</PrCD>
+		<TotalEUR>579.4</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="579.40" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="579.40" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Athens Koukaki']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>6467</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BF</BKF>
+		<Pr>46.1400</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>1MBIA1TUV3ZEFAL7LLZU</PrCD>
+		<TotalEUR>92.28</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="92.28" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="92.28" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>7356</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>31.8200</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>2SID5HX4D8ZEFAL7LLZU</PrCD>
+		<TotalEUR>63.64</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="63.64" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="63.64" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>11898</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>91.2000</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>3B044KDTJKZEFAL7LLZU</PrCD>
+		<TotalEUR>182.4</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="182.40" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="182.40" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>11898</HoID>
+		<RST>SUP</RST>
+		<RoomDescr><![CDATA[Single Superior]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>104.0800</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>3B048TIAOQZEFAL7LLZU</PrCD>
+		<TotalEUR>208.16</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="208.16" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="208.16" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>11899</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>61.1600</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>3B04BVJJXBZEFAL7LLZU</PrCD>
+		<TotalEUR>122.32</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="122.32" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="122.32" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>11900</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>45.0600</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>3B0AWACF10ZEFAL7LLZU</PrCD>
+		<TotalEUR>90.12</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="90.12" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="90.12" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>11901</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>53.6500</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>3B0AELUB8JZEFAL7LLZU</PrCD>
+		<TotalEUR>107.30</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="107.30" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="107.30" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>13860</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>HB</BKF>
+		<Pr>48.2800</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>54D06RH8OIZEFAL7LLZU</PrCD>
+		<TotalEUR>96.56</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="96.56" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="96.56" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>15954</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>45.0600</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>5GK1LT1F03ZEFAL7LLZU</PrCD>
+		<TotalEUR>90.12</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="90.12" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="90.12" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>15979</HoID>
+		<RST>BSC</RST>
+		<RoomDescr><![CDATA[Single Basic Low Floor No Balcony]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>85.8400</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>5LDK8G58ROZEFAL7LLZU</PrCD>
+		<TotalEUR>171.68</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="171.68" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="171.68" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>15979</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>91.2000</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>5LDL5J1BQ7ZEFAL7LLZU</PrCD>
+		<TotalEUR>182.4</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="182.40" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="182.40" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes. Non Refundable 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>15979</HoID>
+		<RST>STD</RST>
+		<RoomDescr><![CDATA[Single Standard]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>96.5700</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>5LDR3JDJ0IZEFAL7LLZU</PrCD>
+		<TotalEUR>193.14</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="193.14" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="193.14" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>15979</HoID>
+		<RST>EXE</RST>
+		<RoomDescr><![CDATA[Single Executive]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>193.1300</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>5LDR0R2I96ZEFAL7LLZU</PrCD>
+		<TotalEUR>386.26</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="386.26" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="386.26" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>15979</HoID>
+		<RST>SUI</RST>
+		<RoomDescr><![CDATA[Single Suite]]></RoomDescr>
+		<BKF>BB</BKF>
+		<Pr>300.4300</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>5LDR7562X4ZEFAL7LLZU</PrCD>
+		<TotalEUR>600.86</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="600.86" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="600.86" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>28871</HoID>
+		<RST>PRE</RST>
+		<RoomDescr><![CDATA[Single Premium]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>107.3000</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>OB30WMNNPAZEFAL7LLZU</PrCD>
+		<TotalEUR>214.6</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-18 14:00:00</LastNoChargeCLX>
+			<NonShow charge="214.60" currency="EUR" />
+			<CLXDetails from="2018-05-18 14:00:00" charge="42.92" currency="EUR" />
+			<CLXDetails from="2018-05-23 14:00:00" charge="96.57" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="214.60" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>28871</HoID>
+		<RST>DLX</RST>
+		<RoomDescr><![CDATA[Single Deluxe]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>120.1700</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>OB2SBCHFOIZEFAL7LLZU</PrCD>
+		<TotalEUR>240.34</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-18 14:00:00</LastNoChargeCLX>
+			<NonShow charge="240.34" currency="EUR" />
+			<CLXDetails from="2018-05-18 14:00:00" charge="48.07" currency="EUR" />
+			<CLXDetails from="2018-05-23 14:00:00" charge="108.15" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="240.34" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+	<Alloc>
+		<HoID>28871</HoID>
+		<RST>SUE</RST>
+		<RoomDescr><![CDATA[Single Suite Executive]]></RoomDescr>
+		<BKF>ABF</BKF>
+		<Pr>163.0900</Pr>
+		<PrCur>EUR</PrCur>
+		<Avail>1</Avail>
+		<PrCD>OB2TFIMDSSZEFAL7LLZU</PrCD>
+		<TotalEUR>326.18</TotalEUR>
+		<CLXPolicy>
+			<LastNoChargeCLX>2018-05-28 14:00:00</LastNoChargeCLX>
+			<NonShow charge="326.18" currency="EUR" />
+			<CLXDetails from="2018-05-28 14:00:00" charge="326.18" currency="EUR" />
+		</CLXPolicy>
+		<Remarks>
+			<![CDATA[Test Notes 
+*** TEST (30) *** #Test Notes# GI for "Ath City Center" 
+#Test Notes# CTp 'Attica Athens']]>
+		</Remarks>
+	</Alloc>
+</HtlAllocation>

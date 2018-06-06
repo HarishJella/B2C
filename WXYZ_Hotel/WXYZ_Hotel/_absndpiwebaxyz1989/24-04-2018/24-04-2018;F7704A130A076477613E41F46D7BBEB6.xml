@@ -1,0 +1,243 @@
+<SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP:Body>
+    <hotel:HotelSearchAvailabilityRsp TraceId="8ccd8696-777e-4515-9f9c-df125d78247d" TransactionId="F7704A130A076477613E41F46D7BBEB6" ResponseTime="3935" xmlns:hotel="http://www.travelport.com/schema/hotel_v43_0" xmlns:common_v43_0="http://www.travelport.com/schema/common_v43_0">
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_001508" Key="V2biUL3R2BKAN0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_001508" Name="HOTEL SAI KRISH GRAND" VendorLocationKey="V2biUL3R2BKAN0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>NO.22 Elumalai Street,Parallel to GST Road,Near Dh</hotel:Address>
+            <hotel:Address>arga Road Subway,Pallavaram</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600043</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="12.965709557176" longitude="80.14885188525" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>3</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR12145.74" Commission="INR668.02" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR12145.74" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/001508/ag_2636913_17092420550056776381.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">Stop at HOTEL SAI KRISH GRAND to discover the wonders of Chennai. Featuring a satisfying list of amenities, guests will find their stay at the property a comfortable one. Free Wi-Fi in all rooms, 24-hour room service, 24-hour security, car power charging station, chapel are on the list of things guests can enjoy. Comfortable guestrooms ensure a good night's sleep with some rooms featuring facilities such as flat screen television, additional bathroom, additional toilet, clothes rack, dressing room. The property offers various recreational opportunities. Discover all Chennai has to offer by making HOTEL SAI KRISH GRAND your base.</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_000865" Key="V2biUL3R2BKAO0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_000865" Name="Ayur Resorts - Odiyur Lake" VendorLocationKey="V2biUL3R2BKAO0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>Mudaliyarkuppam Boat House, Odiyur Lake</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>603302</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="12.325543" longitude="80.02483" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>0</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR19153.58" Commission="INR1053.45" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR19153.58" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/000865/ag_624319_14042915300019246561.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">Ayur Resorts - Odiyur Lake is conveniently located in the popular Mahabalipuram area. Offering a variety of facilities and services, the hotel provides all you need for a good night's sleep. 24-hour room service, free Wi-Fi in all rooms, 24-hour security, daily housekeeping, private check in/check out are there for guest's enjoyment. Designed for comfort, selected guestrooms offer television LCD/plasma screen, internet access – wireless, internet access – wireless (complimentary), non smoking rooms, air conditioning to ensure a restful night. To enhance guests' stay, the hotel offers recreational facilities such as sauna, indoor pool, spa, massage, children's playground. Ayur Resorts ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_001546" Key="V2biUL3R2BKAP0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_001546" Name="Hotel Pink Chennai" VendorLocationKey="V2biUL3R2BKAP0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>No-79-GP Road, Mount Road. (Near E.A Bus Stop/Melo</hotel:Address>
+            <hotel:Address>dy Theatre)</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600002</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="13.06289" longitude="80.2702037" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>2</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR6038.60" Commission="INR332.12" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR6038.60" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/001546/ag_2483643_17070615340054298284.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">Located in Chennai City Center, Hotel Pink Chennai is a perfect starting point from which to explore Chennai. The property features a wide range of facilities to make your stay a pleasant experience. Free Wi-Fi in all rooms, 24-hour room service, 24-hour security, convenience store, daily housekeeping are there for guest's enjoyment. Guestrooms are fitted with all the amenities you need for a good night's sleep. In some of the rooms, guests can find flat screen television, mirror, towels, closet, internet access – wireless. The property offers various recreational opportunities. Discover all Chennai has to offer by making Hotel Pink ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_000610" Key="V2biUL3R2BKAQ0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_000610" Name="Samrat Guest House" VendorLocationKey="V2biUL3R2BKAQ0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>1059/2 Munuswami Salai KK - Nagar</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600078</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="13.038892388796" longitude="80.192738771438" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>1</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR3526.44" Commission="INR193.95" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR3526.44" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/000610/ag_611313_14032620230018869309.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">Stop at Samrat Guest House to discover the wonders of Chennai. The hotel offers a wide range of amenities and perks to ensure you have a great time. To be found at the hotel are daily housekeeping, 24-hour front desk, 24-hour room service, car park, room service. Guestrooms are designed to provide an optimal level of comfort with welcoming decor and some offering convenient amenities like television LCD/plasma screen, non smoking rooms, air conditioning, wake-up service, desk. The hotel offers various recreational opportunities. Friendly staff, great facilities and close proximity to all that Chennai has to offer are three great ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_001456" Key="V2biUL3R2BKAR0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_001456" Name="Nestlay Rooms Perungudi" VendorLocationKey="V2biUL3R2BKAR0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>No.46,Balaji Medical Center,Near Perungudi Toll Ga</hotel:Address>
+            <hotel:Address>te</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600056</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="12.965302525978" longitude="80.246430158549" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>1</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR6743.50" Commission="INR370.89" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR6743.50" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/001456/ag_2175580_17061317170053649258.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">Set in a prime location of Chennai, Nestlay Rooms Perungudi puts everything the city has to offer just outside your doorstep. The property offers guests a range of services and amenities designed to provide comfort and convenience. Free Wi-Fi in all rooms, room service, free breakfast, continental breakfast are just some of the facilities on offer. Guestrooms are designed to provide an optimal level of comfort with welcoming decor and some offering convenient amenities like flat screen television, separate living room, internet access – wireless, internet access – wireless (complimentary), air conditioning. The property offers various recreational opportunities. Convenience and ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_001458" Key="V2biUL3R2BKAS0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_001458" Name="ULO Hotels Lee Crysstal - ECR Covelong" VendorLocationKey="V2biUL3R2BKAS0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>No 2/212 Kovalam Main Road,Off Ecr Highway</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>603112</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="12.786551" longitude="80.248193" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>3</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR13267.70" RateSupplier="HW" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_HW_EN.gif" PaymentType="PostPay" ApproxAvgNightlyAmt="INR13267.70" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/001458/hw_21.JPG" />
+        <hotel:PropertyDescription ProviderCode="TRM">Stop at Lee Crysstal - ECR Covelong to discover the wonders of Chennai. The hotel offers a wide range of amenities and perks to ensure you have a great time. Take advantage of the hotel's 24-hour room service, free Wi-Fi in all rooms, 24-hour security, chapel, daily housekeeping. Television LCD/plasma screen, clothes rack, free welcome drink, linens, mirror can be found in selected guestrooms. Enjoy the hotel's recreational facilities, including billiards, garden, before retiring to your room for a well-deserved rest. A welcoming atmosphere and excellent service are what you can expect during your stay at Lee Crysstal - ECR ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_000168" Key="V2biUL3R2BKAT0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_000168" Name="Mallika Residency" VendorLocationKey="V2biUL3R2BKAT0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>No. 14 &amp; 15, Meeran Sahib Street, Mount Road</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600002</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="13.06931" longitude="80.2706" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>2</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR3518.60" Commission="INR193.52" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR3518.60" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/000168/hs_2958303_2_b.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">Located in Chennai (Central Chennai), Mallika Residency is convenient to Mayor Radhakrishnan Stadium and M.A. Chidambaram Stadium. This hotel is within close proximity of Raja Muthiah Hall and Spencer's Plaza Shopping Mall. Rooms Make yourself at home in one of the 111 guestrooms. Complimentary wireless Internet access keeps you connected, and cable programming is available for your entertainment. Private bathrooms with showers feature rainfall showerheads and complimentary toiletries. Conveniences include complimentary bottled water, and housekeeping is provided daily. Amenities Make use of convenient amenities, which include complimentary wireless Internet access and babysitting/childcare (surcharge). Dining Satisfy your appetite at the hotel's ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_000773" Key="V2biUL3R2BKAU0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_000773" Name="Saibala Grand Hotel" VendorLocationKey="V2biUL3R2BKAU0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>No 6, Pammal Main Road, Pallavaram</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600043</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="12.971262224534" longitude="80.143780410289" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>3</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR14632.46" Commission="INR804.79" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR14632.46" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/000773/hs_10970931_10_b.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">In the heart of Chennai, Saibala Grand Hotel is within the vicinity of Kishkinta and Phoenix Market City. This hotel is within the region of Arignar Anna Zoological Park and Shore Temple. Rooms Make yourself at home in one of the 22 air-conditioned rooms featuring LCD televisions. Complimentary wireless Internet access keeps you connected, and cable programming is available for your entertainment. Private bathrooms have complimentary toiletries and hair dryers. Conveniences include desks and complimentary newspapers, and housekeeping is provided daily. Amenities Enjoy recreation amenities such as a nightclub or take in the view from a rooftop terrace. This hotel ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_001469" Key="V2biUL3R2BKAV0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_001469" Name="The Summit" VendorLocationKey="V2biUL3R2BKAV0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>No 2/3, Cathedral Garden Road, Nungambakkam, Chenn</hotel:Address>
+            <hotel:Address>ai</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600034</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="13.052082" longitude="80.246263" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>3</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR17405.04" Commission="INR957.28" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR17405.04" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/001469/ag_2070109_17041118100052319045.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">The 3-star The Summit offers comfort and convenience whether you're on business or holiday in Chennai. The hotel offers guests a range of services and amenities designed to provide comfort and convenience. Service-minded staff will welcome and guide you at the The Summit. Television LCD/plasma screen, clothes rack, mirror, towels, internet access – wireless can be found in selected guestrooms. The hotel offers various recreational opportunities. Convenience and comfort makes The Summit the perfect choice for your stay in Chennai.</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_000538" Key="V2biUL3R2BKAW0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_000538" Name="Ammu Palace" VendorLocationKey="V2biUL3R2BKAW0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>#2 Bootha perumal street Anna Salai</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600002</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="13.065848838307" longitude="80.267122682209" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>1</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR3733.99" Commission="INR205.37" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR3733.99" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/000538/hs_8309359_7_b.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">With a stay at Ammu Palace in Chennai (Central Chennai), you'll be convenient to M.A. Chidambaram Stadium and Raja Muthiah Hall. This hotel is within close proximity of Spencer's Plaza Shopping Mall and Express Avenue. Rooms Make yourself at home in one of the 60 individually decorated guestrooms. Complimentary wireless Internet access keeps you connected, and cable programming is available for your entertainment. Private bathrooms with shower/tub combinations feature rainfall showerheads and complimentary toiletries. Conveniences include desks and separate sitting areas, and housekeeping is provided daily. Amenities Make use of convenient amenities, which include complimentary wireless Internet access and concierge ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <hotel:HotelSearchResult>
+        <common_v43_0:VendorLocation ProviderCode="TRM" VendorCode="00" VendorLocationID="INMAA@_000707" Key="V2biUL3R2BKAX0EXFAAAAA==" />
+        <hotel:HotelProperty HotelChain="00" HotelCode="INMAA@_000707" Name="Hotel Greens Gate Chennai" VendorLocationKey="V2biUL3R2BKAX0EXFAAAAA==" Availability="Available">
+          <hotel:PropertyAddress>
+            <hotel:Address>No 12,13 VV Koil Street Opposite to Rippon Buildin</hotel:Address>
+            <hotel:Address>g, Periamet</hotel:Address>
+            <hotel:Address>Chennai</hotel:Address>
+            <hotel:Address>600003</hotel:Address>
+          </hotel:PropertyAddress>
+          <common_v43_0:CoordinateLocation latitude="13.081582147709" longitude="80.270437146575" />
+          <hotel:HotelRating RatingProvider="TRM">
+            <hotel:Rating>2</hotel:Rating>
+          </hotel:HotelRating>
+        </hotel:HotelProperty>
+        <hotel:RateInfo ApproximateMinimumStayAmount="INR6171.75" Commission="INR339.45" RateSupplier="AG" RateSupplierLogo="http://media-atl-tram.pp.travelport.com//logos/merchants/TP_AG_EN.gif" PaymentType="PrePay" ApproxAvgNightlyAmt="INR6171.75" TaxesIncluded="true" AmountConverted="true" MultipleRoom="Available">
+          <hotel:RoomDispatch>
+            <hotel:Room Capacity="4" Quantity="3" />
+          </hotel:RoomDispatch>
+        </hotel:RateInfo>
+        <common_v43_0:MediaItem url="http://media-atl-tram.pp.travelport.com/hotel-thumbnails/90x90/INMAA@/000707/ag_816736_15071309590032147138.jpg" />
+        <hotel:PropertyDescription ProviderCode="TRM">Hotel Greens Gate Chennai is conveniently located in the popular Chennai City Center area. The hotel offers a high standard of service and amenities to suit the individual needs of all travelers. All the necessary facilities, including free Wi-Fi in all rooms, 24-hour front desk, 24-hour room service, express check-in/check-out, luggage storage, are at hand. All rooms are designed and decorated to make guests feel right at home, and some rooms come with television LCD/plasma screen, internet access – wireless, internet access – wireless (complimentary), non smoking rooms, air conditioning. The hotel offers various recreational opportunities. Hotel Greens Gate Chennai ...</hotel:PropertyDescription>
+      </hotel:HotelSearchResult>
+      <common_v43_0:HostToken Host="TRM">H4sIAAAAAAAAAH2Tz0/UQBTHX9tdcQFlASMGQ9Rogqe2bkyQcFBYRGvKj7Bw4eRsO9sWZjtlZsoWY0y4yMGrHjQx8aAmJvwTRhO96tGT0bNH48WDM11xWTQ26XSm877f+cybN3vfoMgZDK6jLWSmIiLmTcTDeZQUez69fnPy9gcD9DnoJRT5c8gTlDlQEiHDPKTEz5Kr10A9/a2jsi3LtyigVMOcRzR2fAGnbNvGuGJPyG+9YTfwZOXS5GV70hbQXw2xt7GYCh8JLBFOUxaY69RHpoia2HSph8isnFqRo5/Xa+T7i92yDvot6I/yufmIkIi70BdVQ0ZjSmiwLWDUlTaWsrGUjdWZm8oSAM27yN6CXG28ezUvDzOd2mJHcKEm0vqr94ONzYmlcQMgS6TuTLduH3CNxjiPf2lpT+5WRr/m8a0iGKsr1SwTMDJD6UYUBzdSzIUTNyhrIiGTJC2HO7mfZgxtuxEX2c7Hscfv0FMDNAcKPLqDFT0YrYJqpeisR5tmUOGtSHihGfi8SX1MzJAK2S5T2oT2o+lQWIOhiM/iBkqJWKJJSiS078JwvY20wtAWJpipdQWUXYVjKRxL/ZlyoeSFEfHVYBPuyQA4HqfNOmaLjWlfWnIBw20RQXFgObHAAWYq3QlXgmMSQ8/BdQl+7n/gVbVQh1x3wUABViaDLgwc4hUw7koza9/M2jezZroDp/KTa5e4QjR/Iw59efb8x87uFV0lubiFSIozBuVO3EK+zft7j8b6Hn5+oKsjlWCF9rZO5O2Iqvkk+9PX8t7AP7berTly2KT3gIn+l4mWm2iHND0HNIYssr78SjlxfqPURFFV/Hk3BDUoqTuXMoZjb7sq8yTAcBaWs1+oM/MSAgQAAA==</common_v43_0:HostToken>
+    </hotel:HotelSearchAvailabilityRsp>
+  </SOAP:Body>
+</SOAP:Envelope>
