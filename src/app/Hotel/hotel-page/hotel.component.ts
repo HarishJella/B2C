@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
-import { HotelServiceService } from '../hotel-service/hotel-service.service'
+import { hotelInterface, HotelServiceService } from '../hotel-service/hotel-service.service';
+// import { hotelInterface } from '../hotel.interface';
 
 // import { catchError, retry } from 'rxjs/operators';
 
@@ -13,21 +14,27 @@ import { HotelServiceService } from '../hotel-service/hotel-service.service'
 })
 export class HotelComponent implements OnInit {
   HotelDetails;
+  error: any;
+
   constructor(public dialog: MatDialog, private HotelData: HotelServiceService) { }
-
-
 
   ngOnInit() {
 
     this.showHotelDetails();
+
   }
   // HotelResponseDetails: {};
   showHotelDetails() {
     this.HotelData.getHotelDeatils()
-      .subscribe(HotelDetails => this.HotelDetails = HotelDetails);
-    this.HotelDetails = JSON.stringify(JSON.parse(this.HotelDetails));
-    // this.HotelDetails = JSON.stringify(this.HotelDetails);
-    // console.log(this.HotelDetails);
+      .subscribe(data => {
+
+        this.HotelDetails = data, // success path
+          error => this.error = error // error path );
+          console.log("this.HotelDetails");
+          console.log('this.error');
+          console.log(this.HotelDetails);
+          console.log(this.error);
+      });
   }
 
   openDialog() {

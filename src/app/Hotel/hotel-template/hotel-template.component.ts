@@ -13,6 +13,7 @@ export class HotelTemplateComponent implements OnInit {
   ngOnInit() {
 
   }
+  @Input() Hotel;
   @Input('hotel_grid') hotel_grid: number;
   @Input('hotel_list') hotel_list: string;
   @Input('hotel_map') hotel_map: string;
