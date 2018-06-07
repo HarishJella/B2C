@@ -1,0 +1,46 @@
+hostListner and hostBinding - Angular
+https://dzone.com/articles/what-are-hostbinding-and-hostlistener-in-angular
+
+sass 
+https://gist.github.com/jareware/4738651
+
+
+https://github.com/angular/angular-cli/issues/8798
+
+https://hackerthemes.com/bootstrap-cheatsheet
+
+https://www.quora.com/What-are-the-uses-of-main-TS-and-app-module-TS-in-Angular-4
+
+compitators
+
+https://www.tiket.com/
+https://www.traveloka.com/en-id/
+https://www.kayak.co.in/
+https://www.priceline.com/
+https://www.jetblue.com/
+
+https://toddmotto.com/angular-ngfor-template-element
+
+
+https://www.quora.com/Is-it-necessary-to-install-Node-JS-to-build-an-application-on-AngularJS-2
+
+private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error('An error occurred:', error.error.message);
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      console.error(
+        `Backend returned code ${error.status}, ` +
+        `body was: ${error.error}`);
+    }
+    // return an observable with a user-facing error message
+    return throwError(
+      'Something bad happened; please try again later.');
+  };
+
+// HotelUrl = 'assets/api.json';
+
+cors enablelling
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api

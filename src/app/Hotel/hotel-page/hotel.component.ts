@@ -13,28 +13,21 @@ import { hotelInterface, HotelServiceService } from '../hotel-service/hotel-serv
   styleUrls: ['./hotel.component.scss']
 })
 export class HotelComponent implements OnInit {
-  HotelDetails;
+
+  HotelDetails: any;
   error: any;
 
   constructor(public dialog: MatDialog, private HotelData: HotelServiceService) { }
 
   ngOnInit() {
-
     this.showHotelDetails();
-
   }
-  // HotelResponseDetails: {};
-  showHotelDetails() {
-    this.HotelData.getHotelDeatils()
-      .subscribe(data => {
 
-        this.HotelDetails = data, // success path
-          error => this.error = error // error path );
-          console.log("this.HotelDetails");
-          console.log('this.error');
-          console.log(this.HotelDetails);
-          console.log(this.error);
-      });
+  // Getting response data from hotel-service.service.ts
+  showHotelDetails() {
+    this.HotelData.getHotelDeatils(
+      data => this.HotelDetails = JSON.parse(data.response) // success path
+    );
   }
 
   openDialog() {
@@ -167,6 +160,7 @@ export class HotelComponent implements OnInit {
     this.hotel_list = 'd-flex fadeIn';
     this.hotel_map = 'd-none fadeOut';
   }
+  // Map view
   mapView() {
     this.hotelGridView = '';
     this.hotelListView = 'listView';

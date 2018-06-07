@@ -24,84 +24,80 @@ export interface hotelInterface {
   Description: string;
 }
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Authorization': 'basic QWRtaW46QWRtaW4=',
-    'Accept-Language': 'en-US',
-  })
-};
-
-const Body = {
-  "AgentDetails": {
-    "ApiKey": "WE01ABXzy08USER",
-    "ApiSecret": "8j8Qh6Y6%2f3cbT%2bmIOazO1A%3d%3d",
-    "AgentType": "INTERNAL",
-    "AppType": "B2B",
-    "BranchID": "B0001",
-    "AgentId": "WCKUL0200101",
-    "SequenceId": "11059",
-    "TerminalId": "WCKUL020010108",
-    "UserName": "anbu@webaxyz.com",
-    "IPAddress": "192.168.31.63",
-    "LoginReference": "NecA3T4vCZqbjZifUFQlwjh4%2fZswJLghjZYRLkiyoOQ%3d",
-    "TerminalType": "W",
-    "CurrencyCode": "MYR"
-  },
-  "Vendor": "SPECIALTOURS",
-  "Destination": "Dubai, United Arab Emirates",
-  "CheckIn": "18-07-2018",
-  "CheckOut": "21-07-2018",
-  "Rooms": [
-    {
-      "AD": 2,
-      "CH": 1,
-      "CHAge": [
-        8
-      ]
-    }
-  ],
-  "SearchID": 0,
-  "countryCode": "IN",
-  "ClientCountryId": "27"
-};
-
-
-
-
 @Injectable({
   providedIn: 'root'
 })
+
+// let convert = require('xml-to-json-promise');
+
+// // convert an xml file to json
+// convert.xmlFileToJSON('assets/City.xml').then(json => {
+//   console.log(json);
+// });
+
+
+
 export class HotelServiceService {
 
-  constructor(private http: HttpClient) {
-
-  }
 
 
-  private handleError(error: HttpErrorResponse) {
-    if (error.error instanceof ErrorEvent) {
-      // A client-side or network error occurred. Handle it accordingly.
-      console.error('An error occurred:', error.error.message);
-    } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong,
-      console.error(
-        `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
-    }
-    // return an observable with a user-facing error message
-    return throwError(
-      'Something bad happened; please try again later.');
+
+  // Post Request -> header
+  private httpOptions = {
+    headers: new HttpHeaders({
+
+      'Content-Type': 'application/json',
+      'Authorization': 'basic QWRtaW46QWRtaW4=',
+      'Accept-Language': 'en-US',
+      'Access-Control-Allow-Origin': '*' //t
+    })
   };
 
+  // Post Request -> body 
+  private requestBody = {
+    "AgentDetails": {
+      "ApiKey": "WE01ABXzy08USER",
+      "ApiSecret": "8j8Qh6Y6%2f3cbT%2bmIOazO1A%3d%3d",
+      "AgentType": "INTERNAL",
+      "AppType": "B2B",
+      "BranchID": "B0001",
+      "AgentId": "WCKUL0200101",
+      "SequenceId": "11059",
+      "TerminalId": "WCKUL020010108",
+      "UserName": "anbu@webaxyz.com",
+      "IPAddress": "192.168.31.63",
+      "LoginReference": "NecA3T4vCZqbjZifUFQlwjh4%2fZswJLghjZYRLkiyoOQ%3d",
+      "TerminalType": "W",
+      "CurrencyCode": "MYR"
+    },
+    "Vendor": "HOTELBED",
+    "Destination": "Athens, Greece",
+    "CheckIn": "18-07-2018",
+    "CheckOut": "21-07-2018",
+    "Rooms": [
+      {
+        "AD": 2,
+        "CH": 1,
+        "CHAge": [
+          8
+        ]
+      }
+    ],
+    "SearchID": 0,
+    "countryCode": "IN",
+    "ClientCountryId": "27"
+  };
 
-  // HotelUrl = 'assets/api.json';
+  constructor(private http: HttpClient) { }
 
-
-  HotelUrl = 'http://localhost:13161/api/HotelSearch';
-  getHotelDeatils(): Observable<any> {
-    return this.http.post<any>(this.HotelUrl, Body, httpOptions);
+  HotelUrl: string = 'http://localhost:13161/api/HotelSearch';
+  getHotelDeatils(callback) {
+    return this.http.post(this.HotelUrl, this.requestBody, this.httpOptions).subscribe(data => {
+      callback(data);
+    },
+      err => {
+        console.log(err);
+      });
   }
 
 }

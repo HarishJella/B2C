@@ -43,6 +43,7 @@
     "slick-carousel": "^1.8.1",
     "tippy.js": "^2.5.2",
     "toastr": "^2.1.4",
+    "xml-to-json-promise": "0.0.3",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

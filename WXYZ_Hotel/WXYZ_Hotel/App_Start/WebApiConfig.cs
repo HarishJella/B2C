@@ -10,6 +10,9 @@ namespace WXYZ_Hotel
     {
         public static void Register(HttpConfiguration config)
         {
+
+            // New code
+            config.EnableCors();
             // Web API configuration and services
 
             config.MessageHandlers.Add(new CustomDelegate());

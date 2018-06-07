@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Xml.Linq;
 using WXYZ_Hotel.Models;
 using WXYZ_Hotel.Common;
@@ -20,11 +21,13 @@ using WXYZ_HotelService;
 
 namespace WXYZ_Hotel.Controllers
 {
+  [EnableCors(origins: "http://localhost:4200et", headers: "*", methods: "*")]
     public class SearchController : ApiController
     {
         XElement destination { get; set; }
         internal int ThreadCount = 0;
         string LogData = string.Empty;
+      
         [HttpPost]
         [Route("api/HotelSearch")]
 

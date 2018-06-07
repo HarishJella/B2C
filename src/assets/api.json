@@ -1,4 +1,5 @@
-[{
+[
+  {
     "HotelID": "SPT_18085",
     "TraceID": "8790ab5e-5c72-4ffc-9c6a-99bbb91e9110",
     "HotelChain": "RST~18085|BKF~BB|PrCD~NJQFUS6H98ZF48XRQ9ZU",
@@ -64,7 +65,8 @@
         "Name": "Internet Access"
       }
     ],
-    "Room": [{
+    "Room": [
+      {
         "TraceID": null,
         "Supplier": "SPECIALTOURS",
         "Supplier_Id": "SUP0030",
