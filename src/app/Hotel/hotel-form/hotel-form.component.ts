@@ -24,6 +24,7 @@ export class HotelFormComponent implements OnInit {
     'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
     'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
   ];
+  
   Travellers = [
     { value: 'Economy', viewValue: 'Economy' },
     { value: 'Business', viewValue: 'Business' },

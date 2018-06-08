@@ -28,14 +28,6 @@ export interface hotelInterface {
   providedIn: 'root'
 })
 
-// let convert = require('xml-to-json-promise');
-
-// // convert an xml file to json
-// convert.xmlFileToJSON('assets/City.xml').then(json => {
-//   console.log(json);
-// });
-
-
 
 export class HotelServiceService {
 
@@ -47,9 +39,10 @@ export class HotelServiceService {
     headers: new HttpHeaders({
 
       'Content-Type': 'application/json',
-      'Authorization': 'basic QWRtaW46QWRtaW4=',
-      'Accept-Language': 'en-US',
-      'Access-Control-Allow-Origin': '*' //t
+      'Access-Control-Allow-Methods': 'POST'
+      //'Authorization': 'basic QWRtaW46QWRtaW4=',
+      //'Accept-Language': 'en-US',
+      //'Access-Control-Allow-Origin': '*' //t
     })
   };
 
@@ -90,14 +83,18 @@ export class HotelServiceService {
 
   constructor(private http: HttpClient) { }
 
+
+
   HotelUrl: string = 'http://localhost:13161/api/HotelSearch';
   getHotelDeatils(callback) {
-    return this.http.post(this.HotelUrl, this.requestBody, this.httpOptions).subscribe(data => {
+    //return this.http.post('http://localhost:13161/api/HotelSearch', this.requestBody,);
+    return this.http.post(this.HotelUrl, this.requestBody).subscribe(data => {
       callback(data);
     },
       err => {
         console.log(err);
       });
   }
+
 
 }

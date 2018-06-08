@@ -8,13 +8,10 @@
       </a>
     </div>
     <div class="card-body cardbody">
-      <h5 class="d-flex justify-content-between align-items-center">
+      <h5 class="d-flex justify-content-between align-items-center amenities">
         <i *ngFor="let Amenities of Hotel.Amenities | slice:0:10" class="material-icons active" matTooltipPosition="above" mat-raised-button
           matTooltip="{{Amenities.Name}}">
           wifi
-        </i>
-        <i class="material-icons" matTooltipPosition="above" mat-raised-button matTooltip="Camera">
-          camera
         </i>
         <!--<i class="material-icons active" matTooltipPosition="above" mat-raised-button matTooltip="Commute">
           commute
@@ -38,9 +35,9 @@
       </h5>
 
       <div class="d-flex justify-content-between">
-        <h4 class="card-title mb-0">{{Hotel.HotelName}} </h4>
-        <h4 class="mb-0 pipe">|</h4>
-        <h4 class="mb-0 rateing">{{Hotel.Rating}}/5</h4>
+        <h4 class="card-title mb-0" matTooltipPosition="above" mat-raised-button matTooltip="{{Hotel.HotelName}}">{{ (Hotel.HotelName.length >= 16) ? (Hotel.HotelName | slice:0:15)+'...' : (Hotel.HotelName) }}</h4>
+        <!-- <h4 class="mb-0 pipe">|</h4> -->
+        <h4 class="mb-0 rating {{Hotel.Rating}}">{{Hotel.Rating}}/5</h4>
 
       </div>
       <h5 class="d-flex  align-items-center">
@@ -61,7 +58,12 @@
         </i>
       </h5>
 
-      <p class="mb-1 card-text">{{Hotel.FullAddress }}</p>
+      <p class="mb-1 card-text">
+        <span class="location">
+          <i class="material-icons pr-1">
+            place
+          </i>
+        </span> {{Hotel.FullAddress }}</p>
       <p class="mb-2 card-text">For 1 Night :
         <span>{{Hotel.Currency}} {{Hotel.StartAmount}}</span>
       </p>
@@ -185,7 +187,7 @@
 
 <div mdbModal #hotelDetails="mdb-modal" class="modal fade" id="hotel_details" tabindex="-1" role="dialog" aria-labelledby="hotel_details"
   aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
 
       <div class="modal-header border-bottom-0">

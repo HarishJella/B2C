@@ -3,11 +3,13 @@
 .Hotel-Template {
   .cardc {
     border-radius: 10px;
+    border-radius: 4px;
     box-shadow: none;
     transition: all 0.5s ease-in-out;
     border: 1px solid rgba(128, 128, 128, 0.3);
     &:hover {
       box-shadow: -6px -5px 5px 0 rgba(0, 0, 0, 0.16), 6px 5px 10px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
       transition: all 0.5s ease-in-out;
     }
     .img_pad {
@@ -15,40 +17,63 @@
     }
     img {
       border-radius: 10px;
+      border-radius: 4px;
       height: 200px;
       width: 302px;
     }
     .cardbody {
       padding-top: 0px;
+      .amenities {
+        h5 {
+          min-height: 14px;
+        }
+      }
       h5 {
         i {
           color: #cdcccd;
-          font-size: 18px;
+          font-size: 14px;
           &.active {
             color: #0776bc;
           }
         }
       }
       h4 {
-        font-size: 18px;
+        font-size: 16px;
         font-family: $font_family;
-        color: rgb(0, 0, 0);
-        font-weight: bold;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 700;
         line-height: 1.778;
       }
       .pipe {
         color: #ccc;
       }
-      .rateing {
+      .rating {
         color: #76a70a;
+        &.0,
+        &.1,
+        &.2 {
+          color: red;
+        }
+        &.3 {
+          color: yellow;
+        }
+        &.4,
+        &.5 {
+          color: #76a70a;
+        }
       }
       p {
         span {
-          font-size: 18px;
+          font-size: 16px;
           font-family: $font_family;
-          color: rgb(0, 0, 0);
-          font-weight: bold;
+          color: #1f3c4a;
+          font-weight: 700;
           line-height: 1.778;
+          &.location {
+            i {
+              font-size: 1rem;
+            }
+          }
         }
       }
       button {
