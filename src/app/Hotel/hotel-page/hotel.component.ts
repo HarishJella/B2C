@@ -21,7 +21,7 @@ import { hotelInterface, HotelServiceService } from '../hotel-service/hotel-serv
 export class HotelComponent implements OnInit {
   stickyTop: string = "sticky-top";
   public passengers_state;
-  HotelDetails: hotelInterface[];
+  HotelDetails: any;
   error: any;
   showHotelLoader: boolean = true;
 
