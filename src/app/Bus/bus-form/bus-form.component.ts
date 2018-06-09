@@ -62,5 +62,4 @@ export class BusFormComponent implements OnInit {
   }
   col0: string;
   col2: string;
-
 }

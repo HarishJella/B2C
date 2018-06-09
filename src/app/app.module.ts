@@ -35,6 +35,8 @@ import { hotelModifySearch } from './Hotel/hotel.modify.component';
 import { busModifySearch } from './Bus/bus.modify.component';
 import { ExampleComponent } from './example/example.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CruiseComponent } from './cruise/cruise.component';
+import { BooComponent } from './cruise/boo/boo.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { HttpClientModule } from '@angular/common/http';
     BusFormComponent,
     hotelModifySearch,
     busModifySearch,
-    ExampleComponent
+    ExampleComponent,
+    CruiseComponent,
+    BooComponent
 
   ],
   imports: [
