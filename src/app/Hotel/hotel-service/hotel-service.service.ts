@@ -34,15 +34,19 @@ export class HotelServiceService {
 
 
 
+
+
   // Post Request -> header
   private httpOptions = {
     headers: new HttpHeaders({
 
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Methods': 'POST'
+      // 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT',
+      // 'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept, Authorization',
       //'Authorization': 'basic QWRtaW46QWRtaW4=',
       //'Accept-Language': 'en-US',
-      //'Access-Control-Allow-Origin': '*' //t
+      // 'Access-Control-Allow-Origin': '*', //t
+      // 'Access-Control-Allow-Credentials': 'true',
     })
   };
 
@@ -85,16 +89,14 @@ export class HotelServiceService {
 
 
 
-  HotelUrl: string = 'http://localhost:13161/api/HotelSearch';
+  HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
   getHotelDeatils(callback) {
-    //return this.http.post('http://localhost:13161/api/HotelSearch', this.requestBody,);
-    return this.http.post(this.HotelUrl, this.requestBody).subscribe(data => {
+    return this.http.post(this.HotelUrl, this.requestBody, this.httpOptions).subscribe(data => {
       callback(data);
     },
       err => {
         console.log(err);
       });
   }
-
 
 }

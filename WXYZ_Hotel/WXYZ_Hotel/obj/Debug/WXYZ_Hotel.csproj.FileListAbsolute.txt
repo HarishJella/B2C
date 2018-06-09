@@ -257,4 +257,3 @@ C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\System.Web.Http.Cors.xml
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\System.Web.Http.WebHost.xml
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.dll
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.pdb
-C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.csprojResolveAssemblyReference.cache
