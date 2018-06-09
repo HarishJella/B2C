@@ -249,5 +249,9 @@
   z-index: 2;
 }
 .mat-datepicker-content{   
-   z-index: 1200 !important;
-  }
+  z-index: 1200 !important;
+ }
+ 
+ .cdk-overlay-container { 
+  z-index: 1200; 
+}

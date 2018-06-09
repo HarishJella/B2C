@@ -28,4 +28,5 @@ export class BusTemplateComponent implements OnInit {
   bus_inf() {
     this.droppingTab_active = "mat-tab-label-active";
   }
+  
 }
