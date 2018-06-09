@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ FlightTemplateComponent } from '../flight-template/flight-template.component';
 
 @Component({
   selector: 'app-flightbooking',
