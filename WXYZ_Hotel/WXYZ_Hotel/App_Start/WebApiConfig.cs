@@ -12,7 +12,7 @@ namespace WXYZ_Hotel
         {
 
             // New code
-            //config.EnableCors();
+            config.EnableCors();
             // Web API configuration and services
 
             config.MessageHandlers.Add(new CustomDelegate());

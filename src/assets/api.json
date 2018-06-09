@@ -16,7 +16,8 @@
     "MapLink": "",
     "Description": "Other amenities/services: Room service, Dry cleaning, Baby sitting, Conference facilities, Safe .Important place or monument close to the hotel: in the heart of the city. ",
     "HotelImages": null,
-    "Amenities": [{
+    "Amenities": [
+      {
         "ID": "1",
         "Name": "Central Location"
       },

@@ -44,3 +44,6 @@ private handleError(error: HttpErrorResponse) {
 
 cors enablelling
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api
+
+
+https://coursesweb.net/javascript/convert-xml-json-javascript_s2#x2i
