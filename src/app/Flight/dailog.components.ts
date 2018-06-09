@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { AnimationQueryMetadata } from '@angular/animations';
 
@@ -8,11 +8,16 @@ import { AnimationQueryMetadata } from '@angular/animations';
     templateUrl: 'dailog.component.html',
 })
 export class modifySearchComponent {
+    @Output() public stickyTopEvent = new EventEmitter();
     constructor(public dialogRef: MatDialogRef<modifySearchComponent>) {
         dialogRef.disableClose = true;
+        // dialogRef.afterClosed().subscribe(result => {
+        //     this.stickyTopEvent.emit('sticky-top');
+        // });
+
+
+
     }
-    public closeDailog() {
-        this.dialogRef.close();
-        console.log("success");
-    }
+
+
 }

@@ -24,12 +24,12 @@
       </div>
       <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
         <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
-          matTooltip="Modify Results" matTooltipPosition="above"  matTooltip="Modify Search">Modify Search</button>
+          matTooltip="Modify Results" matTooltipPosition="above" matTooltip="Modify Search">Modify Search</button>
       </div>
     </div>
     <div class="col-12 px-0 search_results">
 
-      <div class="col-1 px-0 filter_div">
+      <div class="col-1 px-0 filter_div {{stickyTop}}">
         <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
           <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)"
             matTooltipPosition="above" mat-raised-button matTooltip="Price Filter">
@@ -51,7 +51,7 @@
             matTooltipPosition="above" mat-raised-button matTooltip="Property Filter">
         </div>
       </div>
-      <div class="col-2 filter_section {{priceState}}">
+      <div class="col-2 filter_section {{priceState}} {{stickyTop}}">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -66,7 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 filter_section {{amenitiesState}}">
+      <div class="col-2 filter_section {{amenitiesState}} {{stickyTop}}">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 filter_section {{locationState}}">
+      <div class="col-2 filter_section {{locationState}} {{stickyTop}}">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 filter_section {{ratingState}}">
+      <div class="col-2 filter_section {{ratingState}} {{stickyTop}}">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -122,7 +122,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 filter_section {{propertyTypeState}}">
+      <div class="col-2 filter_section {{propertyTypeState}} {{stickyTop}}">
         <div class="content py-3">
           <h1>Filter Section</h1>
           <hr>
@@ -147,7 +147,7 @@
       </div>
 
       <div class="{{dynamicClass}} px-0 results_div">
-        <div class="col-12 px-0 d-flex justify-content-center align-items-center Header">
+        <div class="col-12 px-0 d-flex justify-content-center align-items-center Header {{stickyTop}}">
 
           <div class="col-0 d-flex flex-column justify-content-center align-items-center item ">
             <p class="mb-0"></p>
@@ -180,26 +180,11 @@
           </i>
         </div>
         <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map"></app-hotel-template>
-
-
-
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of HotelDetails | slice:0:20,let i of index"
+            [Hotel]="Hotel"></app-hotel-template>
+          <div *ngIf="showHotelLoader">
+            Loading
+          </div>
 
         </div>
 
