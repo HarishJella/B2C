@@ -10,6 +10,7 @@ import { Hotel, HotelServiceService } from '../hotel-service/hotel-service.servi
 
 
 
+let inArray = require('in-array');
 
 @Component({
   selector: 'app-hotel',
@@ -42952,21 +42953,20 @@ export class HotelComponent implements OnInit {
   showHotelDetails() {
     this.HotelData.getHotelDeatils(
       data => {
-        this.HotelDetails = JSON.parse(data.response);
-        this.HotelDetailsOriginal = JSON.parse(data.response);
+        this.HotelDetails = data;
+        this.HotelDetailsOriginal = data;
 
         this.showHotelLoader = false;
       }
 
       // success path
     );
-
   }
 
   filterBy(filter: string) {
     switch (filter) {
       case '1':
-      console.log(event.target);
+        console.log(event.target);
         this.HotelDetails = this.HotelDetails.filter(
           data => {
             return data.Rating.includes('1');
