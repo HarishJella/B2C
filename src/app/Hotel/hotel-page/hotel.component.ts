@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
 import { Hotel, HotelServiceService } from '../hotel-service/hotel-service.service';
+import { MatCheckbox } from '@angular/material';
 
 // import { hotelInterface } from '../hotel.interface';
 
@@ -24,6 +25,7 @@ export class HotelComponent implements OnInit {
   public passengers_state;
   HotelDetails: any;
   HotelDetailsOriginal: any;
+  filterHotelDetails = [];
   error: any;
   showHotelLoader: boolean = true;
 
@@ -42953,61 +42955,38 @@ export class HotelComponent implements OnInit {
   showHotelDetails() {
     this.HotelData.getHotelDeatils(
       data => {
-        this.HotelDetails = data;
-        this.HotelDetailsOriginal = data;
-
+        this.HotelDetails = JSON.parse(data.response);
+        this.HotelDetailsOriginal = this.HotelDetails;
         this.showHotelLoader = false;
       }
-
       // success path
     );
   }
 
-  filterBy(filter: string) {
-    switch (filter) {
-      case '1':
-        console.log(event.target);
-        this.HotelDetails = this.HotelDetails.filter(
-          data => {
-            return data.Rating.includes('1');
 
-          }
-        )
-        break;
-      case '2':
-        this.HotelDetails = this.HotelDetails.filter(
-          data => {
-            return data.Rating.includes('2');
+  @ViewChild('myCheckbox') private myCheckbox: MatCheckbox;
+  filterHotel(filter: string) {
+    console.log(this.myCheckbox.checked);
+    if (this.myCheckbox.checked === true) {
 
-          }
-        )
-        break;
-      case '3':
-        this.HotelDetails = this.HotelDetails.filter(
-          data => {
-            return data.Rating.includes('3');
-
-          }
-        )
-        break;
-      case '4':
-        this.HotelDetails = this.HotelDetails.filter(
-          data => {
-            return data.Rating.includes('4');
-          }
-        )
-        break;
-      case '5':
-        this.HotelDetails = this.HotelDetails.filter(
-          data => {
-            return data.Rating.includes('5');
-
-          }
-        )
-        break;
-      default:
-        this.HotelDetails = this.HotelDetailsOriginal;
-
+      console.log('this.filterHotelDetails');
+      console.log(this.filterHotelDetails);
+      this.HotelDetailsOriginal = this.HotelDetails;
+      this.filterHotelDetails.push.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+        data => {
+          return data.Rating.includes(filter);
+        }
+      )))
+      console.log('this.filterHotelDetails push');
+      console.log(this.filterHotelDetails);
+    } if (this.myCheckbox.checked === false) {
+      this.filterHotelDetails.pop.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+        data => {
+          return data.Rating.includes(filter);
+        }
+      )))
+      console.log('this.filterHotelDetails pop');
+      console.log(this.filterHotelDetails);
     }
   }
 
