@@ -114,11 +114,11 @@
           <hr>
           <div>
             <h2>User Rating</h2>
-            <mat-checkbox>1</mat-checkbox>
-            <mat-checkbox>2</mat-checkbox>
-            <mat-checkbox>3</mat-checkbox>
-            <mat-checkbox>4</mat-checkbox>
-            <mat-checkbox>5</mat-checkbox>
+            <mat-checkbox (click)="filterBy('1')">1</mat-checkbox>
+            <mat-checkbox (click)="filterBy('2')">2</mat-checkbox>
+            <mat-checkbox (click)="filterBy('3')">3</mat-checkbox>
+            <mat-checkbox (click)="filterBy('4')">4</mat-checkbox>
+            <mat-checkbox (click)="filterBy('5')">5</mat-checkbox>
           </div>
         </div>
       </div>
@@ -180,8 +180,6 @@
           </i>
         </div>
         <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
-
-        
 
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of HotelDetails | slice:0:20,let i of index"
             [Hotel]="Hotel"></app-hotel-template>
