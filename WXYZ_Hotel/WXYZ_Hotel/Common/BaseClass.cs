@@ -177,7 +177,9 @@ namespace WXYZ_Hotel.Common
                     ref strErrorMsg).Tables[0].Rows[0][0].ToString());
                 return true;
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 return false;
             }
@@ -600,7 +602,9 @@ namespace WXYZ_Hotel.Common
                 cmd.ExecuteNonQuery();
                 connection.Close();
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
 
             }
@@ -714,7 +718,9 @@ namespace WXYZ_Hotel.Common
                 parameters.Add("SearchResponse", pstrXml);
                 parameters.Add("CacheID", DbType.Int32);
             }
+#pragma warning disable CS0168 // The variable 'exception' is declared but never used
             catch (Exception exception)
+#pragma warning restore CS0168 // The variable 'exception' is declared but never used
             {
             }
         }

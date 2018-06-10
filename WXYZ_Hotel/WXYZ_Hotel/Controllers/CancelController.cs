@@ -145,7 +145,9 @@ namespace WXYZ_Hotel.Controllers
                                          SQLAccess.Insert_Action_LogDetails("HOTEL", CancelRQ.AgentDetails, "E", GetType().Name, "CancelHotel", LogData.ToString(), "", "");
                                          #endregion
                                         return _CancelRS;
+#pragma warning disable CS0162 // Unreachable code detected
                                         break;
+#pragma warning restore CS0162 // Unreachable code detected
                                     case "TRM":
                                         var objtrm = new UAPIHotel();
                                         objtrm.UserName = objProp.Username;
@@ -160,7 +162,9 @@ namespace WXYZ_Hotel.Controllers
                                          SQLAccess.Insert_Action_LogDetails("HOTEL", CancelRQ.AgentDetails, "E", GetType().Name, "CancelHotel", LogData.ToString(), "", "");
                                          #endregion
                                         return _CancelRS;
+#pragma warning disable CS0162 // Unreachable code detected
                                         break;
+#pragma warning restore CS0162 // Unreachable code detected
                                     case "SPECIALTOURS":
                                         var objSpecial = new SPTours();
                                         objSpecial.SuppUserName = objProp.Username;
@@ -171,7 +175,9 @@ namespace WXYZ_Hotel.Controllers
                                          SQLAccess.Insert_Action_LogDetails("HOTEL", CancelRQ.AgentDetails, "E", GetType().Name, "CancelHotel", LogData.ToString(), "", "");
                                          #endregion
                                         return _CancelRS;
+#pragma warning disable CS0162 // Unreachable code detected
                                         break;
+#pragma warning restore CS0162 // Unreachable code detected
                                 }
                                
                             }

@@ -42951,7 +42951,10 @@ export class HotelComponent implements OnInit {
   showHotelDetails() {
     this.HotelData.getHotelDeatils(
       data => {
-        this.HotelDetails = JSON.parse(data.response);
+        // this.HotelDetails = JSON.parse(data.response);
+        this.HotelDetails = data;
+        console.log(data);
+        // console.log(data.response);
         this.showHotelLoader = false;
       }
       // success path

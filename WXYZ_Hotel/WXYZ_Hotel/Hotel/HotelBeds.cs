@@ -1007,7 +1007,9 @@ namespace WXYZ_Hotel.Hotel
             xmlRequest.Append("</Service></ServiceAddRQ>");
             var request = xmlRequest.ToString();
             string response = "";
+#pragma warning disable CS0219 // The variable 'result' is assigned but its value is never used
             bool result = false;//SendHttpWebRequest("POST", HotelbedsUrl, request, ref response, ref response);
+#pragma warning restore CS0219 // The variable 'result' is assigned but its value is never used
             return response;
         }
         #endregion
@@ -1067,7 +1069,9 @@ namespace WXYZ_Hotel.Hotel
 
         public bool ConfirmHotelResponse(string xmlRes, ConfirmHotelRQ ConfirmRQ, ref ConfirmHotelRS _ConfirmRS)
         {
+#pragma warning disable CS0219 // The variable 'success' is assigned but its value is never used
             var success = "UnSuccess";
+#pragma warning restore CS0219 // The variable 'success' is assigned but its value is never used
             string response = string.Empty;
             var helper = new HotelHelper();
             BookingRS _BookingRS = new BookingRS();

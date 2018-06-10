@@ -67,7 +67,7 @@ export class HotelServiceService {
       "TerminalType": "W",
       "CurrencyCode": "MYR"
     },
-    "Vendor": "HOTELBED",
+    "Vendor": "SPECIALTOURS",
     "Destination": "Athens, Greece",
     "CheckIn": "18-07-2018",
     "CheckOut": "21-07-2018",
@@ -89,9 +89,10 @@ export class HotelServiceService {
 
 
 
-  HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
+  // HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
+  HotelUrl: string = 'assets/api.json';
   getHotelDeatils(callback) {
-    return this.http.post(this.HotelUrl, this.requestBody, this.httpOptions).subscribe(data => {
+    return this.http.get(this.HotelUrl).subscribe(data => {
       callback(data);
     },
       err => {

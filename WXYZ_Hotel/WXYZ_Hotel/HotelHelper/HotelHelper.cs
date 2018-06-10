@@ -92,7 +92,9 @@ namespace WXYZ_HotelService
                     return City;
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 data = XDocument.Load(System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/WxyzBusCities.xml"));
                 System.Web.Hosting.HostingEnvironment.Cache["Autocomplete"] = data;
@@ -166,13 +168,17 @@ namespace WXYZ_HotelService
                         XmlSerializerNamespaces ns = new XmlSerializerNamespaces(); ns.Add("", "");
                         returnedXmlClass = (T)new XmlSerializer(typeof(T), "").Deserialize(reader);
                     }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                     catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                     {
                         // String passed is not XML, simply return defaultXmlClass
                     }
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
             }
 
@@ -250,7 +256,9 @@ namespace WXYZ_HotelService
                 filteredDocument = new XmlDocument();
                 filteredDocument.LoadXml(filteredResponse.OuterXml);
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 return "";
             }
@@ -310,7 +318,9 @@ namespace WXYZ_HotelService
                 path += filename;
                 File.WriteAllText(path, xml);
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
 
             }
@@ -331,7 +341,9 @@ namespace WXYZ_HotelService
                 }
                 File.WriteAllText(path, xml);
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
 
             }
@@ -375,7 +387,9 @@ namespace WXYZ_HotelService
                 emailClient.Send(message);
                 return true;
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 return false;
             }

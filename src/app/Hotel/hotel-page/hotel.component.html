@@ -181,10 +181,7 @@
         </div>
         <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
 
-          <div>
-              <input (keyup)="search($event.target.value)" id="name" placeholder="Search"/>
-            <button (click)="search(hotel.value)">search</button>
-          </div>
+        
 
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of HotelDetails | slice:0:20,let i of index"
             [Hotel]="Hotel"></app-hotel-template>

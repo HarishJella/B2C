@@ -242,6 +242,7 @@ F:\WXYZ_Hotel\WXYZ_Hotel\bin\System.Web.Http.WebHost.xml
 F:\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.csprojResolveAssemblyReference.cache
 F:\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.dll
 F:\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.pdb
+C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\WXYZ_Hotel.dll.config
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\WXYZ_Hotel.dll
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\WXYZ_Hotel.pdb
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\Newtonsoft.Json.dll
@@ -255,5 +256,6 @@ C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\System.Net.Http.Formatting.xml
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\System.Web.Http.xml
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\System.Web.Http.Cors.xml
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\bin\System.Web.Http.WebHost.xml
+C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.csprojResolveAssemblyReference.cache
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.dll
 C:\xampp\htdocs\B2C\WXYZ_Hotel\WXYZ_Hotel\obj\Debug\WXYZ_Hotel.pdb

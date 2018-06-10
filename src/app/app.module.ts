@@ -33,7 +33,6 @@ import { CancellationPolicyComponent } from './Staticpages/cancellation-policy/c
 import { BusFormComponent } from './Bus/bus-form/bus-form.component';
 import { hotelModifySearch } from './Hotel/hotel.modify.component';
 import { busModifySearch } from './Bus/bus.modify.component';
-import { ExampleComponent } from './example/example.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -65,9 +64,7 @@ import { HttpClientModule } from '@angular/common/http';
     CancellationPolicyComponent,
     BusFormComponent,
     hotelModifySearch,
-    busModifySearch,
-    ExampleComponent
-
+    busModifySearch
   ],
   imports: [
     BrowserModule,
