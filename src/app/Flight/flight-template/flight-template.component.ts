@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Input } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
@@ -11,6 +11,7 @@ export class FlightTemplateComponent implements OnInit {
 
   col0: string = 'col-md-0';
   col2: string = 'col-md-2';
+  @Input() Flight;
 
   more_flights_show: string = 'slideOutUp d-none';
 

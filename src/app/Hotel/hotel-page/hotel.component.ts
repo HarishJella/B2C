@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
-import { hotelInterface, HotelServiceService } from '../hotel-service/hotel-service.service';
+import { Hotel, HotelServiceService } from '../hotel-service/hotel-service.service';
 
 // import { hotelInterface } from '../hotel.interface';
 
@@ -22,6 +22,7 @@ export class HotelComponent implements OnInit {
   stickyTop: string = "sticky-top";
   public passengers_state;
   HotelDetails: any;
+  HotelDetailsOriginal: any;
   error: any;
   showHotelLoader: boolean = true;
 
@@ -42952,11 +42953,62 @@ export class HotelComponent implements OnInit {
     this.HotelData.getHotelDeatils(
       data => {
         this.HotelDetails = JSON.parse(data.response);
+        this.HotelDetailsOriginal = JSON.parse(data.response);
+
         this.showHotelLoader = false;
       }
+
       // success path
     );
 
+  }
+
+  filterBy(filter: string) {
+    switch (filter) {
+      case '1':
+      console.log(event.target);
+        this.HotelDetails = this.HotelDetails.filter(
+          data => {
+            return data.Rating.includes('1');
+
+          }
+        )
+        break;
+      case '2':
+        this.HotelDetails = this.HotelDetails.filter(
+          data => {
+            return data.Rating.includes('2');
+
+          }
+        )
+        break;
+      case '3':
+        this.HotelDetails = this.HotelDetails.filter(
+          data => {
+            return data.Rating.includes('3');
+
+          }
+        )
+        break;
+      case '4':
+        this.HotelDetails = this.HotelDetails.filter(
+          data => {
+            return data.Rating.includes('4');
+          }
+        )
+        break;
+      case '5':
+        this.HotelDetails = this.HotelDetails.filter(
+          data => {
+            return data.Rating.includes('5');
+
+          }
+        )
+        break;
+      default:
+        this.HotelDetails = this.HotelDetailsOriginal;
+
+    }
   }
 
   openDialog() {
