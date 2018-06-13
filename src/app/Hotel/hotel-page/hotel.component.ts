@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
 import { Hotel, HotelServiceService } from '../hotel-service/hotel-service.service';
 import { MatCheckbox } from '@angular/material';
+
 
 // import { hotelInterface } from '../hotel.interface';
 
@@ -11,7 +12,7 @@ import { MatCheckbox } from '@angular/material';
 
 
 
-let inArray = require('in-array');
+// let inArray = require('in-array');
 
 @Component({
   selector: 'app-hotel',
@@ -28,6 +29,7 @@ export class HotelComponent implements OnInit {
   filterHotelDetails = [];
   error: any;
   showHotelLoader: boolean = true;
+  @Input('hotelObject') public hotelObject: {};
 
   hotelCities: object = {
     "root": {
@@ -42955,17 +42957,21 @@ export class HotelComponent implements OnInit {
   showHotelDetails() {
     this.HotelData.getHotelDeatils(
       data => {
-        this.HotelDetails = JSON.parse(data.response);
+        this.HotelDetails = data;
         this.HotelDetailsOriginal = this.HotelDetails;
         this.showHotelLoader = false;
       }
       // success path
     );
   }
-
+  if(hotelObject) {
+    alert('emitted');
+    console.log(this.hotelObject);
+  }
 
   @ViewChild('myCheckbox') private myCheckbox: MatCheckbox;
   filterHotel(filter: string) {
+
     console.log(this.myCheckbox.checked);
     if (this.myCheckbox.checked === true) {
 

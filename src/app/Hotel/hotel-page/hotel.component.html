@@ -180,9 +180,9 @@
           </i>
         </div>
         <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
-
+          {{hotelObject}}
           <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of filterHotelDetails,let i of index"
-            [Hotel]="Hotel"></app-hotel-template>
+            [Hotel]="Hotel" (hotelObject)="message=$event"></app-hotel-template>
           <div *ngIf="showHotelLoader">
             Loading
           </div>
