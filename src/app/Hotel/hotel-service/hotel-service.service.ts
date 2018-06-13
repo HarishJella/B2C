@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpResponse, HttpHeaders } from '@angul
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { RequestOptions, Request, RequestMethod } from '@angular/http';
+
 // import 'rxjs/add/operator/map';
 // import { hotelInterface } from '../hotel.interface';
 
@@ -93,6 +94,11 @@ export interface HBCancellationPolicy {
 export class HotelServiceService {
 
 
+
+  constructor(private http: HttpClient) { }
+
+
+
   // Post Request -> header
   private httpOptions = {
     headers: new HttpHeaders({
@@ -142,13 +148,22 @@ export class HotelServiceService {
     "ClientCountryId": "27"
   };
 
-  constructor(private http: HttpClient) { }
 
 
 
   HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
   getHotelDeatils(callback) {
     return this.http.post(this.HotelUrl, this.requestBody, this.httpOptions).subscribe(data => {
+      callback(data);
+    },
+      err => {
+        console.log(err);
+      });
+  }
+
+  CityUrl: string = 'assets/Hotel_City.json';
+  getHotelCities(callback) {
+    return this.http.get(this.CityUrl).subscribe(data => {
       callback(data);
     },
       err => {

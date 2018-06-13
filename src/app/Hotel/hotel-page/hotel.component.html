@@ -118,7 +118,7 @@
             <mat-checkbox (click)="filterHotel('2')">2</mat-checkbox>
             <mat-checkbox (click)="filterHotel('3')">3</mat-checkbox>
             <mat-checkbox (click)="filterHotel('4')">4</mat-checkbox>
-            <mat-checkbox #myCheckbox (click)="filterHotel('5')">5</mat-checkbox>
+            <mat-checkbox id="rating5" (click)="filterHotel('5')">5</mat-checkbox>
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@
         </div>
         <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
 
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of filterHotelDetails,let i of index"
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of HotelDetails,let i of index"
             [Hotel]="Hotel"></app-hotel-template>
           <div *ngIf="showHotelLoader">
             Loading
