@@ -78,7 +78,6 @@ export class HotelFormComponent implements OnInit {
 
   // Hotel Search
   // Search input fields two way data binding
-
   city: string = "";
   checkInDate: string = "";
   checkOutDate: string = "";
