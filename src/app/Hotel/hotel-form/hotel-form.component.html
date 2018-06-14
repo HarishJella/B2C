@@ -5,54 +5,52 @@
       <input type="autocomplete" placeholder="Select City" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
 
       <mat-autocomplete #auto="matAutocomplete" class="htlat">
-          <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="htl_opt">
-              <div class="d-flex flex-column">
-                  <div class="d-flex align-items-center justify-content-between ">
-                    <div class="d-flex align-items-center justify-content-between fly_city">
-                       <h4 class=" pr-2 mb-0">{{ option }}</h4>
-                       <span>(BLR)</span>
-                    </div>
-                    <div>
-                    <!-- <img src="/assets/images/india.jpg"/> -->
-                   </div>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-between ">
-                    <div class="airport">
-                      <p class="mb-0">Karanataka ,<span>India</span></p>
-                    </div> 
-                  </div>
-                  </div>
-          </mat-option>
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="htl_opt">
+          <div class="d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between ">
+              <div class="d-flex align-items-center justify-content-between fly_city">
+                <h4 class=" pr-2 mb-0">{{ option }}</h4>
+                <span>(BLR)</span>
+              </div>
+              <div>
+                <!-- <img src="/assets/images/india.jpg"/> -->
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between ">
+              <div class="airport">
+                <p class="mb-0">Karanataka ,
+                  <span>India</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </mat-option>
       </mat-autocomplete>
     </mat-form-field>
-
   </div>
-
-
 
   <div class="md-form col-md-2 input-group">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Check In">
+      <input matInput [matDatepicker]="picker" (focus)="picker.open()" placeholder="Check In">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </div>
   <div class="md-form col-md-2 input-group">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker2" placeholder="Check Out">
+      <input matInput [matDatepicker]="picker2" (focus)="picker2.open()" placeholder="Check Out">
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
       <mat-datepicker #picker2></mat-datepicker>
     </mat-form-field>
   </div>
   <div class="md-form col-md-2 input-group">
-
-      <mat-form-field>
-          <mat-select placeholder="No of Rooms">
-            <mat-option value="option">1</mat-option>
-            <mat-option value="option">2</mat-option>
-            <mat-option value="option">3</mat-option>
-          </mat-select>
-        </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="No of Rooms">
+        <mat-option value="option">1</mat-option>
+        <mat-option value="option">2</mat-option>
+        <mat-option value="option">3</mat-option>
+      </mat-select>
+    </mat-form-field>
 
   </div>
   <div class="md-form col-md-2 input-group">
@@ -87,4 +85,3 @@
     <button type="button" class="btn mb-0 w-100 btn-rounded waves-effect primary_btn" mdbWavesEffect> Search</button>
   </div>
 </div>
-

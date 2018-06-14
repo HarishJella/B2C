@@ -68,7 +68,7 @@
 
   <div class="md-form col-2 input-group">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Onward Date">
+      <input matInput [matDatepicker]="picker"(focus)="picker.open()" placeholder="Onward Date">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -76,7 +76,7 @@
 
   <div class="md-form col-2 input-group">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker2" placeholder="Return Date">
+      <input matInput [matDatepicker]="picker2" (focus)="picker2.open()" placeholder="Return Date">
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
       <mat-datepicker #picker2></mat-datepicker>
     </mat-form-field>

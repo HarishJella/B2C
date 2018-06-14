@@ -32,15 +32,11 @@ export interface hotelInterface {
 export class HotelServiceService {
 
 
-
-
-
-
   // Post Request -> header
   private httpOptions = {
     headers: new HttpHeaders({
 
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
       // 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT',
       // 'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept, Authorization',
       //'Authorization': 'basic QWRtaW46QWRtaW4=',
@@ -83,15 +79,16 @@ export class HotelServiceService {
     "SearchID": 0,
     "countryCode": "IN",
     "ClientCountryId": "27"
-  };
+  }
 
   constructor(private http: HttpClient) { }
 
 
 
-  HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
+  // HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
+  HotelUrl: string = 'http://localhost:13161/api/HotelSearch';
   getHotelDeatils(callback) {
-    return this.http.post(this.HotelUrl, this.requestBody, this.httpOptions).subscribe(data => {
+    return this.http.post(this.HotelUrl, this.requestBody).subscribe(data => {
       callback(data);
     },
       err => {

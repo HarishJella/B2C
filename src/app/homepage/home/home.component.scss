@@ -84,7 +84,7 @@
         .md-form input[type=autocomplete]:focus:not([readonly]) {
           box-shadow: none;
           border-bottom: none;
-        } 
+        }
       }
       .advance_search {
         cursor: pointer;
@@ -116,7 +116,6 @@
         height: 15px;
         width: 15px;
       }
-   
     }
     .mat-tab-header {
       .mat-tab-label-container {
@@ -185,89 +184,85 @@
   }
 }
 
-
-
-.wide-md {
-  background-color: #fff;
-  h2 {
-    text-align: left;
-    @include heading;
+//feature
+.feature {
+  h4 {
+    font-weight: bold;
   }
-  p {
-    font-size: 14px;
-    text-align: justify;
-    font-weight: 400;
-    line-height: 30px;
-    font-family: $font_family;
-  }
-}
-
-.wide-md-a {
-  background-image: linear-gradient(to right, #0776bc, #0095c8, #00afad, #00c277, #9ecb3b);
-  min-height: 150px;
-  color: #fff;
-  text-align: center;
-  padding: 30px;
-  font-family: $font_family;
-}
-
-.wide-md-b {
-  margin-bottom: 30px;
-  .row {
-    margin-top: 10px;
-  }
-
-  h2 {
-    @include heading;
-    &::after {
-      content: "";
-     margin:auto;
-  }
-}
-p{
-  font-size: 14px;
-  font-weight: 400;
-}
-  img {
-    width: 100%;
-  }
-  .mat-card {
-    padding: 5px;
-    border-radius: 50%;
-    &:hover{
-    }
-}
-}
-
-.fly_offer{
-  .view{
-    position: initial !important;
-  }
-  .offer{
-    position: absolute;
-    width: 110px;
-    height: 35px;
-    border-radius: 3px;
-    background-color: #ed1d78;
-    bottom: 140px;
-    color:#fff;
-    .span{
-      font-weight: lighter;
-      text-decoration-line: line-through;
-
-    }
-    p{
+  .card {
+    margin-bottom: 30px;
+    transition: all 0.5s ease-in-out;
+    h5 {
+      font-size: 14px;
       font-weight: bold;
-      font-size: 16px;
+    }
+    i {
+      font-size: 18px;
+    }
+    &:hover {
+      transition: all 0.5s ease-in-out;
+      transform: scale(1.1);
     }
   }
-
 }
 
-.deals{
+.section_tour {
+  background: #fff;
+  .tour {
+    .look {
+      h3 {
+        font-weight: 400;
+      }
+    }
+    .find {
+      @include button;
+      margin: auto;
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.vaction {
+  background-color: #fff;
+  button {
+    @include button;
+  }
+  
+}
+
+.trip_deals {
+  .card {
+    .img_card {
+      position: relative;
+      .overlay_img {
+        position: absolute;
+       .find{
+         display: none!important;
+       }
+      }
+      &:hover {
+        .overlay_img {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5098039215686274);
+        
+          .find {
+            @include button;
+            padding: .50rem 2.5rem;
+            margin: 100px auto;
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mob {
   background-color: #fff;
 }
-
-
-
-

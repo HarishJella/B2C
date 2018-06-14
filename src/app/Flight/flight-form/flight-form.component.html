@@ -82,16 +82,17 @@
       </mat-autocomplete>
     </mat-form-field>
   </div>
+
   <div class="md-form col-md-2 input-group">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Departure Date">
+      <input matInput [matDatepicker]="picker" (focus)="picker.open()" placeholder="Departure Date" >
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </div>
   <div class="md-form col-md-2 input-group">
     <mat-form-field>
-      <input matInput [matDatepicker]="picker2" placeholder="Return Date">
+      <input matInput [matDatepicker]="picker2" (focus)="picker2.open()" placeholder="Return Date">
       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
       <mat-datepicker #picker2></mat-datepicker>
     </mat-form-field>

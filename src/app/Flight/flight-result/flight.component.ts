@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ElementRef, Input } from '@angular/cor
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { modifySearchComponent } from '../dailog.components';
+import { FlightServiceService } from '../flight-service/flight-service.service';
 
 @Component({
   selector: 'app-flight',
@@ -11,11 +12,27 @@ import { modifySearchComponent } from '../dailog.components';
 export class FlightComponent implements OnInit {
 
   stickyTop: string = "sticky-top";
-  constructor(public el: ElementRef, public dialog: MatDialog) { }
+  FlightDetails: any;
+  constructor(public el: ElementRef, public dialog: MatDialog, private FlightData: FlightServiceService) { }
 
   ngOnInit() {
+    this.showFlightDetails();
   }
   public passengers_state;
+
+
+  showFlightDetails() {
+    this.FlightData.getflightdetails(
+      data => {
+        this.FlightDetails = data.FlightDetails[0];
+      
+      }
+      // success path
+    );
+
+  }
+
+
   openDialog() {
     const dialogRef = this.dialog.open(modifySearchComponent, {
       height: 'auto'

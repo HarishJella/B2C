@@ -33,10 +33,8 @@ import { CancellationPolicyComponent } from './Staticpages/cancellation-policy/c
 import { BusFormComponent } from './Bus/bus-form/bus-form.component';
 import { hotelModifySearch } from './Hotel/hotel.modify.component';
 import { busModifySearch } from './Bus/bus.modify.component';
-import { ExampleComponent } from './example/example.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CruiseComponent } from './cruise/cruise.component';
-import { BooComponent } from './cruise/boo/boo.component';
+
 
 @NgModule({
   declarations: [
@@ -68,11 +66,7 @@ import { BooComponent } from './cruise/boo/boo.component';
     BusFormComponent,
     hotelModifySearch,
     busModifySearch,
-    ExampleComponent,
-    CruiseComponent,
-    BooComponent
-
-  ],
+ ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
@@ -82,7 +76,6 @@ import { BooComponent } from './cruise/boo/boo.component';
     BrowserAnimationsModule,
     ComponentsModule,
     HttpClientModule
-
   ],
   entryComponents: [
     modifySearchComponent,

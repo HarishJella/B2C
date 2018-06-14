@@ -363,33 +363,8 @@
 
 
         <div class="result">
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
-          <app-flight-template></app-flight-template>
+          <app-flight-template *ngFor="let Flight of FlightDetails" [Flight]="Flight"></app-flight-template>
+
 
         </div>
 
