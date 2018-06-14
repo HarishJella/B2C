@@ -75,12 +75,20 @@ export class HotelFormComponent implements OnInit {
     )
   }
 
-  hotelSearch() {
-    if (this.options != null) {
-      alert(this.options);
-      this.router.navigateByUrl('/hotel');
-    }
 
+  // Hotel Search
+  // Search input fields two way data binding
+
+  city: string = "";
+  checkInDate: string = "";
+  checkOutDate: string = "";
+  hotelSearch() {
+    if (this.city != '' && this.checkInDate != '' && this.checkOutDate != '') {
+      console.log(this.city, this.checkInDate, this.checkOutDate);
+      this.router.navigateByUrl('/hotel');
+    } else {
+      alert('All Fields are mandatory');
+    }
   }
 
 }

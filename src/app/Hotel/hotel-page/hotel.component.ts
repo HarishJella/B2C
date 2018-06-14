@@ -27,7 +27,7 @@ export class HotelComponent implements OnInit {
   showHotelLoader: boolean = true;
   HotelDetailsLoop: string = 'HotelDetails';
   elementID;
- 
+
 
 
   // hotelCities = result4;
@@ -52,26 +52,23 @@ export class HotelComponent implements OnInit {
       // success path
     );
   }
-  if(hotelObject) {
-    alert('emitted');
-    console.log(this.hotelObject);
-  }
 
 
 
 
-  filterHotel(filter: string) {
-    var element = document.getElementById('rating' + filter + '-input').getAttribute("aria-checked");
+
+  filterHotel(e, filter: string) {
+    var target = e;
     this.HotelDetailsOriginal = this.HotelDetails;
-    console.log(element);
-    if (element == 'false') {
+    console.log(target);
+    if (target == 'false') {
       this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
         data => {
           return data.Rating.includes(filter);
         }
       )))
 
-    } if (element == 'true') {
+    } if (target == 'true') {
       for (var i = 0; i < this.filterHotelDetails.length; i++) {
         if (this.filterHotelDetails[i].Rating === filter) {
           this.filterHotelDetails.splice(i, 1);

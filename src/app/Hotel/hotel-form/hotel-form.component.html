@@ -1,90 +1,109 @@
 <div class="d-flex  justify-content-start align-items-center inputs">
-  <div class="md-form col-md-2 input-group">
+  <form class="d-flex  justify-content-start align-items-center" (submit)="hotelSearch()">
+    <div class="md-form col-md-2 input-group">
 
-    <mat-form-field class="example-full-width">
-      <input type="autocomplete" placeholder="Select City" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-form-field class="example-full-width">
+        <input name="city" [(ngModel)]="city" type="autocomplete" placeholder="Select City" aria-label="Number" matInput [formControl]="myControl"
+          [matAutocomplete]="auto">
 
-      <mat-autocomplete #auto="matAutocomplete" class="htlat">
+        <mat-autocomplete #auto="matAutocomplete" class="htlat">
           <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="htl_opt">
-              <div class="d-flex flex-column">
-                  <div class="d-flex align-items-center justify-content-between ">
-                    <div class="d-flex align-items-center justify-content-between fly_city">
-                       <h4 class=" pr-2 mb-0">{{ option }}</h4>
-                       <span>(BLR)</span>
-                    </div>
-                    <div>
-                    <!-- <img src="/assets/images/india.jpg"/> -->
-                   </div>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-between ">
-                    <div class="airport">
-                      <p class="mb-0">Karanataka ,<span>India</span></p>
-                    </div> 
-                  </div>
-                  </div>
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-between ">
+                <div class="d-flex align-items-center justify-content-between fly_city">
+                  <h4 class=" pr-2 mb-0">{{ option }}</h4>
+                  <span>(BLR)</span>
+                </div>
+                <div>
+                  <!-- <img src="/assets/images/india.jpg"/> -->
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-between ">
+                <div class="airport">
+                  <p class="mb-0">Karanataka ,
+                    <span>India</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
+        </mat-autocomplete>
+      </mat-form-field>
 
-  </div>
+    </div>
 
 
 
-  <div class="md-form col-md-2 input-group">
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Check In">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  </div>
-  <div class="md-form col-md-2 input-group">
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker2" placeholder="Check Out">
-      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-      <mat-datepicker #picker2></mat-datepicker>
-    </mat-form-field>
-  </div>
-  <div class="md-form col-md-2 input-group">
+    <div class="md-form col-md-2 input-group">
+      <mat-form-field>
+        <input name="checkInDate" [ngModel]="(checkInDate | date)" (ngModelChange)="checkInDate=$event" matInput [matDatepicker]="picker"
+          placeholder="Check In">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="md-form col-md-2 input-group">
+      <mat-form-field>
+        <input name="checkOutDate" [(ngModel)]="checkOutDate" matInput [matDatepicker]="picker2" placeholder="Check Out">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="md-form col-md-2 input-group">
 
       <mat-form-field>
-          <mat-select placeholder="No of Rooms">
-            <mat-option value="option">1</mat-option>
-            <mat-option value="option">2</mat-option>
-            <mat-option value="option">3</mat-option>
-          </mat-select>
-        </mat-form-field>
+        <mat-select placeholder="No of Rooms">
+          <mat-option value="option">1</mat-option>
+          <mat-option value="option">2</mat-option>
+          <mat-option value="option">3</mat-option>
+        </mat-select>
+      </mat-form-field>
 
-  </div>
-  <div class="md-form col-md-2 input-group">
-    <mat-form-field>
+    </div>
+    <div class="md-form col-md-2 input-group">
+      <mat-form-field>
 
-      <input (click)="passengers_class()" matInput placeholder="Input" value="Adult 1, Child 0">
+        <input (click)="passengers_class()" matInput placeholder="Input" value="Adult 1, Child 0">
 
-      <div class="animated {{passengers_state}} passengers">
-        <div class="col-12 d-flex flex-column p-3">
-          <!-- <h6>Class : Economy</h6>
+        <div class="animated {{passengers_state}} passengers">
+          <div class="col-12 d-flex flex-column p-3">
+            <!-- <h6>Class : Economy</h6>
           <h6>Adult 1,Child 2,Infant 3</h6> -->
-          <div class="d-flex justify-content-between align-items-center">
-            <p class="mb-0">Adult</p>
-            <div>
-              <button class="btn waves-effect" mdbWavesEffect>+</button>
-              <button class="btn waves-effect" mdbWavesEffect>-</button>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="mb-0">Adult</p>
+              <div>
+                <button class="btn waves-effect" mdbWavesEffect>+</button>
+                <button class="btn waves-effect" mdbWavesEffect>-</button>
+              </div>
             </div>
-          </div>
-          <div class="d-flex justify-content-between align-items-center pt-3">
-            <p class="mb-0">Child</p>
-            <div>
-              <button class="btn waves-effect" mdbWavesEffect>+</button>
-              <button class="btn waves-effect" mdbWavesEffect>-</button>
+            <div class="d-flex justify-content-between align-items-center pt-3">
+              <p class="mb-0">Child</p>
+              <div>
+                <button class="btn waves-effect" mdbWavesEffect>+</button>
+                <button class="btn waves-effect" mdbWavesEffect>-</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </mat-form-field>
+      </mat-form-field>
 
-  </div>
-  <div class="md-form col-2 input-group search">
-    <button type="button" class="btn mb-0 w-100 btn-rounded waves-effect primary_btn" mdbWavesEffect (click)="hotelSearch()"> Search</button>
-  </div>
+    </div>
+    <div class="md-form col-2 input-group search">
+      <button type="submit" value="submit" class="btn mb-0 w-100 btn-rounded waves-effect primary_btn" mdbWavesEffect>
+        Search</button>
+    </div>
+  </form>
 </div>
 
+
+<!-- our root app component
+import {Component, NgModule, Pipe, PipeTransform} from '@angular/core'
+import { FormsModule }      from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser'
+
+@Pipe({ name: 'myPipe'})
+export class MyPipe implements PipeTransform{
+  transform(val) {
+    return val.toUpperCase()
+  } 
+} -->

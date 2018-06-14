@@ -114,11 +114,11 @@
           <hr>
           <div>
             <h2>User Rating</h2>
-            <mat-checkbox (click)="filterHotel('1')">1</mat-checkbox>
-            <mat-checkbox (click)="filterHotel('2')">2</mat-checkbox>
-            <mat-checkbox (click)="filterHotel('3')">3</mat-checkbox>
-            <mat-checkbox (click)="filterHotel('4')">4</mat-checkbox>
-            <mat-checkbox id="rating5" (click)="filterHotel('5')">5</mat-checkbox>
+            <mat-checkbox (click)="filterHotel($event,'1')">1</mat-checkbox>
+            <mat-checkbox (click)="filterHotel($event,'2')">2</mat-checkbox>
+            <mat-checkbox (click)="filterHotel($event,'3')">3</mat-checkbox>
+            <mat-checkbox (click)="filterHotel($event,'4')">4</mat-checkbox>
+            <mat-checkbox (click)="filterHotel($event,'5')">5</mat-checkbox>
           </div>
         </div>
       </div>
