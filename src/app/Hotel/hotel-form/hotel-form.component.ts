@@ -13,9 +13,24 @@ import { Router } from '@angular/router';
 })
 export class HotelFormComponent implements OnInit {
   HotelCities: any;
-  constructor(private HotelData: HotelServiceService, private router: Router) { }
-
+  requestBody: any;
+  filteredOptions: Observable<any[]>;
   myControl: FormControl = new FormControl();
+  constructor(private HotelData: HotelServiceService, private router: Router) {
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(val => val ? this.filter(val) : this.options.slice())
+      );
+  }
+
+  filter(val: string) {
+    return this.options.filter(option =>
+      option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+  }
+
+
+
 
   options = [];
 
@@ -24,21 +39,14 @@ export class HotelFormComponent implements OnInit {
     { value: 'Business', viewValue: 'Business' },
     { value: 'Primary', viewValue: 'Primary' }
   ];
-  filteredOptions: Observable<string[]>;
+
 
   ngOnInit() {
     this.showHotelCities();
+    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
 
-    this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(val => this.filter(val))
-      );
   }
-  filter(val: string): string[] {
-    return this.options.filter(option =>
-      option.toLowerCase().includes(val.toLowerCase()));
-  }
+
 
 
 
@@ -61,12 +69,12 @@ export class HotelFormComponent implements OnInit {
   showHotelCities() {
     this.HotelData.getHotelCities(
       data => {
-        this.HotelCities = data.root.row;
+        this.HotelCities = data.CITYNAMES.row;
         // console.log(data);
         // console.log(this.HotelCities);
         for (var i = 0; i < this.HotelCities.length; i++) {
           // console.log(this.HotelCities[i].attributes.city);
-          var city = this.HotelCities[i].attributes.city;
+          var city = this.HotelCities[i].city;
           this.options.push(city);
           // console.log(this.options);
         }
@@ -81,8 +89,15 @@ export class HotelFormComponent implements OnInit {
   city: string = "";
   checkInDate: string = "";
   checkOutDate: string = "";
+
+
+
+
   hotelSearch() {
     if (this.city != '' && this.checkInDate != '' && this.checkOutDate != '') {
+      this.requestBody.Destination = this.city;
+      // this.requestBodyEvent.emit(this.requestBody);
+      this.HotelData.getHotelDeatils(this.requestBody);
       console.log(this.city, this.checkInDate, this.checkOutDate);
       this.router.navigateByUrl('/hotel');
     } else {
