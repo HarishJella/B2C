@@ -2,7 +2,11 @@ import { Component, OnInit, HostListener, ElementRef, Input } from '@angular/cor
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { modifySearchComponent } from '../dailog.components';
+<<<<<<< HEAD
 import { FlightServiceService } from '../flight-service/flight-service.service';
+=======
+import { FligthServiceService } from '../flight-service/fligth-service.service'
+>>>>>>> f95dba231c6ee59796323f85db992b1b4d9e4fef
 
 @Component({
   selector: 'app-flight',
@@ -13,11 +17,26 @@ export class FlightComponent implements OnInit {
 
   stickyTop: string = "sticky-top";
   FlightDetails: any;
+<<<<<<< HEAD
   constructor(public el: ElementRef, public dialog: MatDialog, private FlightData: FlightServiceService) { }
+=======
+  constructor(public el: ElementRef, public dialog: MatDialog, private FlightData: FligthServiceService) { }
+>>>>>>> f95dba231c6ee59796323f85db992b1b4d9e4fef
 
   ngOnInit() {
     this.showFlightDetails();
   }
+
+  showFlightDetails() {
+    this.FlightData.getflightdetails(
+      data => {
+        this.FlightDetails = data.FlightDetails[0];
+      }
+      // success path
+    );
+
+  }
+
   public passengers_state;
 
 

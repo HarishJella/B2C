@@ -60,7 +60,9 @@ public class Track
             dtHBI.Columns.Add("RHPD_ISSUINGBRANCH_ID");
             return dtHBI;
         }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
         catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
         {
             return null;
         }
@@ -104,7 +106,9 @@ public class Track
             dtHI.Columns.Add("RHD_ISSUINGBRANCH_ID");
             return dtHI;
         }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
         catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
         {
             return null;
         }
@@ -163,7 +167,9 @@ public class Track
             dtHRI.Columns.Add("RHRD_AGENT_EARNINGS");
             return dtHRI;
         }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
         catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
         {
             return null;
         }
@@ -195,7 +201,9 @@ public class Track
             dtAT.Columns.Add("RAT_DESCRIPTION");
             return dtAT;
         }
+#pragma warning disable CS0168 // The variable 'Ex' is declared but never used
         catch (Exception Ex)
+#pragma warning restore CS0168 // The variable 'Ex' is declared but never used
         {
             return null;
         }
@@ -226,7 +234,9 @@ public class Track
             dtHBH.Columns.Add("RHBH_ISSUINGBRANCH_ID");
             return dtHBH;
         }
+#pragma warning disable CS0168 // The variable 'Ex' is declared but never used
         catch (Exception Ex)
+#pragma warning restore CS0168 // The variable 'Ex' is declared but never used
         {
             return null;
         }
@@ -257,7 +267,9 @@ public class Track
             dtSUPTRANS.Columns.Add("RST_DESCRIPTION");
             return dtSUPTRANS;
         }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
         catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
         {
             return null;
         }
@@ -318,9 +330,13 @@ public class Track
         try
         {
             double GrossFare = 0;
+#pragma warning disable CS0219 // The variable 'Commission' is assigned but its value is never used
             double Commission = 0;
+#pragma warning restore CS0219 // The variable 'Commission' is assigned but its value is never used
             double suppGross = 0;
+#pragma warning disable CS0219 // The variable 'suppComm' is assigned but its value is never used
             double suppComm = 0;
+#pragma warning restore CS0219 // The variable 'suppComm' is assigned but its value is never used
             DataSet dsMaster = GetTransactionTables();
             Hashtable _hsh = new Hashtable();
              int rmid = 0; int id = 0;
@@ -1186,7 +1202,9 @@ public class Track
         try
         {
             double suppGross = 0;
+#pragma warning disable CS0219 // The variable 'suppComm' is assigned but its value is never used
             double suppComm = 0;
+#pragma warning restore CS0219 // The variable 'suppComm' is assigned but its value is never used
 
             if (dsMaster.Tables.Contains("RTBL_SUPPLIERTRANSACTION"))
                 dsMaster.Tables["RTBL_SUPPLIERTRANSACTION"].TableName = "RTBL_SUPPLIERTRANSACTION";

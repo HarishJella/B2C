@@ -140,11 +140,15 @@ namespace WXYZ_Hotel.Models
 
                 foreach (var room in req.PaxCounts)
                 {
+#pragma warning disable CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
                     if (room.AD == null)
+#pragma warning restore CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
                     {
                         errormessage = "Data Error , Guest detials required";
                     }
+#pragma warning disable CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
                     if (room.CH == null)
+#pragma warning restore CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
                     {
                         errormessage = "Data Error , Guest detials required";
                     }
@@ -152,7 +156,9 @@ namespace WXYZ_Hotel.Models
                     {
                         foreach (var child in room.CHAge)
                         {
+#pragma warning disable CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
                             if (child == null)
+#pragma warning restore CS0472 // The result of the expression is always 'false' since a value of type 'int' is never equal to 'null' of type 'int?'
                             {
                                 errormessage = "Data Error , Child age is missing";
                             }
@@ -472,7 +478,9 @@ namespace WXYZ_Hotel.Models
                 {
                     int SequenceID = Convert.ToInt32(AgentDt.SequenceID);
                 }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
                     errormessage = "Sequence Id Value Is Empty";
                     return errormessage;
@@ -499,7 +507,9 @@ namespace WXYZ_Hotel.Models
                 {
                     AgentDt.LoginReference = Decrypt(AgentDt.LoginReference);
                 }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
                     errormessage = "Login Reference key Is InValid";
                     return errormessage;

@@ -24,11 +24,21 @@ namespace WXYZ_Hotel.Hotel
 {
     internal class SPTours
     {
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
         string AvailMethodURL = ConfigurationSettings.AppSettings["API_SPECIALTOURS"].ToString() + "STOLXMLAllocation.asmx/AllocationSearch";
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
         string BookMethodURL = ConfigurationSettings.AppSettings["API_SPECIALTOURS_PNR"].ToString() + "STOLXMLPNR.asmx/PNRAddNew";
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
         string ViewPNRMethodURL = ConfigurationSettings.AppSettings["API_SPECIALTOURS_PNR"].ToString() + "STOLXMLPNR.asmx/PNRView";
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
         string CancelPNRMethodURL = ConfigurationSettings.AppSettings["API_SPECIALTOURS_PNR"].ToString() + "STOLXMLPNR.asmx/PNRCancel";
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
         string PNRSRVVoucherMethodURL = ConfigurationSettings.AppSettings["API_SPECIALTOURS_PNR"].ToString() + "STOLXMLPNR.asmx/PNRSRVVoucher";
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
         string PageName = "WXYZ_Hotel.Hotel.SPTours.cs";
         internal string TraceId { get; set; }
         internal string SuppUserName { get; set; }
@@ -203,13 +213,17 @@ namespace WXYZ_Hotel.Hotel
                         XmlSerializerNamespaces ns = new XmlSerializerNamespaces(); ns.Add("", "");
                         returnedXmlClass = (T)new XmlSerializer(typeof(T), "").Deserialize(reader);
                     }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                     catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                     {
                         // String passed is not XML, simply return defaultXmlClass
                     }
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
             }
 
@@ -464,7 +478,9 @@ namespace WXYZ_Hotel.Hotel
                 strXmlReq.Append("<PNRAddNew>");
                 strXmlReq.Append("<Version>1.40</Version>");
                 strXmlReq.Append("<ClientRef>WZ" + DateTime.Now.ToString("yyyyMMddHHmmss") + "</ClientRef>");//CHANGE
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
                 strXmlReq.Append("<AsynchURL>" + ConfigurationSettings.AppSettings["API_SPECIALTOURS"].ToString() + "</AsynchURL>");
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
                 strXmlReq.Append("<Validate>1</Validate>");
                 strXmlReq.Append("<Agent>");
                 strXmlReq.Append("<UName>" + SuppUserName.ToString() + "</UName>");

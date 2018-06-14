@@ -61,7 +61,9 @@ namespace WXYZ_Hotel.Models
                 #endregion
 
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 //Logging.StoreLog(AgentDetails.TerminalID.ToString(), AgentDetails.AgentID.ToString(), AgentDetails.SequenceId.ToString(), AgentDetails.BranchID.ToString(), AgentDetails.LoginReference.ToString(), AppType.B2B, "BUS", ex.StackTrace.Substring(ex.StackTrace.IndexOf("cs:line")) + ex.Message.ToString(), GetType().Name, MethodBase.GetCurrentMethod().Name, "X", AgentDetails.UserName.ToString(), "", "");
             }
@@ -91,7 +93,9 @@ namespace WXYZ_Hotel.Models
                 }
                 //CalcAmt = CalcAmt * Convert.ToInt32(RCount);
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 //Logging.StoreLog(AgentDetails.TerminalID.ToString(), AgentDetails.AgentID.ToString(), AgentDetails.SequenceId.ToString(), AgentDetails.BranchID.ToString(), AgentDetails.LoginReference.ToString(), AppType.B2B, "BUS", ex.StackTrace.Substring(ex.StackTrace.IndexOf("cs:line")) + ex.Message.ToString(), GetType().Name, MethodBase.GetCurrentMethod().Name, "X", AgentDetails.UserName.ToString(), "", "");   // 
             }

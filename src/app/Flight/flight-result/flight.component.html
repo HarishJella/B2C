@@ -363,8 +363,12 @@
 
 
         <div class="result">
+<<<<<<< HEAD
           <app-flight-template *ngFor="let Flight of FlightDetails" [Flight]="Flight"></app-flight-template>
 
+=======
+          <app-flight-template *ngFor="let Flight of FlightDetails,let i=index" [Flight]="Flight"></app-flight-template>
+>>>>>>> f95dba231c6ee59796323f85db992b1b4d9e4fef
 
         </div>
 

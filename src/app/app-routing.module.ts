@@ -17,7 +17,6 @@ import { TCComponent } from './Staticpages/tc/tc.component';
 import { RefundPolicyComponent } from './Staticpages/refund-policy/refund-policy.component';
 import { CancellationPolicyComponent } from './Staticpages/cancellation-policy/cancellation-policy.component';
 
-
 const routes: Routes = [
   // { path: '', redirectTo: 'init', pathMatch: 'full' },
   { path: '', component: HomeComponent },
@@ -34,9 +33,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactUsComponent },
   { path: 'tc', component: TCComponent },
   { path: 'refund', component: RefundPolicyComponent },
-  { path: 'cancel', component: CancellationPolicyComponent },
- 
- 
+  { path: 'cancel', component: CancellationPolicyComponent }
 
 ];
 

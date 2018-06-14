@@ -65,8 +65,8 @@ import { HttpClientModule } from '@angular/common/http';
     CancellationPolicyComponent,
     BusFormComponent,
     hotelModifySearch,
-    busModifySearch,
- ],
+    busModifySearch
+  ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),

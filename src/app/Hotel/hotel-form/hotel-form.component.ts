@@ -2,6 +2,8 @@ import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, Host
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { HotelServiceService } from '../hotel-service/hotel-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hotel-form',
@@ -10,21 +12,13 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./hotel-form.component.scss']
 })
 export class HotelFormComponent implements OnInit {
-
-  constructor() { }
+  HotelCities: any;
+  constructor(private HotelData: HotelServiceService, private router: Router) { }
 
   myControl: FormControl = new FormControl();
 
-  options = [
-    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
-    'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
-    'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-    'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
-    'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
-    'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-    'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-  ];
-  
+  options = [];
+
   Travellers = [
     { value: 'Economy', viewValue: 'Economy' },
     { value: 'Business', viewValue: 'Business' },
@@ -33,6 +27,8 @@ export class HotelFormComponent implements OnInit {
   filteredOptions: Observable<string[]>;
 
   ngOnInit() {
+    this.showHotelCities();
+
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),
@@ -58,6 +54,41 @@ export class HotelFormComponent implements OnInit {
     this.passengers_state = this.passengers_state === 'd-block fadeInLeftBig' ? 'd-none fadeOutRightBig' : 'd-block fadeInLeftBig';
     // modal visiv=bility toggle
     this.passengerFormEvent.emit("passengerFormVisible");
+  }
+
+
+
+  showHotelCities() {
+    this.HotelData.getHotelCities(
+      data => {
+        this.HotelCities = data.root.row;
+        // console.log(data);
+        // console.log(this.HotelCities);
+        for (var i = 0; i < this.HotelCities.length; i++) {
+          // console.log(this.HotelCities[i].attributes.city);
+          var city = this.HotelCities[i].attributes.city;
+          this.options.push(city);
+          // console.log(this.options);
+        }
+        console.log(this.options);
+      }
+    )
+  }
+
+
+  // Hotel Search
+  // Search input fields two way data binding
+
+  city: string = "";
+  checkInDate: string = "";
+  checkOutDate: string = "";
+  hotelSearch() {
+    if (this.city != '' && this.checkInDate != '' && this.checkOutDate != '') {
+      console.log(this.city, this.checkInDate, this.checkOutDate);
+      this.router.navigateByUrl('/hotel');
+    } else {
+      alert('All Fields are mandatory');
+    }
   }
 
 }

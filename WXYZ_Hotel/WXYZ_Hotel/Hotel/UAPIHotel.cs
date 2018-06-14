@@ -234,7 +234,9 @@ namespace WXYZ_HotelService
                     count++;
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
 
             }
@@ -495,7 +497,9 @@ namespace WXYZ_HotelService
                     objstr.Append("<Issue id='1989'>" + error + "</Issue>");
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
 
             }
@@ -541,7 +545,9 @@ namespace WXYZ_HotelService
 
                 if (!doc.Descendants("ErrorInfo").Any())
                 {
+#pragma warning disable CS0219 // The variable 'count' is assigned but its value is never used
                     var count = 1;
+#pragma warning restore CS0219 // The variable 'count' is assigned but its value is never used
                     FileName = helper.Log(StrxmlRes, doc.Descendants("HotelSearchAvailabilityRsp").Attributes("TransactionId").FirstOrDefault().Value.ToString());
                     List<XElement> HotelSearchResultlst = new List<XElement>();
 
@@ -1703,7 +1709,9 @@ namespace WXYZ_HotelService
                     Media.Append("</ImageList>");
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 Media.Append("<ImageList>");
                 Media.Append("<Image></Image>");
@@ -1978,7 +1986,9 @@ namespace WXYZ_HotelService
 
         public bool ConfirmHotelResponse(string xmlRes, ConfirmHotelRQ ConfirmRQ, ref ConfirmHotelRS _ConfirmRS)
         {
+#pragma warning disable CS0219 // The variable 'success' is assigned but its value is never used
             var success = "UnSuccess";
+#pragma warning restore CS0219 // The variable 'success' is assigned but its value is never used
             string response = string.Empty;
             var helper = new HotelHelper();
             BookingRS _BookingRS = new BookingRS();
@@ -2180,7 +2190,9 @@ namespace WXYZ_HotelService
                     return filteredDocument;
                 }
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 return null;
             }
@@ -2290,7 +2302,9 @@ namespace WXYZ_HotelService
                 conn.Close();
                 da.Dispose();
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
             }
             return dataTable;

@@ -154,7 +154,9 @@ namespace WXYZ_Hotel.Common
                 Directory.CreateDirectory(NewDir);
                 UploadFile(lbyte, NewDir, strFilename);
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 //SQLAccess.Insert_Action_LogDetails("HOTEL", AgentDetails, "X", "Common.SQLAccess.cs", "Check_API_User_Valid", ex.ToString(), "", "");
             }
@@ -175,7 +177,9 @@ namespace WXYZ_Hotel.Common
                 }
                 return lstrbyte;
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (System.Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 return lstrbyte;
             }
@@ -190,7 +194,9 @@ namespace WXYZ_Hotel.Common
                 lobjMemoryStream.Close();
                 lobjfileStream.Close();
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (System.Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
             }
             finally
@@ -340,7 +346,9 @@ namespace WXYZ_Hotel.Common
                 Insert_Action_LogDetails("HOTEL", AgentDetails, "E", PageName, "Fetch_Hotel_Avail_Details", LogData.ToString(), "", "");
                 #endregion
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 Insert_Action_LogDetails("HOTEL", AgentDetails, "X", PageName, "Fetch_Hotel_Avail_Details", LogData.ToString(), "", "");
             }
@@ -393,7 +401,9 @@ namespace WXYZ_Hotel.Common
                 Insert_Action_LogDetails("HOTEL", AgentDetails, "E", PageName, "Fetch_Hotel_View_PNR_Details", LogData.ToString(), "", "");
                 #endregion
             }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 Insert_Action_LogDetails("HOTEL", AgentDetails, "X", "Common.SQLAccess.cs", "Fetch_Hotel_View_PNR_Details", LogData.ToString(), "", "");
             }
@@ -443,13 +453,21 @@ namespace WXYZ_Hotel.Common
 
             string connectionString = string.Empty;
             if (server == "P")
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
                 connectionString = ConfigurationSettings.AppSettings["ConnectionStringApp"].ToString();
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
             else if (server == "A")
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
                 connectionString = ConfigurationSettings.AppSettings["APIDATABASE"].ToString();
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
             else if (server == "L")
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
                 connectionString = ConfigurationSettings.AppSettings["LogConnectionString"].ToString();
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
             else if (server == "H")
+#pragma warning disable CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
                 connectionString = ConfigurationSettings.AppSettings["HOTEL_STATIC_CONTENT"].ToString();
+#pragma warning restore CS0618 // 'ConfigurationSettings.AppSettings' is obsolete: 'This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings'
 
             my_connection.ConnectionString = connectionString;
             SqlConnection.ClearPool(my_connection);
@@ -468,11 +486,15 @@ namespace WXYZ_Hotel.Common
             {
                 if (Parameters[key].Equals(DateTime.MinValue))
                 {
+#pragma warning disable CS0618 // 'SqlParameterCollection.Add(string, object)' is obsolete: 'Add(String parameterName, Object value) has been deprecated.  Use AddWithValue(String parameterName, Object value).  http://go.microsoft.com/fwlink/?linkid=14202'
                     Command.Parameters.Add(("@" + key.ToString().ToUpper()), SQLMinDateDBA);
+#pragma warning restore CS0618 // 'SqlParameterCollection.Add(string, object)' is obsolete: 'Add(String parameterName, Object value) has been deprecated.  Use AddWithValue(String parameterName, Object value).  http://go.microsoft.com/fwlink/?linkid=14202'
                 }
                 else
                 {
+#pragma warning disable CS0618 // 'SqlParameterCollection.Add(string, object)' is obsolete: 'Add(String parameterName, Object value) has been deprecated.  Use AddWithValue(String parameterName, Object value).  http://go.microsoft.com/fwlink/?linkid=14202'
                     Command.Parameters.Add(("@" + key.ToString().ToUpper()), Parameters[key]);
+#pragma warning restore CS0618 // 'SqlParameterCollection.Add(string, object)' is obsolete: 'Add(String parameterName, Object value) has been deprecated.  Use AddWithValue(String parameterName, Object value).  http://go.microsoft.com/fwlink/?linkid=14202'
                 }
             }
         }
