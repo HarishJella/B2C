@@ -93,6 +93,7 @@ export interface HBCancellationPolicy {
 
 
 export class HotelServiceService {
+
   private requestBody = {
     "AgentDetails": {
       "ApiKey": "WE01ABXzy08USER",
@@ -128,16 +129,13 @@ export class HotelServiceService {
   };
   // Observable string sources
   private requestBodySource = new BehaviorSubject<any>(this.requestBody);
+  // output a reference string to trigger parent showHotelDetails(), onclick of search button
+
   currentRequestBodySource = this.requestBodySource.asObservable();
   // Observable string streams
   // currentRequestBodySource = this.requestBodySource.asObservable();
 
-
-
-
   constructor(private http: HttpClient) { }
-
-
 
   // Post Request -> header
   private httpOptions = {
@@ -146,18 +144,14 @@ export class HotelServiceService {
     })
   };
 
-
-
-
   // Service message commands
-
-
-
   HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
   // HotelUrl: string = 'assets/api.json';
 
-  getHotelDeatils(requestBody: any): any {
+
+  getHotelDetails(requestBody: any): any {
     this.requestBodySource.next(requestBody);
+
     return this.http.post(this.HotelUrl, requestBody, this.httpOptions);
     // .subscribe(data => {
     //   data

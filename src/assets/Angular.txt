@@ -49,3 +49,5 @@ https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/enabling-cross
 https://coursesweb.net/javascript/convert-xml-json-javascript_s2#x2i
 
 https://stackblitz.com/edit/angular-material-md-checkbox-change-event-example?file=app%2Fapp.component.html
+
+https://blog.codewithdan.com/2017/02/08/10-angular-and-typescript-projects-to-take-you-from-zero-to-hero/

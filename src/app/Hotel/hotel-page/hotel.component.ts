@@ -29,68 +29,31 @@ export class HotelComponent implements OnInit {
   showHotelLoader: boolean = true;
   HotelDetailsLoop: string = 'HotelDetails';
   elementID;
+  // Post Request -> body  from service as Observable
   requestBody: any;
-  // Post Request -> body 
 
 
-  //  this.requestBody = {
-  //   "AgentDetails": {
-  //     "ApiKey": "WE01ABXzy08USER",
-  //     "ApiSecret": "8j8Qh6Y6%2f3cbT%2bmIOazO1A%3d%3d",
-  //     "AgentType": "INTERNAL",
-  //     "AppType": "B2B",
-  //     "BranchID": "B0001",
-  //     "AgentId": "WCKUL0200101",
-  //     "SequenceId": "11059",
-  //     "TerminalId": "WCKUL020010108",
-  //     "UserName": "anbu@webaxyz.com",
-  //     "IPAddress": "192.168.31.63",
-  //     "LoginReference": "NecA3T4vCZqbjZifUFQlwjh4%2fZswJLghjZYRLkiyoOQ%3d",
-  //     "TerminalType": "W",
-  //     "CurrencyCode": "MYR"
-  //   },
-  //   "Vendor": "HOTELBED",
-  //   "Destination": "Athens, Greece",
-  //   "CheckIn": "18-07-2018",
-  //   "CheckOut": "21-07-2018",
-  //   "Rooms": [
-  //     {
-  //       "AD": 2,
-  //       "CH": 1,
-  //       "CHAge": [
-  //         8
-  //       ]
-  //     }
-  //   ],
-  //   "SearchID": 0,
-  //   "countryCode": "IN",
-  //   "ClientCountryId": "27"
-  // };
-
-
-  constructor(public dialog: MatDialog, private HotelData: HotelServiceService, ) {
-
-  }
+  constructor(public dialog: MatDialog, private HotelData: HotelServiceService, ) { }
 
   ngOnInit() {
-    this.showHotelDetails();
+    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
 
   }
 
-  // Getting response data from hotel-service.service.ts
-  showHotelDetails() {
-    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
-    this.HotelData.getHotelDeatils(this.requestBody).subscribe(
-      data => {
-        let dataNew = data;
-        this.HotelDetails = JSON.parse(data.response);
-        this.HotelDetailsOriginal = this.HotelDetails;
-        this.showHotelLoader = false;
-        // console.log(this.HotelDetails = JSON.parse(data.response));
-      },
-      err => console.log(err),
-      () => console.log('Request Completed')
-    );
+
+
+  // subscribeing to getHotelDetails method in hotel-service.service.ts to get Hotel Details
+  showHotelDetails(searchFirred) {
+      this.HotelData.getHotelDetails(this.requestBody).subscribe(
+        data => {
+          this.HotelDetails = JSON.parse(data.response);
+          this.HotelDetailsOriginal = this.HotelDetails;
+          this.showHotelLoader = false;
+          console.log(this.HotelDetails);
+        },
+        err => console.log(err),
+        // () => console.log('Request Completed')
+      );
   }
 
 
