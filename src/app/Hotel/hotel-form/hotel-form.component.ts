@@ -14,9 +14,12 @@ import { Router } from '@angular/router';
 export class HotelFormComponent implements OnInit {
   HotelCities: any;
   requestBody: any;
+  myControl: FormControl;
   filteredOptions: Observable<any[]>;
-  myControl: FormControl = new FormControl();
+  options = [];
+
   constructor(private HotelData: HotelServiceService, private router: Router) {
+    this.myControl = new FormControl();
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),
@@ -24,15 +27,15 @@ export class HotelFormComponent implements OnInit {
       );
   }
 
-  filter(val: string) {
+  filter(city: string) {
     return this.options.filter(option =>
-      option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+      option.city.toLowerCase().indexOf(city.toLowerCase()) === 1);
   }
 
 
 
 
-  options = [];
+
 
   Travellers = [
     { value: 'Economy', viewValue: 'Economy' },
@@ -66,6 +69,8 @@ export class HotelFormComponent implements OnInit {
 
 
 
+
+
   showHotelCities() {
     this.HotelData.getHotelCities(
       data => {
@@ -74,7 +79,8 @@ export class HotelFormComponent implements OnInit {
         // console.log(this.HotelCities);
         for (var i = 0; i < this.HotelCities.length; i++) {
           // console.log(this.HotelCities[i].attributes.city);
-          var city = this.HotelCities[i].city;
+          var city = {};
+          city['city'] = this.HotelCities[i].city;
           this.options.push(city);
           // console.log(this.options);
         }
