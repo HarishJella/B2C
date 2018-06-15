@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpResponse, HttpHeaders } from '@angul
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { RequestOptions, Request, RequestMethod } from '@angular/http';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 // import 'rxjs/add/operator/map';
 // import { hotelInterface } from '../hotel.interface';
@@ -92,28 +93,6 @@ export interface HBCancellationPolicy {
 
 
 export class HotelServiceService {
-
-
-
-  constructor(private http: HttpClient) { }
-
-
-
-  // Post Request -> header
-  private httpOptions = {
-    headers: new HttpHeaders({
-
-      'Content-Type': 'application/json'
-      // 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, DELETE, PUT',
-      // 'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept, Authorization',
-      //'Authorization': 'basic QWRtaW46QWRtaW4=',
-      //'Accept-Language': 'en-US',
-      // 'Access-Control-Allow-Origin': '*', //t
-      // 'Access-Control-Allow-Credentials': 'true',
-    })
-  };
-
-  // Post Request -> body 
   private requestBody = {
     "AgentDetails": {
       "ApiKey": "WE01ABXzy08USER",
@@ -130,7 +109,7 @@ export class HotelServiceService {
       "TerminalType": "W",
       "CurrencyCode": "MYR"
     },
-    "Vendor": "SPECIALTOURS",
+    "Vendor": "HOTELBED",
     "Destination": "Athens, Greece",
     "CheckIn": "18-07-2018",
     "CheckOut": "21-07-2018",
@@ -146,20 +125,46 @@ export class HotelServiceService {
     "SearchID": 0,
     "countryCode": "IN",
     "ClientCountryId": "27"
-  }
+  };
+  // Observable string sources
+  private requestBodySource = new BehaviorSubject<any>(this.requestBody);
+  currentRequestBodySource = this.requestBodySource.asObservable();
+  // Observable string streams
+  // currentRequestBodySource = this.requestBodySource.asObservable();
 
 
 
 
-  // HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
-  HotelUrl: string = 'assets/api.json';
-  getHotelDeatils(callback) {
-    return this.http.get(this.HotelUrl).subscribe(data => {
-      callback(data);
-    },
-      err => {
-        console.log(err);
-      });
+  constructor(private http: HttpClient) { }
+
+
+
+  // Post Request -> header
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+  };
+
+
+
+
+  // Service message commands
+
+
+
+  HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
+  // HotelUrl: string = 'assets/api.json';
+
+  getHotelDeatils(requestBody: any): any {
+    this.requestBodySource.next(requestBody);
+    return this.http.post(this.HotelUrl, requestBody, this.httpOptions);
+    // .subscribe(data => {
+    //   data
+    // },
+    //   err => {
+    //     console.log(err);
+    //   });
   }
 
   CityUrl: string = 'assets/Hotel_City.json';

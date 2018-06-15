@@ -3,15 +3,15 @@
     <div class="md-form col-md-2 input-group">
 
       <mat-form-field class="example-full-width">
-        <input name="city" [(ngModel)]="city" type="autocomplete" placeholder="Select City" aria-label="Number" matInput [formControl]="myControl"
+        <input matInput name="city" [(ngModel)]="city" [matAutocomplete]="auto" placeholder="select city" aria-label="Number" [formControl]="myControl"
           [matAutocomplete]="auto">
 
         <mat-autocomplete #auto="matAutocomplete" class="htlat">
-          <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="htl_opt">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.city" class="htl_opt">
             <div class="d-flex flex-column">
               <div class="d-flex align-items-center justify-content-between ">
                 <div class="d-flex align-items-center justify-content-between fly_city">
-                  <h4 class=" pr-2 mb-0">{{ option }}</h4>
+                  <h4 class=" pr-2 mb-0">{{ option.city }}</h4>
                   <span>(BLR)</span>
                 </div>
                 <div>
@@ -34,10 +34,10 @@
 
 
 
+
     <div class="md-form col-md-2 input-group">
       <mat-form-field>
-        <input name="checkInDate" [ngModel]="(checkInDate | date)" (focus)="picker.open()" (ngModelChange)="checkInDate=$event" matInput [matDatepicker]="picker"
-          placeholder="Check In">
+        <input name="checkInDate" [(ngModel)]="checkInDate" (focus)="picker.open()" matInput [matDatepicker]="picker" placeholder="Check In">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
