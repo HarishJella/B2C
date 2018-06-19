@@ -3,7 +3,7 @@
     <div class="md-form col-md-2 input-group">
 
       <mat-form-field class="example-full-width">
-        <input matInput name="city" [(ngModel)]="city" [matAutocomplete]="auto" placeholder="select city" aria-label="Number" [formControl]="myControl"
+        <input matInput [(ngModel)]="city" [matAutocomplete]="auto" placeholder="select city" aria-label="Number" [formControl]="myControl"
           [matAutocomplete]="auto">
 
         <mat-autocomplete #auto="matAutocomplete" class="htlat">
@@ -54,10 +54,10 @@
     <div class="md-form col-md-2 input-group">
 
       <mat-form-field>
-        <mat-select placeholder="No of Rooms">
-          <mat-option value="option">1</mat-option>
-          <mat-option value="option">2</mat-option>
-          <mat-option value="option">3</mat-option>
+        <mat-select name="Htlrooms" [(ngModel)]="Htlrooms" placeholder="No of Rooms">
+          <mat-option [value]="1">1</mat-option>
+          <mat-option [value]="2">2</mat-option>
+          <mat-option [value]="3">3</mat-option>
         </mat-select>
       </mat-form-field>
 
@@ -65,7 +65,7 @@
     <div class="md-form col-md-2 input-group">
       <mat-form-field>
 
-        <input (click)="passengers_class()" matInput placeholder="Input" value="Adult 1, Child 0">
+        <input disableRipple (click)="passengers_class()" matInput placeholder="Input" value="Adult {{ Adult }}, Child {{ Child }}">
 
         <div class="animated {{passengers_state}} passengers">
           <div class="col-12 d-flex flex-column p-3">
@@ -74,15 +74,15 @@
             <div class="d-flex justify-content-between align-items-center">
               <p class="mb-0">Adult</p>
               <div>
-                <button class="btn waves-effect" mdbWavesEffect>+</button>
-                <button class="btn waves-effect" mdbWavesEffect>-</button>
+                <button type="button" class="btn waves-effect" mdbWavesEffect (click)="adultInc()">+</button>
+                <button type="button" class="btn waves-effect" mdbWavesEffect (click)="adultDec()">-</button>
               </div>
             </div>
             <div class="d-flex justify-content-between align-items-center pt-3">
               <p class="mb-0">Child</p>
               <div>
-                <button class="btn waves-effect" mdbWavesEffect>+</button>
-                <button class="btn waves-effect" mdbWavesEffect>-</button>
+                <button type="button" class="btn waves-effect" mdbWavesEffect (click)="childInc()">+</button>
+                <button type="button" class="btn waves-effect" mdbWavesEffect (click)="childDec()">-</button>
               </div>
             </div>
           </div>
@@ -96,16 +96,3 @@
     </div>
   </form>
 </div>
-
-
-<!-- our root app component
-import {Component, NgModule, Pipe, PipeTransform} from '@angular/core'
-import { FormsModule }      from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser'
-
-@Pipe({ name: 'myPipe'})
-export class MyPipe implements PipeTransform{
-  transform(val) {
-    return val.toUpperCase()
-  } 
-} -->

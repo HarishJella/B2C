@@ -11,7 +11,7 @@ import { MatCheckbox } from '@angular/material';
 // import { catchError, retry } from 'rxjs/operators';
 
 
-
+declare var $: any;
 @Component({
   selector: 'app-hotel',
   encapsulation: ViewEncapsulation.None,
@@ -33,67 +33,56 @@ export class HotelComponent implements OnInit {
   requestBody: any;
 
 
+
+
+
+
   constructor(public dialog: MatDialog, private HotelData: HotelServiceService, ) { }
 
   ngOnInit() {
     this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
+    this.showHotelDetails();
+    if (this.filterHotelDetails === []) {
+      this.filterHotelDetails = this.HotelDetails;
+    } else {
+      this.filterHotelDetails = this.filterHotelDetails;
+    }
 
   }
-
-
 
   // subscribeing to getHotelDetails method in hotel-service.service.ts to get Hotel Details
-  showHotelDetails(searchFirred) {
-      this.HotelData.getHotelDetails(this.requestBody).subscribe(
-        data => {
-          this.HotelDetails = JSON.parse(data.response);
-          this.HotelDetailsOriginal = this.HotelDetails;
-          this.showHotelLoader = false;
-          console.log(this.HotelDetails);
-        },
-        err => console.log(err),
-        // () => console.log('Request Completed')
-      );
+  showHotelDetails() {
+    this.HotelData.getHotelDetails(this.requestBody).subscribe(
+      data => {
+        this.HotelDetails = JSON.parse(data.response);
+        this.HotelDetailsOriginal = this.HotelDetails;
+        // console.log(this.HotelDetails);
+        // this.filterHotelDetails = this.HotelDetails;
+        this.showHotelLoader = false;
+      },
+      err => console.log(err),
+      // () => console.log('Request Completed')
+    );
   }
 
 
 
 
-
-  filterHotel(e, filter: string) {
-    var target = e;
-    this.HotelDetailsOriginal = this.HotelDetails;
-    console.log(target);
-    if (target == 'false') {
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
-        data => {
-          return data.Rating.includes(filter);
-        }
-      )))
-
-    } if (target == 'true') {
-      for (var i = 0; i < this.filterHotelDetails.length; i++) {
-        if (this.filterHotelDetails[i].Rating === filter) {
-          this.filterHotelDetails.splice(i, 1);
-          console.log(this.filterHotelDetails);
-          break;
-        }
-      }
-    }
-  }
 
   openDialog() {
     const dialogRef = this.dialog.open(hotelModifySearch, {
       height: 'auto'
     });
-
+    this.stickyTop = "";
+    this.passengers_state = 'd-none fadeOutRightBig';
     dialogRef.afterClosed().subscribe(result => {
       this.stickyTop = "sticky-top";
       this.passengers_state = 'd-none fadeOutRightBig';
-      console.log(`Dialog result: ${result}`);
+      this.showHotelLoader = true;
+      this.showHotelDetails();
+      // console.log(`Dialog result: ${result}`);
     });
-    this.stickyTop = "";
-    this.passengers_state = 'd-none fadeOutRightBig';
+
   }
 
   formatLabel(value: number | null) {
@@ -224,6 +213,39 @@ export class HotelComponent implements OnInit {
     this.hotel_list = 'd-none fadeOut';
     this.hotel_map = 'd-block fadeIn';
   }
+
+
+
+
+  // Hotel Filter section
+
+  // 1> Rating Filter
+  ratingFilter(filter: string) {
+    var target = $("#rating" + filter).find('input').attr('aria-checked');
+    this.HotelDetailsOriginal = this.HotelDetails;
+    console.log(target);
+    // console.log($(this).find('#rating' + filter + '-input'));
+    if (target == 'false') {
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+        data => {
+          return data.Rating.includes(filter);
+        }
+      )))
+      console.log(this.filterHotelDetails);
+    } if (target == 'true') {
+      this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
+        data => {
+          return data.Rating.includes(filter);
+        }
+      ));
+      console.log(this.filterHotelDetails);
+    }
+  }
+
+  amenitiesFilter(event) {
+    console.log(event.target.id);
+  }
+
 
 
 }

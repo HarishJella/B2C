@@ -1,10 +1,12 @@
 <section class="my-5 availability">
-  <div class="section">
+  <div class="container">
     <div class="col-12 p-0 mb-3 modify_search mb-4 border front">
 
       <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
         <h6 class="mb-1">City</h6>
-        <p class="mb-0">{{requestBody.Destination}}</p>
+        <p class="mb-0">{{ (requestBody.Destination.length > 26) ? (requestBody.Destination | slice:0:26)+'...' : requestBody.Destination
+          }}
+        </p>
         <span>Karnataka</span>
       </div>
       <div class="item p-3  col-2 d-flex flex-column justify-content-center align-items-center">
@@ -72,10 +74,11 @@
           <hr>
           <div>
             <h2>Amenities</h2>
-            <mat-checkbox>Wifi</mat-checkbox>
+            <!-- <mat-checkbox *ngFor="let Amenities of HotelDetails.Amenities;let i = index" id="rating{{Amenities.ID}}" (click)="amenitiesFilter($event)">{{Amenities.Name}}</mat-checkbox> -->
             <mat-checkbox>Swimming pool</mat-checkbox>
             <mat-checkbox>Bed</mat-checkbox>
             <mat-checkbox>Table</mat-checkbox>
+
           </div>
         </div>
       </div>
@@ -85,26 +88,9 @@
           <hr>
           <div>
             <h2>Location</h2>
-            <mat-checkbox>Anandarao Circle</mat-checkbox>
-            <mat-checkbox>B T M Layout</mat-checkbox>
-            <mat-checkbox>China Airlines</mat-checkbox>
-            <mat-checkbox>Basavangaudi</mat-checkbox>
-            <mat-checkbox>Belanduru</mat-checkbox>
-            <mat-checkbox>Anandarao Circle</mat-checkbox>
-            <mat-checkbox>B T M Layout</mat-checkbox>
-            <mat-checkbox>China Airlines</mat-checkbox>
-            <mat-checkbox>Basavangaudi</mat-checkbox>
-            <mat-checkbox>Belanduru</mat-checkbox>
-            <mat-checkbox>Anandarao Circle</mat-checkbox>
-            <mat-checkbox>B T M Layout</mat-checkbox>
-            <mat-checkbox>China Airlines</mat-checkbox>
-            <mat-checkbox>Basavangaudi</mat-checkbox>
-            <mat-checkbox>Belanduru</mat-checkbox>
-            <mat-checkbox>Anandarao Circle</mat-checkbox>
-            <mat-checkbox>B T M Layout</mat-checkbox>
-            <mat-checkbox>China Airlines</mat-checkbox>
-            <mat-checkbox>Basavangaudi</mat-checkbox>
-            <mat-checkbox>Belanduru</mat-checkbox>
+            <mat-checkbox *ngFor="let location of HotelDetails;let i = index" id="location" (click)="locationFilter($event)">
+              {{ location.FullAddress }}
+            </mat-checkbox>
           </div>
         </div>
       </div>
@@ -114,11 +100,11 @@
           <hr>
           <div>
             <h2>User Rating</h2>
-            <mat-checkbox (click)="filterHotel($event,'1')">1</mat-checkbox>
-            <mat-checkbox (click)="filterHotel($event,'2')">2</mat-checkbox>
-            <mat-checkbox (click)="filterHotel($event,'3')">3</mat-checkbox>
-            <mat-checkbox (click)="filterHotel($event,'4')">4</mat-checkbox>
-            <mat-checkbox (click)="filterHotel($event,'5')">5</mat-checkbox>
+            <mat-checkbox id="rating1" (click)="ratingFilter('1')">1</mat-checkbox>
+            <mat-checkbox id="rating2" (click)="ratingFilter('2')">2</mat-checkbox>
+            <mat-checkbox id="rating3" (click)="ratingFilter('3')">3</mat-checkbox>
+            <mat-checkbox id="rating4" (click)="ratingFilter('4')">4</mat-checkbox>
+            <mat-checkbox id="rating5" (click)="ratingFilter('5')">5</mat-checkbox>
           </div>
         </div>
       </div>
@@ -181,8 +167,11 @@
         </div>
         <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
 
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of HotelDetails,let i of index"
+
+
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of (filterHotelDetails.length === 0) ? HotelDetails : filterHotelDetails ,let i of index"
             [Hotel]="Hotel"></app-hotel-template>
+
           <div *ngIf="showHotelLoader">
             Loading
           </div>

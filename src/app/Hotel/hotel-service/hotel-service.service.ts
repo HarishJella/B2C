@@ -111,7 +111,7 @@ export class HotelServiceService {
       "CurrencyCode": "MYR"
     },
     "Vendor": "HOTELBED",
-    "Destination": "Athens, Greece",
+    "Destination": "Bangalore, India",
     "CheckIn": "18-07-2018",
     "CheckOut": "21-07-2018",
     "Rooms": [
@@ -146,19 +146,13 @@ export class HotelServiceService {
 
   // Service message commands
   HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
+  // HotelUrl: string = 'http://localhost:13161/api/HotelSearch';
   // HotelUrl: string = 'assets/api.json';
 
 
   getHotelDetails(requestBody: any): any {
     this.requestBodySource.next(requestBody);
-
     return this.http.post(this.HotelUrl, requestBody, this.httpOptions);
-    // .subscribe(data => {
-    //   data
-    // },
-    //   err => {
-    //     console.log(err);
-    //   });
   }
 
   CityUrl: string = 'assets/Hotel_City.json';

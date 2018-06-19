@@ -6,6 +6,7 @@ import { HotelServiceService } from '../hotel-service/hotel-service.service';
 import { Router } from '@angular/router';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDatepicker } from '@angular/material/datepicker';
 
 
 // Depending on whether rollup is used, moment needs to be imported differently.
@@ -22,13 +23,13 @@ const moment = _rollupMoment || _moment;
 // https://momentjs.com/docs/#/displaying/format/
 export const MY_FORMATS = {
   parse: {
-    dateInput: 'MM-DD-YYYY',
+    dateInput: 'DD-MM-YYYY',
   },
   display: {
-    dateInput: 'MM-DD-YYYY',
-    monthYearLabel: 'MM-DD-YYYY',
-    dateA11yLabel: 'MM-DD-YYYY',
-    monthYearA11yLabel: 'MM-DD-YYYY',
+    dateInput: 'DD-MM-YYYY',
+    monthYearLabel: 'DDD MMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'DDDD MMMM YYYY',
   },
 };
 
@@ -54,23 +55,26 @@ export class HotelFormComponent implements OnInit {
   myControl: FormControl;
   filteredOptions: Observable<any[]>;
   options = [];
+  Adult: number = 1;
+  Child: number = 0;
 
-  date = new FormControl(moment("25-12-1995", "DD-MM-YYYY"));
+  date = new FormControl(moment().fromNow(true));
 
 
+
+
+
+  // serializedDate = new FormControl((new Date()).toISOString());
 
   constructor(private HotelData: HotelServiceService, private router: Router) {
     this.myControl = new FormControl();
-    this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(val => val ? this.filter(val) : this.options.slice())
-      );
   }
 
-  filter(city: string) {
-    return this.options.filter(option =>
-      option.city.toLowerCase().indexOf(city.toLowerCase()) === 1);
+  filter(city: string): string[] {
+    if (city) {
+      return this.options.filter(option =>
+        option.city.toLowerCase().indexOf(city.toLowerCase()) === 0);
+    }
   }
 
   Travellers = [
@@ -82,6 +86,12 @@ export class HotelFormComponent implements OnInit {
   ngOnInit() {
     this.showHotelCities();
     this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
+
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(val => val.length >= 3 ? this.filter(val) : [])
+      );
   }
 
   @Input('passengers_state') public passengers_state: string;
@@ -93,6 +103,34 @@ export class HotelFormComponent implements OnInit {
     // modal visiv=bility toggle
     this.passengerFormEvent.emit("passengerFormVisible");
   }
+
+
+  //  passengers count
+  // increment adult passengers
+  adultInc() {
+    this.Adult = this.Adult + 1;
+  }
+  //Decrement
+  adultDec() {
+
+    if (this.Adult === 1) {
+      this.Adult = 1;
+    } else {
+      this.Adult = this.Adult - 1;
+    }
+  }
+  childInc() {
+    this.Child = this.Child + 1;
+  }
+  //Decrement
+  childDec() {
+    if (this.Child === 0) {
+      this.Child = 0;
+    } else {
+      this.Child = this.Child - 1;
+    }
+  }
+
 
   showHotelCities() {
     this.HotelData.getHotelCities(
@@ -107,7 +145,7 @@ export class HotelFormComponent implements OnInit {
           this.options.push(city);
           // console.log(this.options);
         }
-        console.log(this.options);
+        // console.log(this.options);
       }
     )
 
@@ -116,24 +154,36 @@ export class HotelFormComponent implements OnInit {
   // Hotel Search
   // Search input fields two way data binding
   city: string = "";
-  checkInDate: string = "";
-  checkOutDate: string = "";
+  checkInDate = "";
+  checkOutDate = "";
+  Htlrooms: number = 1;
+  requestRooms = [];
 
   hotelSearch() {
-    alert('hi');
     if (this.city != '' && this.checkInDate != '' && this.checkOutDate != '') {
+      this.checkInDate = moment(this.checkInDate).format('DD-MM-YYYY');
+      this.checkOutDate = moment(this.checkOutDate).format('DD-MM-YYYY');
       this.requestBody.Destination = this.city;
       this.requestBody.CheckIn = this.checkInDate;
       this.requestBody.CheckOut = this.checkOutDate;
+      // for (var i = 0; i < this.Htlrooms; i++) {
+      //   this.requestRooms.push({
+      //     "AD": 2,
+      //     "CH": 1,
+      //     "CHAge": [
+      //       8
+      //     ]
+      //   });
+      // }
+      // this.requestBody.Rooms = this.requestRooms;
       // this.requestBodyEvent.emit(this.requestBody);
       this.HotelData.getHotelDetails(this.requestBody);
-      console.log(this.city, this.checkInDate, this.checkOutDate);
+      console.log(this.requestBody);
+      console.log(this.city, this.checkInDate, this.checkOutDate, this.Htlrooms);
       // this.searchFirred.emit('firred');
       this.router.navigateByUrl('/hotel');
-
     } else {
       alert('All Fields are mandatory');
     }
-
   }
 }
