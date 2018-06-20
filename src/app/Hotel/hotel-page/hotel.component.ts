@@ -11,7 +11,7 @@ import { MatCheckbox } from '@angular/material';
 // import { catchError, retry } from 'rxjs/operators';
 
 
-
+declare var $: any;
 @Component({
   selector: 'app-hotel',
   encapsulation: ViewEncapsulation.None,
@@ -29,67 +29,39 @@ export class HotelComponent implements OnInit {
   showHotelLoader: boolean = true;
   HotelDetailsLoop: string = 'HotelDetails';
   elementID;
+  // Post Request -> body  from service as Observable
   requestBody: any;
-  // Post Request -> body 
 
 
-  //  this.requestBody = {
-  //   "AgentDetails": {
-  //     "ApiKey": "WE01ABXzy08USER",
-  //     "ApiSecret": "8j8Qh6Y6%2f3cbT%2bmIOazO1A%3d%3d",
-  //     "AgentType": "INTERNAL",
-  //     "AppType": "B2B",
-  //     "BranchID": "B0001",
-  //     "AgentId": "WCKUL0200101",
-  //     "SequenceId": "11059",
-  //     "TerminalId": "WCKUL020010108",
-  //     "UserName": "anbu@webaxyz.com",
-  //     "IPAddress": "192.168.31.63",
-  //     "LoginReference": "NecA3T4vCZqbjZifUFQlwjh4%2fZswJLghjZYRLkiyoOQ%3d",
-  //     "TerminalType": "W",
-  //     "CurrencyCode": "MYR"
-  //   },
-  //   "Vendor": "HOTELBED",
-  //   "Destination": "Athens, Greece",
-  //   "CheckIn": "18-07-2018",
-  //   "CheckOut": "21-07-2018",
-  //   "Rooms": [
-  //     {
-  //       "AD": 2,
-  //       "CH": 1,
-  //       "CHAge": [
-  //         8
-  //       ]
-  //     }
-  //   ],
-  //   "SearchID": 0,
-  //   "countryCode": "IN",
-  //   "ClientCountryId": "27"
-  // };
 
 
-  constructor(public dialog: MatDialog, private HotelData: HotelServiceService, ) {
 
-  }
+
+  constructor(public dialog: MatDialog, private HotelData: HotelServiceService, ) { }
 
   ngOnInit() {
+    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
     this.showHotelDetails();
+    if (this.filterHotelDetails === []) {
+      this.filterHotelDetails = this.HotelDetails;
+    } else {
+      this.filterHotelDetails = this.filterHotelDetails;
+    }
 
   }
 
-  // Getting response data from hotel-service.service.ts
+  // subscribeing to getHotelDetails method in hotel-service.service.ts to get Hotel Details
   showHotelDetails() {
-    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
-    this.HotelData.getHotelDeatils(this.requestBody).subscribe(
+    this.HotelData.getHotelDetails(this.requestBody).subscribe(
       data => {
-        let dataNew = data;
         this.HotelDetails = JSON.parse(data.response);
         this.HotelDetailsOriginal = this.HotelDetails;
+        // console.log(this.HotelDetails);
+        // this.filterHotelDetails = this.HotelDetails;
         this.showHotelLoader = false;
-        // console.log(this.HotelDetails = JSON.parse(data.response));
       },
       err => console.log(err),
-      () => console.log('Request Completed')
+      // () => console.log('Request Completed')
     );
   }
 
@@ -97,40 +69,20 @@ export class HotelComponent implements OnInit {
 
 
 
-  filterHotel(e, filter: string) {
-    var target = e;
-    this.HotelDetailsOriginal = this.HotelDetails;
-    console.log(target);
-    if (target == 'false') {
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
-        data => {
-          return data.Rating.includes(filter);
-        }
-      )))
-
-    } if (target == 'true') {
-      for (var i = 0; i < this.filterHotelDetails.length; i++) {
-        if (this.filterHotelDetails[i].Rating === filter) {
-          this.filterHotelDetails.splice(i, 1);
-          console.log(this.filterHotelDetails);
-          break;
-        }
-      }
-    }
-  }
-
   openDialog() {
     const dialogRef = this.dialog.open(hotelModifySearch, {
       height: 'auto'
     });
-
+    this.stickyTop = "";
+    this.passengers_state = 'd-none fadeOutRightBig';
     dialogRef.afterClosed().subscribe(result => {
       this.stickyTop = "sticky-top";
       this.passengers_state = 'd-none fadeOutRightBig';
-      console.log(`Dialog result: ${result}`);
+      this.showHotelLoader = true;
+      this.showHotelDetails();
+      // console.log(`Dialog result: ${result}`);
     });
-    this.stickyTop = "";
-    this.passengers_state = 'd-none fadeOutRightBig';
+
   }
 
   formatLabel(value: number | null) {
@@ -261,6 +213,39 @@ export class HotelComponent implements OnInit {
     this.hotel_list = 'd-none fadeOut';
     this.hotel_map = 'd-block fadeIn';
   }
+
+
+
+
+  // Hotel Filter section
+
+  // 1> Rating Filter
+  ratingFilter(filter: string) {
+    var target = $("#rating" + filter).find('input').attr('aria-checked');
+    this.HotelDetailsOriginal = this.HotelDetails;
+    console.log(target);
+    // console.log($(this).find('#rating' + filter + '-input'));
+    if (target == 'false') {
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+        data => {
+          return data.Rating.includes(filter);
+        }
+      )))
+      console.log(this.filterHotelDetails);
+    } if (target == 'true') {
+      this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
+        data => {
+          return data.Rating.includes(filter);
+        }
+      ));
+      console.log(this.filterHotelDetails);
+    }
+  }
+
+  amenitiesFilter(event) {
+    console.log(event.target.id);
+  }
+
 
 
 }

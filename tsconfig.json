@@ -8,6 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "allowSyntheticDefaultImports": true,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -16,5 +17,5 @@
       "dom"
     ]
   },
-  "include": ["node_modules/angular-bootstrap-md/**/*.ts",  "src/**/*.ts"]
+  "include": ["node_modules/angular-bootstrap-md/**/*.ts", "src/**/*.ts"]
 }

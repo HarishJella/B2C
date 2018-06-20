@@ -4,7 +4,6 @@
   width: auto;
 }
 
-
 .inputs {
   .input-group {
     margin-top: 1.25rem;
@@ -14,6 +13,7 @@
       top: 100%;
       background: #ffffff;
       box-shadow: 0 0 20px #d2d2d2;
+      width: 100%;
       .btn {
         padding: 0.2rem 0.8rem;
         color: #000;
@@ -107,7 +107,6 @@
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle {}
 
-
 .mat-tab-header {
   .mat-tab-label-container {
     .mat-tab-list {
@@ -122,12 +121,10 @@
             width: 60px;
           }
           &.mat-tab-label-active {
-           
             background: $pinky-orange;
           }
         }
         .mat-tab-label {
-          
           opacity: 1 !important;
           .mat-tab-label-content {
             font-size: 15px;
@@ -138,7 +135,6 @@
           }
         }
         .mat-tab-label-active {
-        
           background: $pinky-orange;
           color: #fff;
           opacity: 1 !important;
@@ -167,7 +163,6 @@
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
   border-color: #c1c1c1 !important;
 }
-
 
 .mat-radio-container {
   width: 15px !important;
@@ -206,7 +201,7 @@ mat-option.htl_opt.mat-option {
       margin-top: 3px;
     }
   }
-  .airport{
+  .airport {
     font-size: 12px;
     text-overflow: ellipsis;
     white-space: nowrap;
