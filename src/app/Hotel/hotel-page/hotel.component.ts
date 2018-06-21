@@ -5,13 +5,8 @@ import { hotelModifySearch } from '../hotel.modify.component';
 import { Hotel, HotelServiceService } from '../hotel-service/hotel-service.service';
 import { MatCheckbox } from '@angular/material';
 
-
-// import { hotelInterface } from '../hotel.interface';
-
-// import { catchError, retry } from 'rxjs/operators';
-
-
 declare var $: any;
+
 @Component({
   selector: 'app-hotel',
   encapsulation: ViewEncapsulation.None,
@@ -32,22 +27,11 @@ export class HotelComponent implements OnInit {
   // Post Request -> body  from service as Observable
   requestBody: any;
 
-
-
-
-
-
   constructor(public dialog: MatDialog, private HotelData: HotelServiceService, ) { }
 
   ngOnInit() {
     this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
     this.showHotelDetails();
-    if (this.filterHotelDetails === []) {
-      this.filterHotelDetails = this.HotelDetails;
-    } else {
-      this.filterHotelDetails = this.filterHotelDetails;
-    }
-
   }
 
   // subscribeing to getHotelDetails method in hotel-service.service.ts to get Hotel Details
@@ -56,18 +40,13 @@ export class HotelComponent implements OnInit {
       data => {
         this.HotelDetails = JSON.parse(data.response);
         this.HotelDetailsOriginal = this.HotelDetails;
-        // console.log(this.HotelDetails);
-        // this.filterHotelDetails = this.HotelDetails;
+        console.log(this.HotelDetails[0]);
         this.showHotelLoader = false;
       },
       err => console.log(err),
       // () => console.log('Request Completed')
     );
   }
-
-
-
-
 
   openDialog() {
     const dialogRef = this.dialog.open(hotelModifySearch, {
@@ -214,38 +193,215 @@ export class HotelComponent implements OnInit {
     this.hotel_map = 'd-block fadeIn';
   }
 
-
-
-
   // Hotel Filter section
+  // 1> Price Filteration
+  val = 1000;
+  priceFilteration() {
+    console.log(this.val);
+    let priceValue = this.val;
+    console.log(priceValue);
+    this.HotelDetailsOriginal = this.HotelDetails;
+    if (priceValue) {
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+        data => {
+          if (data.StartAmount <= priceValue) {
+            return data.StartAmount.includes(data.StartAmount);
+          }
+        }
+      )))
+    } else {
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+        data => {
+          if (data.StartAmount >= priceValue) {
+            return data.StartAmount.includes(priceValue);
+          }
+        }
+      )))
+    }
+    this.filterHotelDetails.sort(function (a, b) {
+      var nameA = parseInt(a.StartAmount); // ignore upper and lowercase
+      var nameB = parseInt(b.StartAmount); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return 1;
+      }
+      if (nameA > nameB) {
+        return -1;
+      }
+      return 0;
+    });
+  }
 
-  // 1> Rating Filter
+  // 2> Rating Filter
   ratingFilter(filter: string) {
+    console.log(event.target);
     var target = $("#rating" + filter).find('input').attr('aria-checked');
     this.HotelDetailsOriginal = this.HotelDetails;
     console.log(target);
     // console.log($(this).find('#rating' + filter + '-input'));
+    // this.filterHotelDetails = [];
     if (target == 'false') {
       this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
         data => {
           return data.Rating.includes(filter);
         }
       )))
-      console.log(this.filterHotelDetails);
+      // console.log(this.filterHotelDetails);
     } if (target == 'true') {
       this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
         data => {
           return data.Rating.includes(filter);
         }
       ));
-      console.log(this.filterHotelDetails);
+      // console.log(this.filterHotelDetails);
     }
   }
 
-  amenitiesFilter(event) {
-    console.log(event.target.id);
+  // 3> Location Filter
+  locationFilter(filter: string) {
+    console.log(filter);
+    let id = $("#" + filter).find('input').attr('aria-checked');
+    console.log(id);
   }
 
+  // 4> Amenities Filter
+  amenitiesFilter(id: number) {
+    var target = $("#amenities" + id).find('input').attr('aria-checked');
+    this.HotelDetailsOriginal = this.HotelDetails;
+    if (target == 'false') {
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+        data => {
+          if (data.Amenities != null) {
+            return data.Amenities.ID.includes(id);
+          }
+        }
+      )))
+      // console.log(this.filterHotelDetails);
+    } if (target == 'true') {
+      this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
+        data => {
+          if (data.Amenities != null) {
+            return data.Amenities.ID.includes(id);
+          }
+        }
+      ));
+    }
+  }
+
+
+  // sorting
+  // 1> Recommended
+  Recommended() {
+    this.HotelDetails.sort(function (a, b) {
+      var ratingA = parseInt(a.Rating); // ignore upper and lowercase
+      var ratingB = parseInt(b.Rating); // ignore upper and lowercase
+
+      var priceA = parseInt(a.StartAmount);
+      var priceB = parseInt(b.StartAmount);
+      if (ratingA < ratingB && priceA < priceB) {
+        return 1;
+      }
+      if (ratingA > ratingB && priceA > priceB) {
+        return -1;
+      }
+      return 0;
+    });
+
+    this.filterHotelDetails.sort(function (a, b) {
+      var ratingA = parseInt(a.Rating); // ignore upper and lowercase
+      var ratingB = parseInt(b.Rating); // ignore upper and lowercase
+
+      if (ratingA < ratingB) {
+        return 1;
+      }
+      if (ratingA > ratingB) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  // 2> Alphabetic
+  Alphabetic() {
+    this.HotelDetails.sort(function (a, b) {
+      var nameA = a.HotelName.toUpperCase(); // ignore upper and lowercase
+      var nameB = b.HotelName.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+
+      // names must be equal
+      return 0;
+    });
+    this.filterHotelDetails.sort(function (a, b) {
+      var nameA = a.HotelName.toUpperCase(); // ignore upper and lowercase
+      var nameB = b.HotelName.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      // names must be equal
+      return 0;
+    });
+  }
+
+  // 2> Rating
+  Rating() {
+    this.HotelDetails.sort(function (a, b) {
+      var nameA = parseInt(a.Rating); // ignore upper and lowercase
+      var nameB = parseInt(b.Rating); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return 1;
+      }
+      if (nameA > nameB) {
+        return -1;
+      }
+      return 0;
+    });
+
+    this.filterHotelDetails.sort(function (a, b) {
+      var nameA = parseInt(a.Rating); // ignore upper and lowercase
+      var nameB = parseInt(b.Rating); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return 1;
+      }
+      if (nameA > nameB) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  // 3> Price
+  Price() {
+    this.HotelDetails.sort(function (a, b) {
+      var nameA = parseInt(a.StartAmount); // ignore upper and lowercase
+      var nameB = parseInt(b.StartAmount); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+
+    this.filterHotelDetails.sort(function (a, b) {
+      var nameA = parseInt(a.StartAmount); // ignore upper and lowercase
+      var nameB = parseInt(b.StartAmount); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+  }
 
 
 }

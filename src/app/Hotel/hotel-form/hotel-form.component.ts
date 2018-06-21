@@ -61,9 +61,6 @@ export class HotelFormComponent implements OnInit {
   date = new FormControl(moment().fromNow(true));
 
 
-
-
-
   // serializedDate = new FormControl((new Date()).toISOString());
 
   constructor(private HotelData: HotelServiceService, private router: Router) {
@@ -138,25 +135,23 @@ export class HotelFormComponent implements OnInit {
         this.HotelCities = data.CITYNAMES.row;
         // console.log(data);
         // console.log(this.HotelCities);
-        for (var i = 0; i < this.HotelCities.length; i++) {
+        for (let Hotel of this.HotelCities) {
           // console.log(this.HotelCities[i].attributes.city);
           var city = {};
-          city['city'] = this.HotelCities[i].city;
+          city['city'] = Hotel.city;
           this.options.push(city);
           // console.log(this.options);
         }
-        // console.log(this.options);
       }
     )
-
   }
 
   // Hotel Search
   // Search input fields two way data binding
-  city: string = "";
-  checkInDate = "";
-  checkOutDate = "";
-  Htlrooms: number = 1;
+  city;
+  checkInDate;
+  checkOutDate;
+  Htlrooms;
   requestRooms = [];
 
   hotelSearch() {

@@ -34,6 +34,7 @@ import { BusFormComponent } from './Bus/bus-form/bus-form.component';
 import { hotelModifySearch } from './Hotel/hotel.modify.component';
 import { busModifySearch } from './Bus/bus.modify.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SamevaluePipe } from './pipes/samevalue.pipe';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { HttpClientModule } from '@angular/common/http';
     CancellationPolicyComponent,
     BusFormComponent,
     hotelModifySearch,
-    busModifySearch
+    busModifySearch,
+    SamevaluePipe
   ],
   imports: [
     BrowserModule,
