@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
 import { Hotel, HotelServiceService } from '../hotel-service/hotel-service.service';
 import { MatCheckbox } from '@angular/material';
+import * as jQuery from 'jquery';
 
 declare var $: any;
 
@@ -196,19 +197,22 @@ export class HotelComponent implements OnInit {
   // Hotel Filter section
   // 1> Price Filteration
   val = 1000;
+  priceFilterArray = [];
   priceFilteration() {
+
     console.log(this.val);
     let priceValue = this.val;
     console.log(priceValue);
     this.HotelDetailsOriginal = this.HotelDetails;
     if (priceValue) {
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+      this.priceFilterArray.unshift.apply(this.priceFilterArray, (this.HotelDetailsOriginal.filter(
         data => {
           if (data.StartAmount <= priceValue) {
             return data.StartAmount.includes(data.StartAmount);
           }
         }
       )))
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.priceFilterArray);
     } else {
       this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
         data => {
@@ -232,19 +236,18 @@ export class HotelComponent implements OnInit {
   }
 
   // 2> Rating Filter
+  ratingFilterArray = [];
   ratingFilter(filter: string) {
-    console.log(event.target);
     var target = $("#rating" + filter).find('input').attr('aria-checked');
     this.HotelDetailsOriginal = this.HotelDetails;
-    console.log(target);
-    // console.log($(this).find('#rating' + filter + '-input'));
-    // this.filterHotelDetails = [];
     if (target == 'false') {
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+      this.ratingFilterArray.unshift.apply(this.ratingFilterArray, (this.HotelDetailsOriginal.filter(
         data => {
           return data.Rating.includes(filter);
         }
       )))
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.ratingFilterArray);
+      // console.log(this.ratingFilterArray);
       // console.log(this.filterHotelDetails);
     } if (target == 'true') {
       this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
@@ -257,24 +260,59 @@ export class HotelComponent implements OnInit {
   }
 
   // 3> Location Filter
+  locationFilterArray = [];
   locationFilter(filter: string) {
-    console.log(filter);
-    let id = $("#" + filter).find('input').attr('aria-checked');
-    console.log(id);
+    let id = filter.replace(/\s/g, "");
+    let value = $("#" + id).find('input').attr('aria-checked');
+    this.HotelDetailsOriginal = this.HotelDetails;
+
+    if (value == 'false') {
+      this.locationFilterArray.unshift.apply(this.locationFilterArray, (this.HotelDetailsOriginal.filter(
+        data => {
+          return data.FullAddress.includes(filter);
+        }
+      )))
+
+      // let array = [];
+      // const array = [{ id: 123, value: "value1", name:"Name1" }, { id: 124, value: "value2", name: "Name1" }, { id: 125, value: "value3", name: "Name2" }, { id: 126, value: "value4", name: "Name2" }],
+      // unique = new Map(array.map(obj => [obj.name, obj]));
+
+      // To get the unique objects
+      // const uniques = Array.from(unique.values());
+
+      // Get the names like you already did:
+      // console.log("Names:", uniques.map(obj => obj.name));
+
+      // If you ever need the complete array of unique objects, you got a ref:
+      // console.log(JSON.stringify(uniques));
+      // this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.locationFilterArray);
+      console.log(this.locationFilterArray);
+      console.log(this.filterHotelDetails);
+    } if (value == 'true') {
+      this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
+        data => {
+          return data.FullAddress.includes(filter);
+        }
+      ));
+      console.log(this.filterHotelDetails);
+    }
   }
 
+
   // 4> Amenities Filter
+  amenitiesFilterArray = [];
   amenitiesFilter(id: number) {
     var target = $("#amenities" + id).find('input').attr('aria-checked');
     this.HotelDetailsOriginal = this.HotelDetails;
     if (target == 'false') {
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+      this.amenitiesFilterArray.unshift.apply(this.amenitiesFilterArray, (this.HotelDetailsOriginal.filter(
         data => {
           if (data.Amenities != null) {
             return data.Amenities.ID.includes(id);
           }
         }
       )))
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.amenitiesFilterArray);
       // console.log(this.filterHotelDetails);
     } if (target == 'true') {
       this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
