@@ -39,9 +39,8 @@ export class HotelComponent implements OnInit {
   showHotelDetails() {
     this.HotelData.getHotelDetails(this.requestBody).subscribe(
       data => {
-        this.HotelDetails = JSON.parse(data.response);
+        this.HotelDetails = data;
         this.HotelDetailsOriginal = this.HotelDetails;
-        console.log(this.HotelDetails[0]);
         this.showHotelLoader = false;
       },
       err => console.log(err),
@@ -261,43 +260,44 @@ export class HotelComponent implements OnInit {
 
   // 3> Location Filter
   locationFilterArray = [];
-  locationFilter(filter: string) {
-    let id = filter.replace(/\s/g, "");
+  locationFilter(location) {
+    let id = location.HotelID;
     let value = $("#" + id).find('input').attr('aria-checked');
     this.HotelDetailsOriginal = this.HotelDetails;
 
     if (value == 'false') {
       this.locationFilterArray.unshift.apply(this.locationFilterArray, (this.HotelDetailsOriginal.filter(
         data => {
-          return data.FullAddress.includes(filter);
+          return data.FullAddress.includes(location.FullAddress);
         }
       )))
 
-      // let array = [];
-      // const array = [{ id: 123, value: "value1", name:"Name1" }, { id: 124, value: "value2", name: "Name1" }, { id: 125, value: "value3", name: "Name2" }, { id: 126, value: "value4", name: "Name2" }],
-      // unique = new Map(array.map(obj => [obj.name, obj]));
+      // this.filterHotelDetails.push(this.locationFilterArray);
+      // function removeDuplicates(myArr, prop) {
+      //   return myArr.filter((obj, pos, arr) => {
+      //     return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+      //   });
+      // }
+      this.locationFilterArray = this.removeDuplicates(this.locationFilterArray, location.FullAddress);
 
-      // To get the unique objects
-      // const uniques = Array.from(unique.values());
-
-      // Get the names like you already did:
-      // console.log("Names:", uniques.map(obj => obj.name));
-
-      // If you ever need the complete array of unique objects, you got a ref:
-      // console.log(JSON.stringify(uniques));
-      // this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.locationFilterArray);
       console.log(this.locationFilterArray);
+      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.locationFilterArray);
+
       console.log(this.filterHotelDetails);
     } if (value == 'true') {
       this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
         data => {
-          return data.FullAddress.includes(filter);
+          return data.FullAddress.includes(location.FullAddress);
         }
       ));
       console.log(this.filterHotelDetails);
     }
   }
-
+  removeDuplicates(myArr, prop) {
+    return myArr.filter((obj, pos, arr) => {
+      return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+    });
+  }
 
   // 4> Amenities Filter
   amenitiesFilterArray = [];

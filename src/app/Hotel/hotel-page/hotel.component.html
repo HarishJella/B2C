@@ -92,7 +92,7 @@
           <hr>
           <div>
             <h2>Location</h2>
-            <mat-checkbox *ngFor="let location of HotelDetails,let i=index" id="{{ location.FullAddress.split(' ').join('') }}" (click)="locationFilter( location.FullAddress )">
+            <mat-checkbox *ngFor="let location of HotelDetails,let i=index" id="{{ location.HotelID }}" (click)="locationFilter( location )">
               {{location.FullAddress}}
             </mat-checkbox>
           </div>
