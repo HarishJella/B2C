@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, Host
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { HotelServiceService} from '../hotel-service/hotel-service.service';
 
 import { Router } from '@angular/router';
 
@@ -55,7 +56,9 @@ export class HotelFormComponent implements OnInit {
 
 // serializedDate = new FormControl((new Date()).toISOString());
 
-  constructor( private router: Router) {
+  // serializedDate = new FormControl((new Date()).toISOString());
+
+  constructor(private HotelData: HotelServiceService, private router: Router) {
     this.myControl = new FormControl();
   }
 
@@ -110,6 +113,60 @@ export class HotelFormComponent implements OnInit {
       this.Child = 0;
     } else {
       this.Child = this.Child - 1;
+    }
+  }
+
+
+  showHotelCities() {
+    this.HotelData.getHotelCities(
+      data => {
+        this.HotelCities = data.CITYNAMES.row;
+        // console.log(data);
+        // console.log(this.HotelCities);
+        for (let Hotel of this.HotelCities) {
+          // console.log(this.HotelCities[i].attributes.city);
+          var city = {};
+          city['city'] = Hotel.city;
+          this.options.push(city);
+          // console.log(this.options);
+        }
+      }
+    )
+  }
+
+  // Hotel Search
+  // Search input fields two way data binding
+  city;
+  checkInDate;
+  checkOutDate;
+  Htlrooms;
+  requestRooms = [];
+
+  hotelSearch() {
+    if (this.city != '' && this.checkInDate != '' && this.checkOutDate != '') {
+      this.checkInDate = moment(this.checkInDate).format('DD-MM-YYYY');
+      this.checkOutDate = moment(this.checkOutDate).format('DD-MM-YYYY');
+      this.requestBody.Destination = this.city;
+      this.requestBody.CheckIn = this.checkInDate;
+      this.requestBody.CheckOut = this.checkOutDate;
+      // for (var i = 0; i < this.Htlrooms; i++) {
+      //   this.requestRooms.push({
+      //     "AD": 2,
+      //     "CH": 1,
+      //     "CHAge": [
+      //       8
+      //     ]
+      //   });
+      // }
+      // this.requestBody.Rooms = this.requestRooms;
+      // this.requestBodyEvent.emit(this.requestBody);
+      this.HotelData.getHotelDetails(this.requestBody);
+      console.log(this.requestBody);
+      console.log(this.city, this.checkInDate, this.checkOutDate, this.Htlrooms);
+      // this.searchFirred.emit('firred');
+      this.router.navigateByUrl('/hotel');
+    } else {
+      alert('All Fields are mandatory');
     }
   }
 }

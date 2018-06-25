@@ -57,8 +57,9 @@
           <hr>
           <div>
             <h2>Price</h2>
-            <p>Upto Rs 2,52,369</p>
-            <mat-slider [thumbLabel]="true" value="10000" [displayWith]="formatLabel" tickInterval="1" min="1" max="100000"></mat-slider>
+            <p>Upto Rs 1,00,000</p>
+            <mat-slider [thumbLabel]="true" (click)="priceFilteration($event)" [(ngModel)]="val" [displayWith]="formatLabel" tickInterval="1000"
+              min="0" max="10000"></mat-slider>
             <div class="d-flex justify-content-between minmax">
               <p>min: 0</p>
               <p>max: 100k</p>
@@ -72,11 +73,14 @@
           <hr>
           <div>
             <h2>Amenities</h2>
-            <!-- <mat-checkbox *ngFor="let Amenities of HotelDetails.Amenities;let i = index" id="rating{{Amenities.ID}}" (click)="amenitiesFilter($event)">{{Amenities.Name}}</mat-checkbox> -->
-            <mat-checkbox>Swimming pool</mat-checkbox>
-            <mat-checkbox>Bed</mat-checkbox>
-            <mat-checkbox>Table</mat-checkbox>
-
+            <mat-checkbox id="amenities8" (click)="amenitiesFilter(8)">Air Conditioning</mat-checkbox>
+            <mat-checkbox id="amenities28" (click)="amenitiesFilter(28)">Internet Access</mat-checkbox>
+            <mat-checkbox id="amenities9" (click)="amenitiesFilter(9)">TV</mat-checkbox>
+            <mat-checkbox id="amenities10" (click)="amenitiesFilter(10)">Restaurant</mat-checkbox>
+            <mat-checkbox id="amenities11" (click)="amenitiesFilter(11)">Bar</mat-checkbox>
+            <mat-checkbox id="amenities13" (click)="amenitiesFilter(13)">Parking</mat-checkbox>
+            <mat-checkbox id="amenities20" (click)="amenitiesFilter(20)">Fitness Center</mat-checkbox>
+            <mat-checkbox id="amenities22" (click)="amenitiesFilter(22)">Swimming Pool</mat-checkbox>
           </div>
         </div>
       </div>
@@ -86,8 +90,8 @@
           <hr>
           <div>
             <h2>Location</h2>
-            <mat-checkbox *ngFor="let location of HotelDetails;let i = index" id="location" (click)="locationFilter($event)">
-              {{ location.FullAddress }}
+            <mat-checkbox *ngFor="let location of HotelDetails,let i=index" id="{{ location.HotelID }}" (click)="locationFilter( location )">
+              {{location.FullAddress}}
             </mat-checkbox>
           </div>
         </div>
@@ -137,19 +141,22 @@
             <p class="mb-0"></p>
           </div>
           <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
-            <p class="mb-0">Recommended</p>
+            <p class="mb-0" (click)="Recommended()">Recommended</p>
+          </div>
+          <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
+            <p class="mb-0" (click)="Alphabetic()">Alphabetic</p>
           </div>
           <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
-            <p class="mb-0">Star Rating</p>
+            <p class="mb-0" (click)="Rating()">Star Rating</p>
           </div>
           <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
-            <p class="mb-0">Price</p>
+            <p class="mb-0" (click)="Price()">Price</p>
           </div>
           <div class="col-0 d-flex flex-column justify-content-center align-items-center item ">
             <p class="mb-0"></p>
           </div>
           <div class="col-4 d-flex flex-column justify-content-center align-items-center item">
-            <p class="mb-0">Showing 18 of 18 Hotels</p>
+            <p class="mb-0" *ngIf="filterHotelDetails.length > 0 || HotelDetails "> {{ (filterHotelDetails.length != 0) ? filterHotelDetails.length : HotelDetails.length}} Hotels</p>
           </div>
         </div>
         <div class="d-flex justify-content-end align-items-center views my-1">
@@ -167,12 +174,13 @@
 
 
 
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of (filterHotelDetails.length === 0) ? HotelDetails : filterHotelDetails ,let i of index"
+          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of (filterHotelDetails.length != 0) ? filterHotelDetails : HotelDetails ,let i of index"
             [Hotel]="Hotel"></app-hotel-template>
 
           <div *ngIf="showHotelLoader">
             Loading
           </div>
+
 
         </div>
 
