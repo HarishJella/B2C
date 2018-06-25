@@ -20,11 +20,9 @@
           </div>
 
           <div>
-            <h6 class="mb-1" matTooltipPosition="above" matTooltip="Airline Name">{{Flight.Seg[0]._ArN}}</h6>
+            <h6 class="mb-1" matTooltipPosition="above" matTooltip="Airline Name">Air-Asia</h6>
             <p class="mb-0 aircode" matTooltipPosition="below" matTooltip="Airline Code">AI-9506</p>
           </div>
-
-
         </div>
         <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
           <div class="mb-1 d-flex">
@@ -44,27 +42,7 @@
           <div class="d-flex justify-content-around meals_baggage">
             <img src="assets/images/meals.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Meals">
             <img src="assets/images/baggage.svg" alt="" matTooltipPosition="above" mat-raised-button matTooltip="Free Baggages">
-          </div>
-          <!-- <div class="provider fundable refundable">
-            R
-            <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
-              <div class="p-2">
-                Refundable
-              </div>
-            </div>
-
-          </div>
-          <div class="provider fundable refundable">
-            R
-            <div class="animated slideInDown tol-tip" data-wow-delay="1s" data-wow-offset="100" data-wow-duration="1s">
-              <div class="p-2">
-                Refundable
-              </div>
-            </div>
-
-          </div> -->
-
-
+          </div> 
         </div>
         <div class="col-2 d-flex flex-column justify-content-center align-items-center">
           <div class="mb-1 d-flex">
@@ -77,15 +55,12 @@
           </div>
         </div>
         <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
-          <h6 class="mb-1" matTooltipPosition="above" mat-raised-button matTooltip="Class - {{Flight.Seg[0]._Cls}}">Class - {{Flight.Seg[0]._Cls}}</h6>
+          <h6 class="mb-1" matTooltipPosition="above" mat-raised-button matTooltip="Class - {{Flight.Seg[0]._Cls}}">Class - x </h6>
           <p class="mb-0 refundable" matTooltipPosition="below" mat-raised-button matTooltip="Refundable">{{Flight.Seg[0]._FTy}}</p>
-
         </div>
+       </div>
+       </div>
 
-      </div>
-
-
-    </div>
     <div class="col-3  px-0 d-flex  justify-content-center align-items-center item section2 ">
       <div class="col-6 pt-3 d-flex flex-column justify-content-center align-items-center fare">
         <div class="discount">
@@ -145,9 +120,8 @@
             <h6 class="mb-1" matTooltipPosition="above" matTooltip="Airline Name">Delta Air Lines</h6>
             <p class="mb-0 aircode" matTooltipPosition="below" matTooltip="Airline Code">AI-9506</p>
           </div>
+         </div>
 
-
-        </div>
         <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center departure">
           <div class="mb-1 d-flex">
             <h6 class="mb-0 mr-1" matTooltipPosition="above" mat-raised-button matTooltip="Bangalore">BLR</h6>
@@ -201,13 +175,10 @@
         <div class="col-2 py-3 d-flex flex-column justify-content-center align-items-center">
           <h6 class="mb-1" matTooltipPosition="above" mat-raised-button matTooltip="Class - X-ROIP">X - ROIP</h6>
           <p class="mb-0 refundable" matTooltipPosition="below" mat-raised-button matTooltip="Refundable">refundable</p>
-
-        </div>
-
+         </div>
       </div>
-
-
     </div>
+
     <div class="col-3  px-0 d-flex  justify-content-center align-items-center item section2 ">
       <div class="col-6 pt-3 d-flex flex-column justify-content-center align-items-center fare">
         <div class="discount">
@@ -243,24 +214,18 @@
       </div>
     </div>
   </div>
-
 </div>
 
 <!-- more_flights button -->
 <div class="d-flex justify-content-center align-items-center ">
   <div class="d-flex justify-content-center align-items-center waves-light more_flights" (click)="more_flights()" mdbWavesEffect
     matTooltipPosition="above" mat-raised-button matTooltip="2 More Similar Flights Available">
-
     <p class="mb-0 pr-1">More</p>
     <i class="material-icons">
       airplanemode_active
     </i>
-
-  </div>
-
 </div>
-
-
+</div>
 
 <div mdbModal #flightDetails="mdb-modal" class="modal fade" id="flight_details" tabindex="-1" role="dialog" aria-labelledby="flightDetails"
   aria-hidden="true">
@@ -326,8 +291,6 @@
                             <span class="mb-0">Operated by spicejet</span>
                           </div>
                         </div>
-
-
                       </div>
                       <div class="col-3 d-flex flex-column justify-content-center align-items-center">
                         <h6>New Delhi (DEL)</h6>
@@ -435,16 +398,7 @@
                         <span class="mb-0">Chatrpathi Shivaji - T - 1</span>
                       </div>
                     </div>
-                    <!-- <div class="col-12 d-flex justify-content-center align-items-center">
-                      <div class="col-8 d-flex justify-content-center align-items-center border Layover">
-                        <i class="material-icons pr-2">
-                          airline_seat_individual_suite
-                        </i>
-                        <p class="mb-0"> Layover: Toronto (YYZ) - 17h 042m</p>
-
-                      </div>
-                    </div>-->
-                  </div>
+                   </div>
                 </div>
 
                 <div class="tab-content pt-5">
@@ -573,15 +527,7 @@
                         <span class="mb-0">Chatrpathi Shivaji - T - 1</span>
                       </div>
                     </div>
-                    <!-- <div class="col-12 d-flex justify-content-center align-items-center">
-                      <div class="col-8 d-flex justify-content-center align-items-center border Layover">
-                        <i class="material-icons pr-2">
-                          airline_seat_individual_suite
-                        </i>
-                        <p class="mb-0"> Layover: Toronto (YYZ) - 17h 042m</p>
-
-                      </div>
-                    </div>-->
+                   
                   </div>
                 </div>
 
@@ -646,20 +592,17 @@
                           <td scope="row">1</td>
                           <td>Fare Summary</td>
                           <td>ADT * 1</td>
-
-                        </tr>
+                         </tr>
                         <tr>
                           <td scope="row">2</td>
                           <td>Base fare</td>
                           <td class="price_right">$ 6,225</td>
-
                         </tr>
                         <tr>
                           <td scope="row">3</td>
                           <td>Airlinr fuel surcharges</td>
                           <td class="price_right">$ 636</td>
-
-                        </tr>
+                         </tr>
                         <tr>
                           <td scope="row">4</td>
                           <td>Total</td>
@@ -709,32 +652,21 @@
                       </tbody>
                     </table>
                     <span>* Total fare displayed above has been rounded off and may thus show a slight difference</span>
-
                   </div>
-
                 </div>
               </mat-tab>
-
-
-
-              <mat-tab label="Fare Rules">
+                <mat-tab label="Fare Rules">
                 <div class="col-12 d-flex justify-content-between align-items-start fare_rules">
                   <div class="col-12 px-0">
-
                     <table class="table table-sm my-3 table-bordered">
                       <thead>
                         <tr>
-
-                          <th>Category</th>
+                           <th>Category</th>
                           <th>Type</th>
                           <th colspan="2">Fare Rule</th>
-
-
-
                         </tr>
                       </thead>
                       <tbody>
-
                         <tr>
                           <td>0000</td>
                           <td>Rule</td>
@@ -833,10 +765,8 @@
                             suscipit natus soluta sit tempore reiciendis. Neque numquam repellat rerum voluptatum dicta.
                             Delectus, dolore?</td>
                         </tr>
-
-                      </tbody>
+                       </tbody>
                     </table>
-
                   </div>
                 </div>
               </mat-tab>
@@ -943,7 +873,6 @@
           </i>
         </button>
       </div>
-
     </div>
   </div>
 </div>
@@ -1120,7 +1049,6 @@
                             <td>Meals</td>
                             <td>Paid Meals / Not Applicable</td>
                           </tr>
-
                         </tbody>
                       </table>
                       <div class="d-block text-center">
@@ -1170,10 +1098,7 @@
                   </div>
                 </div>
               </mat-tab>
-
-
-
-            </mat-tab-group>
+             </mat-tab-group>
           </mat-card-content>
         </mat-card>
       </div>
