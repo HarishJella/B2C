@@ -87,7 +87,7 @@ export class HotelFormComponent implements OnInit {
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),
-        map(val => val.length >= 3 ? this.filter(val) : [])
+        map(val => val.length >= 2 ? this.filter(val) : [])
       );
   }
 
@@ -155,7 +155,8 @@ export class HotelFormComponent implements OnInit {
   requestRooms = [];
 
   hotelSearch() {
-    if (this.city != '' && this.checkInDate != '' && this.checkOutDate != '') {
+    console.log(this.city, this.checkInDate, this.checkOutDate);
+    if (this.city != null && this.checkInDate != null && this.checkOutDate != null) {
       this.checkInDate = moment(this.checkInDate).format('DD-MM-YYYY');
       this.checkOutDate = moment(this.checkOutDate).format('DD-MM-YYYY');
       this.requestBody.Destination = this.city;

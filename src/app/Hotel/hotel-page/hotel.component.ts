@@ -39,7 +39,7 @@ export class HotelComponent implements OnInit {
   showHotelDetails() {
     this.HotelData.getHotelDetails(this.requestBody).subscribe(
       data => {
-        this.HotelDetails = data;
+        this.HotelDetails = JSON.parse(data.response);
         this.HotelDetailsOriginal = this.HotelDetails;
         this.showHotelLoader = false;
       },
@@ -198,7 +198,6 @@ export class HotelComponent implements OnInit {
   val = 1000;
   priceFilterArray = [];
   priceFilteration() {
-
     console.log(this.val);
     let priceValue = this.val;
     console.log(priceValue);
@@ -239,6 +238,7 @@ export class HotelComponent implements OnInit {
   ratingFilter(filter: string) {
     var target = $("#rating" + filter).find('input').attr('aria-checked');
     this.HotelDetailsOriginal = this.HotelDetails;
+
     if (target == 'false') {
       this.ratingFilterArray.unshift.apply(this.ratingFilterArray, (this.HotelDetailsOriginal.filter(
         data => {
@@ -293,11 +293,8 @@ export class HotelComponent implements OnInit {
       console.log(this.filterHotelDetails);
     }
   }
-  removeDuplicates(myArr, prop) {
-    return myArr.filter((obj, pos, arr) => {
-      return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
-    });
-  }
+
+
 
   // 4> Amenities Filter
   amenitiesFilterArray = [];
@@ -441,6 +438,13 @@ export class HotelComponent implements OnInit {
     });
   }
 
+
+  // Remove same object valu from filterHotelDetails
+  removeDuplicates(myArr, prop) {
+    return myArr.filter((obj, pos, arr) => {
+      return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+    });
+  }
 
 }
 

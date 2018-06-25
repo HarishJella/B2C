@@ -5,7 +5,7 @@
 
       </div>
     </mat-card>
-    <mat-tab-group class="main-srch {{modalToggleVisiblity}}">
+    <mat-tab-group class="main-srch {{modalToggleVisiblity}}" [selectedIndex]="selected">
       <mat-tab>
         <ng-template mat-tab-label>
           <img src="assets/images/flight.svg" (click)="tab()">
