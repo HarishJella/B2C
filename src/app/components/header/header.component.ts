@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Output, EventEmitter } from '@angular/core';
+import { SharedService } from '../../shared/shared.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,8 @@ export class HeaderComponent implements OnInit {
   register_form: string = 'd-none';
   loginActive: string = 'active';
   registerActive: string = '';
-  constructor() { }
+  tabIndex: number;
+  constructor(private _sharedService: SharedService) { }
 
   ngOnInit() {
   }
@@ -39,8 +41,9 @@ export class HeaderComponent implements OnInit {
     this.login_form = 'd-none slideOutUp';
     this.register_form = 'd-none slideOutUp'
     this.forgot_password_form = 'd-flex slideInUp';
-
-
   }
 
+  tabs(tab: number) {
+    this._sharedService.tabGroup(tab);
+  }
 }

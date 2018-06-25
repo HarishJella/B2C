@@ -76,7 +76,14 @@ export class HotelFormComponent implements OnInit {
   ];
 
   ngOnInit() {
-    
+    this.showHotelCities();
+    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
+
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(val => val.length >= 2 ? this.filter(val) : [])
+      );
   }
 
   @Input('passengers_state') public passengers_state: string;
@@ -143,7 +150,8 @@ export class HotelFormComponent implements OnInit {
   requestRooms = [];
 
   hotelSearch() {
-    if (this.city != '' && this.checkInDate != '' && this.checkOutDate != '') {
+    console.log(this.city, this.checkInDate, this.checkOutDate);
+    if (this.city != null && this.checkInDate != null && this.checkOutDate != null) {
       this.checkInDate = moment(this.checkInDate).format('DD-MM-YYYY');
       this.checkOutDate = moment(this.checkOutDate).format('DD-MM-YYYY');
       this.requestBody.Destination = this.city;
