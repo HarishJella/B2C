@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   constructor(private _sharedService: SharedService) { }
 
   ngOnInit() {
+    this._sharedService.tabCurrentIndexSource.subscribe(data => this.tabIndex = data);
   }
 
   Login() {
@@ -44,6 +45,7 @@ export class HeaderComponent implements OnInit {
   }
 
   tabs(tab: number) {
-    this._sharedService.tabGroup(tab);
+    this.tabIndex = tab;
+    this._sharedService.tabGroup(this.tabIndex);
   }
 }

@@ -9,7 +9,7 @@ export class SharedService {
   constructor() { }
 
 
-  tabIndex: number;
+  tabIndex: number = 0;
   // Observable string sources
   private tabSource = new BehaviorSubject<any>(this.tabIndex);
   // output a reference string to trigger parent showHotelDetails(), onclick of search button

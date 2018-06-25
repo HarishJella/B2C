@@ -4,25 +4,23 @@
 
       <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
         <h6 class="mb-1">City</h6>
-        <p class="mb-0">{{ (requestBody.Destination.length > 26) ? (requestBody.Destination | slice:0:26)+'...' : requestBody.Destination
-          }}
-        </p>
+        <p class="mb-0"> </p>
         <span>Karnataka</span>
       </div>
       <div class="item p-3  col-2 d-flex flex-column justify-content-center align-items-center">
         <h6 class="mb-1">Check In</h6>
         <p class="mb-0">11:00</p>
-        <span>{{requestBody.CheckIn}}</span>
+        <span></span>
       </div>
       <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
         <h6 class="mb-1">Check Out</h6>
         <p class="mb-0">11:00</p>
-        <span>{{requestBody.CheckOut}}</span>
+        <span></span>
       </div>
       <div class="item p-3 seater_class col-3 d-flex flex-column justify-content-start align-items-center">
         <h6 class="mb-1">Type</h6>
         <p class="mb-0">Double Deck Room - 8 Nights</p>
-        <span>Adult {{requestBody.Rooms[0].AD}}, Child {{requestBody.Rooms[0].CH}}</span>
+        <span>Adult , Child</span>
       </div>
       <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
         <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"

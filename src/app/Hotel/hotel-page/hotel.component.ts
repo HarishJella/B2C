@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
-import { Hotel, HotelServiceService } from '../hotel-service/hotel-service.service';
+import { HotelServiceService} from '../hotel-service/hotel-service.service';
+
 import { MatCheckbox } from '@angular/material';
 import * as jQuery from 'jquery';
 
@@ -58,7 +59,7 @@ export class HotelComponent implements OnInit {
       this.stickyTop = "sticky-top";
       this.passengers_state = 'd-none fadeOutRightBig';
       this.showHotelLoader = true;
-      this.showHotelDetails();
+     
       // console.log(`Dialog result: ${result}`);
     });
 

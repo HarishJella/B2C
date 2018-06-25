@@ -2,9 +2,10 @@ import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, Host
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { HotelServiceService } from '../hotel-service/hotel-service.service';
+import { HotelServiceService} from '../hotel-service/hotel-service.service';
+
 import { Router } from '@angular/router';
-import { MomentDateAdapter } from '@angular/material-moment-adapter';
+
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatDatepicker } from '@angular/material/datepicker';
 
@@ -39,14 +40,7 @@ export const MY_FORMATS = {
   encapsulation: ViewEncapsulation.None,
   templateUrl: './hotel-form.component.html',
   styleUrls: ['./hotel-form.component.scss'],
-  providers: [
-    // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
-    // application's root module. We provide it at the component level here, due to limitations of
-    // our example generation script.
-    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-
-    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
-  ],
+ 
 })
 
 export class HotelFormComponent implements OnInit {
@@ -60,6 +54,7 @@ export class HotelFormComponent implements OnInit {
 
   date = new FormControl(moment().fromNow(true));
 
+// serializedDate = new FormControl((new Date()).toISOString());
 
   // serializedDate = new FormControl((new Date()).toISOString());
 
