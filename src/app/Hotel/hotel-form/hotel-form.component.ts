@@ -2,9 +2,9 @@ import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, Host
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { HotelServiceService } from '../hotel-service/hotel-service.service';
+
 import { Router } from '@angular/router';
-import { MomentDateAdapter } from '@angular/material-moment-adapter';
+
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatDatepicker } from '@angular/material/datepicker';
 
@@ -39,14 +39,7 @@ export const MY_FORMATS = {
   encapsulation: ViewEncapsulation.None,
   templateUrl: './hotel-form.component.html',
   styleUrls: ['./hotel-form.component.scss'],
-  providers: [
-    // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
-    // application's root module. We provide it at the component level here, due to limitations of
-    // our example generation script.
-    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-
-    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
-  ],
+ 
 })
 
 export class HotelFormComponent implements OnInit {
@@ -60,13 +53,9 @@ export class HotelFormComponent implements OnInit {
 
   date = new FormControl(moment().fromNow(true));
 
+// serializedDate = new FormControl((new Date()).toISOString());
 
-
-
-
-  // serializedDate = new FormControl((new Date()).toISOString());
-
-  constructor(private HotelData: HotelServiceService, private router: Router) {
+  constructor( private router: Router) {
     this.myControl = new FormControl();
   }
 
@@ -84,14 +73,7 @@ export class HotelFormComponent implements OnInit {
   ];
 
   ngOnInit() {
-    this.showHotelCities();
-    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
-
-    this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(val => val.length >= 3 ? this.filter(val) : [])
-      );
+    
   }
 
   @Input('passengers_state') public passengers_state: string;
@@ -128,62 +110,6 @@ export class HotelFormComponent implements OnInit {
       this.Child = 0;
     } else {
       this.Child = this.Child - 1;
-    }
-  }
-
-
-  showHotelCities() {
-    this.HotelData.getHotelCities(
-      data => {
-        this.HotelCities = data.CITYNAMES.row;
-        // console.log(data);
-        // console.log(this.HotelCities);
-        for (var i = 0; i < this.HotelCities.length; i++) {
-          // console.log(this.HotelCities[i].attributes.city);
-          var city = {};
-          city['city'] = this.HotelCities[i].city;
-          this.options.push(city);
-          // console.log(this.options);
-        }
-        // console.log(this.options);
-      }
-    )
-
-  }
-
-  // Hotel Search
-  // Search input fields two way data binding
-  city: string = "";
-  checkInDate = "";
-  checkOutDate = "";
-  Htlrooms: number = 1;
-  requestRooms = [];
-
-  hotelSearch() {
-    if (this.city != '' && this.checkInDate != '' && this.checkOutDate != '') {
-      this.checkInDate = moment(this.checkInDate).format('DD-MM-YYYY');
-      this.checkOutDate = moment(this.checkOutDate).format('DD-MM-YYYY');
-      this.requestBody.Destination = this.city;
-      this.requestBody.CheckIn = this.checkInDate;
-      this.requestBody.CheckOut = this.checkOutDate;
-      // for (var i = 0; i < this.Htlrooms; i++) {
-      //   this.requestRooms.push({
-      //     "AD": 2,
-      //     "CH": 1,
-      //     "CHAge": [
-      //       8
-      //     ]
-      //   });
-      // }
-      // this.requestBody.Rooms = this.requestRooms;
-      // this.requestBodyEvent.emit(this.requestBody);
-      this.HotelData.getHotelDetails(this.requestBody);
-      console.log(this.requestBody);
-      console.log(this.city, this.checkInDate, this.checkOutDate, this.Htlrooms);
-      // this.searchFirred.emit('firred');
-      this.router.navigateByUrl('/hotel');
-    } else {
-      alert('All Fields are mandatory');
     }
   }
 }

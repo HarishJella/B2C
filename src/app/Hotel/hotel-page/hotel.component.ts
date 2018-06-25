@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
-import { Hotel, HotelServiceService } from '../hotel-service/hotel-service.service';
+
 import { MatCheckbox } from '@angular/material';
 
 
@@ -32,43 +32,12 @@ export class HotelComponent implements OnInit {
   // Post Request -> body  from service as Observable
   requestBody: any;
 
-
-
-
-
-
-  constructor(public dialog: MatDialog, private HotelData: HotelServiceService, ) { }
+  constructor(public dialog: MatDialog,  ) { }
 
   ngOnInit() {
-    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
-    this.showHotelDetails();
-    if (this.filterHotelDetails === []) {
-      this.filterHotelDetails = this.HotelDetails;
-    } else {
-      this.filterHotelDetails = this.filterHotelDetails;
-    }
-
+    
   }
-
-  // subscribeing to getHotelDetails method in hotel-service.service.ts to get Hotel Details
-  showHotelDetails() {
-    this.HotelData.getHotelDetails(this.requestBody).subscribe(
-      data => {
-        this.HotelDetails = JSON.parse(data.response);
-        this.HotelDetailsOriginal = this.HotelDetails;
-        // console.log(this.HotelDetails);
-        // this.filterHotelDetails = this.HotelDetails;
-        this.showHotelLoader = false;
-      },
-      err => console.log(err),
-      // () => console.log('Request Completed')
-    );
-  }
-
-
-
-
-
+ 
   openDialog() {
     const dialogRef = this.dialog.open(hotelModifySearch, {
       height: 'auto'
@@ -79,7 +48,7 @@ export class HotelComponent implements OnInit {
       this.stickyTop = "sticky-top";
       this.passengers_state = 'd-none fadeOutRightBig';
       this.showHotelLoader = true;
-      this.showHotelDetails();
+     
       // console.log(`Dialog result: ${result}`);
     });
 
