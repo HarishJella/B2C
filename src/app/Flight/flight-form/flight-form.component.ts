@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, Host
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { FligthServiceService } from '../flight-service/fligth-service.service'
 
 
 // import { MatDialogRef } from '@angular/material';
@@ -21,7 +22,7 @@ export class FlightFormComponent implements OnInit {
 
 
 
-  constructor(private eRef: ElementRef) {
+  constructor(private eRef: ElementRef, public _flightService: FligthServiceService) {
 
   }
 
@@ -42,44 +43,123 @@ export class FlightFormComponent implements OnInit {
   myControl: FormControl = new FormControl();
   myControl1: FormControl = new FormControl();
 
-  options = [
-    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
-    'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
-    'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-    'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
-    'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
-    'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-    'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-  ];
+  options = [];
 
   filteredOptions: Observable<string[]>;
+  filteredOptions1: Observable<string[]>;
 
   ngOnInit() {
+    this.LoadCities();
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),
-        map(val => this.filter(val))
+        map(val => val.length >= 2 ? this.filter(val) : [])
       );
-    this.filteredOptions = this.myControl1.valueChanges
+    this.filteredOptions1 = this.myControl1.valueChanges
       .pipe(
         startWith(''),
-        map(val => this.filter(val))
+        map(val => val.length >= 2 ? this.filter(val) : [])
       );
   }
-
+  one: string[];
+  two: string[];
   filter(val: string): string[] {
-    return this.options.filter(option =>
-      option.toLowerCase().includes(val.toLowerCase()));
+    return this.options.filter(option => {
+      if (option.CityName.toLowerCase().indexOf(val.toLowerCase()) === 0) {
+        return option.CityName.toLowerCase().indexOf(val.toLowerCase()) === 0;
+      }
+      if (option.CityCode.toLowerCase().indexOf(val.toLowerCase()) === 0) {
+        return option.CityCode.toLowerCase().indexOf(val.toLowerCase()) === 0;
+      }
+
+    })
+
   }
+
   Travellers = [
     { value: 'Economy', viewValue: 'Economy' },
     { value: 'Business', viewValue: 'Business' },
     { value: 'Primary', viewValue: 'Primary' }
   ];
+  FlightCities: any;
 
-  // col0: string;
-  // col2: string;
+  // citynames=[];
+  LoadCities() {
 
+    this._flightService.GetCity(
+      data => {
+        this.FlightCities = data.root.row;
+
+        for (let Cities of this.FlightCities) {
+          var city = {};
+          city['CityName'] = Cities.CityName;
+          city['CityCode'] = Cities.CityCode;
+          city['AirportName'] = Cities.AirportName;
+          city['CountryName'] = Cities.CountryName;
+
+          this.options.push(city);
+
+        }
+        console.log(this.options);
+
+      }
+
+    )
+  }
+  Adult: number = 1;
+  Child: number = 0;
+  Infant: number = 0;
+  ClsName: string = "Economy";
+  adultInc() {
+    if ((this.Adult + this.Child + this.Infant) < 13) {
+      this.Adult = this.Adult + 1;
+    }
+  }
+  //Decrement
+  adultDec() {
+
+    if (this.Adult === 1) {
+      this.Adult = 1;
+    } else {
+      this.Adult = this.Adult - 1;
+    }
+  }
+  childInc() {
+    if ((this.Adult + this.Child + this.Infant) < 13) {
+      this.Child = this.Child + 1;
+    }
+  }
+  //Decrement
+  childDec() {
+    if (this.Child === 0) {
+      this.Child = 0;
+    } else {
+      this.Child = this.Child - 1;
+    }
+  }
+  increment() {
+    if ((this.Adult + this.Child + this.Infant) < 13) {
+
+    }
+  }
+
+  InfantInc() {
+    if ((this.Adult + this.Child + this.Infant) < 13) {
+      if (this.Infant < 4) {
+        this.Infant = this.Infant + 1;
+      }
+    }
+  }
+  //Decrement
+  InfantDec() {
+    if (this.Infant === 0) {
+      this.Infant = 0;
+    } else {
+      this.Infant = this.Infant - 1;
+    }
+  }
 
 
 }
+
+

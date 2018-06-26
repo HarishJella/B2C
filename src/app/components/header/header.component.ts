@@ -43,6 +43,8 @@ export class HeaderComponent implements OnInit {
     this.register_form = 'd-none slideOutUp'
     this.forgot_password_form = 'd-flex slideInUp';
   }
+  public tab() {
+  }
 
   tabs(tab: number) {
     this.tabIndex = tab;

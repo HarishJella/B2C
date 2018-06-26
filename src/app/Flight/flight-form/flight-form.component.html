@@ -14,15 +14,15 @@
   <div class="md-form col-md-2 input-group">
 
     <mat-form-field class="example-full-width flight_form">
-      <input type="autocomplete" placeholder="Leaving From" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <input   type="autocomplete" placeholder="Leaving From" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
 
       <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="mtoption">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option.CityName" class="mtoption">
           <div class="d-flex flex-column">
             <div class="d-flex align-items-center justify-content-between ">
               <div class="d-flex align-items-center justify-content-between fly_city">
-                <h4 class=" pr-2 mb-0">{{ option }}</h4>
-                <span>(BLR)</span>
+                <h4 class=" pr-2 mb-0">{{ option.CityName }}</h4>
+                <span>({{option.CityCode}})</span>
               </div>
 
               <div>
@@ -32,8 +32,8 @@
             </div>
             <div class="d-flex align-items-center justify-content-between ">
               <div class="airport">
-                <p class="mb-0">Kempegowda Internal Airport ,
-                  <span>India</span>
+                <p class="mb-0">{{option.AirportName}} ,
+                  <span>{{option.CountryName}}</span>
                 </p>
               </div>
 
@@ -59,12 +59,12 @@
     <mat-form-field class="input">
       <input type="autocomplete" placeholder="Going To" aria-label="Number" matInput [formControl]="myControl1" [matAutocomplete]="auto2">
       <mat-autocomplete #auto2="matAutocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="mtoption">
+        <mat-option *ngFor="let option of filteredOptions1 | async" [value]="option.CityName" class="mtoption">
           <div class="d-flex flex-column">
             <div class="d-flex align-items-center justify-content-between ">
               <div class="d-flex align-items-center justify-content-between fly_city">
-                <h4 class=" pr-2 mb-0">{{ option }}</h4>
-                <span>(BLR)</span>
+                <h4 class=" pr-2 mb-0">{{ option.CityName }}</h4>
+                <span>({{option.CityCode}})</span>
               </div>
               <div>
                 <img src="./assets/images/india.jpg" />
@@ -72,8 +72,8 @@
             </div>
             <div class="d-flex align-items-center justify-content-between ">
               <div class="airport">
-                <p class="mb-0">Kempegowda Internal Airport ,
-                  <span>India</span>
+                <p class="mb-0">{{option.AirportName}}  ,
+                  <span>{{option.CountryName}}</span>
                 </p>
               </div>
             </div>
@@ -105,7 +105,7 @@
         </mat-option>
       </mat-select> -->
 
-      <input (click)="passengers_class()" matInput placeholder="Input" value="1 Traveler, Economy">
+      <input (click)="passengers_class()" matInput placeholder="Input" [readonly]="true" value="{{ClsName}},A- {{ Adult }}, C- {{ Child }},I- {{Infant}}">
 
       <div class="animated {{passengers_state}} passengers">
         <div class="col-12 d-flex flex-column">
@@ -113,7 +113,7 @@
           <h6>Adult 1,Child 2,Infant 3</h6> -->
           <div class="d-flex justify-content-between align-items-center pt-3">
             <mat-form-field>
-              <mat-select placeholder="Class">
+              <mat-select placeholder="Class"  [(ngModel)]="ClsName" >
                 <mat-option *ngFor="let Travel of Travellers" selected [value]="Travel.value">
                   {{ Travel.viewValue }}
                 </mat-option>
@@ -123,22 +123,22 @@
           <div class="d-flex justify-content-between align-items-center">
             <p class="mb-0">Adult</p>
             <div>
-              <button class="btn waves-effect" mdbWavesEffect>+</button>
-              <button class="btn waves-effect" mdbWavesEffect>-</button>
+              <button class="btn waves-effect" mdbWavesEffect (click)='adultInc()'>+</button>
+              <button class="btn waves-effect" mdbWavesEffect (click)='adultDec()'>-</button>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center pt-3">
             <p class="mb-0">Child</p>
             <div>
-              <button class="btn waves-effect" mdbWavesEffect>+</button>
-              <button class="btn waves-effect" mdbWavesEffect>-</button>
+              <button class="btn waves-effect" mdbWavesEffect (click)='childInc()'>+</button>
+              <button class="btn waves-effect" mdbWavesEffect (click)='childDec()'>-</button>
             </div>
           </div>
           <div class="d-flex justify-content-between align-items-center py-3">
             <p class="mb-0">Infant</p>
             <div>
-              <button class="btn waves-effect" mdbWavesEffect>+</button>
-              <button class="btn waves-effect" mdbWavesEffect>-</button>
+              <button class="btn waves-effect" mdbWavesEffect (click)='InfantInc()'>+</button>
+              <button class="btn waves-effect" mdbWavesEffect (click)='InfantDec()'>-</button>
             </div>
           </div>
         </div>
