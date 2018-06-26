@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Input, HostListener, Output } from '@angular/core';
+import { HomeComponent } from '../../homepage/home/home.component';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,9 @@ export class HeaderComponent implements OnInit {
   register_form: string = 'd-none';
   loginActive: string = 'active';
   registerActive: string = '';
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit() {
   }
@@ -41,6 +44,8 @@ export class HeaderComponent implements OnInit {
     this.forgot_password_form = 'd-flex slideInUp';
 
 
+  }
+  public tab() {
   }
 
 }

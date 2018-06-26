@@ -5,20 +5,19 @@
 
       </div>
     </mat-card>
-    <mat-tab-group class="main-srch {{modalToggleVisiblity}}">
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="assets/images/flight.svg" (click)="tab()">
-          <!-- <p>flight</p> -->
-        </ng-template>
-
-        <app-flight-form (passengerFormEvent)="modalToggleVisiblity=$event" [passengers_state]="passengers_state"></app-flight-form>
-
+    <mat-tab-group  class="main-srch {{modalToggleVisiblity}}">
+    
+        <mat-tab> 
+          <ng-template mat-tab-label> 
+         <img src='assets/images/flight.svg' > 
+            <!-- <p>flight</p> -->     
+         </ng-template>          
+      <app-flight-form (passengerFormEvent)='modalToggleVisiblity=$event' [passengers_state]='passengers_state'></app-flight-form>      
       </mat-tab>
 
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/hotel.svg" (click)="tab()">
+          <img src="assets/images/hotel.svg" >
         </ng-template>
         <app-hotel-form (passengerFormEvent)="modalToggleVisiblity=$event" [passengers_state]="passengers_state"></app-hotel-form>
 
@@ -26,7 +25,7 @@
 
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/bus.svg " (click)="tab()">
+          <img src="assets/images/bus.svg " >
         </ng-template>
         <app-bus-form></app-bus-form>
       </mat-tab>
@@ -34,7 +33,7 @@
 
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/holiday.svg" (click)="tab()">
+          <img src="assets/images/holiday.svg" >
         </ng-template>
         Holidays Coming Soon.......
       </mat-tab>

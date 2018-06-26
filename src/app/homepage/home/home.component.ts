@@ -18,12 +18,24 @@ export class HomeComponent implements OnInit {
     this.col0 = 'col-md-0.1';
     this.col0 = 'col-md-0.1';
     this.col2 = 'col-md-1.9';
+   
   }
 
   public modalToggleVisiblity;
   public passengers_state: string = "d-none fadeOutRightBig";
-  tab() {
+   tdsflight="";
+ 
+    public tab() {
+    
+    alert("Home");
     this.modalToggleVisiblity = "passengerFormHidden";
     this.passengers_state = "d-none fadeOutRightBig";
+  }
+  public tdsFt()
+  {
+  
+   this.tdsflight=" <mat-tab> <ng-template mat-tab-label> <img src='assets/images/flight.svg' >    <!-- <p>flight</p> -->  </ng-template>  <app-flight-form (passengerFormEvent)='modalToggleVisiblity=$event' [passengers_state]='passengers_state'></app-flight-form></mat-tab> ";
+    alert(this.tdsflight);
+    return this.tdsflight;
   }
 }
