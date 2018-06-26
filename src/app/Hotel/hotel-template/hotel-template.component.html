@@ -9,11 +9,11 @@
     </div>
     <div class="card-body cardbody">
       <h5 class="d-flex justify-content-between align-items-center amenities">
-        <i *ngFor="let Amenities of Hotel.Amenities | slice:0:10" class="material-icons active" matTooltipPosition="above" mat-raised-button
+        <!-- <i *ngFor="let Amenities of Hotel.Amenities | slice:0:10" class="material-icons active" matTooltipPosition="above" mat-raised-button
           matTooltip="{{Amenities.Name}}">
           wifi
-        </i>
-        <!--<i class="material-icons active" matTooltipPosition="above" mat-raised-button matTooltip="Commute">
+        </i> -->
+        <i class="material-icons active" matTooltipPosition="above" mat-raised-button matTooltip="Commute">
           commute
         </i>
         <i class="material-icons" matTooltipPosition="above" mat-raised-button matTooltip="Description">
@@ -31,13 +31,13 @@
         </i>
         <i class="material-icons active" matTooltipPosition="above" mat-raised-button matTooltip="Feedback">
           feedback
-        </i> -->
+        </i>
       </h5>
 
       <div class="d-flex justify-content-between">
         <h4 class="card-title mb-0" matTooltipPosition="above" mat-raised-button matTooltip="{{Hotel.HotelName}}">{{ (Hotel.HotelName.length >= 16) ? (Hotel.HotelName | slice:0:15)+'...' : (Hotel.HotelName) }}</h4>
         <!-- <h4 class="mb-0 pipe">|</h4> -->
-        <h4 class="mb-0 rating {{Hotel.Rating}}">{{Hotel.Rating}}/5</h4>
+        <h4 class="mb-0 rating ">4/5</h4>
 
       </div>
       <h5 class="d-flex  align-items-center">
@@ -63,7 +63,7 @@
           <i class="material-icons pr-1">
             place
           </i>
-        </span> {{Hotel.FullAddress }}</p>
+        </span> Bengaluru</p>
       <p class="mb-2 card-text">For 1 Night :
         <span>{{Hotel.Currency}} {{Hotel.StartAmount}}</span>
       </p>
@@ -84,7 +84,7 @@
 
       <div class="col-6 d-flex flex-column">
         <div class="d-flex justify-content-start align-items-center py-2 title">
-          <h4 class="hotel_name mb-0 pr-4">{{Hotel.HotelName}}</h4>
+          <h4 class="hotel_name mb-0 pr-4">IBIS BENGALURU</h4>
           <!-- <h4 class="mb-0 pipe pr-3">|</h4> -->
           <h4 class="mb-0 d-flex align-items-end rating_numbers" matTooltipPosition="above" mat-raised-button matTooltip="Hotel Rating">
             <span class="pr-1 green">4.5</span>
@@ -97,18 +97,18 @@
             <i class="material-icons pr-1">
               place
             </i>
-          </span>{{Hotel.FullAddress}}</p>
+          </span>Lution airport</p>
         <span class="rating" data-rating="2.5" style="background: linear-gradient(to right, #f2276a, #f2256c 20%, #c1c1c1 1%, #f9191938 99%);">
           <span aria-hidden="true" matTooltipPosition="above" mat-raised-button matTooltip="User Rating">
             ★★★★★
           </span>
         </span>
         <div class="d-flex justify-content-start align-items-center py-2">
-          <i *ngFor="let Amenities of Hotel.Amenities | slice:0:10" class="material-icons active" matTooltipPosition="above" mat-raised-button
+          <!-- <i *ngFor="let Amenities of Hotel.Amenities | slice:0:10" class="material-icons active" matTooltipPosition="above" mat-raised-button
             matTooltip="{{Amenities.Name}}">
             wifi
-          </i>
-          <!-- <i class="material-icons pr-2" matTooltipPosition="above" mat-raised-button matTooltip="Free camera">
+          </i> -->
+          <i class="material-icons pr-2" matTooltipPosition="above" mat-raised-button matTooltip="Free camera">
             camera
           </i>
           <i class="material-icons pr-2 active" matTooltipPosition="above" mat-raised-button matTooltip="Free commute">
@@ -128,7 +128,7 @@
           </i>
           <i class="material-icons pr-2 active" matTooltipPosition="above" mat-raised-button matTooltip="Free feedback">
             feedback
-          </i> -->
+          </i>
         </div>
       </div>
       <div class="col-3 d-flex flex-column justify-content-center">
@@ -177,11 +177,11 @@
   </div>
 </div>
 
-<div class="animated col-12 px-0 border {{hotel_map}}">
-  <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2361735188765!2d77.64569661442442!3d13.020626790823725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1683fb688b7b%3A0x9f64a15c2c63b179!2sWebaxyz+IT+Consulting+Private+Limited!5e0!3m2!1sen!2sin!4v1527593778834"
-    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-  Map
-</div>
+<!-- <div class="animated col-12 px-0 border ">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2361735188765!2d77.64569661442442!3d13.020626790823725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1683fb688b7b%3A0x9f64a15c2c63b179!2sWebaxyz+IT+Consulting+Private+Limited!5e0!3m2!1sen!2sin!4v1527593778834"
+    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div> -->
 
 
 
@@ -209,51 +209,48 @@
               </div>
               <div>
                 <div class="d-flex align-items-center justify-content-between">
-                  <h6 class="mb-0">{{Hotel.HotelName}}</h6>
+                  <h6 class="mb-0">IBIB BENGALURU</h6>
 
-                  <span class="rating" data-rating="{{Hotel.Rating}}" style="background: linear-gradient(to right, #f2276a, #f2256c 20%, #c1c1c1 1%, #f9191938 99%);">
+                  <span class="rating" data-rating="" style="background: linear-gradient(to right, #f2276a, #f2256c 20%, #c1c1c1 1%, #f9191938 99%);">
                     <span aria-hidden="true">
                       ★★★★★
                     </span>
                   </span>
                 </div>
 
-                <p class="mb-0">{{Hotel.FullAddress}}</p>
+                <p class="mb-0">Bengaluru</p>
 
               </div>
             </div>
-            <!-- <div class="d-flex flex-column justify-content-center align-items-start">
+            <div class="d-flex flex-column justify-content-center align-items-start">
               <div class="d-flex align-items-center">
                 <h6 class="mb-0"> 3.75/5</h6>
                 <p class="mb-0">55 Reviews</p>
               </div>
 
               <p class="mb-0">81% guests recommended</p>
-            </div> -->
-            <!-- <div class="d-flex flex-column justify-content-center align-items-start">
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-start">
               <h6 class="mb-0">check in </h6>
               <p class="mb-0">11:00</p>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-start">
               <h6 class="mb-0">check out</h6>
               <p class="mb-0">23:00</p>
-            </div> -->
+            </div>
           </div>
           <div class="d-flex flex-column justify-content-center align-items-end header_price">
-            <!-- <div class="d-flex"> -->
-            <!-- <i class="material-icons">
+            <div class="d-flex"> 
+            <i class="material-icons">
                 announcement
               </i>
               <p class="mb-0">
                 Save Rs.536
-              </p> -->
-            <!-- </div> -->
+              </p>
+             </div> 
             <div class="d-flex price">
-              <!-- <p class="mb-0">Rs. 1357</p> -->
-              <p class="mb-0 ">{{Hotel.Currency}}</p>
+              <p class="mb-0">Rs. 1357</p>
             </div>
-
-
             <p class="mb-0">Per Room / Night</p>
           </div>
         </div>
@@ -307,20 +304,20 @@
                         <div class="col-12 px-0 d-flex room_details">
                           <div class="col-3 d-flex flex-column justify-content-between">
                             <div>
-                              <h6>{{Room.RoomName}}</h6>
-                              <p>{{Room.AdultCount}} Adult, {{Room.ChildCount}} Child</p>
+                              <h6>Room Name</h6>
+                              <p> Adult 2, Child 1</p>
                             </div>
                             <div class="d-flex">
                               <p class="d-flex flex-column pr-2">
 
                                 <span>
                                   Check In</span>
-                                <span>{{Hotel.Checkin}}</span>
+                                <span>12:00</span>
                               </p>
                               <p class="d-flex flex-column">
                                 <span>
                                   Check Out</span>
-                                <span>{{Hotel.CheckOut}}</span>
+                                <span>10:00</span>
                               </p>
                             </div>
                           </div>
@@ -465,11 +462,8 @@
                             </p>
                             <button class="btn">Book</button>
                           </div>
-
                         </div>
-
                       </div>
-
                     </div>
                   </div>
 
@@ -613,13 +607,10 @@
                             </p>
                             <button class="btn">Book</button>
                           </div>
-
                         </div>
-
                       </div>
                       <div class="col-12 px-0 d-flex flex-column justify-content-between align-items-center  pb-2 single_room my-2">
-
-                        <div class="col-12">
+                      <div class="col-12">
                           <div class="d-flex align-items-center mb-2 content">
                             <h6 class="mb-0 pr-2">Standard Room (2 variants)</h6>
                             <p class="mb-0">Room size 15*15 sq.ft</p>
@@ -682,15 +673,10 @@
                             </p>
                             <button class="btn">Book</button>
                           </div>
-
                         </div>
-
                       </div>
                     </div>
                   </div>
-
-
-
                 </div>
               </mat-tab>
 
@@ -719,8 +705,8 @@
                   </div>
                   <div class="col-12 hotel_description">
                     <h6>Description</h6>
-                    <p>{{Hotel.Description}} </p>
-                    <!-- <p>It comprises of 11 floors and 182 spacious and well-kept rooms and suites. Coffee/tea maker, in-room
+
+                    <p>It comprises of 11 floors and 182 spacious and well-kept rooms and suites. Coffee/tea maker, in-room
                       safe, television and attached bathroom with bath amenities and bathtubs are few of the conveniences.
                     </p>
                     <p>It comprises of 11 floors and 182 spacious and well-kept rooms and suites. Coffee/tea maker, in-room
@@ -731,7 +717,7 @@
                       City Junction Railway Station and 30 km from Kempegowda International Airport. </p>
                     <p>Fun World (7 km), Bangalore Palace (9 km) and Cubbon Park (11 km). Moreover, there are numerous IT parks
                       and corporate hubs in its proximity including World Trade Centre (6 km) and Embassy Manyata Business
-                      Park (10 km). 30 km from Kempegowda International Airport.</p> -->
+                      Park (10 km). 30 km from Kempegowda International Airport.</p>
                   </div>
                 </div>
               </mat-tab>
@@ -743,11 +729,11 @@
 
               <mat-tab label="Amenities">
                 <div class="px-3 amenities my-3">
-                  <div *ngFor="let Amenities of Hotel.Amenities" class="d-flex justify-content-start align-items-center">
+                  <!-- <div *ngFor="let Amenities of Hotel.Amenities" class="d-flex justify-content-start align-items-center">
                     <img class="pr-3" src="assets/images/hotel_amenities/aircondiction.svg" alt="">
                     <p class="mb-0">{{Amenities.Name}}</p>
-                  </div>
-                  <!-- <div class="d-flex justify-content-start align-items-center">
+                  </div> -->
+                  <div class="d-flex justify-content-start align-items-center">
                     <img class="pr-3" src="assets/images/hotel_amenities/bar.svg" alt="">
                     <p class="mb-0">Bar</p>
                   </div>
@@ -782,7 +768,7 @@
                   <div class="d-flex justify-content-start align-items-center">
                     <img class="pr-3" src="assets/images/hotel_amenities/wifi.svg" alt="">
                     <p class="mb-0">Wifi</p>
-                  </div> -->
+                  </div>
                 </div>
               </mat-tab>
 
@@ -897,29 +883,29 @@
                           </div>
                         </div>
 
-                        <!--<div class="col-12 px-0 d-flex ">
-                            <div class="col-1 px-0">
-                              <i class="material-icons pr-3">
-                                reply
-                              </i>
+                        <div class="col-12 px-0 d-flex ">
+                          <div class="col-1 px-0">
+                            <i class="material-icons pr-3">
+                              reply
+                            </i>
+                          </div>
+
+                          <div class="col-11 px-0 manager_reply">
+                            <div class="col-2 px-0">
+                              <img src="assets/images/Empty_image_icon.png" alt="">
+                              <p class="mb-1">Manager</p>
                             </div>
-  
-                            <div class="col-11 px-0 manager_reply">
-                              <div class="col-2 px-0">
-                                <img src="assets/images/Empty_image_icon.png" alt="">
-                                <p class="mb-1">Manager</p>
-                              </div>
-                              <div class="col-12 d-flex align-items-start">
-  
-                                <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
-                                  repellat inventore eum cum provident rerum harum vero!</p>
-                              </div>
-                               <div class="d-flex align-items-center justify-content-end">
-                                <p class="pr-3">23 May,2018</p>
-                                <p>9 hours ago</p>
-                              </div> 
+                            <div class="col-12 d-flex align-items-start">
+
+                              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
                             </div>
-                        </div>-->
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="pr-3">23 May,2018</p>
+                              <p>9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
                       <div class="single_review border-bottom">
@@ -950,29 +936,29 @@
                           </div>
                         </div>
 
-                        <!--<div class="col-12 px-0 d-flex ">
-                              <div class="col-1 px-0">
-                                <i class="material-icons pr-3">
-                                  reply
-                                </i>
-                              </div>
-    
-                              <div class="col-11 px-0 manager_reply">
-                                <div class="col-2 px-0">
-                                  <img src="assets/images/Empty_image_icon.png" alt="">
-                                  <p class="mb-1">Manager</p>
-                                </div>
-                                <div class="col-12 d-flex align-items-start">
-    
-                                  <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
-                                    repellat inventore eum cum provident rerum harum vero!</p>
-                                </div>
-                                 <div class="d-flex align-items-center justify-content-end">
-                                  <p class="pr-3">23 May,2018</p>
-                                  <p>9 hours ago</p>
-                                </div> 
-                              </div>
-                          </div>-->
+                        <div class="col-12 px-0 d-flex ">
+                          <div class="col-1 px-0">
+                            <i class="material-icons pr-3">
+                              reply
+                            </i>
+                          </div>
+
+                          <div class="col-11 px-0 manager_reply">
+                            <div class="col-2 px-0">
+                              <img src="assets/images/Empty_image_icon.png" alt="">
+                              <p class="mb-1">Manager</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+
+                              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="pr-3">23 May,2018</p>
+                              <p>9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
                       <div class="single_review border-bottom">
@@ -1003,29 +989,29 @@
                           </div>
                         </div>
 
-                        <!--<div class="col-12 px-0 d-flex ">
-                                <div class="col-1 px-0">
-                                  <i class="material-icons pr-3">
-                                    reply
-                                  </i>
-                                </div>
-      
-                                <div class="col-11 px-0 manager_reply">
-                                  <div class="col-2 px-0">
-                                    <img src="assets/images/Empty_image_icon.png" alt="">
-                                    <p class="mb-1">Manager</p>
-                                  </div>
-                                  <div class="col-12 d-flex align-items-start">
-      
-                                    <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
-                                      repellat inventore eum cum provident rerum harum vero!</p>
-                                  </div>
-                                   <div class="d-flex align-items-center justify-content-end">
-                                    <p class="pr-3">23 May,2018</p>
-                                    <p>9 hours ago</p>
-                                  </div> 
-                                </div>
-                            </div>-->
+                        <div class="col-12 px-0 d-flex ">
+                          <div class="col-1 px-0">
+                            <i class="material-icons pr-3">
+                              reply
+                            </i>
+                          </div>
+
+                          <div class="col-11 px-0 manager_reply">
+                            <div class="col-2 px-0">
+                              <img src="assets/images/Empty_image_icon.png" alt="">
+                              <p class="mb-1">Manager</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+
+                              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="pr-3">23 May,2018</p>
+                              <p>9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
 
@@ -1057,33 +1043,30 @@
                           </div>
                         </div>
 
-                        <!--<div class="col-12 px-0 d-flex ">
-                                  <div class="col-1 px-0">
-                                    <i class="material-icons pr-3">
-                                      reply
-                                    </i>
-                                  </div>
-        
-                                  <div class="col-11 px-0 manager_reply">
-                                    <div class="col-2 px-0">
-                                      <img src="assets/images/Empty_image_icon.png" alt="">
-                                      <p class="mb-1">Manager</p>
-                                    </div>
-                                    <div class="col-12 d-flex align-items-start">
-        
-                                      <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
-                                        repellat inventore eum cum provident rerum harum vero!</p>
-                                    </div>
-                                     <div class="d-flex align-items-center justify-content-end">
-                                      <p class="pr-3">23 May,2018</p>
-                                      <p>9 hours ago</p>
-                                    </div> 
-                                  </div>
-                              </div>-->
+                        <div class="col-12 px-0 d-flex ">
+                          <div class="col-1 px-0">
+                            <i class="material-icons pr-3">
+                              reply
+                            </i>
+                          </div>
+
+                          <div class="col-11 px-0 manager_reply">
+                            <div class="col-2 px-0">
+                              <img src="assets/images/Empty_image_icon.png" alt="">
+                              <p class="mb-1">Manager</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+
+                              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="pr-3">23 May,2018</p>
+                              <p>9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-
-
-
                       <div class="single_review border-bottom">
                         <div class="col-12 px-0 d-flex">
                           <div class="col-1 px-0">
@@ -1112,29 +1095,29 @@
                           </div>
                         </div>
 
-                        <!--<div class="col-12 px-0 d-flex ">
-                                    <div class="col-1 px-0">
-                                      <i class="material-icons pr-3">
-                                        reply
-                                      </i>
-                                    </div>
-          
-                                    <div class="col-11 px-0 manager_reply">
-                                      <div class="col-2 px-0">
-                                        <img src="assets/images/Empty_image_icon.png" alt="">
-                                        <p class="mb-1">Manager</p>
-                                      </div>
-                                      <div class="col-12 d-flex align-items-start">
-          
-                                        <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
-                                          repellat inventore eum cum provident rerum harum vero!</p>
-                                      </div>
-                                       <div class="d-flex align-items-center justify-content-end">
-                                        <p class="pr-3">23 May,2018</p>
-                                        <p>9 hours ago</p>
-                                      </div> 
-                                    </div>
-                                </div>-->
+                        <div class="col-12 px-0 d-flex ">
+                          <div class="col-1 px-0">
+                            <i class="material-icons pr-3">
+                              reply
+                            </i>
+                          </div>
+
+                          <div class="col-11 px-0 manager_reply">
+                            <div class="col-2 px-0">
+                              <img src="assets/images/Empty_image_icon.png" alt="">
+                              <p class="mb-1">Manager</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+
+                              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="pr-3">23 May,2018</p>
+                              <p>9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
 
@@ -1166,29 +1149,29 @@
                           </div>
                         </div>
 
-                        <!--<div class="col-12 px-0 d-flex ">
-                                      <div class="col-1 px-0">
-                                        <i class="material-icons pr-3">
-                                          reply
-                                        </i>
-                                      </div>
-            
-                                      <div class="col-11 px-0 manager_reply">
-                                        <div class="col-2 px-0">
-                                          <img src="assets/images/Empty_image_icon.png" alt="">
-                                          <p class="mb-1">Manager</p>
-                                        </div>
-                                        <div class="col-12 d-flex align-items-start">
-            
-                                          <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
-                                            repellat inventore eum cum provident rerum harum vero!</p>
-                                        </div>
-                                         <div class="d-flex align-items-center justify-content-end">
-                                          <p class="pr-3">23 May,2018</p>
-                                          <p>9 hours ago</p>
-                                        </div> 
-                                      </div>
-                                  </div>-->
+                        <div class="col-12 px-0 d-flex ">
+                          <div class="col-1 px-0">
+                            <i class="material-icons pr-3">
+                              reply
+                            </i>
+                          </div>
+
+                          <div class="col-11 px-0 manager_reply">
+                            <div class="col-2 px-0">
+                              <img src="assets/images/Empty_image_icon.png" alt="">
+                              <p class="mb-1">Manager</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+
+                              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="pr-3">23 May,2018</p>
+                              <p>9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
 
@@ -1220,31 +1203,30 @@
                           </div>
                         </div>
 
-                        <!--<div class="col-12 px-0 d-flex ">
-                                        <div class="col-1 px-0">
-                                          <i class="material-icons pr-3">
-                                            reply
-                                          </i>
-                                        </div>
-              
-                                        <div class="col-11 px-0 manager_reply">
-                                          <div class="col-2 px-0">
-                                            <img src="assets/images/Empty_image_icon.png" alt="">
-                                            <p class="mb-1">Manager</p>
-                                          </div>
-                                          <div class="col-12 d-flex align-items-start">
-              
-                                            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
-                                              repellat inventore eum cum provident rerum harum vero!</p>
-                                          </div>
-                                           <div class="d-flex align-items-center justify-content-end">
-                                            <p class="pr-3">23 May,2018</p>
-                                            <p>9 hours ago</p>
-                                          </div> 
-                                        </div>
-                                    </div>-->
-                      </div>
+                        <div class="col-12 px-0 d-flex ">
+                          <div class="col-1 px-0">
+                            <i class="material-icons pr-3">
+                              reply
+                            </i>
+                          </div>
 
+                          <div class="col-11 px-0 manager_reply">
+                            <div class="col-2 px-0">
+                              <img src="assets/images/Empty_image_icon.png" alt="">
+                              <p class="mb-1">Manager</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-start">
+
+                              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloremque deleniti est
+                                repellat inventore eum cum provident rerum harum vero!</p>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                              <p class="pr-3">23 May,2018</p>
+                              <p>9 hours ago</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1266,6 +1248,7 @@
                     hotelier. No refund shall be applicable in such cases.</p>
                 </div>
               </mat-tab>
+
               <mat-tab label="Cancellation Policy">
                 <div class="my-3  demo-tab-content">
                   <table class="table table-bordered">
@@ -1302,7 +1285,6 @@
                   </table>
                 </div>
               </mat-tab>
-
             </mat-tab-group>
           </mat-card-content>
         </mat-card>
@@ -1321,7 +1303,6 @@
           </i>
         </button>
       </div>
-
     </div>
   </div>
 </div>

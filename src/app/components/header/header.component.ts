@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation, OnInit, Input, HostListener, Output } from '@angular/core';
-import { HomeComponent } from '../../homepage/home/home.component';
+import { Component, ViewEncapsulation, OnInit, Output, EventEmitter } from '@angular/core';
+import { SharedService } from '../../shared/shared.service';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +14,11 @@ export class HeaderComponent implements OnInit {
   register_form: string = 'd-none';
   loginActive: string = 'active';
   registerActive: string = '';
-  constructor() { 
-    
-  }
+  tabIndex: number;
+  constructor(private _sharedService: SharedService) { }
 
   ngOnInit() {
+    this._sharedService.tabCurrentIndexSource.subscribe(data => this.tabIndex = data);
   }
 
   Login() {
@@ -42,10 +42,12 @@ export class HeaderComponent implements OnInit {
     this.login_form = 'd-none slideOutUp';
     this.register_form = 'd-none slideOutUp'
     this.forgot_password_form = 'd-flex slideInUp';
-
-
   }
   public tab() {
   }
 
+  tabs(tab: number) {
+    this.tabIndex = tab;
+    this._sharedService.tabGroup(this.tabIndex);
+  }
 }

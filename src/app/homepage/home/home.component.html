@@ -5,14 +5,15 @@
 
       </div>
     </mat-card>
-    <mat-tab-group  class="main-srch {{modalToggleVisiblity}}">
-    
-        <mat-tab> 
-          <ng-template mat-tab-label> 
-         <img src='assets/images/flight.svg' > 
-            <!-- <p>flight</p> -->     
-         </ng-template>          
-      <app-flight-form (passengerFormEvent)='modalToggleVisiblity=$event' [passengers_state]='passengers_state'></app-flight-form>      
+    <mat-tab-group class="main-srch {{modalToggleVisiblity}}" [selectedIndex]="tabIndex">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="assets/images/flight.svg" (click)="tab()">
+          <!-- <p>flight</p> -->
+        </ng-template>
+
+        <app-flight-form (passengerFormEvent)="modalToggleVisiblity=$event" [passengers_state]="passengers_state"></app-flight-form>
+
       </mat-tab>
 
       <mat-tab>

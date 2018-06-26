@@ -31,11 +31,5 @@ export class HomeComponent implements OnInit {
     this.modalToggleVisiblity = "passengerFormHidden";
     this.passengers_state = "d-none fadeOutRightBig";
   }
-  public tdsFt()
-  {
   
-   this.tdsflight=" <mat-tab> <ng-template mat-tab-label> <img src='assets/images/flight.svg' >    <!-- <p>flight</p> -->  </ng-template>  <app-flight-form (passengerFormEvent)='modalToggleVisiblity=$event' [passengers_state]='passengers_state'></app-flight-form></mat-tab> ";
-    alert(this.tdsflight);
-    return this.tdsflight;
-  }
 }
