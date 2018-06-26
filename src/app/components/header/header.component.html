@@ -29,17 +29,17 @@
     <div class="container d-flex justify-content-between align-items-center">
       <div class="d-flex align-items-center nav-br justify-content-between" style="z-index: 99;">
         <div class="pr-3">
-          <a class="active" matTooltipPosition="below" mat-raised-button matTooltip="Flight" (click)="tabs(0)">
+          <a [class.active]="tabIndex === 0" matTooltipPosition="below" mat-raised-button matTooltip="Flight" (click)="tabs(0)">
             <img src="assets/images/flight.svg ">
           </a>
         </div>
         <div class="pr-3">
-          <a routerLinkActive="active" matTooltipPosition="below" mat-raised-button matTooltip="Hotel" (click)="tabs(1)">
+          <a [class.active]="tabIndex === 1" matTooltipPosition="below" mat-raised-button matTooltip="Hotel" (click)="tabs(1)">
             <img src="assets/images/hotel.svg">
           </a>
         </div>
         <div class="pr-3">
-          <a matTooltipPosition="below" mat-raised-button matTooltip="Bus" (click)="tabs(2)">
+          <a [class.active]="tabIndex === 2" matTooltipPosition="below" mat-raised-button matTooltip="Bus" (click)="tabs(2)">
             <img src="assets/images/bus.svg ">
           </a>
         </div>

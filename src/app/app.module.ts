@@ -35,6 +35,7 @@ import { hotelModifySearch } from './Hotel/hotel.modify.component';
 import { busModifySearch } from './Bus/bus.modify.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SamevaluePipe } from './pipes/samevalue.pipe';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import { SamevaluePipe } from './pipes/samevalue.pipe';
     AppRoutingModule,
     BrowserAnimationsModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgHttpLoaderModule
   ],
   entryComponents: [
     modifySearchComponent,

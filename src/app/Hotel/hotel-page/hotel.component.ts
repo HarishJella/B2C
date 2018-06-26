@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
-import { HotelServiceService} from '../hotel-service/hotel-service.service';
+import { HotelServiceService } from '../hotel-service/hotel-service.service';
+import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms';
 
 import { MatCheckbox } from '@angular/material';
 import * as jQuery from 'jquery';
@@ -29,11 +30,18 @@ export class HotelComponent implements OnInit {
   // Post Request -> body  from service as Observable
   requestBody: any;
 
-  constructor(public dialog: MatDialog, private HotelData: HotelServiceService, ) { }
+  filterFormGroup: FormGroup;
+  constructor(public dialog: MatDialog, private HotelData: HotelServiceService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
     this.showHotelDetails();
+
+    this.filterFormGroup = this.formBuilder.group({
+      rating: this.formBuilder.array([]),
+      location: this.formBuilder.array([]),
+      price: this.formBuilder.array([])
+    });
   }
 
   // subscribeing to getHotelDetails method in hotel-service.service.ts to get Hotel Details
@@ -58,8 +66,9 @@ export class HotelComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       this.stickyTop = "sticky-top";
       this.passengers_state = 'd-none fadeOutRightBig';
+      this.showHotelDetails;
       this.showHotelLoader = true;
-     
+
       // console.log(`Dialog result: ${result}`);
     });
 
@@ -196,31 +205,38 @@ export class HotelComponent implements OnInit {
 
   // Hotel Filter section
   // 1> Price Filteration
-  val = 1000;
+
   priceFilterArray = [];
-  priceFilteration() {
-    console.log(this.val);
-    let priceValue = this.val;
-    console.log(priceValue);
-    this.HotelDetailsOriginal = this.HotelDetails;
+  priceFilteration(event) {
+    console.log(event.value);
+    let priceValue = event.value;
+
+    const price = <FormArray>this.filterFormGroup.get('price') as FormArray;
+
     if (priceValue) {
-      this.priceFilterArray.unshift.apply(this.priceFilterArray, (this.HotelDetailsOriginal.filter(
-        data => {
-          if (data.StartAmount <= priceValue) {
-            return data.StartAmount.includes(data.StartAmount);
-          }
-        }
-      )))
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.priceFilterArray);
-    } else {
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
-        data => {
-          if (data.StartAmount >= priceValue) {
-            return data.StartAmount.includes(priceValue);
-          }
-        }
-      )))
+      price.push(new FormControl(event.value))
     }
+    console.log(price);
+    this.filterHotelData();
+    // this.HotelDetailsOriginal = this.HotelDetails;
+    // if (priceValue) {
+    //   this.priceFilterArray.unshift.apply(this.priceFilterArray, (this.HotelDetailsOriginal.filter(
+    //     data => {
+    //       if (data.StartAmount <= priceValue) {
+    //         return data.StartAmount.includes(data.StartAmount);
+    //       }
+    //     }
+    //   )))
+    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.priceFilterArray);
+    // } else {
+    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
+    //     data => {
+    //       if (data.StartAmount >= priceValue) {
+    //         return data.StartAmount.includes(priceValue);
+    //       }
+    //     }
+    //   )))
+    // }
     this.filterHotelDetails.sort(function (a, b) {
       var nameA = parseInt(a.StartAmount); // ignore upper and lowercase
       var nameB = parseInt(b.StartAmount); // ignore upper and lowercase
@@ -236,65 +252,84 @@ export class HotelComponent implements OnInit {
 
   // 2> Rating Filter
   ratingFilterArray = [];
-  ratingFilter(filter: string) {
-    var target = $("#rating" + filter).find('input').attr('aria-checked');
-    this.HotelDetailsOriginal = this.HotelDetails;
+  ratingFilter(event) {
+    // var target = $("#rating" + filter).find('input').attr('aria-checked');
+    // var target = event.checked;
+    // this.HotelDetailsOriginal = this.HotelDetails;
 
-    if (target == 'false') {
-      this.ratingFilterArray.unshift.apply(this.ratingFilterArray, (this.HotelDetailsOriginal.filter(
-        data => {
-          return data.Rating.includes(filter);
-        }
-      )))
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.ratingFilterArray);
-      // console.log(this.ratingFilterArray);
-      // console.log(this.filterHotelDetails);
-    } if (target == 'true') {
-      this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
-        data => {
-          return data.Rating.includes(filter);
-        }
-      ));
-      // console.log(this.filterHotelDetails);
+    // if (target === true) {
+    //   this.ratingFilterArray.unshift.apply(this.ratingFilterArray, (this.HotelDetailsOriginal.filter(
+    //     data => {
+    //       return data.Rating.includes(event.source.value);
+    //     }
+    //   )))
+    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.ratingFilterArray);
+    // } if (target === false) {
+    //   this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
+    //     data => {
+    //       return data.Rating.includes(event.source.value);
+    //     }
+    //   ));
+    // }
+    const rating = <FormArray>this.filterFormGroup.get('rating') as FormArray;
+
+    if (event.checked) {
+      rating.push(new FormControl(event.source.value))
+    } else {
+      const i = rating.controls.findIndex(x => x.value === event.source.value);
+      rating.removeAt(i);
     }
+    this.filterHotelData();
   }
 
   // 3> Location Filter
   locationFilterArray = [];
   locationFilter(location) {
-    let id = location.HotelID;
-    let value = $("#" + id).find('input').attr('aria-checked');
-    this.HotelDetailsOriginal = this.HotelDetails;
 
-    if (value == 'false') {
-      this.locationFilterArray.unshift.apply(this.locationFilterArray, (this.HotelDetailsOriginal.filter(
-        data => {
-          return data.FullAddress.includes(location.FullAddress);
-        }
-      )))
+    const location1 = <FormArray>this.filterFormGroup.get('location') as FormArray;
 
-      // this.filterHotelDetails.push(this.locationFilterArray);
-      // function removeDuplicates(myArr, prop) {
-      //   return myArr.filter((obj, pos, arr) => {
-      //     return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
-      //   });
-      // }
-      this.locationFilterArray = this.removeDuplicates(this.locationFilterArray, location.FullAddress);
-
-      console.log(this.locationFilterArray);
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.locationFilterArray);
-
-      console.log(this.filterHotelDetails);
-    } if (value == 'true') {
-      this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
-        data => {
-          return data.FullAddress.includes(location.FullAddress);
-        }
-      ));
-      console.log(this.filterHotelDetails);
+    if (location.FullAddress != null || location.FullAddress != undefined) {
+      location1.push(new FormControl(location.FullAddress))
+    } else {
+      const i = location.controls.findIndex(x => x.value === location.FullAddress);
+      location1.removeAt(i);
     }
-  }
+    // let id = location.HotelID;
+    // let value = $("#" + id).find('input').attr('aria-checked');
+    // this.HotelDetailsOriginal = this.HotelDetails;
 
+    // if (value == 'false') {
+    //   this.locationFilterArray.unshift.apply(this.locationFilterArray, (this.HotelDetailsOriginal.filter(
+    //     data => {
+    //       return data.FullAddress.includes(location.FullAddress);
+    //     }
+    //   )))
+
+    // this.filterHotelDetails.push(this.locationFilterArray);
+    // function removeDuplicates(myArr, prop) {
+    //   return myArr.filter((obj, pos, arr) => {
+    //     return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+    //   });
+    // }
+    //   this.locationFilterArray = this.removeDuplicates(this.locationFilterArray, location.FullAddress);
+
+    //   console.log(this.locationFilterArray);
+    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.locationFilterArray);
+
+    //   console.log(this.filterHotelDetails);
+    // } if (value == 'true') {
+    //   this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
+    //     data => {
+    //       return data.FullAddress.includes(location.FullAddress);
+    //     }
+    //   ));
+    //   console.log(this.filterHotelDetails);
+    // }
+    this.filterHotelData();
+  }
+  filterHotelData() {
+    console.log(this.filterFormGroup.value);
+  }
 
 
   // 4> Amenities Filter
@@ -446,6 +481,9 @@ export class HotelComponent implements OnInit {
       return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
     });
   }
+
+
+
 
 }
 

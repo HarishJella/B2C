@@ -55,3 +55,5 @@ https://blog.codewithdan.com/2017/02/08/10-angular-and-typescript-projects-to-ta
 https://stackblitz.com/edit/angular-qxd4hq-uvkyyc?file=app%2Fautocomplete-filter-example.ts
 
 https://stackoverflow.com/questions/44469330/call-a-parent-component-function-from-a-child-component-in-angular
+
+https://stackblitz.com/edit/angular-tyfg2z?file=app%2Fapp.component.ts

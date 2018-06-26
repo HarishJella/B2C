@@ -1,192 +1,203 @@
-<section class="my-5 availability">
-  <div class="container">
-    <div class="col-12 p-0 mb-3 modify_search mb-4 border front">
+<pre>{{ filterFormGroup.value | json }}</pre>
 
-      <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
-        <h6 class="mb-1">City</h6>
-        <p class="mb-0"> </p>
-        <span>Karnataka</span>
-      </div>
-      <div class="item p-3  col-2 d-flex flex-column justify-content-center align-items-center">
-        <h6 class="mb-1">Check In</h6>
-        <p class="mb-0">11:00</p>
-        <span></span>
-      </div>
-      <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
-        <h6 class="mb-1">Check Out</h6>
-        <p class="mb-0">11:00</p>
-        <span></span>
-      </div>
-      <div class="item p-3 seater_class col-3 d-flex flex-column justify-content-start align-items-center">
-        <h6 class="mb-1">Type</h6>
-        <p class="mb-0">Double Deck Room - 8 Nights</p>
-        <span>Adult , Child</span>
-      </div>
-      <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
-        <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
-          matTooltip="Modify Results" matTooltipPosition="above" matTooltip="Modify Search">Modify Search</button>
-      </div>
-    </div>
-    <div class="col-12 px-0 search_results">
+<form [formGroup]="filterFormGroup" (ngSubmit)="submit()">
+  <section class="my-5 availability">
+    <div class="container">
+      <div class="col-12 p-0 mb-3 modify_search mb-4 border front">
 
-      <div class="col-1 px-0 filter_div {{stickyTop}}">
-        <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)"
-            matTooltipPosition="above" mat-raised-button matTooltip="Price Filter">
+        <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-1">City</h6>
+          <p class="mb-0"> {{requestBody.Destination}}</p>
+          <span>Karnataka</span>
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState" (click)="open_filter($event)"
-            matTooltipPosition="above" mat-raised-button matTooltip="Aminities Filter">
+        <div class="item p-3  col-2 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-1">Check In</h6>
+          <p class="mb-0">11:00</p>
+          <span>{{requestBody.CheckIn}}</span>
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)"
-            matTooltipPosition="above" mat-raised-button matTooltip="Location Filter">
+        <div class="item p-3 col-2 d-flex flex-column justify-content-center align-items-center">
+          <h6 class="mb-1">Check Out</h6>
+          <p class="mb-0">11:00</p>
+          <span>{{requestBody.CheckOut}}</span>
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState" (click)="open_filter($event)"
-            matTooltipPosition="above" mat-raised-button matTooltip="Rating Filter">
+        <div class="item p-3 seater_class col-3 d-flex flex-column justify-content-start align-items-center">
+          <h6 class="mb-1">Type</h6>
+          <p class="mb-0">Double Deck Room - 8 Nights</p>
+          <span>Adult , Child</span>
         </div>
-        <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-          <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState" (click)="open_filter($event)"
-            matTooltipPosition="above" mat-raised-button matTooltip="Property Filter">
+        <div class="item p-3 col-3 d-flex justify-content-center align-items-center search_button">
+          <button (click)="openDialog()" type="button" class="btn btn-outline-secondary btn-rounded" mdbWavesEffect matTooltipPosition="above"
+            matTooltip="Modify Results" matTooltipPosition="above" matTooltip="Modify Search">Modify Search</button>
         </div>
       </div>
-      <div class="col-2 filter_section {{priceState}} {{stickyTop}}">
-        <div class="content py-3">
-          <h1>Filter Section</h1>
-          <hr>
-          <div>
-            <h2>Price</h2>
-            <p>Upto Rs 1,00,000</p>
-            <mat-slider [thumbLabel]="true" (click)="priceFilteration($event)" [(ngModel)]="val" [displayWith]="formatLabel" tickInterval="1000"
-              min="0" max="10000"></mat-slider>
-            <div class="d-flex justify-content-between minmax">
-              <p>min: 0</p>
-              <p>max: 100k</p>
+      <div class="col-12 px-0 search_results">
+
+        <div class="col-1 px-0 filter_div {{stickyTop}}">
+          <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+            <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)"
+              matTooltipPosition="above" mat-raised-button matTooltip="Price Filter">
+          </div>
+          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+            <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState" (click)="open_filter($event)"
+              matTooltipPosition="above" mat-raised-button matTooltip="Aminities Filter">
+          </div>
+          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+            <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)"
+              matTooltipPosition="above" mat-raised-button matTooltip="Location Filter">
+          </div>
+          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+            <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState" (click)="open_filter($event)"
+              matTooltipPosition="above" mat-raised-button matTooltip="Rating Filter">
+          </div>
+          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
+            <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState" (click)="open_filter($event)"
+              matTooltipPosition="above" mat-raised-button matTooltip="Property Filter">
+          </div>
+        </div>
+
+
+
+
+        <div class="col-2 filter_section {{priceState}} {{stickyTop}}">
+          <div class="content py-3">
+            <h1>Filter Section</h1>
+            <hr>
+            <div>
+              <h2>Price</h2>
+              <p>Upto Rs 1,00,000</p>
+              <!-- <mat-slider [thumbLabel]="true" (click)="priceFilteration($event)" [(ngModel)]="priceFilterValue" [displayWith]="formatLabel"
+              tickInterval="1000" min="0" max="10000"></mat-slider> -->
+              <mat-slider [thumbLabel]="true" (change)="priceFilteration($event)" [displayWith]="formatLabel" tickInterval="1000" min="0"
+                max="10000"></mat-slider>
+              <div class="d-flex justify-content-between minmax">
+                <p>min: 0</p>
+                <p>max: 100k</p>
+                <p>{{priceFilterValue}}</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-2 filter_section {{amenitiesState}} {{stickyTop}}">
-        <div class="content py-3">
-          <h1>Filter Section</h1>
-          <hr>
-          <div>
-            <h2>Amenities</h2>
-            <mat-checkbox id="amenities8" (click)="amenitiesFilter(8)">Air Conditioning</mat-checkbox>
-            <mat-checkbox id="amenities28" (click)="amenitiesFilter(28)">Internet Access</mat-checkbox>
-            <mat-checkbox id="amenities9" (click)="amenitiesFilter(9)">TV</mat-checkbox>
-            <mat-checkbox id="amenities10" (click)="amenitiesFilter(10)">Restaurant</mat-checkbox>
-            <mat-checkbox id="amenities11" (click)="amenitiesFilter(11)">Bar</mat-checkbox>
-            <mat-checkbox id="amenities13" (click)="amenitiesFilter(13)">Parking</mat-checkbox>
-            <mat-checkbox id="amenities20" (click)="amenitiesFilter(20)">Fitness Center</mat-checkbox>
-            <mat-checkbox id="amenities22" (click)="amenitiesFilter(22)">Swimming Pool</mat-checkbox>
+
+
+        <div class="col-2 filter_section {{amenitiesState}} {{stickyTop}}">
+          <div class="content py-3">
+            <h1>Filter Section</h1>
+            <hr>
+            <div>
+              <h2>Amenities</h2>
+              <mat-checkbox id="amenities8" (click)="amenitiesFilter(8)">Air Conditioning</mat-checkbox>
+              <mat-checkbox id="amenities28" (click)="amenitiesFilter(28)">Internet Access</mat-checkbox>
+              <mat-checkbox id="amenities9" (click)="amenitiesFilter(9)">TV</mat-checkbox>
+              <mat-checkbox id="amenities10" (click)="amenitiesFilter(10)">Restaurant</mat-checkbox>
+              <mat-checkbox id="amenities11" (click)="amenitiesFilter(11)">Bar</mat-checkbox>
+              <mat-checkbox id="amenities13" (click)="amenitiesFilter(13)">Parking</mat-checkbox>
+              <mat-checkbox id="amenities20" (click)="amenitiesFilter(20)">Fitness Center</mat-checkbox>
+              <mat-checkbox id="amenities22" (click)="amenitiesFilter(22)">Swimming Pool</mat-checkbox>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-2 filter_section {{locationState}} {{stickyTop}}">
-        <div class="content py-3">
-          <h1>Filter Section</h1>
-          <hr>
-          <div>
-            <h2>Location</h2>
-            <mat-checkbox *ngFor="let location of HotelDetails,let i=index" id="{{ location.HotelID }}" (click)="locationFilter( location )">
-              {{location.FullAddress}}
-            </mat-checkbox>
+        <div class="col-2 filter_section {{locationState}} {{stickyTop}}">
+          <div class="content py-3">
+            <h1>Filter Section</h1>
+            <hr>
+            <div>
+              <h2>Location</h2>
+              <mat-checkbox multiple="false" *ngFor="let location of HotelDetails,let i=index" id="{{ location.HotelID }}" (click)="locationFilter( location )">
+                {{location.FullAddress}}
+              </mat-checkbox>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-2 filter_section {{ratingState}} {{stickyTop}}">
-        <div class="content py-3">
-          <h1>Filter Section</h1>
-          <hr>
-          <div>
-            <h2>User Rating</h2>
-            <!-- <mat-checkbox id="rating1" (click)="ratingFilter('1')">1</mat-checkbox>
-            <mat-checkbox id="rating2" (click)="ratingFilter('2')">2</mat-checkbox>
-            <mat-checkbox id="rating3" (click)="ratingFilter('3')">3</mat-checkbox>
-            <mat-checkbox id="rating4" (click)="ratingFilter('4')">4</mat-checkbox>
-            <mat-checkbox id="rating5" (click)="ratingFilter('5')">5</mat-checkbox> -->
-            <mat-checbox id="rating1">1</mat-checbox>
+        <div class="col-2 filter_section {{ratingState}} {{stickyTop}}">
+          <div class="content py-3">
+            <h1>Filter Section</h1>
+            <hr>
+            <div>
+              <h2>User Rating</h2>
+              <!-- <mat-checkbox id="rating1" (change)="ratingFilter($event)" [value]="1">1</mat-checkbox>
+              <mat-checkbox id="rating2" (change)="ratingFilter($event)" [value]="2">2</mat-checkbox>
+              <mat-checkbox id="rating3" (change)="ratingFilter($event)" [value]="3">3</mat-checkbox>
+              <mat-checkbox id="rating4" (change)="ratingFilter($event)" [value]="4">4</mat-checkbox>
+              <mat-checkbox id="rating5" (change)="ratingFilter($event)" [value]="5">5</mat-checkbox> -->
+
+              <mat-checkbox id="rating1" (change)="ratingFilter($event)" [value]="1">1</mat-checkbox>
+              <mat-checkbox id="rating2" (change)="ratingFilter($event)" [value]="2">2</mat-checkbox>
+              <mat-checkbox id="rating3" (change)="ratingFilter($event)" [value]="3">3</mat-checkbox>
+              <mat-checkbox id="rating4" (change)="ratingFilter($event)" [value]="4">4</mat-checkbox>
+              <mat-checkbox id="rating5" (change)="ratingFilter($event)" [value]="5">5</mat-checkbox>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-2 filter_section {{propertyTypeState}} {{stickyTop}}">
-        <div class="content py-3">
-          <h1>Filter Section</h1>
-          <hr>
-          <div>
-            <h2>Property Type</h2>
-            <mat-checkbox>BnB</mat-checkbox>
-            <mat-checkbox>Bungalow</mat-checkbox>
-            <mat-checkbox>Cottage</mat-checkbox>
-            <mat-checkbox>Farm stay</mat-checkbox>
-            <mat-checkbox>Guest House</mat-checkbox>
-            <mat-checkbox>Home stay</mat-checkbox>
-            <mat-checkbox>Hostel</mat-checkbox>
-            <mat-checkbox>Hotel</mat-checkbox>
-            <mat-checkbox>Loadge</mat-checkbox>
-            <mat-checkbox>Motel</mat-checkbox>
-            <mat-checkbox>Resort</mat-checkbox>
-            <mat-checkbox>Service apartment</mat-checkbox>
-            <mat-checkbox>Tent</mat-checkbox>
-            <mat-checkbox>Villa</mat-checkbox>
+        <div class="col-2 filter_section {{propertyTypeState}} {{stickyTop}}">
+          <div class="content py-3">
+            <h1>Filter Section</h1>
+            <hr>
+            <div>
+              <h2>Property Type</h2>
+              <mat-checkbox>BnB</mat-checkbox>
+              <mat-checkbox>Bungalow</mat-checkbox>
+              <mat-checkbox>Cottage</mat-checkbox>
+              <mat-checkbox>Farm stay</mat-checkbox>
+              <mat-checkbox>Guest House</mat-checkbox>
+              <mat-checkbox>Home stay</mat-checkbox>
+              <mat-checkbox>Hostel</mat-checkbox>
+              <mat-checkbox>Hotel</mat-checkbox>
+              <mat-checkbox>Loadge</mat-checkbox>
+              <mat-checkbox>Motel</mat-checkbox>
+              <mat-checkbox>Resort</mat-checkbox>
+              <mat-checkbox>Service apartment</mat-checkbox>
+              <mat-checkbox>Tent</mat-checkbox>
+              <mat-checkbox>Villa</mat-checkbox>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="{{dynamicClass}} px-0 results_div">
-        <div class="col-12 px-0 d-flex justify-content-center align-items-center Header {{stickyTop}}">
+        <div class="{{dynamicClass}} px-0 results_div">
+          <div class="col-12 px-0 d-flex justify-content-center align-items-center Header {{stickyTop}}">
 
-          <div class="col-0 d-flex flex-column justify-content-center align-items-center item ">
-            <p class="mb-0"></p>
+            <div class="col-0 d-flex flex-column justify-content-center align-items-center item ">
+              <p class="mb-0"></p>
+            </div>
+            <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
+              <p class="mb-0" (click)="Recommended()">Recommended</p>
+            </div>
+            <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
+              <p class="mb-0" (click)="Alphabetic()">Alphabetic</p>
+            </div>
+            <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+              <p class="mb-0" (click)="Rating()">Star Rating</p>
+            </div>
+            <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
+              <p class="mb-0" (click)="Price()">Price</p>
+            </div>
+            <div class="col-0 d-flex flex-column justify-content-center align-items-center item ">
+              <p class="mb-0"></p>
+            </div>
+            <div class="col-4 d-flex flex-column justify-content-center align-items-center item">
+              <p class="mb-0" *ngIf="filterHotelDetails.length > 0 || HotelDetails "> {{ (filterHotelDetails.length != 0) ? filterHotelDetails.length : HotelDetails.length}} Hotels</p>
+            </div>
           </div>
-          <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
-            <p class="mb-0" (click)="Recommended()">Recommended</p>
+          <div class="d-flex justify-content-end align-items-center views my-1">
+            <i class="material-icons pl-2" (click)="gridView()" matTooltipPosition="below" mat-raised-button matTooltip="Grid View">
+              list_alt
+            </i>
+            <i class="material-icons pl-2" (click)="listView()" matTooltipPosition="below" mat-raised-button matTooltip="List View">
+              view_list
+            </i>
+            <i class="material-icons pl-2" (click)="mapView()" matTooltipPosition="below" mat-raised-button matTooltip="Map View">
+              place
+            </i>
           </div>
-          <div class="col-2 d-flex flex-column justify-content-center align-items-center item ">
-            <p class="mb-0" (click)="Alphabetic()">Alphabetic</p>
-          </div>
-          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
-            <p class="mb-0" (click)="Rating()">Star Rating</p>
-          </div>
-          <div class="col-2 d-flex flex-column justify-content-center align-items-center item">
-            <p class="mb-0" (click)="Price()">Price</p>
-          </div>
-          <div class="col-0 d-flex flex-column justify-content-center align-items-center item ">
-            <p class="mb-0"></p>
-          </div>
-          <div class="col-4 d-flex flex-column justify-content-center align-items-center item">
-            <p class="mb-0" *ngIf="filterHotelDetails.length > 0 || HotelDetails "> {{ (filterHotelDetails.length != 0) ? filterHotelDetails.length : HotelDetails.length}} Hotels</p>
+          <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
+
+            <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of (filterHotelDetails.length != 0) ? filterHotelDetails : HotelDetails ,let i of index"
+              [Hotel]="Hotel"></app-hotel-template>
+            <ng-template *ngIf="showHotelLoader">
+              <mat-spinner></mat-spinner>
+            </ng-template>
           </div>
         </div>
-        <div class="d-flex justify-content-end align-items-center views my-1">
-          <i class="material-icons pl-2" (click)="gridView()" matTooltipPosition="below" mat-raised-button matTooltip="Grid View">
-            list_alt
-          </i>
-          <i class="material-icons pl-2" (click)="listView()" matTooltipPosition="below" mat-raised-button matTooltip="List View">
-            view_list
-          </i>
-          <i class="material-icons pl-2" (click)="mapView()" matTooltipPosition="below" mat-raised-button matTooltip="Map View">
-            place
-          </i>
-        </div>
-        <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
-
-
-
-          <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of (filterHotelDetails.length != 0) ? filterHotelDetails : HotelDetails ,let i of index"
-            [Hotel]="Hotel"></app-hotel-template>
-
-          <div *ngIf="showHotelLoader">
-            Loading
-          </div>
-
-
-        </div>
-
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</form>
