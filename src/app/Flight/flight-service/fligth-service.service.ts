@@ -70,4 +70,12 @@ export class FligthServiceService {
         console.log(err);
       });
   }
+  CityURL: string = 'assets/Flight_city.Json'
+  GetCity(callback) {
+    this.http.get(this.CityURL).subscribe(data => {
+      callback(data);
+    }, err => {
+      console.log(err);
+    });
+  }
 }
