@@ -33,18 +33,14 @@ export class FligthServiceService {
       "TerminalType": "W",
       "CurrencyCode": "MYR"
     },
-
     "Sectors": [
       {
         "Source": "MAA",
         "Destination": "BLR",
         "DepartureDate": "2018-06-14",
         "ReturnDate": null
-
-
       }
     ],
-
     "ServiceRequestType": "INTERNAL",
     "Class": "Economy",
     "PrefAir": "ALL",
@@ -55,10 +51,7 @@ export class FligthServiceService {
       "AdultCount": 1,
       "Childcount": 0,
       "InfantCount": 0
-
     }
-
-
   }
 
   FlightUrl: string = 'http://192.168.31.199:1998/WxyzAirService.svc/GetAirAvailability';

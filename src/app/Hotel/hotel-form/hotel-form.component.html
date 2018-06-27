@@ -31,18 +31,18 @@
       </mat-form-field>
 
     </div>
-      <div class="md-form col-md-2 input-group">
+    <div class="md-form col-md-2 input-group">
       <mat-form-field>
-        <input name="checkInDate" [(ngModel)]="checkInDate" (focus)="picker.open()" matInput [matDatepicker]="picker" placeholder="Check In"
-          [formControl]="date">
+        <input name="checkInDate" [(ngModel)]="checkInDate" [min]="minDate" (focus)="picker.open()" matInput [matDatepicker]="picker"
+          placeholder="Check In" [formControl]="date">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </div>
     <div class="md-form col-md-2 input-group">
       <mat-form-field>
-        <input name="checkOutDate" [(ngModel)]="checkOutDate" (focus)="picker2.open()" matInput [matDatepicker]="picker2" placeholder="Check Out"
-          [formControl]="date">
+        <input name="checkOutDate" [(ngModel)]="checkOutDate" [min]="minDate" (focus)="picker2.open()" matInput [matDatepicker]="picker2"
+          placeholder="Check Out" [formControl]="date">
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
         <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field>

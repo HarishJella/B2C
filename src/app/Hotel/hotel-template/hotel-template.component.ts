@@ -10,9 +10,8 @@ export class HotelTemplateComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
 
-  }
   @Input() private Hotel;
   @Input('hotel_grid') hotel_grid: number;
   @Input('hotel_list') hotel_list: string;

@@ -111,7 +111,7 @@ export class HotelServiceService {
       "CurrencyCode": "MYR"
     },
     "Vendor": "HOTELBED",
-    "Destination": "Bangalore, India",
+    "Destination": "London, United Kingdom",
     "CheckIn": "18-07-2018",
     "CheckOut": "21-07-2018",
     "Rooms": [

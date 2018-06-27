@@ -21,7 +21,7 @@ export class HotelComponent implements OnInit {
   stickyTop: string = "sticky-top";
   public passengers_state;
   HotelDetails: any;
-  HotelDetailsOriginal: any;
+  public HotelDetailsOriginal: any;
   filterHotelDetails = [];
   error: any;
   showHotelLoader: boolean = true;
@@ -40,7 +40,8 @@ export class HotelComponent implements OnInit {
     this.filterFormGroup = this.formBuilder.group({
       rating: this.formBuilder.array([]),
       location: this.formBuilder.array([]),
-      price: this.formBuilder.array([])
+      price: this.formBuilder.array([]),
+      amenities: this.formBuilder.array([])
     });
   }
 
@@ -66,7 +67,7 @@ export class HotelComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       this.stickyTop = "sticky-top";
       this.passengers_state = 'd-none fadeOutRightBig';
-      this.showHotelDetails;
+      this.showHotelDetails();
       this.showHotelLoader = true;
 
       // console.log(`Dialog result: ${result}`);
@@ -327,35 +328,44 @@ export class HotelComponent implements OnInit {
     // }
     this.filterHotelData();
   }
-  filterHotelData() {
-    console.log(this.filterFormGroup.value);
-  }
+
 
 
   // 4> Amenities Filter
   amenitiesFilterArray = [];
-  amenitiesFilter(id: number) {
-    var target = $("#amenities" + id).find('input').attr('aria-checked');
-    this.HotelDetailsOriginal = this.HotelDetails;
-    if (target == 'false') {
-      this.amenitiesFilterArray.unshift.apply(this.amenitiesFilterArray, (this.HotelDetailsOriginal.filter(
-        data => {
-          if (data.Amenities != null) {
-            return data.Amenities.ID.includes(id);
-          }
-        }
-      )))
-      this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.amenitiesFilterArray);
-      // console.log(this.filterHotelDetails);
-    } if (target == 'true') {
-      this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
-        data => {
-          if (data.Amenities != null) {
-            return data.Amenities.ID.includes(id);
-          }
-        }
-      ));
+  amenitiesFilter(event, id: number) {
+    // var target = $("#amenities" + id).find('input').attr('aria-checked');
+    var target = event;
+    // this.HotelDetailsOriginal = this.HotelDetails;
+    // if (target === true) {
+    //   this.amenitiesFilterArray.unshift.apply(this.amenitiesFilterArray, (this.HotelDetailsOriginal.filter(
+    //     data => {
+    //       if (data.Amenities != null) {
+    //         return data.Amenities.ID.includes(id);
+    //       }
+    //     }
+    //   )))
+    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.amenitiesFilterArray);
+    //   // console.log(this.filterHotelDetails);
+    // } if (target === false) {
+    //   this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
+    //     data => {
+    //       if (data.Amenities != null) {
+    //         return data.Amenities.ID.includes(id);
+    //       }
+    //     }
+    //   ));
+    // }
+
+    const amenities = <FormArray>this.filterFormGroup.get('amenities') as FormArray;
+
+    if (event.checked) {
+      amenities.push(new FormControl(id))
+    } else {
+      const i = amenities.controls.findIndex(x => x.value === id);
+      amenities.removeAt(i);
     }
+    this.filterHotelData();
   }
 
 
@@ -483,7 +493,32 @@ export class HotelComponent implements OnInit {
   }
 
 
+  filterHotelData() {
+    let price = this.filterFormGroup.value.price;
+    let amenities = this.filterFormGroup.value.amenities;
+    let rating = this.filterFormGroup.value.rating;
+    let location = this.filterFormGroup.value.location;
 
-
+    for (let Hotel of this.HotelDetailsOriginal) {
+      let status: boolean = false;
+      if (Hotel.StartAmount <= price) {
+        status = true;
+      }
+      if (status) {
+        if (amenities.length) {
+          amenities.forEach(element => {
+            Hotel.Amenities.forEach(data => {
+              if (element == data.ID) {
+                status = true;
+              }
+              else {
+                status = false;
+              }
+            });
+          });
+        }
+      }
+    }
+  }
 }
 

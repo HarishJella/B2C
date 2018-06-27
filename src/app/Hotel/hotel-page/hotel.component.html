@@ -85,14 +85,14 @@
             <hr>
             <div>
               <h2>Amenities</h2>
-              <mat-checkbox id="amenities8" (click)="amenitiesFilter(8)">Air Conditioning</mat-checkbox>
-              <mat-checkbox id="amenities28" (click)="amenitiesFilter(28)">Internet Access</mat-checkbox>
-              <mat-checkbox id="amenities9" (click)="amenitiesFilter(9)">TV</mat-checkbox>
-              <mat-checkbox id="amenities10" (click)="amenitiesFilter(10)">Restaurant</mat-checkbox>
-              <mat-checkbox id="amenities11" (click)="amenitiesFilter(11)">Bar</mat-checkbox>
-              <mat-checkbox id="amenities13" (click)="amenitiesFilter(13)">Parking</mat-checkbox>
-              <mat-checkbox id="amenities20" (click)="amenitiesFilter(20)">Fitness Center</mat-checkbox>
-              <mat-checkbox id="amenities22" (click)="amenitiesFilter(22)">Swimming Pool</mat-checkbox>
+              <mat-checkbox id="amenities8" (change)="amenitiesFilter($event,8)">Air Conditioning</mat-checkbox>
+              <mat-checkbox id="amenities28" (change)="amenitiesFilter($event,28)">Internet Access</mat-checkbox>
+              <mat-checkbox id="amenities9" (change)="amenitiesFilter($event,9)">TV</mat-checkbox>
+              <mat-checkbox id="amenities10" (change)="amenitiesFilter($event,10)">Restaurant</mat-checkbox>
+              <mat-checkbox id="amenities11" (change)="amenitiesFilter($event,11)">Bar</mat-checkbox>
+              <mat-checkbox id="amenities13" (change)="amenitiesFilter($event,13)">Parking</mat-checkbox>
+              <mat-checkbox id="amenities20" (change)="amenitiesFilter($event,20)">Fitness Center</mat-checkbox>
+              <mat-checkbox id="amenities22" (change)="amenitiesFilter($event,22)">Swimming Pool</mat-checkbox>
             </div>
           </div>
         </div>

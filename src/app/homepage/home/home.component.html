@@ -8,7 +8,7 @@
     <mat-tab-group class="main-srch {{modalToggleVisiblity}}" [selectedIndex]="tabIndex">
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/flight.svg" (click)="tab()">
+          <img src="assets/images/flight.svg" (click)="tab(0)">
           <!-- <p>flight</p> -->
         </ng-template>
 
@@ -18,7 +18,7 @@
 
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/hotel.svg" >
+          <img src="assets/images/hotel.svg" (click)="tab(1)">
         </ng-template>
         <app-hotel-form (passengerFormEvent)="modalToggleVisiblity=$event" [passengers_state]="passengers_state"></app-hotel-form>
 
@@ -26,17 +26,9 @@
 
       <mat-tab>
         <ng-template mat-tab-label>
-          <img src="assets/images/bus.svg " >
+          <img src="assets/images/bus.svg" (click)="tab(2)">
         </ng-template>
         <app-bus-form></app-bus-form>
-      </mat-tab>
-
-
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <img src="assets/images/holiday.svg" >
-        </ng-template>
-        Holidays Coming Soon.......
       </mat-tab>
 
     </mat-tab-group>
@@ -180,13 +172,13 @@
 <div class="vaction pb-5">
   <div class="container">
     <div class="col-12 d-flex py-5">
-    <div class=" text-center">
+      <div class=" text-center">
         <h3 class="my-2"> Travel World's Vacation Packages </h3>
         <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error suscipit culpa corporis inventore ad totam
           numquam autem maiores, consequatur, est rerum laboriosam at quae vero ipsam illum sit quibusdam?consequatur, est
           rerum laboriosam at quae vero ipsam illum sit quibusdam?</p>
       </div>
-      </div>
+    </div>
 
     <div class="col-12 d-flex justify-content-between align-items-center">
       <div class="col-4">
@@ -238,10 +230,10 @@
             <!--Text-->
             <p class="card-text d-flex">
               <i class="material-icons"> location_on </i>Ecuador</p>
-            </div>
-           </div>
+          </div>
+        </div>
       </div>
-     </div>
+    </div>
   </div>
 </div>
 
@@ -304,8 +296,8 @@
             <!--Text-->
             <p class="card-text d-flex">
               <i class="material-icons"> location_on </i>Europe</p>
-             </div>
-             </div>
+          </div>
+        </div>
       </div>
       <div class="col-4">
         <div class="card">

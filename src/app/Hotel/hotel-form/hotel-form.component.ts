@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation, OnInit, EventEmitter, Input, Output, Host
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { HotelServiceService} from '../hotel-service/hotel-service.service';
+import { HotelServiceService } from '../hotel-service/hotel-service.service';
 
 import { Router } from '@angular/router';
 
@@ -40,7 +40,7 @@ export const MY_FORMATS = {
   encapsulation: ViewEncapsulation.None,
   templateUrl: './hotel-form.component.html',
   styleUrls: ['./hotel-form.component.scss'],
- 
+
 })
 
 export class HotelFormComponent implements OnInit {
@@ -51,10 +51,11 @@ export class HotelFormComponent implements OnInit {
   options = [];
   Adult: number = 1;
   Child: number = 0;
+  minDate = new Date();
 
   date = new FormControl(moment().fromNow(true));
 
-// serializedDate = new FormControl((new Date()).toISOString());
+  // serializedDate = new FormControl((new Date()).toISOString());
 
   // serializedDate = new FormControl((new Date()).toISOString());
 
