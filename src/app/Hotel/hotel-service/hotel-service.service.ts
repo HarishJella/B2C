@@ -110,7 +110,7 @@ export class HotelServiceService {
       "TerminalType": "W",
       "CurrencyCode": "MYR"
     },
-    "Vendor": "HOTELBED",
+    "Vendor": "TRM",
     "Destination": "London, United Kingdom",
     "CheckIn": "18-07-2018",
     "CheckOut": "21-07-2018",

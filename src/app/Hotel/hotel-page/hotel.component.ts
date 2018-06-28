@@ -58,6 +58,8 @@ export class HotelComponent implements OnInit {
     );
   }
 
+
+
   openDialog() {
     const dialogRef = this.dialog.open(hotelModifySearch, {
       height: 'auto'
@@ -215,10 +217,14 @@ export class HotelComponent implements OnInit {
     const price = <FormArray>this.filterFormGroup.get('price') as FormArray;
 
     if (priceValue) {
-      price.push(new FormControl(event.value))
+      price.push(new FormControl(event.value));
+      this.filter();
     }
     console.log(price);
-    this.filterHotelData();
+
+
+
+    // this.filterHotelData();
     // this.HotelDetailsOriginal = this.HotelDetails;
     // if (priceValue) {
     //   this.priceFilterArray.unshift.apply(this.priceFilterArray, (this.HotelDetailsOriginal.filter(
@@ -280,7 +286,8 @@ export class HotelComponent implements OnInit {
       const i = rating.controls.findIndex(x => x.value === event.source.value);
       rating.removeAt(i);
     }
-    this.filterHotelData();
+    this.filter();
+    // this.filterHotelData();
   }
 
   // 3> Location Filter
@@ -326,7 +333,7 @@ export class HotelComponent implements OnInit {
     //   ));
     //   console.log(this.filterHotelDetails);
     // }
-    this.filterHotelData();
+    // this.filterHotelData();
   }
 
 
@@ -365,7 +372,7 @@ export class HotelComponent implements OnInit {
       const i = amenities.controls.findIndex(x => x.value === id);
       amenities.removeAt(i);
     }
-    this.filterHotelData();
+    // this.filterHotelData();
   }
 
 
@@ -493,32 +500,142 @@ export class HotelComponent implements OnInit {
   }
 
 
-  filterHotelData() {
+
+  // public filterHotelData() {
+  //   let price = this.filterFormGroup.value.price;
+  //   let amenities = this.filterFormGroup.value.amenities;
+  //   let rating = this.filterFormGroup.value.rating;
+  //   let location = this.filterFormGroup.value.location;
+  //   let hotelDetails = this.HotelDetailsOriginal;
+  //   let status: boolean = false;
+  //   for (let i = 0; i < hotelDetails; i++) {
+
+  //     if (hotelDetails[i].HotelID) {
+  //       this.HotelDetailsOriginal.splice(i, 1);
+  //       console.log(this.HotelDetailsOriginal);
+  //       break;
+  //     }
+
+  //     if (hotelDetails[i].StartAmount <= price) {
+  //       status = true;
+  //     }
+  //     if (status) {
+  //       if (hotelDetails[i].amenities != null && hotelDetails[i].amenities != undefined && hotelDetails[i].amenities.length) {
+  //         hotelDetails[i].amenities.forEach(element => {
+  //           if (element.ID == hotelDetails[i].amenities.ID) {
+  //             status = true;
+  //           }
+  //           else {
+  //             status = false;
+  //           }
+  //         });
+  //       } else {
+  //         status = true;
+  //       }
+  //     }
+  //     if (status) {
+  //       console.log(status);
+  //       console.log(hotelDetails);
+  //     }
+  //   }
+  // }
+
+
+  filterArray = [];
+  filter() {
+
     let price = this.filterFormGroup.value.price;
     let amenities = this.filterFormGroup.value.amenities;
     let rating = this.filterFormGroup.value.rating;
     let location = this.filterFormGroup.value.location;
 
-    for (let Hotel of this.HotelDetailsOriginal) {
+    var hotelObj;
+
+
+    this.HotelDetailsOriginal.forEach(element => {
+      hotelObj = element;
       let status: boolean = false;
-      if (Hotel.StartAmount <= price) {
-        status = true;
-      }
-      if (status) {
-        if (amenities.length) {
-          amenities.forEach(element => {
-            Hotel.Amenities.forEach(data => {
-              if (element == data.ID) {
-                status = true;
-              }
-              else {
-                status = false;
-              }
-            });
-          });
+      this.HotelDetailsOriginal.splice(hotelObj, 1);
+
+      for (let p = 0; p < price.length; p++) {
+        if ((price.length - 1) == p) {
+          if (parseInt(hotelObj.StartAmount) <= price[price.length - 1]) {
+            status = true;
+          }
         }
       }
-    }
-  }
-}
+      if (status) {
+        if (amenities.length > 0) {
+          for (var amt = 0; amt < amenities.length; amt++) {
+            if (hotelObj.Amenities.length > 0) {
+              hotelObj.Amenities.forEach(element => {
+                if (element.ID == amenities[amt]) {
+                  status = true;
+                } else {
+                  status = false;
+                }
+              });
+            } else {
+              status = false;
+            }
+          }
+        } else {
+          status = false;
+        }
+      }
 
+      // if (status) {
+      //   if (hotelObj.Amenities == null && hotelObj.Amenities == undefined) {
+      //     status = false;
+      //   }
+      //   else {
+      //     amenities.forEach(data => {
+      //       amenities.forEach(element => {
+      //         if (hotelObj.ID === data.ID) {
+      //           status = true;
+      //         }
+      //         else {
+      //           status = false;
+      //         }
+      //       });
+      //       console.log(data);
+      //     });
+
+      //   }
+      // }
+      // if (status) {
+      //   if (rating.length) {
+      //     rating.forEach(element => {
+      //       if (element == hotelObj.Rating) {
+      //         status = true;
+      //       }
+      //       else {
+      //         status = false;
+      //       }
+      //     });
+      //   }
+      // }
+      // if (status) {
+      //   if (location.length) {
+      //     rating.forEach(element => {
+      //       if (element == hotelObj.Rating) {
+      //         status = true;
+      //       }
+      //       else {
+      //         status = false;
+      //       }
+      //     });
+      //   }
+      // }
+      if (status) {
+        this.filterArray.push(hotelObj);
+      }
+
+      console.log(this.HotelDetailsOriginal);
+      console.log(this.filterArray);
+    });
+  }
+
+
+
+}

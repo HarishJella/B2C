@@ -190,7 +190,7 @@
           </div>
           <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
 
-            <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of (filterHotelDetails.length != 0) ? filterHotelDetails : HotelDetails ,let i of index"
+            <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of (filterHotelDetails.length != 0) ? filterHotelDetails : HotelDetails | slice:0:20 ,let i of index"
               [Hotel]="Hotel"></app-hotel-template>
             <ng-template *ngIf="showHotelLoader">
               <mat-spinner></mat-spinner>
