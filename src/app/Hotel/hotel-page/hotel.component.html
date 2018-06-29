@@ -1,5 +1,3 @@
-<pre>{{ filterFormGroup.value | json }}</pre>
-
 <form [formGroup]="filterFormGroup" (ngSubmit)="submit()">
   <section class="my-5 availability">
     <div class="container">
@@ -67,12 +65,11 @@
               <p>Upto Rs 1,00,000</p>
               <!-- <mat-slider [thumbLabel]="true" (click)="priceFilteration($event)" [(ngModel)]="priceFilterValue" [displayWith]="formatLabel"
               tickInterval="1000" min="0" max="10000"></mat-slider> -->
-              <mat-slider [thumbLabel]="true" (change)="priceFilteration($event)" [displayWith]="formatLabel" tickInterval="1000" min="0"
-                max="10000"></mat-slider>
+              <mat-slider [thumbLabel]="true" (change)="priceFilteration($event)" [displayWith]="formatLabel" [value]="450" tickInterval="100"
+                [min]="filt_min_price" [max]="filt_max_price"></mat-slider>
               <div class="d-flex justify-content-between minmax">
-                <p>min: 0</p>
-                <p>max: 100k</p>
-                <p>{{priceFilterValue}}</p>
+                <p>min: {{filt_min_price}}</p>
+                <p>max: {{filt_max_price}}</p>
               </div>
             </div>
           </div>
@@ -85,14 +82,14 @@
             <hr>
             <div>
               <h2>Amenities</h2>
-              <mat-checkbox id="amenities8" (change)="amenitiesFilter($event,8)">Air Conditioning</mat-checkbox>
-              <mat-checkbox id="amenities28" (change)="amenitiesFilter($event,28)">Internet Access</mat-checkbox>
-              <mat-checkbox id="amenities9" (change)="amenitiesFilter($event,9)">TV</mat-checkbox>
-              <mat-checkbox id="amenities10" (change)="amenitiesFilter($event,10)">Restaurant</mat-checkbox>
-              <mat-checkbox id="amenities11" (change)="amenitiesFilter($event,11)">Bar</mat-checkbox>
-              <mat-checkbox id="amenities13" (change)="amenitiesFilter($event,13)">Parking</mat-checkbox>
-              <mat-checkbox id="amenities20" (change)="amenitiesFilter($event,20)">Fitness Center</mat-checkbox>
-              <mat-checkbox id="amenities22" (change)="amenitiesFilter($event,22)">Swimming Pool</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,8)">Air Conditioning</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,28)">Internet Access</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,9)">TV</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,10)">Restaurant</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,11)">Bar</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,13)">Parking</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,20)">Fitness Center</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,22)">Swimming Pool</mat-checkbox>
             </div>
           </div>
         </div>
@@ -190,8 +187,9 @@
           </div>
           <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
 
-            <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of (filterHotelDetails.length != 0) ? filterHotelDetails : HotelDetails | slice:0:20 ,let i of index"
-              [Hotel]="Hotel"></app-hotel-template>
+            <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of  HotelDetails,let i of index"
+              [Hotel]="Hotel" [hidden]="!Hotel.hidden"></app-hotel-template>
+
             <ng-template *ngIf="showHotelLoader">
               <mat-spinner></mat-spinner>
             </ng-template>
