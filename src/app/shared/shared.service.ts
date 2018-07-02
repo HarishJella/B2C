@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
 
-  constructor() { }
+  constructor(public snackBar: MatSnackBar) { }
 
 
   tabIndex: number = 0;

@@ -112,8 +112,8 @@ export class HotelServiceService {
     },
     "Vendor": "HOTELBED",
     "Destination": "London, United Kingdom",
-    "CheckIn": "1-07-2018",
-    "CheckOut": "2-07-2018",
+    "CheckIn": "01-08-2018",
+    "CheckOut": "02-08-2018",
     "Rooms": [
       {
         "AD": 2,
@@ -145,14 +145,14 @@ export class HotelServiceService {
   };
 
   // Service message commands
-  // HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
+  HotelUrl: string = 'http://192.168.31.199:1996/api/HotelSearch';
   // HotelUrl: string = 'http://localhost:13161/api/HotelSearch';
-  HotelUrl: string = 'assets/api.json';
+  // HotelUrl: string = 'assets/api.json';
 
 
   getHotelDetails(requestBody: any): any {
     this.requestBodySource.next(requestBody);
-    return this.http.get(this.HotelUrl);
+    return this.http.post(this.HotelUrl, this.requestBody, this.httpOptions);
   }
 
   CityUrl: string = 'assets/Hotel_City.json';

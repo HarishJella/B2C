@@ -1,3 +1,4 @@
+
 <form [formGroup]="filterFormGroup" (ngSubmit)="submit()">
   <section class="my-5 availability">
     <div class="container">
@@ -31,24 +32,24 @@
       <div class="col-12 px-0 search_results">
 
         <div class="col-1 px-0 filter_div {{stickyTop}}">
-          <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-            <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="" class="img-fluid priceState" (click)="open_filter($event)"
+          <div class="py-3 px-4 d-flex flex-column justify-content-center align-items-center item priceState" (click)="open_filter($event)">
+            <img src="assets/images/filter icons/hotel_fliter_icon/price.svg" alt="Filter Icon - Price" class="img-fluid priceState"
               matTooltipPosition="above" mat-raised-button matTooltip="Price Filter">
           </div>
-          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-            <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="" class="img-fluid amenitiesState" (click)="open_filter($event)"
+          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item amenitiesState" (click)="open_filter($event)">
+            <img src="assets/images/filter icons/hotel_fliter_icon/aminities.svg" alt="Amenities Icon - Price" class="img-fluid amenitiesState"
               matTooltipPosition="above" mat-raised-button matTooltip="Aminities Filter">
           </div>
-          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-            <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="" class="img-fluid locationState" (click)="open_filter($event)"
+          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item locationState" (click)="open_filter($event)">
+            <img src="assets/images/filter icons/hotel_fliter_icon/loaction.svg" alt="Location Icon - Price" class="img-fluid locationState"
               matTooltipPosition="above" mat-raised-button matTooltip="Location Filter">
           </div>
-          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-            <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="" class="img-fluid ratingState" (click)="open_filter($event)"
+          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item ratingState" (click)="open_filter($event)">
+            <img src="assets/images/filter icons/hotel_fliter_icon/user_rating.svg" alt="Rating Icon - Price" class="img-fluid ratingState"
               matTooltipPosition="above" mat-raised-button matTooltip="Rating Filter">
           </div>
-          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item">
-            <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="" class="img-fluid propertyTypeState" (click)="open_filter($event)"
+          <div class="p-3 px-4 d-flex flex-column justify-content-center align-items-center item propertyTypeState" (click)="open_filter($event)">
+            <img src="assets/images/filter icons/hotel_fliter_icon/property.svg" alt="Property Icon - Price" class="img-fluid propertyTypeState"
               matTooltipPosition="above" mat-raised-button matTooltip="Property Filter">
           </div>
         </div>
@@ -82,14 +83,14 @@
             <hr>
             <div>
               <h2>Amenities</h2>
-              <mat-checkbox (change)="amenitiesFilter($event,8)">Air Conditioning</mat-checkbox>
-              <mat-checkbox (change)="amenitiesFilter($event,28)">Internet Access</mat-checkbox>
+              <mat-checkbox multiple="true" *ngFor="let Amenities of filAmits,let i=index">{{ Amenities.Name}}</mat-checkbox>
+              <!-- <mat-checkbox (change)="amenitiesFilter($event,28)">Internet Access</mat-checkbox>
               <mat-checkbox (change)="amenitiesFilter($event,9)">TV</mat-checkbox>
               <mat-checkbox (change)="amenitiesFilter($event,10)">Restaurant</mat-checkbox>
               <mat-checkbox (change)="amenitiesFilter($event,11)">Bar</mat-checkbox>
               <mat-checkbox (change)="amenitiesFilter($event,13)">Parking</mat-checkbox>
               <mat-checkbox (change)="amenitiesFilter($event,20)">Fitness Center</mat-checkbox>
-              <mat-checkbox (change)="amenitiesFilter($event,22)">Swimming Pool</mat-checkbox>
+              <mat-checkbox (change)="amenitiesFilter($event,22)">Swimming Pool</mat-checkbox> -->
             </div>
           </div>
         </div>
@@ -99,7 +100,7 @@
             <hr>
             <div>
               <h2>Location</h2>
-              <mat-checkbox multiple="false" *ngFor="let location of loc,let i=index" id="{{ location.Location }}" (click)="locationFilter( location )">
+              <mat-checkbox multiple="false" *ngFor="let location of filLoc,let i=index" id="{{ location.Location }}" (change)="locationFilter($event)">
                 {{location.FullAddress}}
               </mat-checkbox>
             </div>
@@ -181,7 +182,7 @@
           </div>
           <div class="result hotelresult {{hotelresult}} {{hotelGridView}} {{hotelListView}}">
 
-            <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of  HotelDetails,let i of index"
+            <app-hotel-template [hotel_grid]="hotel_grid" [hotel_list]="hotel_list" [hotel_map]="hotel_map" *ngFor="let Hotel of  HotelDetails | slice:0:10,let i of index"
               [Hotel]="Hotel" [hidden]="!Hotel.hidden"></app-hotel-template>
 
             <ng-template *ngIf="showHotelLoader">

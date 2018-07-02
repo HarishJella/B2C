@@ -4,10 +4,8 @@ import { MatDialog } from '@angular/material';
 import { hotelModifySearch } from '../hotel.modify.component';
 import { HotelServiceService } from '../hotel-service/hotel-service.service';
 import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms';
-
 import { MatCheckbox } from '@angular/material';
 import * as jQuery from 'jquery';
-
 declare var $: any;
 
 @Component({
@@ -28,19 +26,22 @@ export class HotelComponent implements OnInit {
   elementID;
   // Post Request -> body  from service as Observable
   requestBody: any;
-
   filt_min_price: number = 0;
   filt_max_price: number = 0;
   Amenities;
-  loc = [];
-  map1 = new Map();
+  //Variables for Filter Location array
+  filLoc = [];
+  Locmap = new Map();
+  //Variables for Filter Amenities array
+  filAmits = [];
+  Amitsmap = new Map();
   filterFormGroup: FormGroup;
+
   constructor(public dialog: MatDialog, private HotelData: HotelServiceService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
     this.showHotelDetails();
-
     this.filterFormGroup = this.formBuilder.group({
       rating: this.formBuilder.array([]),
       location: this.formBuilder.array([]),
@@ -53,26 +54,35 @@ export class HotelComponent implements OnInit {
   showHotelDetails() {
     this.HotelData.getHotelDetails(this.requestBody).subscribe(
       data => {
-        this.HotelDetails = data;
+        this.HotelDetails = JSON.parse(data.response);
         this.HotelDetails.map(el => {
           el.hidden = true;
         })
         // console.log(...this.HotelDetails);
 
+        //Getting max and min HotelPrice from response data
         this.filt_max_price = Math.round(Math.max.apply(Math, this.HotelDetails.map(function (o) { return o.StartAmount; })));
         this.filt_min_price = Math.round(Math.min.apply(Math, this.HotelDetails.map(function (o) { return o.StartAmount; })));
 
+        //Making Location unique from all Hotel and pushing it filLoc(filter location) array
         for (let Location of this.HotelDetails) {
-          this.map1.set(Location.FullAddress, Location);
+          this.Locmap.set(Location.FullAddress, Location);
         }
-
-        this.map1.forEach(data => {
-          this.loc.push(data);
+        this.Locmap.forEach(data => {
+          this.filLoc.push(data);
         });
-        console.log(this.loc);
 
-        //returns object
-
+        //Making Amenities unique from all Hotel and pushing it filAmits(filter amenities) array
+        this.HotelDetails.forEach(element => {
+          if (element.Amenities != null || element.Amenities != undefined) {
+            for (let Amenities of element.Amenities) {
+              this.Amitsmap.set(Amenities.ID, Amenities);
+            }
+          }
+        });
+        this.Amitsmap.forEach(data => {
+          this.filAmits.push(data);
+        });
         this.showHotelLoader = false;
       },
       err => console.log(err),
@@ -91,21 +101,19 @@ export class HotelComponent implements OnInit {
       this.passengers_state = 'd-none fadeOutRightBig';
       this.showHotelDetails();
       this.showHotelLoader = true;
-
-      // console.log(`Dialog result: ${result}`);
     });
-
   }
 
   formatLabel(value: number | null) {
     if (!value) {
       return 0;
     }
-
     if (value >= 1000) {
       return Math.round(value / 1000) + 'k';
     }
-
+    if (value >= 100000) {
+      return Math.round(value / 100000) + 'L';
+    }
     return value;
   }
 
@@ -126,7 +134,7 @@ export class HotelComponent implements OnInit {
     let length = event.target.classList.length;
     length = length - 1;
     let className = event.target.classList[length];
-    console.log(className);
+
     if (className == 'priceState') {
       this.priceState = this.priceState === 'filter_content' ? 'fil' : 'filter_content';
       if (this.priceState == 'filter_content') {
@@ -231,39 +239,15 @@ export class HotelComponent implements OnInit {
 
   priceFilterArray = [];
   priceFilteration(event) {
-    console.log(event.value);
-    let priceValue = event.value;
 
+    let priceValue = event.value;
     const price = <FormArray>this.filterFormGroup.get('price') as FormArray;
 
     if (priceValue) {
       price.push(new FormControl(event.value));
       this.filter_HotelDetails();
     }
-    console.log(price);
 
-
-
-    // this.filterHotelData();
-    // this.HotelDetailsOriginal = this.HotelDetails;
-    // if (priceValue) {
-    //   this.priceFilterArray.unshift.apply(this.priceFilterArray, (this.HotelDetailsOriginal.filter(
-    //     data => {
-    //       if (data.StartAmount <= priceValue) {
-    //         return data.StartAmount.includes(data.StartAmount);
-    //       }
-    //     }
-    //   )))
-    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.priceFilterArray);
-    // } else {
-    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, (this.HotelDetailsOriginal.filter(
-    //     data => {
-    //       if (data.StartAmount >= priceValue) {
-    //         return data.StartAmount.includes(priceValue);
-    //       }
-    //     }
-    //   )))
-    // }
     this.filterHotelDetails.sort(function (a, b) {
       var nameA = parseInt(a.StartAmount); // ignore upper and lowercase
       var nameB = parseInt(b.StartAmount); // ignore upper and lowercase
@@ -280,26 +264,7 @@ export class HotelComponent implements OnInit {
   // 2> Rating Filter
   ratingFilterArray = [];
   ratingFilter(event) {
-    // var target = $("#rating" + filter).find('input').attr('aria-checked');
-    // var target = event.checked;
-    // this.HotelDetailsOriginal = this.HotelDetails;
-
-    // if (target === true) {
-    //   this.ratingFilterArray.unshift.apply(this.ratingFilterArray, (this.HotelDetailsOriginal.filter(
-    //     data => {
-    //       return data.Rating.includes(event.source.value);
-    //     }
-    //   )))
-    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.ratingFilterArray);
-    // } if (target === false) {
-    //   this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
-    //     data => {
-    //       return data.Rating.includes(event.source.value);
-    //     }
-    //   ));
-    // }
     const rating = <FormArray>this.filterFormGroup.get('rating') as FormArray;
-
     if (event.checked) {
       rating.push(new FormControl(event.source.value))
     } else {
@@ -311,50 +276,17 @@ export class HotelComponent implements OnInit {
 
   // 3> Location Filter
   locationFilterArray = [];
-  locationFilter(location) {
+  locationFilter(event) {
 
-    const location1 = <FormArray>this.filterFormGroup.get('location') as FormArray;
-
-    if (location.FullAddress != null || location.FullAddress != undefined) {
-      location1.push(new FormControl(location.FullAddress))
+    const location = <FormArray>this.filterFormGroup.get('location') as FormArray;
+    if (event.checked) {
+      location.push(new FormControl(event.source.id))
     } else {
-      const i = location.controls.findIndex(x => x.value === location.FullAddress);
-      location1.removeAt(i);
+      const i = location.controls.findIndex(x => x.value === event.source.id);
+      location.removeAt(i);
     }
-    // let id = location.HotelID;
-    // let value = $("#" + id).find('input').attr('aria-checked');
-    // this.HotelDetailsOriginal = this.HotelDetails;
-
-    // if (value == 'false') {
-    //   this.locationFilterArray.unshift.apply(this.locationFilterArray, (this.HotelDetailsOriginal.filter(
-    //     data => {
-    //       return data.FullAddress.includes(location.FullAddress);
-    //     }
-    //   )))
-
-    // this.filterHotelDetails.push(this.locationFilterArray);
-    // function removeDuplicates(myArr, prop) {
-    //   return myArr.filter((obj, pos, arr) => {
-    //     return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
-    //   });
-    // }
-    //   this.locationFilterArray = this.removeDuplicates(this.locationFilterArray, location.FullAddress);
-
-    //   console.log(this.locationFilterArray);
-    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.locationFilterArray);
-
-    //   console.log(this.filterHotelDetails);
-    // } if (value == 'true') {
-    //   this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
-    //     data => {
-    //       return data.FullAddress.includes(location.FullAddress);
-    //     }
-    //   ));
-    //   console.log(this.filterHotelDetails);
-    // }
     this.filter_HotelDetails();
   }
-
 
 
   // 4> Amenities Filter
@@ -362,29 +294,7 @@ export class HotelComponent implements OnInit {
   amenitiesFilter(event, id: number) {
     // var target = $("#amenities" + id).find('input').attr('aria-checked');
     var target = event;
-    // this.HotelDetailsOriginal = this.HotelDetails;
-    // if (target === true) {
-    //   this.amenitiesFilterArray.unshift.apply(this.amenitiesFilterArray, (this.HotelDetailsOriginal.filter(
-    //     data => {
-    //       if (data.Amenities != null) {
-    //         return data.Amenities.ID.includes(id);
-    //       }
-    //     }
-    //   )))
-    //   this.filterHotelDetails.unshift.apply(this.filterHotelDetails, this.amenitiesFilterArray);
-    //   // console.log(this.filterHotelDetails);
-    // } if (target === false) {
-    //   this.filterHotelDetails.splice(this.filterHotelDetails.findIndex(
-    //     data => {
-    //       if (data.Amenities != null) {
-    //         return data.Amenities.ID.includes(id);
-    //       }
-    //     }
-    //   ));
-    // }
-
     const amenities = <FormArray>this.filterFormGroup.get('amenities') as FormArray;
-
     if (event.checked) {
       amenities.push(new FormControl(id))
     } else {
@@ -392,6 +302,92 @@ export class HotelComponent implements OnInit {
       amenities.removeAt(i);
     }
     this.filter_HotelDetails();
+  }
+
+
+  // Remove same object valu from filterHotelDetails
+  removeDuplicates(myArr, prop) {
+    return myArr.filter((obj, pos, arr) => {
+      return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
+    });
+  }
+
+  filter_HotelDetails() {
+    let price = this.filterFormGroup.value.price;
+    let amenities = this.filterFormGroup.value.amenities;
+    let rating = this.filterFormGroup.value.rating;
+    let location = this.filterFormGroup.value.location;
+
+    for (let Hotel of this.HotelDetails) {
+      Hotel.hidden = false;
+      let status: boolean = false;
+
+      if (price.length > 0) {
+        for (let p = 0; p < price.length; p++) {
+          if ((price.length - 1) == p && price[price.length - 1] != 0) {
+            if (parseInt(Hotel.StartAmount) <= price[price.length - 1]) {
+              status = true;
+            }
+          }
+        }
+      }
+
+      if (price.length == 0) {
+        if (parseInt(Hotel.StartAmount) <= this.filt_max_price) {
+          status = true;
+        }
+      }
+
+      if (status) {
+        if (amenities.length > 0) {
+          for (let amt of amenities.length) {
+            if (Hotel.Amenities.length > 0 || (Hotel.Amenities != null || Hotel.Amenities != undefined)) {
+              for (let aminit of Hotel.Amenities) {
+                if (aminit.ID == amt) {
+                  status = true;
+                  break;
+                } else {
+                  status = false;
+                }
+              };
+            } else {
+              status = false;
+            }
+          }
+        }
+      }
+
+      if (status) {
+        if (rating.length > 0 || rating.length != 0) {
+          for (let rate of rating) {
+            if (parseInt(Hotel.Rating) == rate) {
+              status = true;
+              break;
+            } else {
+              status = false;
+            }
+          }
+        }
+      }
+
+      if (status) {
+        if (location.length > 0) {
+          for (let loc of location) {
+            if (Hotel.FullAddress == loc) {
+              status = true;
+              break;
+            } else {
+              status = false;
+            }
+          }
+        }
+      }
+
+      if (status) {
+        Hotel.hidden = true;
+      }
+
+    };
   }
 
 
@@ -412,37 +408,11 @@ export class HotelComponent implements OnInit {
       }
       return 0;
     });
-
-    this.filterHotelDetails.sort(function (a, b) {
-      var ratingA = parseInt(a.Rating); // ignore upper and lowercase
-      var ratingB = parseInt(b.Rating); // ignore upper and lowercase
-
-      if (ratingA < ratingB) {
-        return 1;
-      }
-      if (ratingA > ratingB) {
-        return -1;
-      }
-      return 0;
-    });
   }
 
   // 2> Alphabetic
   Alphabetic() {
     this.HotelDetails.sort(function (a, b) {
-      var nameA = a.HotelName.toUpperCase(); // ignore upper and lowercase
-      var nameB = b.HotelName.toUpperCase(); // ignore upper and lowercase
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-
-      // names must be equal
-      return 0;
-    });
-    this.filterHotelDetails.sort(function (a, b) {
       var nameA = a.HotelName.toUpperCase(); // ignore upper and lowercase
       var nameB = b.HotelName.toUpperCase(); // ignore upper and lowercase
       if (nameA < nameB) {
@@ -469,18 +439,6 @@ export class HotelComponent implements OnInit {
       }
       return 0;
     });
-
-    this.filterHotelDetails.sort(function (a, b) {
-      var nameA = parseInt(a.Rating); // ignore upper and lowercase
-      var nameB = parseInt(b.Rating); // ignore upper and lowercase
-      if (nameA < nameB) {
-        return 1;
-      }
-      if (nameA > nameB) {
-        return -1;
-      }
-      return 0;
-    });
   }
 
   // 3> Price
@@ -496,72 +454,6 @@ export class HotelComponent implements OnInit {
       }
       return 0;
     });
-
-    this.filterHotelDetails.sort(function (a, b) {
-      var nameA = parseInt(a.StartAmount); // ignore upper and lowercase
-      var nameB = parseInt(b.StartAmount); // ignore upper and lowercase
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      return 0;
-    });
   }
 
-
-  // Remove same object valu from filterHotelDetails
-  removeDuplicates(myArr, prop) {
-    return myArr.filter((obj, pos, arr) => {
-      return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos;
-    });
-  }
-
-
-  filter_HotelDetails() {
-
-    let price = this.filterFormGroup.value.price;
-    let amenities = this.filterFormGroup.value.amenities;
-    let rating = this.filterFormGroup.value.rating;
-    let location = this.filterFormGroup.value.location;
-
-    for (let Hotel of this.HotelDetails) {
-      Hotel.hidden = false;
-      let status: boolean = false;
-
-
-
-      for (let p = 0; p < price.length; p++) {
-        if ((price.length - 1) == p && price[price.length - 1] != 0) {
-          if (parseInt(Hotel.StartAmount) <= price[price.length - 1]) {
-            status = true;
-          }
-        }
-      }
-
-      if (status) {
-        if (amenities.length > 0) {
-          for (let amt of amenities.length) {
-            if (Hotel.Amenities.length > 0 || (Hotel.Amenities != null || Hotel.Amenities != undefined)) {
-              for (let aminit of Hotel.Amenities) {
-                if (aminit.ID == amt) {
-                  status = true;
-                  break;
-                } else {
-                  status = false;
-                }
-              };
-            } else {
-              status = false;
-            }
-          }
-        }
-      }
-      if (status) {
-        Hotel.hidden = true;
-      }
-    };
-    console.log(this.HotelDetails);
-  }
 }

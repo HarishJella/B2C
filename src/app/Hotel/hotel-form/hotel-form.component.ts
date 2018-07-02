@@ -59,7 +59,7 @@ export class HotelFormComponent implements OnInit {
 
   // serializedDate = new FormControl((new Date()).toISOString());
 
-  constructor(private HotelData: HotelServiceService, private router: Router) {
+  constructor(private _hotelService: HotelServiceService, private router: Router) {
     this.myControl = new FormControl();
   }
 
@@ -78,13 +78,15 @@ export class HotelFormComponent implements OnInit {
 
   ngOnInit() {
     this.showHotelCities();
-    this.HotelData.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
+    this._hotelService.currentRequestBodySource.subscribe(requestBody => this.requestBody = requestBody);
 
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
         startWith(''),
         map(val => val.length >= 2 ? this.filter(val) : [])
       );
+
+
   }
 
   @Input('passengers_state') public passengers_state: string;
@@ -126,7 +128,7 @@ export class HotelFormComponent implements OnInit {
 
 
   showHotelCities() {
-    this.HotelData.getHotelCities(
+    this._hotelService.getHotelCities(
       data => {
         this.HotelCities = data.CITYNAMES.row;
         // console.log(data);
@@ -169,7 +171,7 @@ export class HotelFormComponent implements OnInit {
       // }
       // this.requestBody.Rooms = this.requestRooms;
       // this.requestBodyEvent.emit(this.requestBody);
-      this.HotelData.getHotelDetails(this.requestBody);
+      this._hotelService.getHotelDetails(this.requestBody);
       console.log(this.requestBody);
       console.log(this.city, this.checkInDate, this.checkOutDate, this.Htlrooms);
       // this.searchFirred.emit('firred');
