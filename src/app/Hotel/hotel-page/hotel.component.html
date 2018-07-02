@@ -65,8 +65,8 @@
               <p>Upto Rs 1,00,000</p>
               <!-- <mat-slider [thumbLabel]="true" (click)="priceFilteration($event)" [(ngModel)]="priceFilterValue" [displayWith]="formatLabel"
               tickInterval="1000" min="0" max="10000"></mat-slider> -->
-              <mat-slider [thumbLabel]="true" (change)="priceFilteration($event)" [displayWith]="formatLabel" [value]="450" tickInterval="100"
-                [min]="filt_min_price" [max]="filt_max_price"></mat-slider>
+              <mat-slider [thumbLabel]="true" (change)="priceFilteration($event)" [displayWith]="formatLabel" [value]="filt_min_price"
+                tickInterval="500" [min]="filt_min_price" [max]="filt_max_price"></mat-slider>
               <div class="d-flex justify-content-between minmax">
                 <p>min: {{filt_min_price}}</p>
                 <p>max: {{filt_max_price}}</p>
@@ -99,7 +99,7 @@
             <hr>
             <div>
               <h2>Location</h2>
-              <mat-checkbox multiple="false" *ngFor="let location of HotelDetails,let i=index" id="{{ location.HotelID }}" (click)="locationFilter( location )">
+              <mat-checkbox multiple="false" *ngFor="let location of loc,let i=index" id="{{ location.Location }}" (click)="locationFilter( location )">
                 {{location.FullAddress}}
               </mat-checkbox>
             </div>
@@ -111,12 +111,6 @@
             <hr>
             <div>
               <h2>User Rating</h2>
-              <!-- <mat-checkbox id="rating1" (change)="ratingFilter($event)" [value]="1">1</mat-checkbox>
-              <mat-checkbox id="rating2" (change)="ratingFilter($event)" [value]="2">2</mat-checkbox>
-              <mat-checkbox id="rating3" (change)="ratingFilter($event)" [value]="3">3</mat-checkbox>
-              <mat-checkbox id="rating4" (change)="ratingFilter($event)" [value]="4">4</mat-checkbox>
-              <mat-checkbox id="rating5" (change)="ratingFilter($event)" [value]="5">5</mat-checkbox> -->
-
               <mat-checkbox id="rating1" (change)="ratingFilter($event)" [value]="1">1</mat-checkbox>
               <mat-checkbox id="rating2" (change)="ratingFilter($event)" [value]="2">2</mat-checkbox>
               <mat-checkbox id="rating3" (change)="ratingFilter($event)" [value]="3">3</mat-checkbox>

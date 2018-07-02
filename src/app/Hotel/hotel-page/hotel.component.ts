@@ -31,7 +31,9 @@ export class HotelComponent implements OnInit {
 
   filt_min_price: number = 0;
   filt_max_price: number = 0;
-
+  Amenities;
+  loc = [];
+  map1 = new Map();
   filterFormGroup: FormGroup;
   constructor(public dialog: MatDialog, private HotelData: HotelServiceService, private formBuilder: FormBuilder) { }
 
@@ -51,11 +53,26 @@ export class HotelComponent implements OnInit {
   showHotelDetails() {
     this.HotelData.getHotelDetails(this.requestBody).subscribe(
       data => {
-        this.HotelDetails = JSON.parse(data.response);
+        this.HotelDetails = data;
         this.HotelDetails.map(el => {
           el.hidden = true;
         })
         // console.log(...this.HotelDetails);
+
+        this.filt_max_price = Math.round(Math.max.apply(Math, this.HotelDetails.map(function (o) { return o.StartAmount; })));
+        this.filt_min_price = Math.round(Math.min.apply(Math, this.HotelDetails.map(function (o) { return o.StartAmount; })));
+
+        for (let Location of this.HotelDetails) {
+          this.map1.set(Location.FullAddress, Location);
+        }
+
+        this.map1.forEach(data => {
+          this.loc.push(data);
+        });
+        console.log(this.loc);
+
+        //returns object
+
         this.showHotelLoader = false;
       },
       err => console.log(err),
@@ -509,12 +526,6 @@ export class HotelComponent implements OnInit {
     let rating = this.filterFormGroup.value.rating;
     let location = this.filterFormGroup.value.location;
 
-
-    for (let Hotel of this.HotelDetails) {
-      if (this.filt_max_price > Hotel.StartAmount) {
-        this.filt_max_price = Hotel.StartAmount;
-      }
-    }
     for (let Hotel of this.HotelDetails) {
       Hotel.hidden = false;
       let status: boolean = false;
